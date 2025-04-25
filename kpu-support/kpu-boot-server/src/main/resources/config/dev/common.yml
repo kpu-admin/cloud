@@ -1,0 +1,12 @@
+kpu:
+  generator:
+    outputDir: /Users/lmx/gitlab/kpu-boot
+    frontOutputDir: /Users/lmx/gitlab/kpu-web
+    frontSoyOutputDir: /Users/lmx/gitlab/kpu-web-soybean
+    # 作者
+    author: lmx
+    # 默认项目
+    projectType: BOOT
+
+server:
+  port: 18760

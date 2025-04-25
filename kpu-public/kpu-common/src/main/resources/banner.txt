@@ -1,0 +1,20 @@
+${AnsiColor.BRIGHT_YELLOW}
+       ,--.,-.----.
+   ,--/  /|\    /  \
+,---,': / '|   :    \          ,--,
+:   : '/ / |   |  .\ :       ,'_ /|
+|   '   ,  .   :  |: |  .--. |  | :
+'   |  /   |   |   \ :,'_ /| :  . |
+|   ;  ;   |   : .   /|  ' | |  . .
+:   '   \  ;   | |`-' |  | ' |  | |
+|   |    ' |   | ;    :  | | :  ' ;
+'   : |.  \:   ' |    |  ; ' |  | '
+|   | '_\.':   : :    :  | : ;  ; |
+'   : |    |   | :    '  :  `--'   \
+;   |,'    `---'.|    :  ,      .-./
+'---'        `---`     `--`----'
+
+Spring Boot Version: ${spring-boot.version}
+当前服务: ${spring.application.name}   激活环境: ${spring.profiles.active}   当前版本: ${info.version}
+nacos访问地址(单体版请忽略): http://${kpu.nacos.ip}:${kpu.nacos.port}/nacos    nacos命名空间: ${kpu.nacos.namespace}
+${AnsiColor.DEFAULT}

@@ -1,0 +1,116 @@
+# 代码生成
+kpu:
+  generator:
+    outputDir: /Users/lmx/gitlab/kpu-cloud
+    frontOutputDir: /Users/lmx/gitlab/kpu-web
+    # 作者
+    author: lmx
+    # 默认项目
+    projectType: CLOUD
+  #  # 去除表前缀
+  #  tablePrefix:
+  #    - xxx_
+  #  # 去除字段前缀
+  #  fieldPrefix:
+  #    - xxx_
+  #  # 去除字段后缀
+  #  fieldSuffix:
+  #    - xxx_
+    # 项目前缀
+    projectPrefix: 'kpu'
+    superClass: SUPER_CLASS
+    # 生成方式
+    genType: GEN
+    packageInfoConfig: # 其他配置建议保持PackageInfoConfig中的默认值
+      # 生成代码位于 src/main/java 下的基础包
+      parent: 'cn.lmx.kpu'
+      utilParent: 'cn.lmx.basic'
+    entity-config:
+      # 时间类型对应策略  ONLY_DATE: java.util  SQL_PACK:java.sql  TIME_PACK: java.time
+      dateType: TIME_PACK
+      # Entity类的父类
+      entitySuperClass: ENTITY
+      # 指定生成的主键的ID类型 (${superClass} == NONE 时，新生成的实体才生效)
+      idType: INPUT
+      # 数据库表字段映射到实体的命名策略
+      columnNaming: underline_to_camel
+      # 忽略字段（字段名）
+      # ignoreColumns:
+      #   - xxx
+      # 【实体】 是否生成字段常量
+      columnConstant: false
+      # 【实体、VO】是否为链式模型
+      chain: true
+      # 【实体、VO】 是否为lombok模型
+      lombok: true
+      # 乐观锁字段名称
+      versionColumnName: ''
+      # 乐观锁属性名称
+      versionPropertyName: ''
+      # 逻辑删除字段名称
+      logicDeleteColumnName: ''
+      # 逻辑删除属性名称
+      logicDeletePropertyName: ''
+      fillColumnName:
+        xxx: INSERT
+      # 格式化SaveVO文件名称
+      formatSaveVoFileName: ''
+      # 格式化UpdateVO文件名称
+      formatUpdateVoFileName: ''
+      # 格式化ResultVO文件名称
+      formatResultVoFileName: ''
+      # 格式化 PageQuery 文件名称
+      formatPageQueryFileName: ''
+    mapperConfig:
+      formatMapperFileName: ''
+      formatXmlFileName: ''
+      mapperAnnotation: false
+  #    columnAnnotationTablePrefix:
+  #      - xxx
+      baseResultMap: true
+      cache: false
+      baseColumnList: true
+      cacheClass: org.apache.ibatis.cache.decorators.LoggingCache
+  #  serviceConfig:
+  #  managerConfig:
+  #  controllerConfig:
+  #  webProConfig:
+    fileOverrideStrategy:
+      entityFileOverride: OVERRIDE
+      sqlFileOverride: OVERRIDE
+      mapperFileOverride: EXIST_IGNORE
+      xmlFileOverride: OVERRIDE
+      managerFileOverride: EXIST_IGNORE
+      serviceFileOverride: EXIST_IGNORE
+      controllerFileOverride: EXIST_IGNORE
+      apiModelFileOverride: OVERRIDE
+      langFileOverride: OVERRIDE
+      indexEditTreeFileOverride: EXIST_IGNORE
+      dataFileOverride: EXIST_IGNORE
+    constantsPackage:
+      # 业务服务 后台手动改动过的枚举
+      FieldFill: com.baomidou.mybatisplus.annotation.FieldFill
+      SuperClassEnum: cn.lmx.kpu.generator.enumeration.SuperClassEnum
+      EntitySuperClassEnum: cn.lmx.kpu.generator.enumeration.EntitySuperClassEnum
+      # common 常量
+      EchoDictType: cn.lmx.kpu.model.constant.EchoDictType
+      EchoApi: cn.lmx.kpu.model.constant.EchoApi
+      # common 公共枚举
+      HttpMethod: cn.lmx.kpu.model.enumeration.HttpMethod
+      BooleanEnum: cn.lmx.kpu.model.enumeration.BooleanEnum
+      StateEnum: cn.lmx.kpu.model.enumeration.StateEnum
+      UserStatusEnum: cn.lmx.kpu.model.enumeration.base.UserStatusEnum
+      RoleCategoryEnum: cn.lmx.kpu.model.enumeration.base.RoleCategoryEnum
+      ActiveStatusEnum: cn.lmx.kpu.model.enumeration.base.ActiveStatusEnum
+      OrgTypeEnum: cn.lmx.kpu.model.enumeration.base.OrgTypeEnum
+      FileType: cn.lmx.kpu.model.enumeration.base.FileType
+      DateType: cn.lmx.kpu.model.enumeration.base.DateType
+      DictClassifyEnum: cn.lmx.kpu.model.enumeration.system.DictClassifyEnum
+      DataTypeEnum: cn.lmx.kpu.model.enumeration.system.DataTypeEnum
+  swagger:
+    docket:
+      generator:
+        title: 在线代码生成器模块服务
+        base-package: cn.lmx.kpu.generator.controller
+server:
+  port: 18780

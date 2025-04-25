@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.lmx.kpu</groupId>
+        <artifactId>kpu-dependencies-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../kpu-dependencies-parent/pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>kpu-support</artifactId>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>支撑模块</description>
+
+    <modules>
+        <!-- 监控和全链路调用监控 开发环境可以不用启动 -->
+        <module>kpu-monitor</module>
+        <!-- 定时任务执行器，启动该项目时，需要先启动 kpu-job（开源版） 或 kpu-job-pro（赞助版） -->
+        <module>kpu-job-executor</module>
+        <!-- 单体版 -->
+        <module>kpu-boot-server</module>
+    </modules>
+
+</project>

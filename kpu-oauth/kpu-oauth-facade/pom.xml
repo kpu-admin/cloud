@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kpu-oauth</artifactId>
+        <groupId>cn.lmx.kpu</groupId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>kpu-oauth-facade</artifactId>
+    <name>${project.artifactId}</name>
+    <description>认证服务-接口层</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>kpu-oauth-api</module>
+        <module>kpu-oauth-boot-impl</module>
+        <module>kpu-oauth-cloud-impl</module>
+    </modules>
+</project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.lmx.kpu</groupId>
+        <artifactId>kpu-dependencies-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../kpu-dependencies-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>kpu-system</artifactId>
+    <name>${project.artifactId}</name>
+    <description>系统服务</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>kpu-system-facade</module>
+        <module>kpu-system-entity</module>
+        <module>kpu-system-biz</module>
+        <module>kpu-system-controller</module>
+        <module>kpu-system-server</module>
+    </modules>
+
+</project>

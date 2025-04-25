@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kpu-gateway</artifactId>
+        <groupId>cn.lmx.kpu</groupId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>kpu-gateway-biz</artifactId>
+    <name>${project.artifactId}</name>
+    <description>网关服务插件</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-oauth-biz</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-webmvc</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>kpu-validator-starter</artifactId>
+                    <groupId>cn.lmx.basic</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>sa-token-spring-boot3-starter</artifactId>
+                    <groupId>cn.dev33</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>cn.lmx.basic</groupId>
+                    <artifactId>kpu-mvc</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>kpu-mq-starter</artifactId>
+                    <groupId>cn.lmx.basic</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-database-mode</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-webmvc</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>kpu-validator-starter</artifactId>
+                    <groupId>cn.lmx.basic</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>kpu-mvc</artifactId>
+                    <groupId>cn.lmx.basic</groupId>
+                </exclusion>
+
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.lmx.basic</groupId>
+            <artifactId>kpu-cache-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.lmx.basic</groupId>
+            <artifactId>kpu-cloud-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-webmvc</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <optional>true</optional>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+</project>
