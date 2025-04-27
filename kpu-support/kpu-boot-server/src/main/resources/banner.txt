@@ -16,4 +16,5 @@ ${AnsiColor.BRIGHT_YELLOW}
 
 Spring Boot Version: ${spring-boot.version}
 当前服务: ${spring.application.name}   激活环境: ${spring.profiles.active}   当前版本: ${info.version}
+日志路径: ${logging.file.path}
 ${AnsiColor.DEFAULT}

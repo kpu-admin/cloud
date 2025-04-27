@@ -30,6 +30,7 @@ dist/
 nbdist/
 .nb-gradle/
 generatorConfig.xml
+*.tar
 
 ### nacos ###
 third-party/nacos/derby.log
