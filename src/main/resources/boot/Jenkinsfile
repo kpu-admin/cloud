@@ -16,7 +16,7 @@ pipeline {
         SERVER_NAME = "kpu-boot"
 
         BOOT_SERVER = "${SERVER_NAME}-server"
-        JAR_NAME = "${BOOT_SERVER}-datasource"
+        JAR_NAME = "${BOOT_SERVER}-none"
 
         // 推送到服务器端的文件夹路径
         remoteDirectory = "./temp_jar/"
@@ -72,6 +72,7 @@ pipeline {
                     }
 
                     echo "${EXEC_COMMAND}"
+                    echo "${sourceFiles}"
                     sshPublisher(publishers: [sshPublisherDesc(configName: "${SERVER_SSH_HOST}", transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: "${EXEC_COMMAND}", execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: "${remoteDirectory}", remoteDirectorySDF: false, removePrefix: "${removePrefix}", sourceFiles: "${sourceFiles}")], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
                 }
 
