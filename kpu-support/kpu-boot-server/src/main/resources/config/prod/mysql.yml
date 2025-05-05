@@ -17,7 +17,7 @@ kpu:
     password: 'DjZ6ryGcnCJQbbPs'
     # 生产使用原生驱动，开发使用p6spy驱动打印日志
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.108.93.44:3306/kpu_none?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&nullCatalogMeansCurrent=true
+    url: jdbc:mysql://127.0.0.1:3306/kpu_none?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&nullCatalogMeansCurrent=true
   sqlserver: &db-sqlserver
     username: 'sa'
     password: '1234@abcd'
