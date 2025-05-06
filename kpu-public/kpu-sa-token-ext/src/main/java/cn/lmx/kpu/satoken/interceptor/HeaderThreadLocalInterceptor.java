@@ -20,8 +20,8 @@ import java.util.Map;
  * <p>
  * 该拦截器在必须优先于系统中其他的业务拦截器。
  * <p>
- * 微服务模式，必须每个服务都启用该拦截器，通过 lamp.webmvc.header = true 启用
- * 单体模式 必须禁用该拦截器，通过 lamp.webmvc.header = false 禁用
+ * 微服务模式，必须每个服务都启用该拦截器，通过 kpu.webmvc.header = true 启用
+ * 单体模式 必须禁用该拦截器，通过 kpu.webmvc.header = false 禁用
  * <p>
  *
  * @author lmx
