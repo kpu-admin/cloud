@@ -34,7 +34,7 @@ kpu:
 knife4j:
   enable: true
   # 生产屏蔽文档
-  production: false
+  production: true
   setting:
     language: zh_cn
     swagger-model-name: 实体类列表
