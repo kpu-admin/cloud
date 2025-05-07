@@ -27,7 +27,7 @@ kpu:
       endpoint: "http://127.0.0.1:9001/"
       accessKey: "49iiDQz2T82aIAdm3Mvu"
       secretKey: "SFKgasTdDPyMVWsY1TfQ39ZRCeEmdRhmWonXzBaa"
-      bucket: "kpu"
+      bucket: "dev"
     huawei:
       urlPrefix: "dev.obs.cn-southwest-2.myhuaweicloud.com"
       endpoint: "obs.cn-southwest-2.myhuaweicloud.com"
