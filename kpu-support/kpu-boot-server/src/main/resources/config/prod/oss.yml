@@ -24,7 +24,7 @@ kpu:
       access-key-id: "填写你的id"
       access-key-secret: "填写你的秘钥"
     minIo:
-      endpoint: "http://127.0.0.1:9001/"
+      endpoint: "http://127.0.0.1:9000/"
       accessKey: "49iiDQz2T82aIAdm3Mvu"
       secretKey: "SFKgasTdDPyMVWsY1TfQ39ZRCeEmdRhmWonXzBaa"
       bucket: "dev"
