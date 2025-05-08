@@ -25,7 +25,6 @@ pipeline {
             JAR_NAME = "${SERVER_NAME}-server"
         }
 
-        echo "您选择了如下参数：SERVER_NAME:${SERVER_NAME}JAR_NAME:${JAR_NAME}"
         // 推送时需要忽略的项目前缀
         removePrefix = "${SERVER_NAME}/${JAR_NAME}/target/"
 
