@@ -26,10 +26,10 @@ pipeline {
         stage('替换环境参数') {
             steps {
                 script {
-                    if (${SERVER_NAME} == "kpu-monitor") {
+                    if ("${SERVER_NAME}" == "kpu-job-executor") {
                         JAR_NAME = "${SERVER_NAME}-none"
                         SERVER_NAME = "kpu-support"
-                    }else if(${SERVER_NAME} == "kpu-monitor"){
+                    }else if("${SERVER_NAME}" == "kpu-monitor"){
                         JAR_NAME = "${SERVER_NAME}"
                         SERVER_NAME = "kpu-support"
                     }else{
