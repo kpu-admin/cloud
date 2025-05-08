@@ -16,16 +16,6 @@ pipeline {
         // 推送到服务器端的文件夹路径
         remoteDirectory = "./temp_jar/"
 
-        if ("${SERVER_NAME}" != "kpu-monitor") {
-            JAR_NAME = "${SERVER_NAME}-none"
-            SERVER_NAME = "kpu-support"
-        }else if("${SERVER_NAME}" != "kpu-monitor"){
-            JAR_NAME = "${SERVER_NAME}"
-            SERVER_NAME = "kpu-support"
-        }else{
-            JAR_NAME = "${SERVER_NAME}-server"
-        }
-
         JAR_NAME = "${SERVER_NAME}-server"
         // 推送时需要忽略的项目前缀
         removePrefix = "${SERVER_NAME}/${JAR_NAME}/target/"
