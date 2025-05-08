@@ -16,16 +16,27 @@ pipeline {
         // 推送到服务器端的文件夹路径
         remoteDirectory = "./temp_jar/"
         // 推送时需要忽略的项目前缀
-        removePrefix = "${SERVER_NAME}/${JAR_NAME}/target/"
+        removePrefix = ""
 
         // 需要推送到服务器端的文件(jar)
-        sourceFiles = "${SERVER_NAME}/${JAR_NAME}/target/${JAR_NAME}.jar"
+        sourceFiles = ""
     }
 
     stages {
         stage('替换环境参数') {
             steps {
                 script {
+                    if ("${SERVER_NAME}" != "kpu-monitor") {
+                        JAR_NAME = "${SERVER_NAME}-none"
+                        SERVER_NAME = "kpu-support"
+                    } else {
+                        JAR_NAME = "${SERVER_NAME}-server"
+                    }
+
+                    // 初始化一些依赖于 JAR_NAME 的变量
+                    removePrefix = "${SERVER_NAME}/${JAR_NAME}/target/"
+                    sourceFiles = "${SERVER_NAME}/${JAR_NAME}/target/${JAR_NAME}.jar"
+
                     // SERVER_SSH_HOST一定要包含_ 如：ip_dev ip_prod 等格式
                     PROFILES_ARR = "${SERVER_SSH_HOST}".split('_')
                     PROFILES = PROFILES_ARR[1]
