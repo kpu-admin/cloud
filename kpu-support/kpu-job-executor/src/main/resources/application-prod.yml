@@ -11,12 +11,12 @@ kpu:
     ip: 127.0.0.1
     port: 16379
     database: 0
-    password: SbtyMveYNfLzTks7H0apCmyStPzWJqjy
+    password: lmx123125
   mysql:
     ip: 127.0.0.1
-    port: 3218
+    port: 3306
     driverClassName: com.mysql.cj.jdbc.Driver
     database: kpu_none
     username: 'root'
-    password: 'ZHadmin123.'
+    password: 'lmx123125.'
     url: jdbc:mysql://${kpu.mysql.ip}:${kpu.mysql.port}/${kpu.mysql.database}?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&nullCatalogMeansCurrent=true

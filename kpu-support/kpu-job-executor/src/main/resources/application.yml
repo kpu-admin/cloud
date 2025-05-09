@@ -11,7 +11,7 @@ kpu:
     ip: 127.0.0.1
     port: 16379
     database: 0
-    password: SbtyMveYNfLzTks7H0apCmyStPzWJqjy
+    password: lmx123125
   mysql: &db-mysql
     username: 'root'
     password: 'lmx123125'
