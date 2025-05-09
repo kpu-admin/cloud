@@ -19,7 +19,7 @@
         <!-- 监控和全链路调用监控 开发环境可以不用启动 -->
         <module>kpu-monitor</module>
         <!-- 定时任务执行器，启动该项目时，需要先启动 kpu-job（开源版） 或 kpu-job-pro（赞助版） -->
-        <module>kpu-job-executor</module>
+        <module>kpu-job-executor-none</module>
         <!-- 单体版 -->
         <module>kpu-boot-server</module>
     </modules>
