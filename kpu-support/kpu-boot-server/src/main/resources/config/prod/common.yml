@@ -9,4 +9,4 @@ kpu:
     projectType: BOOT
 
 server:
-  port: 18760
+  port: 18761
