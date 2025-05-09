@@ -126,7 +126,7 @@ public class ExtendMsgServiceImpl extends SuperServiceImpl<ExtendMsgManager, Lon
             // 务必启动 kpu-job-pro 项目，否则调用会失败！
             Map<String, Long> param = MapUtil.builder("msgId", extendMsg.getId()).build();
 
-            XxlJobInfoVO xxlJobInfoVO = XxlJobInfoVO.create("kpu-none-executor",
+            XxlJobInfoVO xxlJobInfoVO = XxlJobInfoVO.create("kpu-job-executor-none",
                     "【发送消息】" + extendMsg.getTitle(), extendMsg.getSendTime(), "publishMsg", JsonUtil.toJson(param));
             jobFacde.addTimingTask(xxlJobInfoVO);
         }
@@ -205,7 +205,7 @@ public class ExtendMsgServiceImpl extends SuperServiceImpl<ExtendMsgManager, Lon
             // 务必启动 kpu-job-pro 项目，否则调用会失败！
             Map<String, Long> param = MapUtil.builder("msgId", extendMsg.getId()).build();
 
-            XxlJobInfoVO xxlJobInfoVO = XxlJobInfoVO.create("kpu-none-executor",
+            XxlJobInfoVO xxlJobInfoVO = XxlJobInfoVO.create("kpu-job-executor-none",
                     "【发送消息】" + extendMsg.getTitle(), extendMsg.getSendTime(), "sendMsg", JsonUtil.toJson(param));
             jobFacde.addTimingTask(xxlJobInfoVO);
         }
