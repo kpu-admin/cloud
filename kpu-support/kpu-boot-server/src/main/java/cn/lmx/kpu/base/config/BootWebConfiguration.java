@@ -76,7 +76,7 @@ public class BootWebConfiguration extends BaseConfig implements WebMvcConfigurer
                 .excludePathPatterns(commonPathPatterns);
 
         // 注册 Sa-Token 拦截器，定义详细认证规则
-        registry.addInterceptor(getSaFilter()).addPathPatterns("/**").order(10);
+        registry.addInterceptor(getSaFilter()).addPathPatterns("/**").excludePathPatterns("/error").order(10);
 
 
         WebMvcConfigurer.super.addInterceptors(registry);
