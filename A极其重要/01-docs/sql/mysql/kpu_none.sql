@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : mac
+ Source Server         : 172.16.190.130
  Source Server Type    : MySQL
- Source Server Version : 80404 (8.4.4)
+ Source Server Version : 80042 (8.0.42)
  Source Host           : localhost:3306
  Source Schema         : kpu_none
 
  Target Server Type    : MySQL
- Target Server Version : 80404 (8.4.4)
+ Target Server Version : 80042 (8.0.42)
  File Encoding         : 65001
 
- Date: 25/04/2025 12:58:21
+ Date: 10/05/2025 16:27:42
 */
 
 SET NAMES utf8mb4;
@@ -695,7 +695,7 @@ VALUES (593945495446097920, 3, 'DEF__APPLICATION__LOGO', '2025-02-13 00:22:59', 
 INSERT INTO `com_appendix` (`id`, `biz_id`, `biz_type`, `created_time`, `created_by`)
 VALUES (593945495446098029, 2, 'DEF__APPLICATION__LOGO', '2025-02-09 19:33:05', 2);
 INSERT INTO `com_appendix` (`id`, `biz_id`, `biz_type`, `created_time`, `created_by`)
-VALUES (615984338441649156, 2, 'DEF__USER__AVATAR', '2025-04-02 05:38:07', 2);
+VALUES (630294954723680278, 2, 'DEF__USER__AVATAR', '2025-05-10 14:37:07', 2);
 COMMIT;
 
 -- ----------------------------
@@ -729,342 +729,6 @@ CREATE TABLE `com_file`
 -- Records of com_file
 -- ----------------------------
 BEGIN;
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828097, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/8231dc3cd0f8487f8346db56ac794680.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/8231dc3cd0f8487f8346db56ac794680.png',
-        '8231dc3cd0f8487f8346db56ac794680.png', '', '404.png', 'image/png', 'png', 88217, '2025-01-31 20:35:04', 2,
-        '2025-01-31 20:35:04', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828114, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/cf949a2494c34861b9da1e40e09e3ce0.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/cf949a2494c34861b9da1e40e09e3ce0.png',
-        'cf949a2494c34861b9da1e40e09e3ce0.png', '', '404.png', 'image/png', 'png', 64550, '2025-01-31 21:29:27', 2,
-        '2025-01-31 21:29:27', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828120, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/fce113fef82c403d98ff223d3a48474d.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/fce113fef82c403d98ff223d3a48474d.png',
-        'fce113fef82c403d98ff223d3a48474d.png', '', '404.png', 'image/png', 'png', 64550, '2025-01-31 21:46:30', 2,
-        '2025-01-31 21:46:30', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828123, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/b5598189b02b4523af5961c8be9de41a.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/b5598189b02b4523af5961c8be9de41a.png',
-        'b5598189b02b4523af5961c8be9de41a.png', '', '404.png', 'image/png', 'png', 64550, '2025-01-31 21:48:45', 2,
-        '2025-01-31 21:48:45', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828125, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/0f0f78fc29d5484993f61a01a859bd5f.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/0f0f78fc29d5484993f61a01a859bd5f.png',
-        '0f0f78fc29d5484993f61a01a859bd5f.png', '', '404.png', 'image/png', 'png', 64550, '2025-01-31 21:49:10', 2,
-        '2025-01-31 21:49:10', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828128, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/580ecd8093af4ed993549e50b334294d.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/580ecd8093af4ed993549e50b334294d.png',
-        '580ecd8093af4ed993549e50b334294d.png', '', '404.png', 'image/png', 'png', 64550, '2025-01-31 21:50:12', 2,
-        '2025-01-31 21:50:12', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828132, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/2951b02fc8144b7fa38e1a4a25dae2fd.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/2951b02fc8144b7fa38e1a4a25dae2fd.png',
-        '2951b02fc8144b7fa38e1a4a25dae2fd.png', '', '404.png', 'image/png', 'png', 64550, '2025-01-31 21:52:56', 2,
-        '2025-01-31 21:52:56', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828136, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/381b97a5eb7b4d97b4aa86f3a86728ae.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/381b97a5eb7b4d97b4aa86f3a86728ae.png',
-        '381b97a5eb7b4d97b4aa86f3a86728ae.png', '', 'BBA0936EC20813436ECEF78B0B71D74D.png', 'image/png', 'png', 729371,
-        '2025-01-31 22:01:01', 2, '2025-01-31 22:01:01', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828140, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/e7bcb0a4d40c4a579ffa3cdde0b39c94.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/e7bcb0a4d40c4a579ffa3cdde0b39c94.png',
-        'e7bcb0a4d40c4a579ffa3cdde0b39c94.png', '', 'BBA0936EC20813436ECEF78B0B71D74D.png', 'image/png', 'png', 729371,
-        '2025-01-31 22:06:19', 2, '2025-01-31 22:06:19', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828142, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/c6f84f44cc424ad3879d69cdc2830ebd.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/c6f84f44cc424ad3879d69cdc2830ebd.png',
-        'c6f84f44cc424ad3879d69cdc2830ebd.png', '', 'BBA0936EC20813436ECEF78B0B71D74D.png', 'image/png', 'png', 729371,
-        '2025-01-31 22:06:49', 2, '2025-01-31 22:06:49', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828148, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/527935a6b9a3442d80eb5dce50cf2266.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/527935a6b9a3442d80eb5dce50cf2266.png',
-        '527935a6b9a3442d80eb5dce50cf2266.png', '', '7559CEC20DE825D7C0D2FBD3344488EE.png', 'image/png', 'png', 753917,
-        '2025-01-31 22:09:05', 2, '2025-01-31 22:09:05', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828151, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/12c54a84a0a947848325522ce1f153c4.png',
-        'http://127.0.0.1/file/dev/DEF__APPLICATION__LOGO/2025/01/31/12c54a84a0a947848325522ce1f153c4.png',
-        '12c54a84a0a947848325522ce1f153c4.png', '', '7559CEC20DE825D7C0D2FBD3344488EE.png', 'image/png', 'png', 753917,
-        '2025-01-31 22:09:56', 2, '2025-01-31 22:09:56', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828153, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/ae05500d7d804da68d8040356d2486da.png',
-        'http://192.168.1.60/file/dev/DEF__APPLICATION__LOGO/2025/01/31/ae05500d7d804da68d8040356d2486da.png',
-        'ae05500d7d804da68d8040356d2486da.png', '', '7559CEC20DE825D7C0D2FBD3344488EE.png', 'image/png', 'png', 753917,
-        '2025-01-31 22:10:21', 2, '2025-01-31 22:10:21', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828157, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/7946bfacff5340dfa237418471e4e89e.png',
-        'http://192.168.1.60/file/dev/DEF__APPLICATION__LOGO/2025/01/31/7946bfacff5340dfa237418471e4e89e.png',
-        '7946bfacff5340dfa237418471e4e89e.png', '', '7559CEC20DE825D7C0D2FBD3344488EE.png', 'image/png', 'png', 753917,
-        '2025-01-31 22:17:33', 2, '2025-01-31 22:17:33', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828163, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/76c0339540a348b5b9963e5be5ce7884.png',
-        'http://192.168.1.60/file/dev/DEF__APPLICATION__LOGO/2025/01/31/76c0339540a348b5b9963e5be5ce7884.png',
-        '76c0339540a348b5b9963e5be5ce7884.png', '', '7559CEC20DE825D7C0D2FBD3344488EE.png', 'image/png', 'png', 753917,
-        '2025-01-31 22:33:21', 2, '2025-01-31 22:33:21', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828165, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/01/31/14cb9b0d273b4c44af62af5cef8c0c6d.png',
-        'http://192.168.1.60/file/dev/DEF__APPLICATION__LOGO/2025/01/31/14cb9b0d273b4c44af62af5cef8c0c6d.png',
-        '14cb9b0d273b4c44af62af5cef8c0c6d.png', '', '7559CEC20DE825D7C0D2FBD3344488EE.png', 'image/png', 'png', 753917,
-        '2025-01-31 22:34:43', 2, '2025-01-31 22:34:43', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828195, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/c1754479d8dc4b07a5690630d5fb3047.png',
-        'http://192.168.1.60/file/dev/DEF__APPLICATION__LOGO/2025/02/01/c1754479d8dc4b07a5690630d5fb3047.png',
-        'c1754479d8dc4b07a5690630d5fb3047.png', '', '7559CEC20DE825D7C0D2FBD3344488EE.png', 'image/png', 'png', 753917,
-        '2025-02-01 13:04:43', 2, '2025-02-01 13:04:43', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828197, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/30cd98e2a8244a878460e49260775c54.png',
-        'http://192.168.1.60/file/dev/DEF__APPLICATION__LOGO/2025/02/01/30cd98e2a8244a878460e49260775c54.png',
-        '30cd98e2a8244a878460e49260775c54.png', '', '7559CEC20DE825D7C0D2FBD3344488EE.png', 'image/png', 'png', 753917,
-        '2025-02-01 13:05:01', 2, '2025-02-01 13:05:01', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828199, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/0cab8b9e52cc43bab7d358f37688d21f.png',
-        'http://192.168.1.60/file/dev/DEF__APPLICATION__LOGO/2025/02/01/0cab8b9e52cc43bab7d358f37688d21f.png',
-        '0cab8b9e52cc43bab7d358f37688d21f.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 13:06:32', 2,
-        '2025-02-01 13:06:32', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (592857867992828215, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/ed85ce49aaae495aafbb81a6f6e840ca.png',
-        'http://192.168.1.60/file/dev/DEF__APPLICATION__LOGO/2025/02/01/ed85ce49aaae495aafbb81a6f6e840ca.png',
-        'ed85ce49aaae495aafbb81a6f6e840ca.png', '', '404.png', 'image/png', 'png', 88217, '2025-02-01 13:20:47', 2,
-        '2025-02-01 13:20:47', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097920, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/396e7c7462cc4318a9185f7d35050ff2.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/396e7c7462cc4318a9185f7d35050ff2.png',
-        '396e7c7462cc4318a9185f7d35050ff2.png', '', '404.png', 'image/png', 'png', 137569, '2025-02-01 13:32:35', 2,
-        '2025-02-01 13:32:35', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097951, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/b1849d9c78294cb483b78f59ecf42f24.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/b1849d9c78294cb483b78f59ecf42f24.png',
-        'b1849d9c78294cb483b78f59ecf42f24.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:21:28', 2,
-        '2025-02-01 14:21:28', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097953, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/27365331056943bdb0251cbfde5b1568.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/27365331056943bdb0251cbfde5b1568.png',
-        '27365331056943bdb0251cbfde5b1568.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:22:45', 2,
-        '2025-02-01 14:22:45', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097960, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/c6c48628b4dc4cf7a6d4685d9ad35828.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/c6c48628b4dc4cf7a6d4685d9ad35828.png',
-        'c6c48628b4dc4cf7a6d4685d9ad35828.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:25:25', 2,
-        '2025-02-01 14:25:25', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097962, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/79c7e478027f4b3aac6bf8cbb69df04d.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/79c7e478027f4b3aac6bf8cbb69df04d.png',
-        '79c7e478027f4b3aac6bf8cbb69df04d.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:27:56', 2,
-        '2025-02-01 14:27:56', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097966, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/b43d80784011442cb94a5d9713a1fff2.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/b43d80784011442cb94a5d9713a1fff2.png',
-        'b43d80784011442cb94a5d9713a1fff2.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:29:04', 2,
-        '2025-02-01 14:29:04', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097968, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/871920f8b220476487951ab8fae39aaf.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/871920f8b220476487951ab8fae39aaf.png',
-        '871920f8b220476487951ab8fae39aaf.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:30:01', 2,
-        '2025-02-01 14:30:01', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097972, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/33baa1f5bca444eea49f45d43c1dcf9e.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/33baa1f5bca444eea49f45d43c1dcf9e.png',
-        '33baa1f5bca444eea49f45d43c1dcf9e.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:32:01', 2,
-        '2025-02-01 14:32:01', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097976, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/8e599bf0a7d54867854623e7b313e2f0.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/8e599bf0a7d54867854623e7b313e2f0.png',
-        '8e599bf0a7d54867854623e7b313e2f0.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:32:45', 2,
-        '2025-02-01 14:32:45', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097981, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/7ac3572d801d4fcfa0989fc758600db1.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/7ac3572d801d4fcfa0989fc758600db1.png',
-        '7ac3572d801d4fcfa0989fc758600db1.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:34:19', 2,
-        '2025-02-01 14:34:19', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097985, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/44030ac4ec3e4857b9706c7baec958b9.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/44030ac4ec3e4857b9706c7baec958b9.png',
-        '44030ac4ec3e4857b9706c7baec958b9.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:35:16', 2,
-        '2025-02-01 14:35:16', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097988, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/041aa33269144f8a8571563681bb5371.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/041aa33269144f8a8571563681bb5371.png',
-        '041aa33269144f8a8571563681bb5371.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:35:41', 2,
-        '2025-02-01 14:35:41', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097991, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/e5cae997eddc4714b7f478df06ec2bc1.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/e5cae997eddc4714b7f478df06ec2bc1.png',
-        'e5cae997eddc4714b7f478df06ec2bc1.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:36:23', 2,
-        '2025-02-01 14:36:23', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446097995, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/25809b3446624260afcccf4f6e069819.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/25809b3446624260afcccf4f6e069819.png',
-        '25809b3446624260afcccf4f6e069819.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:38:39', 2,
-        '2025-02-01 14:38:39', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446098015, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/c91edd77595e4acdb7142dc958182652.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/c91edd77595e4acdb7142dc958182652.png',
-        'c91edd77595e4acdb7142dc958182652.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 14:54:40', 2,
-        '2025-02-01 14:54:40', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (593945495446098029, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/01/3b1831a3103548f4831022bff21e2756.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/01/3b1831a3103548f4831022bff21e2756.png',
-        '3b1831a3103548f4831022bff21e2756.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-01 15:04:22', 2,
-        '2025-02-01 15:04:22', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (595083739088951306, 'DEF__APPLICATION__LOGO', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__APPLICATION__LOGO/2025/02/04/7f20b4f0c6c246968fe17414cb6b0932.png',
-        'http://192.168.1.60:10000/file/dev/DEF__APPLICATION__LOGO/2025/02/04/7f20b4f0c6c246968fe17414cb6b0932.png',
-        '7f20b4f0c6c246968fe17414cb6b0932.png', '', '404.png', 'image/png', 'png', 64550, '2025-02-04 15:33:04', 2,
-        '2025-02-04 15:33:04', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (614058582480277212, 'BASE__FILE', 'IMAGE', 'LOCAL', 'dev',
-        'BASE__FILE/2025/03/28/2f02182796974177bd4b6e7429aaaaa6.jpeg',
-        'http://192.168.1.60:10000/file/dev/BASE__FILE/2025/03/28/2f02182796974177bd4b6e7429aaaaa6.jpeg',
-        '2f02182796974177bd4b6e7429aaaaa6.jpeg', '', '1.jpeg', 'image/jpeg', 'jpeg', 168602, '2025-03-28 06:56:09', 1,
-        '2025-03-28 06:56:09', 1, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382728, 'BASE__FILE', 'IMAGE', 'LOCAL', 'dev',
-        'BASE__FILE/2025/03/30/cc6f7c3abc3e496ca4776bc735e5317d.jpeg',
-        'http://127.0.0.1:18760/anyTenant/file/dev/BASE__FILE/2025/03/30/cc6f7c3abc3e496ca4776bc735e5317d.jpeg',
-        'cc6f7c3abc3e496ca4776bc735e5317d.jpeg', '', '1.jpeg', 'image/jpeg', 'jpeg', 168602, '2025-03-30 23:48:03', 2,
-        '2025-03-30 23:48:03', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615984338441649152, 'DEF__USER__AVATAR', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__USER__AVATAR/2025/04/02/6891b4b0a2ad4256959f547cd656b413.jpeg',
-        'http://127.0.0.1:18760/anyTenant/file/dev/DEF__USER__AVATAR/2025/04/02/6891b4b0a2ad4256959f547cd656b413.jpeg',
-        '6891b4b0a2ad4256959f547cd656b413.jpeg', '', '1.jpeg', 'image/jpeg', 'jpeg', 85711, '2025-04-02 00:19:53', 2,
-        '2025-04-02 00:19:53', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615984338441649154, 'DEF__USER__AVATAR', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__USER__AVATAR/2025/04/02/18611f31b959479f92b49dd1a3593aab.png',
-        'http://127.0.0.1:18760/anyTenant/file/dev/DEF__USER__AVATAR/2025/04/02/18611f31b959479f92b49dd1a3593aab.png',
-        '18611f31b959479f92b49dd1a3593aab.png', '', '1.png', 'image/png', 'png', 160166, '2025-04-02 00:23:16', 2,
-        '2025-04-02 00:23:16', 2, NULL);
-INSERT INTO `com_file` (`id`, `biz_type`, `file_type`, `storage_type`, `bucket`, `path`, `url`, `unique_file_name`,
-                        `file_md5`, `original_file_name`, `content_type`, `suffix`, `size_`, `created_time`,
-                        `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615984338441649156, 'DEF__USER__AVATAR', 'IMAGE', 'LOCAL', 'dev',
-        'DEF__USER__AVATAR/2025/04/02/73e554a78725428ba7de7d0dc7fccd83.jpeg',
-        'http://127.0.0.1:18760/anyTenant/file/dev/DEF__USER__AVATAR/2025/04/02/73e554a78725428ba7de7d0dc7fccd83.jpeg',
-        '73e554a78725428ba7de7d0dc7fccd83.jpeg', '', '1.jpeg', 'image/jpeg', 'jpeg', 85711, '2025-04-02 00:36:38', 2,
-        '2025-04-02 00:36:38', 2, NULL);
 COMMIT;
 
 -- ----------------------------
@@ -3735,9 +3399,9 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
-VALUES (144313439471271947, 1, 'basic:system', '系统功能', '20', 0, '01', '', '/sysFunction', 'LAYOUT', '/system/role',
-        'ant-design:setting-outlined', b'0', b'0', b'1', 3, '', b'0', b'1', NULL, NULL, NULL, '/', 0, '{}', 2,
-        '2021-12-12 12:12:12', 2, '2021-12-12 12:12:12');
+VALUES (144313439471271947, 1, 'basic:system', '系统功能', '20', 0, '01', '', '/basic/sysFunction', 'LAYOUT',
+        '/basic/system/role', 'ant-design:setting-outlined', b'0', b'0', b'1', 3, '', b'0', b'1', NULL, NULL, NULL, '/',
+        0, '{}', 2, '2021-12-12 12:12:12', 2, '2025-05-10 13:27:07');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
@@ -3797,7 +3461,7 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
 VALUES (172353511420329984, 2, 'tenant:system:file', '全局附件管理', '20', 143911967403278336, '01', '', '/system/file',
         '/devOperation/system/defFile/index', '', 'ant-design:file-zip-outlined', b'0', b'0', b'1', 6, '', b'0', b'1',
         NULL, NULL, NULL, '/143911967403278336/', 1, '{}', 1452186486253289472, '2021-12-12 12:12:12', 2,
-        '2024-06-12 12:46:36');
+        '2025-05-10 13:30:07');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
@@ -3931,9 +3595,9 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
 VALUES (206499429136465920, 2, 'tenant:developer:tools:generator:project', '项目生成', '20', 198310764748996608, '01',
-        '', 'project', 'devOperation/developer/genProject/index', '', '', b'0', b'0', b'1', 3, '', b'0', b'1', NULL,
+        '', 'project', '/devOperation/developer/genProject/index', '', '', b'0', b'0', b'1', 3, '', b'0', b'1', NULL,
         NULL, NULL, '/160833820721938437/198310764748996608/', 2, '{\"content\":\"new\"}', 1452186486253289472,
-        '2021-12-12 12:12:12', 1452186486253289472, '2021-12-12 12:12:12');
+        '2021-12-12 12:12:12', 2, '2025-05-10 13:14:19');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
@@ -4066,9 +3730,9 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
 VALUES (242152648445263893, 2, 'tenant:developer:job', '分布式定时任务', '20', 160833820721938437, '03', '',
-        'https://datasource.kpu.top/xxl-job-admin/', 'IFRAME', '', 'ant-design:project-outlined', b'0', b'0', b'1', 8,
-        '', b'0', b'1', NULL, NULL, NULL, '/160833820721938437/', 1, '{}', 1452186486253289472, '2021-12-12 12:12:12',
-        2, '2025-05-09 21:04:42');
+        'http://172.16.190.130:90/xxl-job-admin/', 'IFRAME', '', 'ant-design:project-outlined', b'0', b'0', b'1', 8, '',
+        b'0', b'1', NULL, NULL, NULL, '/160833820721938437/', 1, '{}', 1452186486253289472, '2021-12-12 12:12:12', 2,
+        '2025-05-10 03:01:19');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
@@ -4253,8 +3917,8 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
 VALUES (529783477227333632, 2, 'tenant:system:online', '在线用户', '20', 143911967403278336, '01', '', '/system/online',
-        'devOperation/system/online/index', '', 'ant-design:user-outlined', b'0', b'0', b'1', 7, '', b'0', b'1', NULL,
-        NULL, b'0', '/143911967403278336/', 1, '', 2, '2024-08-12 16:19:57', 2, '2024-08-12 16:21:25');
+        '/devOperation/system/online/index', '', 'ant-design:user-outlined', b'0', b'0', b'1', 7, '', b'0', b'1', NULL,
+        NULL, b'0', '/143911967403278336/', 1, '{}', 2, '2024-08-12 16:19:57', 2, '2025-05-10 13:16:47');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
@@ -4368,60 +4032,61 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
-VALUES (1449733521265393664, 1, 'basic:msg', '消息中心', '20', 0, '01', '', '/msg', 'LAYOUT', '/msg/myMsg',
+VALUES (1449733521265393664, 1, 'basic:msg', '消息中心', '20', 0, '01', '', '/basic/msg', 'LAYOUT', '/basic/msg/myMsg',
         'ant-design:message-outlined', b'0', b'0', b'1', 1, '', b'0', b'1', NULL, NULL, NULL, '/', 0, '{}', 2,
-        '2021-12-12 12:12:12', 2, '2024-10-08 15:35:37');
+        '2021-12-12 12:12:12', 2, '2025-05-10 13:28:22');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
-VALUES (1449733787893104640, 1, 'basic:msg:myMsg', '我的消息', '20', 1449733521265393664, '01', '', '/msg/myMsg',
+VALUES (1449733787893104640, 1, 'basic:msg:myMsg', '我的消息', '20', 1449733521265393664, '01', '', '/basic/msg/myMsg',
         '/basic/msg/extendNotice/index', '', 'wpf-my-topic', b'0', b'0', b'1', 1, '', b'0', b'1', NULL, NULL, NULL,
-        '/1449733521265393664/', 1, '{}', 2, '2021-12-12 12:12:12', 1452186486253289472, '2021-12-12 12:12:12');
+        '/1449733521265393664/', 1, '{}', 2, '2021-12-12 12:12:12', 2, '2025-05-10 13:27:54');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
-VALUES (1449734007292952576, 1, 'basic:msg:msg', '消息管理', '20', 1449733521265393664, '01', '', '/msg/msg',
+VALUES (1449734007292952576, 1, 'basic:msg:msg', '消息管理', '20', 1449733521265393664, '01', '', '/basic/msg/msg',
         '/basic/msg/extendMsg/index', '', 'codicon-repo-push', b'0', b'0', b'1', 2, '', b'0', b'1', NULL, NULL, NULL,
-        '/1449733521265393664/', 1, '{\"content\":\"数据权限\"}', 2, '2021-12-12 12:12:12', 2, '2024-04-10 15:12:13');
+        '/1449733521265393664/', 1, '{\"content\":\"数据权限\"}', 2, '2021-12-12 12:12:12', 2, '2025-05-10 13:27:33');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
-VALUES (1449734450995789824, 1, 'basic:system:role', '角色权限维护', '20', 144313439471271947, '01', '', '/system/role',
-        '/basic/system/baseRole/index', '', 'ant-design:lock-outlined', b'0', b'0', b'1', 1, '', b'0', b'1', NULL, NULL,
-        NULL, '/144313439471271947/', 1, '{}', 2, '2021-12-12 12:12:12', 1452186486253289472, '2021-12-12 12:12:12');
+VALUES (1449734450995789824, 1, 'basic:system:role', '角色权限维护', '20', 144313439471271947, '01', '',
+        '/basic/system/role', '/basic/system/baseRole/index', '', 'ant-design:lock-outlined', b'0', b'0', b'1', 1, '',
+        b'0', b'1', NULL, NULL, NULL, '/144313439471271947/', 1, '{}', 2, '2021-12-12 12:12:12', 2,
+        '2025-05-10 13:26:52');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
-VALUES (1449734707225821184, 1, 'basic:system:appendix', '附件管理', '20', 144313439471271947, '01', '', '/system/file',
-        '/basic/system/baseFile/index', '', 'ant-design:file-sync-outlined', b'0', b'0', b'1', 2, '', b'0', b'1', NULL,
-        NULL, NULL, '/144313439471271947/', 1, '{}', 2, '2021-10-17 21:51:04', 1452186486253289472,
-        '2021-12-12 00:50:10');
+VALUES (1449734707225821184, 1, 'basic:system:appendix', '附件管理', '20', 144313439471271947, '01', '',
+        '/basic/system/file', '/basic/system/baseFile/index', '', 'ant-design:file-sync-outlined', b'0', b'0', b'1', 2,
+        '', b'0', b'1', NULL, NULL, NULL, '/144313439471271947/', 1, '{}', 2, '2021-10-17 21:51:04', 2,
+        '2025-05-10 13:25:53');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
 VALUES (1449734944434683904, 1, 'basic:system:webLog', '操作日志', '20', 144313439471271947, '01', '',
-        '/system/operationLog', '/basic/system/baseOperationLog/index', '', 'ant-design:reconciliation-outlined', b'0',
-        b'0', b'1', 3, '', b'0', b'1', NULL, NULL, NULL, '/144313439471271947/', 1, '{}', 2, '2021-12-12 12:12:12',
-        1452186486253289472, '2021-12-12 12:12:12');
+        '/basic/system/operationLog', '/basic/system/baseOperationLog/index', '', 'ant-design:reconciliation-outlined',
+        b'0', b'0', b'1', 3, '', b'0', b'1', NULL, NULL, NULL, '/144313439471271947/', 1, '{}', 2,
+        '2021-12-12 12:12:12', 2, '2025-05-10 13:26:16');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
 VALUES (1449735103088427008, 1, 'basic:system:loginLog', '登录日志', '20', 144313439471271947, '01', '',
-        '/sysFunction/loginLog', '/basic/system/baseLoginLog/index', '', 'ant-design:login-outlined', b'0', b'0', b'1',
-        4, '', b'0', b'1', NULL, NULL, NULL, '/144313439471271947/', 1, '{}', 2, '2021-12-12 12:12:12',
-        1452186486253289472, '2021-12-12 12:12:12');
+        '/basic/sysFunction/loginLog', '/basic/system/baseLoginLog/index', '', 'ant-design:login-outlined', b'0', b'0',
+        b'1', 4, '', b'0', b'1', NULL, NULL, NULL, '/144313439471271947/', 1, '{}', 2, '2021-12-12 12:12:12', 2,
+        '2025-05-10 13:26:39');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
@@ -4599,9 +4264,9 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
 VALUES (1460436763976663040, 1, 'basic:msg:msg:add', '发布消息', '20', 1449734007292952576, '01', '',
-        '/msg/msg/:type/:id', '/basic/msg/extendMsg/Edit', '', '', b'1', b'0', b'1', 1, '', b'0', b'1', NULL, NULL,
-        NULL, '/1449733521265393664/1449734007292952576/', 2, '{\"currentActiveMenu\":\"/msg/msg\"}',
-        1452186486253289472, '2021-12-12 12:12:12', 2, '2024-05-15 23:04:39');
+        '/basic/msg/msg/:type/:id', '/basic/msg/extendMsg/Edit', '', '', b'1', b'0', b'1', 1, '', b'0', b'1', NULL,
+        NULL, NULL, '/1449733521265393664/1449734007292952576/', 2, '{\"currentActiveMenu\":\"/msg/msg\"}',
+        1452186486253289472, '2021-12-12 12:12:12', 2, '2025-05-10 13:27:42');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
@@ -4624,9 +4289,9 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
                             `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`,
                             `updated_by`, `updated_time`)
 VALUES (1460468030063509504, 1, 'basic:msg:myMsg:edit', '查看我的消息', '20', 1449733787893104640, '01', '',
-        '/msg/myMsg/:type/:id', '/basic/msg/extendNotice/Edit', '', '', b'1', b'0', b'1', 1, '', b'0', b'1', NULL, NULL,
-        NULL, '/1449733521265393664/1449733787893104640/', 2, '{\"currentActiveMenu\":\"/msg/myMsg\"}',
-        1452186486253289472, '2021-12-12 12:12:12', 2, '2024-05-15 23:05:56');
+        '/basic/msg/myMsg/:type/:id', '/basic/msg/extendNotice/Edit', '', '', b'1', b'0', b'1', 1, '', b'0', b'1', NULL,
+        NULL, NULL, '/1449733521265393664/1449733787893104640/', 2, '{\"currentActiveMenu\":\"/msg/myMsg\"}',
+        1452186486253289472, '2021-12-12 12:12:12', 2, '2025-05-10 13:28:08');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`,
                             `describe_`, `path`, `component`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`,
                             `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`,
@@ -4986,11 +4651,6 @@ VALUES (167990267029225491, 1457665444381982720, 'BasePositionController', 'kpu-
         '2021-12-11 23:41:21');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
                                 `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (167990267029225504, 1449735103088427008, 'BaseLoginLogController', 'kpu-base-server', 'POST',
-        '登录日志-分页列表查询', '/base/baseLoginLog/page', b'0', 1452186486253289472, '2021-12-12 00:28:52',
-        1452186486253289472, '2021-12-12 00:28:52');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
 VALUES (167990267029225505, 1460540557393657856, 'BaseLoginLogController', 'kpu-base-server', 'DELETE',
         '登录日志-清空日志', '/base/baseLoginLog/clear', b'0', 1452186486253289472, '2021-12-12 00:29:25',
         1452186486253289472, '2021-12-12 00:29:25');
@@ -5006,11 +4666,6 @@ VALUES (167990267029225507, 1460540612146102272, 'BaseLoginLogController', 'kpu-
         1452186486253289472, '2021-12-12 00:30:14');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
                                 `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (167990267029225508, 1449734944434683904, 'BaseOperationLogController', 'kpu-base-server', 'POST',
-        '操作日志-分页列表查询', '/base/baseOperationLog/page', b'0', 1452186486253289472, '2021-12-12 00:30:33',
-        1452186486253289472, '2021-12-12 00:30:33');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
 VALUES (167990267029225509, 1460538960118808576, 'BaseOperationLogController', 'kpu-base-server', 'DELETE',
         '操作日志-清空日志', '/base/baseOperationLog/clear', b'0', 1452186486253289472, '2021-12-12 00:31:01',
         1452186486253289472, '2021-12-12 00:31:01');
@@ -5024,11 +4679,6 @@ INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_appli
 VALUES (167990267029225511, 1460539047851065344, 'BaseOperationLogController', 'kpu-base-server', 'GET',
         '操作日志-查询单体详情', '/base/baseOperationLog/detail', b'0', 1452186486253289472, '2021-12-12 00:31:30',
         1452186486253289472, '2021-12-12 00:31:30');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (167990267029225512, 1449734707225821184, 'FileController', 'kpu-base-server', 'POST',
-        '文件实时上传-分页列表查询', '/base/file/page', b'0', 1452186486253289472, '2021-12-12 00:50:10',
-        1452186486253289472, '2021-12-12 00:50:10');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
                                 `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
 VALUES (167990267029225513, 1460540979420332032, 'FileController', 'kpu-base-server', 'DELETE', '文件实时上传-删除',
@@ -5452,39 +5102,9 @@ VALUES (169380096971374684, 1460547794912673792, 'DefParameterController', 'kpu-
         1452186486253289472, '2021-12-15 17:16:55');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
                                 `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (172353511420329985, 172353511420329984, 'FileDefController', 'kpu-base-server', 'POST',
-        '默认库-文件操作接口-分页列表查询', '/base/file/def/page', b'0', 1452186486253289472, '2021-12-23 11:16:30',
-        1452186486253289472, '2021-12-23 11:16:30');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
 VALUES (172353511420329990, 172353511420329989, 'FileDefController', 'kpu-base-server', 'DELETE',
         '默认库-文件操作接口-删除', '/base/file/def', b'0', 1452186486253289472, '2021-12-23 11:19:09',
         1452186486253289472, '2021-12-23 11:19:09');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (179951682229108736, 1449734450995789824, 'DefApplicationController', 'kpu-system-server', 'GET',
-        '应用-查询可用的应用资源列表', '/system/defApplication/findAvailableApplicationResourceList', b'0',
-        1452186486253289472, '2022-01-12 22:35:53', 1452186486253289472, '2022-01-12 22:35:53');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (179951682229108737, 1449734450995789824, 'BaseRoleController', 'kpu-base-server', 'GET',
-        '角色-查询角色拥有的资源id集合', '/base/baseRole/resourceList', b'0', 1452186486253289472,
-        '2022-01-12 22:35:53', 1452186486253289472, '2022-01-12 22:35:53');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (179951682229108738, 1449734450995789824, 'BaseRoleController', 'kpu-base-server', 'POST', '角色-分页列表查询',
-        '/base/baseRole/page', b'0', 1452186486253289472, '2022-01-12 22:35:53', 1452186486253289472,
-        '2022-01-12 22:35:53');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (179951682229108739, 1449734450995789824, 'BaseRoleController', 'kpu-base-server', 'GET',
-        '角色-查询角色拥有的数据权限ID', '/base/baseRole/findResourceDataScopeIdByRoleId', b'0', 1452186486253289472,
-        '2022-01-12 22:35:53', 1452186486253289472, '2022-01-12 22:35:53');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (179951682229108740, 1449734450995789824, 'DefApplicationController', 'kpu-system-server', 'GET',
-        '应用-查询可用的应用数据权限列表', '/system/defApplication/findAvailableApplicationDataScopeList', b'0',
-        1452186486253289472, '2022-01-12 22:35:53', 1452186486253289472, '2022-01-12 22:35:53');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
                                 `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
 VALUES (199848844077301780, 199848844077301779, 'BaseEmployeeController', 'kpu-boot-server', 'POST',
@@ -5635,21 +5255,6 @@ INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_appli
 VALUES (221743822848131082, 221743822848131072, 'DefDatasourceConfigController', 'kpu-system-server', 'POST',
         '数据源-分页列表查询', '/system/defDatasourceConfig/page', b'0', 1452186486253289472, '2022-05-05 16:08:17',
         1452186486253289472, '2022-05-05 16:08:17');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (237425014733799437, 206499429136465920, 'DefGenProjectController', 'kpu-generator-server', 'POST',
-        '项目生成-生成项目', '/generator/defGenProject/generator', b'0', 1452186486253289472, '2022-06-16 20:40:41',
-        1452186486253289472, '2022-06-16 20:40:41');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (237425014733799438, 206499429136465920, 'DefGenProjectController', 'kpu-generator-server', 'POST',
-        '项目生成-获取默认配置', '/generator/defGenProject/getDef', b'0', 1452186486253289472, '2022-06-16 20:40:41',
-        1452186486253289472, '2022-06-16 20:40:41');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (237425014733799439, 206499429136465920, 'DefGenProjectController', 'kpu-boot-server-none', 'POST',
-        '项目生成-下载项目', '/generator/defGenProject/download', b'0', 1452186486253289472, '2022-06-16 20:40:41',
-        1452186486253289472, '2022-06-16 20:40:41');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
                                 `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
 VALUES (237425014733799442, 201343651610099712, 'DefGenTableController', 'kpu-generator-server', 'GET',
@@ -5827,31 +5432,6 @@ VALUES (253596752014213245, 250025856074776583, 'DefMsgTemplateController', 'kpu
         '2022-07-31 00:03:15', 1452186486253289472, '2022-07-31 00:03:15');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
                                 `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (254523790640283648, 1449734007292952576, 'ExtendMsgController', 'kpu-base-server', 'POST', '消息-分页列表查询',
-        '/base/extendMsg/page', b'0', 1452186486253289472, '2022-08-01 21:51:02', 1452186486253289472,
-        '2022-08-01 21:51:02');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (254523790640283649, 1449734007292952576, 'BaseEmployeeController', 'kpu-base-server', 'POST', '员工-批量查询',
-        '/base/baseEmployee/query', b'0', 1452186486253289472, '2022-08-01 21:51:02', 1452186486253289472,
-        '2022-08-01 21:51:02');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (254523790640283650, 1460436763976663040, 'ExtendMsgController', 'kpu-base-server', 'GET', '消息-查询消息中心',
-        '/base/extendMsg/{id}', b'0', 1452186486253289472, '2022-08-01 21:51:57', 1452186486253289472,
-        '2022-08-01 21:51:57');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (254523790640283651, 1460436763976663040, 'ExtendMsgController', 'kpu-base-server', 'POST', '消息-发布站内信',
-        '/base/extendMsg/publish', b'0', 1452186486253289472, '2022-08-01 21:51:57', 1452186486253289472,
-        '2022-08-01 21:51:57');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (254523790640283652, 1460436763976663040, 'ExtendMsgController', 'kpu-base-server', 'GET', '消息-查询单体详情',
-        '/base/extendMsg/detail', b'0', 1452186486253289472, '2022-08-01 21:51:57', 1452186486253289472,
-        '2022-08-01 21:51:57');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
-                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
 VALUES (254523790640283653, 1460436856054218752, 'ExtendMsgController', 'kpu-base-server', 'POST', '消息-发布站内信',
         '/base/extendMsg/publish', b'0', 1452186486253289472, '2022-08-01 21:52:20', 1452186486253289472,
         '2022-08-01 21:52:20');
@@ -5910,13 +5490,98 @@ VALUES (529783477227333638, 529783477227333637, 'DefUserController', 'kpu-system
         '/system/defUser/onlineUsers/logout', b'0', 2, '2024-08-12 16:20:53', 2, '2024-08-12 16:20:53');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
                                 `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (529783477227333639, 529783477227333632, 'DefUserController', 'kpu-system-server', 'POST',
-        '用户获取此 Session 绑定的 Token 签名列表 ', '/system/defUser/onlineUsers/getTokenSignList', b'0', 2,
-        '2024-08-12 16:21:25', 2, '2024-08-12 16:21:25');
+VALUES (630298777244576768, 206499429136465920, 'DefGenProjectController', 'kpu-generator-server', 'POST',
+        '项目生成-生成项目', '/generator/defGenProject/generator', b'0', 2, '2025-05-10 13:14:19', 2,
+        '2025-05-10 13:14:19');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
                                 `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
-VALUES (529783477227333640, 529783477227333632, 'DefUserController', 'kpu-system-server', 'POST', '用户获取在线人员',
-        '/system/defUser/onlineUsers/page', b'0', 2, '2024-08-12 16:21:25', 2, '2024-08-12 16:21:25');
+VALUES (630298777244576769, 206499429136465920, 'DefGenProjectController', 'kpu-generator-server', 'POST',
+        '项目生成-获取默认配置', '/generator/defGenProject/getDef', b'0', 2, '2025-05-10 13:14:19', 2,
+        '2025-05-10 13:14:19');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576770, 206499429136465920, 'DefGenProjectController', 'kpu-boot-server-none', 'POST',
+        '项目生成-下载项目', '/generator/defGenProject/download', b'0', 2, '2025-05-10 13:14:19', 2,
+        '2025-05-10 13:14:19');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576771, 529783477227333632, 'DefUserController', 'kpu-system-server', 'POST',
+        '用户获取此 Session 绑定的 Token 签名列表 ', '/system/defUser/onlineUsers/getTokenSignList', b'0', 2,
+        '2025-05-10 13:16:47', 2, '2025-05-10 13:16:47');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576772, 529783477227333632, 'DefUserController', 'kpu-system-server', 'POST', '用户获取在线人员',
+        '/system/defUser/onlineUsers/page', b'0', 2, '2025-05-10 13:16:47', 2, '2025-05-10 13:16:47');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576775, 1449734707225821184, 'FileController', 'kpu-base-server', 'POST',
+        '文件实时上传-分页列表查询', '/base/file/page', b'0', 2, '2025-05-10 13:25:53', 2, '2025-05-10 13:25:53');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576776, 1449734944434683904, 'BaseOperationLogController', 'kpu-base-server', 'POST',
+        '操作日志-分页列表查询', '/base/baseOperationLog/page', b'0', 2, '2025-05-10 13:26:16', 2,
+        '2025-05-10 13:26:16');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576777, 1449735103088427008, 'BaseLoginLogController', 'kpu-base-server', 'POST',
+        '登录日志-分页列表查询', '/base/baseLoginLog/page', b'0', 2, '2025-05-10 13:26:39', 2, '2025-05-10 13:26:39');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576778, 1449734450995789824, 'DefApplicationController', 'kpu-system-server', 'GET',
+        '应用-查询可用的应用资源列表', '/system/defApplication/findAvailableApplicationResourceList', b'0', 2,
+        '2025-05-10 13:26:52', 2, '2025-05-10 13:26:52');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576779, 1449734450995789824, 'BaseRoleController', 'kpu-base-server', 'GET',
+        '角色-查询角色拥有的资源id集合', '/base/baseRole/resourceList', b'0', 2, '2025-05-10 13:26:52', 2,
+        '2025-05-10 13:26:52');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576780, 1449734450995789824, 'BaseRoleController', 'kpu-base-server', 'POST', '角色-分页列表查询',
+        '/base/baseRole/page', b'0', 2, '2025-05-10 13:26:52', 2, '2025-05-10 13:26:52');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576781, 1449734450995789824, 'BaseRoleController', 'kpu-base-server', 'GET',
+        '角色-查询角色拥有的数据权限ID', '/base/baseRole/findResourceDataScopeIdByRoleId', b'0', 2,
+        '2025-05-10 13:26:52', 2, '2025-05-10 13:26:52');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576782, 1449734450995789824, 'DefApplicationController', 'kpu-system-server', 'GET',
+        '应用-查询可用的应用数据权限列表', '/system/defApplication/findAvailableApplicationDataScopeList', b'0', 2,
+        '2025-05-10 13:26:52', 2, '2025-05-10 13:26:52');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576783, 1449734007292952576, 'ExtendMsgController', 'kpu-base-server', 'POST', '消息-分页列表查询',
+        '/base/extendMsg/page', b'0', 2, '2025-05-10 13:27:33', 2, '2025-05-10 13:27:33');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576784, 1449734007292952576, 'BaseEmployeeController', 'kpu-base-server', 'POST', '员工批量查询',
+        '/base/baseEmployee/query', b'0', 2, '2025-05-10 13:27:33', 2, '2025-05-10 13:27:33');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576785, 1449734007292952576, 'BaseEmployeeController', 'kpu-base-server', 'POST',
+        '员工根据Id批量查询', '/base/baseEmployee/findByIds', b'0', 2, '2025-05-10 13:27:33', 2, '2025-05-10 13:27:33');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576786, 1460436763976663040, 'ExtendMsgController', 'kpu-base-server', 'GET', '消息-查询消息中心',
+        '/base/extendMsg/{id}', b'0', 2, '2025-05-10 13:27:42', 2, '2025-05-10 13:27:42');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576787, 1460436763976663040, 'ExtendMsgController', 'kpu-base-server', 'POST', '消息-发布站内信',
+        '/base/extendMsg/publish', b'0', 2, '2025-05-10 13:27:42', 2, '2025-05-10 13:27:42');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576788, 1460436763976663040, 'ExtendMsgController', 'kpu-base-server', 'GET', '消息-查询单体详情',
+        '/base/extendMsg/detail', b'0', 2, '2025-05-10 13:27:42', 2, '2025-05-10 13:27:42');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576789, 1460436763976663040, 'BaseEmployeeController', 'kpu-base-server', 'POST',
+        '员工根据Id批量查询', '/base/baseEmployee/findByIds', b'0', 2, '2025-05-10 13:27:42', 2, '2025-05-10 13:27:42');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`,
+                                `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`)
+VALUES (630298777244576790, 172353511420329984, 'FileDefController', 'kpu-base-server', 'POST',
+        '默认库-文件操作接口-分页列表查询', '/base/file/def/page', b'0', 2, '2025-05-10 13:30:07', 2,
+        '2025-05-10 13:30:07');
 COMMIT;
 
 -- ----------------------------
@@ -5974,7 +5639,7 @@ INSERT INTO `def_user` (`id`, `username`, `nick_name`, `email`, `mobile`, `id_ca
 VALUES (2, 'admin', '内置超管', 'admin@qq.com', '15211111111', NULL, '1', '2', b'0', '01', '02', '1', b'1',
         '老子今天不上班，爽翻，巴适得板。', NULL, 0, NULL,
         'd3cf98806ab5ea6094bdfaa8d321b3e86142c7cd9032e333fb79eb8ab4f326aa', 'd0OAyArl0f0X9594rfQU',
-        '2025-04-25 12:53:48', 1, '2021-10-24 16:13:33', 2, '2025-04-02 05:38:07');
+        '2025-05-10 16:26:33', 1, '2021-10-24 16:13:33', 2, '2025-05-10 14:37:07');
 INSERT INTO `def_user` (`id`, `username`, `nick_name`, `email`, `mobile`, `id_card`, `wx_open_id`, `dd_open_id`,
                         `readonly`, `nation`, `education`, `sex`, `state`, `work_describe`, `password_error_last_time`,
                         `password_error_num`, `password_expire_time`, `password`, `salt`, `last_login_time`,
@@ -6165,140 +5830,6 @@ CREATE TABLE `extend_notice`
 -- Records of extend_notice
 -- ----------------------------
 BEGIN;
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (614058582480276489, 614058582480276485, NULL, NULL, 1, '03', NULL,
-        '尊敬的用户,jj：\n  近期服务器迁移，需要停服2天，特此通知。', NULL, NULL, NULL, b'1', NULL, NULL, b'0', b'0',
-        '2025-03-27 18:24:36', 2, '2025-03-27 18:24:36', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (614058582480277124, 614058582480277119, NULL, NULL, 1457904456589901824, '01', 'test', '<p>test</p>', 'test',
-        NULL, NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-28 05:29:40', 2, '2025-03-28 05:29:40', 2,
-        1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (614058582480277125, 614058582480277119, NULL, NULL, 1454329823978586112, '01', 'test', '<p>test</p>', 'test',
-        NULL, NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-28 05:29:40', 2, '2025-03-28 05:29:40', 2,
-        1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (614058582480277126, 614058582480277119, NULL, NULL, 1452186486492364800, '01', 'test', '<p>test</p>', 'test',
-        NULL, NULL, b'1', NULL, '2025-03-31 06:57:58', b'1', b'0', '2025-03-28 05:29:40', 2, '2025-03-28 05:29:40', 2,
-        1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (614058582480277127, 614058582480277119, NULL, NULL, 160566476187631622, '01', 'test', '<p>test</p>', 'test',
-        NULL, NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-28 05:29:40', 2, '2025-03-28 05:29:40', 2,
-        1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (614058582480277152, 614058582480277150, NULL, NULL, 160566476187631622, '03', 'test2', '<p>TEST2</p>',
-        '托尔斯泰', NULL, NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-28 05:53:21', 2, '2025-03-28 05:53:21', 2,
-        1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382777, 615254580548382775, NULL, NULL, 160566476187631622, '03', 'test2', '<p>TEST2</p>',
-        '托尔斯泰', NULL, NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 06:57:48', 2, '2025-03-31 06:57:48', 2,
-        1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382807, 615254580548382802, NULL, NULL, 1457904456589901824, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:01:50', 2, '2025-03-31 07:01:50', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382808, 615254580548382802, NULL, NULL, 1454329823978586112, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:01:50', 2, '2025-03-31 07:01:50', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382809, 615254580548382802, NULL, NULL, 1452186486492364800, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:01:50', 2, '2025-03-31 07:01:50', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382810, 615254580548382802, NULL, NULL, 160566476187631622, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:01:50', 2, '2025-03-31 07:01:50', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382821, 615254580548382816, NULL, NULL, 1452186486492364800, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:02:50', 2, '2025-03-31 07:02:50', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382822, 615254580548382816, NULL, NULL, 1454329823978586112, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:02:50', 2, '2025-03-31 07:02:50', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382823, 615254580548382816, NULL, NULL, 1457904456589901824, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:02:50', 2, '2025-03-31 07:02:50', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382824, 615254580548382816, NULL, NULL, 160566476187631622, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:02:50', 2, '2025-03-31 07:02:50', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382835, 615254580548382830, NULL, NULL, 1452186486492364800, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:03:24', 2, '2025-03-31 07:03:24', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382836, 615254580548382830, NULL, NULL, 1454329823978586112, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:03:24', 2, '2025-03-31 07:03:24', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382837, 615254580548382830, NULL, NULL, 1457904456589901824, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:03:24', 2, '2025-03-31 07:03:24', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382838, 615254580548382830, NULL, NULL, 160566476187631622, '01', 'test', '<p>1</p>', 'test', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:03:24', 2, '2025-03-31 07:03:24', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382853, 615254580548382849, NULL, NULL, 1454329823978586112, '01', 'lm', '<p>lm</p>', 'lm', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:04:15', 2, '2025-03-31 07:04:15', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382854, 615254580548382849, NULL, NULL, 1452186486492364800, '01', 'lm', '<p>lm</p>', 'lm', NULL,
-        NULL, b'1', NULL, '2025-03-31 07:05:06', b'1', b'0', '2025-03-31 07:04:15', 2, '2025-03-31 07:04:15', 2,
-        1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382855, 615254580548382849, NULL, NULL, 160566476187631622, '01', 'lm', '<p>lm</p>', 'lm', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:04:15', 2, '2025-03-31 07:04:15', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382865, 615254580548382861, NULL, NULL, 1452186486492364800, '01', 'lm', '<p>lm</p>', 'lm', NULL,
-        NULL, b'1', NULL, '2025-03-31 07:04:54', b'1', b'0', '2025-03-31 07:04:39', 2, '2025-03-31 07:04:39', 2,
-        1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382866, 615254580548382861, NULL, NULL, 1454329823978586112, '01', 'lm', '<p>lm</p>', 'lm', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:04:39', 2, '2025-03-31 07:04:39', 2, 1451532821628715008);
-INSERT INTO `extend_notice` (`id`, `msg_id`, `biz_id`, `biz_type`, `recipient_id`, `remind_mode`, `title`, `content`,
-                             `author`, `url`, `target_`, `auto_read`, `handle_time`, `read_time`, `is_read`,
-                             `is_handle`, `created_time`, `created_by`, `updated_time`, `updated_by`, `created_org_id`)
-VALUES (615254580548382867, 615254580548382861, NULL, NULL, 160566476187631622, '01', 'lm', '<p>lm</p>', 'lm', NULL,
-        NULL, b'1', NULL, NULL, b'0', b'0', '2025-03-31 07:04:39', 2, '2025-03-31 07:04:39', 2, 1451532821628715008);
 COMMIT;
 
 -- ----------------------------
@@ -6340,829 +5871,12 @@ CREATE TABLE `worker_node`
     `modified`    timestamp   NULL DEFAULT NULL COMMENT '修改时间',
     `created`     timestamp   NULL DEFAULT NULL COMMENT '创建时间',
     PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB
-  AUTO_INCREMENT = 392 COMMENT ='DB;WorkerID Assigner for UID Generator';
+) ENGINE = InnoDB COMMENT ='DB;WorkerID Assigner for UID Generator';
 
 -- ----------------------------
 -- Records of worker_node
 -- ----------------------------
 BEGIN;
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (113, '2408:8352:e60:73f4:fd7b:6809:65a:4f79%en0', '1736634979187-80828', 2, '2025-01-12', '2025-01-12 06:36:19',
-        '2025-01-12 06:36:19');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (114, '2408:8352:e60:73f4:781d:3c6c:d1d1:293%en0', '1737127516833-10911', 2, '2025-01-17', '2025-01-17 23:25:17',
-        '2025-01-17 23:25:17');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (115, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737524449776-38293', 2, '2025-01-22',
-        '2025-01-22 13:40:50', '2025-01-22 13:40:50');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (116, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737526616552-41651', 2, '2025-01-22',
-        '2025-01-22 14:16:57', '2025-01-22 14:16:57');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (117, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737526677868-13508', 2, '2025-01-22',
-        '2025-01-22 14:17:58', '2025-01-22 14:17:58');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (118, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737538225941-82977', 2, '2025-01-22',
-        '2025-01-22 17:30:26', '2025-01-22 17:30:26');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (119, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737538944541-57736', 2, '2025-01-22',
-        '2025-01-22 17:42:25', '2025-01-22 17:42:25');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (120, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737539134700-69324', 2, '2025-01-22',
-        '2025-01-22 17:45:35', '2025-01-22 17:45:35');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (121, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737539328330-32270', 2, '2025-01-22',
-        '2025-01-22 17:48:48', '2025-01-22 17:48:48');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (122, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737539843956-31334', 2, '2025-01-22',
-        '2025-01-22 17:57:24', '2025-01-22 17:57:24');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (123, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737540718798-87876', 2, '2025-01-22',
-        '2025-01-22 18:11:59', '2025-01-22 18:11:59');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (124, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737541092504-49438', 2, '2025-01-22',
-        '2025-01-22 18:18:13', '2025-01-22 18:18:13');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (125, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737541187157-75587', 2, '2025-01-22',
-        '2025-01-22 18:19:47', '2025-01-22 18:19:47');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (126, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737541949529-66772', 2, '2025-01-22',
-        '2025-01-22 18:32:30', '2025-01-22 18:32:30');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (127, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737546963919-52726', 2, '2025-01-22',
-        '2025-01-22 19:56:04', '2025-01-22 19:56:04');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (128, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737546999225-67023', 2, '2025-01-22',
-        '2025-01-22 19:56:39', '2025-01-22 19:56:39');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (129, '2408:8352:e60:73f4:f092:e5b8:de0c:1457%en0', '1737555434938-75809', 2, '2025-01-22',
-        '2025-01-22 22:17:15', '2025-01-22 22:17:15');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (130, '192.168.31.164', '1738134677876-47754', 2, '2025-01-29', '2025-01-29 15:11:18', '2025-01-29 15:11:18');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (131, '192.168.31.164', '1738387884318-74407', 2, '2025-02-01', '2025-02-01 13:31:24', '2025-02-01 13:31:24');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (132, '192.168.31.164', '1738387910960-8545', 2, '2025-02-01', '2025-02-01 13:31:51', '2025-02-01 13:31:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (133, '192.168.31.164', '1738652068848-14065', 2, '2025-02-04', '2025-02-04 14:54:29', '2025-02-04 14:54:29');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (134, '198.18.0.1', '1738652929696-69706', 2, '2025-02-04', '2025-02-04 15:08:50', '2025-02-04 15:08:50');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (135, '2408:8352:e60:73f4:e99b:2e16:bb22:b1c4%en0', '1739006274659-44917', 2, '2025-02-08',
-        '2025-02-08 17:17:55', '2025-02-08 17:17:55');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (136, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739083064806-49401', 2, '2025-02-09',
-        '2025-02-09 14:37:45', '2025-02-09 14:37:45');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (137, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739083487338-91109', 2, '2025-02-09',
-        '2025-02-09 14:44:47', '2025-02-09 14:44:47');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (138, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739086308664-41264', 2, '2025-02-09',
-        '2025-02-09 15:31:49', '2025-02-09 15:31:49');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (139, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739087147409-95271', 2, '2025-02-09',
-        '2025-02-09 15:45:47', '2025-02-09 15:45:47');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (140, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739171451126-29899', 2, '2025-02-10',
-        '2025-02-10 15:10:51', '2025-02-10 15:10:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (141, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739172441339-10187', 2, '2025-02-10',
-        '2025-02-10 15:27:21', '2025-02-10 15:27:21');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (142, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739172563962-44776', 2, '2025-02-10',
-        '2025-02-10 15:29:24', '2025-02-10 15:29:24');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (143, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739172986590-31780', 2, '2025-02-10',
-        '2025-02-10 15:36:27', '2025-02-10 15:36:27');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (144, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739173321632-39434', 2, '2025-02-10',
-        '2025-02-10 15:42:02', '2025-02-10 15:42:02');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (145, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739173382463-49263', 2, '2025-02-10',
-        '2025-02-10 15:43:02', '2025-02-10 15:43:02');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (146, '2408:8352:e60:73f4:2909:e3bf:7597:9f16%en0', '1739173580869-40812', 2, '2025-02-10',
-        '2025-02-10 15:46:21', '2025-02-10 15:46:21');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (147, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739175318487-41244', 2, '2025-02-10', '2025-02-10 16:15:18',
-        '2025-02-10 16:15:18');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (148, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739175790806-99254', 2, '2025-02-10', '2025-02-10 16:23:11',
-        '2025-02-10 16:23:11');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (149, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739176936700-90768', 2, '2025-02-10', '2025-02-10 16:42:17',
-        '2025-02-10 16:42:17');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (150, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739177455787-65408', 2, '2025-02-10', '2025-02-10 16:50:56',
-        '2025-02-10 16:50:56');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (151, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739177684673-88478', 2, '2025-02-10', '2025-02-10 16:54:45',
-        '2025-02-10 16:54:45');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (152, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739177912950-11127', 2, '2025-02-10', '2025-02-10 16:58:33',
-        '2025-02-10 16:58:33');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (153, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739178664080-93599', 2, '2025-02-10', '2025-02-10 17:11:04',
-        '2025-02-10 17:11:04');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (154, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739194922829-17505', 2, '2025-02-10', '2025-02-10 21:42:03',
-        '2025-02-10 21:42:03');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (155, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739295844548-60815', 2, '2025-02-12', '2025-02-12 01:44:05',
-        '2025-02-12 01:44:05');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (156, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739296181097-94208', 2, '2025-02-12', '2025-02-12 01:49:41',
-        '2025-02-12 01:49:41');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (157, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739338352003-6957', 2, '2025-02-12', '2025-02-12 13:32:32',
-        '2025-02-12 13:32:32');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (158, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739338664389-55661', 2, '2025-02-12', '2025-02-12 13:37:44',
-        '2025-02-12 13:37:44');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (159, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739338726529-83876', 2, '2025-02-12', '2025-02-12 13:38:47',
-        '2025-02-12 13:38:47');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (160, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739338904195-94959', 2, '2025-02-12', '2025-02-12 13:41:44',
-        '2025-02-12 13:41:44');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (161, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739338982407-59237', 2, '2025-02-12', '2025-02-12 13:43:02',
-        '2025-02-12 13:43:02');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (162, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739339135484-72312', 2, '2025-02-12', '2025-02-12 13:45:35',
-        '2025-02-12 13:45:35');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (163, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739339295985-98852', 2, '2025-02-12', '2025-02-12 13:48:16',
-        '2025-02-12 13:48:16');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (164, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739339409504-70957', 2, '2025-02-12', '2025-02-12 13:50:10',
-        '2025-02-12 13:50:10');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (165, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739339753889-5629', 2, '2025-02-12', '2025-02-12 13:55:54',
-        '2025-02-12 13:55:54');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (166, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739340286291-42374', 2, '2025-02-12', '2025-02-12 14:04:46',
-        '2025-02-12 14:04:46');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (167, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739340336679-42193', 2, '2025-02-12', '2025-02-12 14:05:37',
-        '2025-02-12 14:05:37');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (168, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739340434211-9199', 2, '2025-02-12', '2025-02-12 14:07:14',
-        '2025-02-12 14:07:14');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (169, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739340575965-46318', 2, '2025-02-12', '2025-02-12 14:09:36',
-        '2025-02-12 14:09:36');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (170, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739340654433-22687', 2, '2025-02-12', '2025-02-12 14:10:54',
-        '2025-02-12 14:10:54');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (171, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739340813708-50072', 2, '2025-02-12', '2025-02-12 14:13:34',
-        '2025-02-12 14:13:34');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (172, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739340869541-73402', 2, '2025-02-12', '2025-02-12 14:14:30',
-        '2025-02-12 14:14:30');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (173, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739340945287-68437', 2, '2025-02-12', '2025-02-12 14:15:45',
-        '2025-02-12 14:15:45');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (174, '2408:8352:e60:73f4:41f:b423:fe1:519f%en0', '1739341269341-19464', 2, '2025-02-12', '2025-02-12 14:21:09',
-        '2025-02-12 14:21:09');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (175, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739341663895-54824', 2, '2025-02-12',
-        '2025-02-12 14:27:44', '2025-02-12 14:27:44');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (176, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739341816586-84288', 2, '2025-02-12',
-        '2025-02-12 14:30:17', '2025-02-12 14:30:17');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (177, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739342139576-37045', 2, '2025-02-12',
-        '2025-02-12 14:35:40', '2025-02-12 14:35:40');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (178, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739342224580-67794', 2, '2025-02-12',
-        '2025-02-12 14:37:05', '2025-02-12 14:37:05');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (179, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739342312581-90880', 2, '2025-02-12',
-        '2025-02-12 14:38:33', '2025-02-12 14:38:33');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (180, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739342424978-98842', 2, '2025-02-12',
-        '2025-02-12 14:40:25', '2025-02-12 14:40:25');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (181, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739342595628-69458', 2, '2025-02-12',
-        '2025-02-12 14:43:16', '2025-02-12 14:43:16');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (182, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739343040275-60089', 2, '2025-02-12',
-        '2025-02-12 14:50:40', '2025-02-12 14:50:40');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (183, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739343516812-10476', 2, '2025-02-12',
-        '2025-02-12 14:58:37', '2025-02-12 14:58:37');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (184, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739343968603-76490', 2, '2025-02-12',
-        '2025-02-12 15:06:09', '2025-02-12 15:06:09');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (185, '2408:8352:e60:73f4:c5ac:e56d:afb1:31e4%en0', '1739344126323-10239', 2, '2025-02-12',
-        '2025-02-12 15:08:46', '2025-02-12 15:08:46');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (186, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443015818-23373', 2, '2025-02-13',
-        '2025-02-13 18:36:56', '2025-02-13 18:36:56');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (187, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443237560-69046', 2, '2025-02-13',
-        '2025-02-13 18:40:38', '2025-02-13 18:40:38');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (188, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443371493-9492', 2, '2025-02-13', '2025-02-13 18:42:51',
-        '2025-02-13 18:42:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (189, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443559320-23288', 2, '2025-02-13',
-        '2025-02-13 18:45:59', '2025-02-13 18:45:59');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (190, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443609440-51149', 2, '2025-02-13',
-        '2025-02-13 18:46:49', '2025-02-13 18:46:49');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (191, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443705385-54552', 2, '2025-02-13',
-        '2025-02-13 18:48:25', '2025-02-13 18:48:25');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (192, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443743564-52330', 2, '2025-02-13',
-        '2025-02-13 18:49:04', '2025-02-13 18:49:04');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (193, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443795991-93267', 2, '2025-02-13',
-        '2025-02-13 18:49:56', '2025-02-13 18:49:56');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (194, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443857623-12337', 2, '2025-02-13',
-        '2025-02-13 18:50:58', '2025-02-13 18:50:58');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (195, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739443886432-60823', 2, '2025-02-13',
-        '2025-02-13 18:51:26', '2025-02-13 18:51:26');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (196, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739444035715-38893', 2, '2025-02-13',
-        '2025-02-13 18:53:56', '2025-02-13 18:53:56');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (197, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739444232430-6469', 2, '2025-02-13', '2025-02-13 18:57:12',
-        '2025-02-13 18:57:12');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (198, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739444307838-15740', 2, '2025-02-13',
-        '2025-02-13 18:58:28', '2025-02-13 18:58:28');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (199, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739444848436-8433', 2, '2025-02-13', '2025-02-13 19:07:28',
-        '2025-02-13 19:07:28');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (200, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739444903057-21075', 2, '2025-02-13',
-        '2025-02-13 19:08:23', '2025-02-13 19:08:23');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (201, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445036598-27695', 2, '2025-02-13',
-        '2025-02-13 19:10:37', '2025-02-13 19:10:37');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (202, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445187654-40576', 2, '2025-02-13',
-        '2025-02-13 19:13:08', '2025-02-13 19:13:08');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (203, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445234496-7645', 2, '2025-02-13', '2025-02-13 19:13:54',
-        '2025-02-13 19:13:54');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (204, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445346674-38419', 2, '2025-02-13',
-        '2025-02-13 19:15:47', '2025-02-13 19:15:47');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (205, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445396086-77025', 2, '2025-02-13',
-        '2025-02-13 19:16:36', '2025-02-13 19:16:36');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (206, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445467463-91405', 2, '2025-02-13',
-        '2025-02-13 19:17:47', '2025-02-13 19:17:47');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (207, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445533924-31071', 2, '2025-02-13',
-        '2025-02-13 19:18:54', '2025-02-13 19:18:54');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (208, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445600979-4579', 2, '2025-02-13', '2025-02-13 19:20:01',
-        '2025-02-13 19:20:01');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (209, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445700308-73936', 2, '2025-02-13',
-        '2025-02-13 19:21:40', '2025-02-13 19:21:40');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (210, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445773050-93670', 2, '2025-02-13',
-        '2025-02-13 19:22:53', '2025-02-13 19:22:53');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (211, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445837656-42031', 2, '2025-02-13',
-        '2025-02-13 19:23:58', '2025-02-13 19:23:58');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (212, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739445895618-48477', 2, '2025-02-13',
-        '2025-02-13 19:24:56', '2025-02-13 19:24:56');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (213, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446002509-94418', 2, '2025-02-13',
-        '2025-02-13 19:26:43', '2025-02-13 19:26:43');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (214, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446122879-82821', 2, '2025-02-13',
-        '2025-02-13 19:28:43', '2025-02-13 19:28:43');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (215, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446214837-89594', 2, '2025-02-13',
-        '2025-02-13 19:30:15', '2025-02-13 19:30:15');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (216, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446368313-64591', 2, '2025-02-13',
-        '2025-02-13 19:32:48', '2025-02-13 19:32:48');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (217, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446434479-90051', 2, '2025-02-13',
-        '2025-02-13 19:33:54', '2025-02-13 19:33:54');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (218, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446540648-89530', 2, '2025-02-13',
-        '2025-02-13 19:35:41', '2025-02-13 19:35:41');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (219, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446581267-76365', 2, '2025-02-13',
-        '2025-02-13 19:36:21', '2025-02-13 19:36:21');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (220, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446653753-87683', 2, '2025-02-13',
-        '2025-02-13 19:37:34', '2025-02-13 19:37:34');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (221, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446731133-50679', 2, '2025-02-13',
-        '2025-02-13 19:38:51', '2025-02-13 19:38:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (222, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446796575-81291', 2, '2025-02-13',
-        '2025-02-13 19:39:57', '2025-02-13 19:39:57');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (223, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446853745-37521', 2, '2025-02-13',
-        '2025-02-13 19:40:54', '2025-02-13 19:40:54');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (224, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739446950309-60359', 2, '2025-02-13',
-        '2025-02-13 19:42:30', '2025-02-13 19:42:30');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (225, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739447254217-18182', 2, '2025-02-13',
-        '2025-02-13 19:47:34', '2025-02-13 19:47:34');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (226, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739447512938-57105', 2, '2025-02-13',
-        '2025-02-13 19:51:53', '2025-02-13 19:51:53');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (227, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739447624693-35050', 2, '2025-02-13',
-        '2025-02-13 19:53:45', '2025-02-13 19:53:45');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (228, '2408:8352:e60:73f4:f9a2:2591:d75a:f889%en0', '1739447810334-46624', 2, '2025-02-13',
-        '2025-02-13 19:56:50', '2025-02-13 19:56:50');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (229, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739521008886-35687', 2, '2025-02-14',
-        '2025-02-14 16:16:49', '2025-02-14 16:16:49');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (230, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739578481757-12101', 2, '2025-02-15',
-        '2025-02-15 08:14:42', '2025-02-15 08:14:42');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (231, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739639931409-79317', 2, '2025-02-16',
-        '2025-02-16 01:18:51', '2025-02-16 01:18:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (232, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739643097580-13555', 2, '2025-02-16',
-        '2025-02-16 02:11:38', '2025-02-16 02:11:38');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (233, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739643469056-33392', 2, '2025-02-16',
-        '2025-02-16 02:17:49', '2025-02-16 02:17:49');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (234, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739644094288-85254', 2, '2025-02-16',
-        '2025-02-16 02:28:14', '2025-02-16 02:28:14');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (235, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739645471716-4525', 2, '2025-02-16',
-        '2025-02-16 02:51:12', '2025-02-16 02:51:12');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (236, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739645598568-84366', 2, '2025-02-16',
-        '2025-02-16 02:53:19', '2025-02-16 02:53:19');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (237, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739647368166-4392', 2, '2025-02-16',
-        '2025-02-16 03:22:48', '2025-02-16 03:22:48');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (238, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739647809290-35128', 2, '2025-02-16',
-        '2025-02-16 03:30:09', '2025-02-16 03:30:09');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (239, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739647836690-87610', 2, '2025-02-16',
-        '2025-02-16 03:30:37', '2025-02-16 03:30:37');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (240, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739648434559-33372', 2, '2025-02-16',
-        '2025-02-16 03:40:35', '2025-02-16 03:40:35');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (241, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739648736206-18624', 2, '2025-02-16',
-        '2025-02-16 03:45:36', '2025-02-16 03:45:36');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (242, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739648862240-17190', 2, '2025-02-16',
-        '2025-02-16 03:47:42', '2025-02-16 03:47:42');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (243, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739648978991-65564', 2, '2025-02-16',
-        '2025-02-16 03:49:39', '2025-02-16 03:49:39');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (244, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739726870856-54989', 2, '2025-02-17',
-        '2025-02-17 01:27:51', '2025-02-17 01:27:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (245, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739726967651-24712', 2, '2025-02-17',
-        '2025-02-17 01:29:28', '2025-02-17 01:29:28');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (246, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739782190604-86164', 2, '2025-02-17',
-        '2025-02-17 16:49:51', '2025-02-17 16:49:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (247, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739782291979-9860', 2, '2025-02-17',
-        '2025-02-17 16:51:32', '2025-02-17 16:51:32');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (248, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739783202105-6151', 2, '2025-02-17',
-        '2025-02-17 17:06:42', '2025-02-17 17:06:42');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (249, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739783252730-94913', 2, '2025-02-17',
-        '2025-02-17 17:07:33', '2025-02-17 17:07:33');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (250, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739783455169-10963', 2, '2025-02-17',
-        '2025-02-17 17:10:55', '2025-02-17 17:10:55');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (251, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739783754277-87893', 2, '2025-02-17',
-        '2025-02-17 17:15:54', '2025-02-17 17:15:54');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (252, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739785131444-59328', 2, '2025-02-17',
-        '2025-02-17 17:38:51', '2025-02-17 17:38:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (253, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739785150158-16413', 2, '2025-02-17',
-        '2025-02-17 17:39:10', '2025-02-17 17:39:10');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (254, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739787704292-31344', 2, '2025-02-17',
-        '2025-02-17 18:21:44', '2025-02-17 18:21:44');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (255, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739788137904-23290', 2, '2025-02-17',
-        '2025-02-17 18:28:58', '2025-02-17 18:28:58');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (256, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739788272111-80451', 2, '2025-02-17',
-        '2025-02-17 18:31:12', '2025-02-17 18:31:12');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (257, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739788761406-64439', 2, '2025-02-17',
-        '2025-02-17 18:39:21', '2025-02-17 18:39:21');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (258, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739789777577-10817', 2, '2025-02-17',
-        '2025-02-17 18:56:18', '2025-02-17 18:56:18');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (259, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739790628246-37349', 2, '2025-02-17',
-        '2025-02-17 19:10:28', '2025-02-17 19:10:28');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (260, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739790895674-10318', 2, '2025-02-17',
-        '2025-02-17 19:14:56', '2025-02-17 19:14:56');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (261, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739791045565-54321', 2, '2025-02-17',
-        '2025-02-17 19:17:26', '2025-02-17 19:17:26');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (262, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739791242449-96183', 2, '2025-02-17',
-        '2025-02-17 19:20:42', '2025-02-17 19:20:42');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (263, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1739893234702-11143', 2, '2025-02-18',
-        '2025-02-18 23:40:35', '2025-02-18 23:40:35');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (264, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1740454401938-80974', 2, '2025-02-25',
-        '2025-02-25 11:33:22', '2025-02-25 11:33:22');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (265, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1740785980703-29106', 2, '2025-03-01',
-        '2025-03-01 07:39:41', '2025-03-01 07:39:41');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (266, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1740788364421-82198', 2, '2025-03-01',
-        '2025-03-01 08:19:24', '2025-03-01 08:19:24');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (267, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1740790073271-11799', 2, '2025-03-01',
-        '2025-03-01 08:47:53', '2025-03-01 08:47:53');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (268, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1740791692874-34816', 2, '2025-03-01',
-        '2025-03-01 09:14:53', '2025-03-01 09:14:53');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (269, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1741247767131-4149', 2, '2025-03-06',
-        '2025-03-06 15:56:07', '2025-03-06 15:56:07');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (270, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1741247957177-19990', 2, '2025-03-06',
-        '2025-03-06 15:59:17', '2025-03-06 15:59:17');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (271, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1741249167107-42201', 2, '2025-03-06',
-        '2025-03-06 16:19:27', '2025-03-06 16:19:27');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (272, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1742890312794-7681', 2, '2025-03-25',
-        '2025-03-25 16:11:53', '2025-03-25 16:11:53');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (273, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743013294988-89825', 2, '2025-03-27',
-        '2025-03-27 02:21:35', '2025-03-27 02:21:35');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (274, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743070412877-53143', 2, '2025-03-27',
-        '2025-03-27 18:13:33', '2025-03-27 18:13:33');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (275, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743070853875-73914', 2, '2025-03-27',
-        '2025-03-27 18:20:54', '2025-03-27 18:20:54');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (276, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743119457017-12515', 2, '2025-03-28',
-        '2025-03-28 07:50:57', '2025-03-28 07:50:57');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (277, '198.18.0.1', '1743186288000-5426', 2, '2025-03-29', '2025-03-29 02:24:48', '2025-03-29 02:24:48');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (278, '198.18.0.1', '1743188096979-44896', 2, '2025-03-29', '2025-03-29 02:54:57', '2025-03-29 02:54:57');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (279, '198.18.0.1', '1743188700716-2372', 2, '2025-03-29', '2025-03-29 03:05:01', '2025-03-29 03:05:01');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (280, '198.18.0.1', '1743189094599-91977', 2, '2025-03-29', '2025-03-29 03:11:35', '2025-03-29 03:11:35');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (281, '198.18.0.1', '1743189253912-53929', 2, '2025-03-29', '2025-03-29 03:14:14', '2025-03-29 03:14:14');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (282, '198.18.0.1', '1743189562297-13725', 2, '2025-03-29', '2025-03-29 03:19:22', '2025-03-29 03:19:22');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (283, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743192051264-88491', 2, '2025-03-29',
-        '2025-03-29 04:00:51', '2025-03-29 04:00:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (284, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743192450571-45262', 2, '2025-03-29',
-        '2025-03-29 04:07:31', '2025-03-29 04:07:31');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (285, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743193246164-74711', 2, '2025-03-29',
-        '2025-03-29 04:20:46', '2025-03-29 04:20:46');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (286, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743193269363-59440', 2, '2025-03-29',
-        '2025-03-29 04:21:09', '2025-03-29 04:21:09');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (287, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743194110866-40255', 2, '2025-03-29',
-        '2025-03-29 04:35:11', '2025-03-29 04:35:11');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (288, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743194167744-97270', 2, '2025-03-29',
-        '2025-03-29 04:36:08', '2025-03-29 04:36:08');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (289, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743194206689-48487', 2, '2025-03-29',
-        '2025-03-29 04:36:47', '2025-03-29 04:36:47');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (290, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743194287808-24599', 2, '2025-03-29',
-        '2025-03-29 04:38:08', '2025-03-29 04:38:08');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (291, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743194588920-72207', 2, '2025-03-29',
-        '2025-03-29 04:43:09', '2025-03-29 04:43:09');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (292, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743194740067-86832', 2, '2025-03-29',
-        '2025-03-29 04:45:40', '2025-03-29 04:45:40');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (293, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743194832295-69293', 2, '2025-03-29',
-        '2025-03-29 04:47:12', '2025-03-29 04:47:12');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (294, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743195629306-84359', 2, '2025-03-29',
-        '2025-03-29 05:00:29', '2025-03-29 05:00:29');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (295, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743195742287-39472', 2, '2025-03-29',
-        '2025-03-29 05:02:22', '2025-03-29 05:02:22');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (296, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743195882100-50102', 2, '2025-03-29',
-        '2025-03-29 05:04:42', '2025-03-29 05:04:42');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (297, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743196193308-93847', 2, '2025-03-29',
-        '2025-03-29 05:09:53', '2025-03-29 05:09:53');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (298, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743345675235-38941', 2, '2025-03-30',
-        '2025-03-30 22:41:15', '2025-03-30 22:41:15');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (299, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743348771047-18954', 2, '2025-03-30',
-        '2025-03-30 23:32:51', '2025-03-30 23:32:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (300, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743349319224-4898', 2, '2025-03-30',
-        '2025-03-30 23:41:59', '2025-03-30 23:41:59');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (301, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743513284074-40516', 2, '2025-04-01',
-        '2025-04-01 21:14:44', '2025-04-01 21:14:44');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (302, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743513480202-27376', 2, '2025-04-01',
-        '2025-04-01 21:18:00', '2025-04-01 21:18:00');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (303, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743519229655-98505', 2, '2025-04-01',
-        '2025-04-01 22:53:50', '2025-04-01 22:53:50');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (304, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743529709944-33356', 2, '2025-04-02',
-        '2025-04-02 01:48:30', '2025-04-02 01:48:30');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (305, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743529786520-25174', 2, '2025-04-02',
-        '2025-04-02 01:49:47', '2025-04-02 01:49:47');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (306, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743530037308-74148', 2, '2025-04-02',
-        '2025-04-02 01:53:57', '2025-04-02 01:53:57');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (307, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743530262885-10495', 2, '2025-04-02',
-        '2025-04-02 01:57:43', '2025-04-02 01:57:43');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (308, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743530473644-73250', 2, '2025-04-02',
-        '2025-04-02 02:01:14', '2025-04-02 02:01:14');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (309, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743542019477-53558', 2, '2025-04-02',
-        '2025-04-02 05:13:39', '2025-04-02 05:13:39');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (310, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1743544478322-92879', 2, '2025-04-02',
-        '2025-04-02 05:54:38', '2025-04-02 05:54:38');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (311, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1744129942140-5006', 2, '2025-04-09',
-        '2025-04-09 00:32:22', '2025-04-09 00:32:22');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (312, '198.18.0.1', '1744161718995-32619', 2, '2025-04-09', '2025-04-09 09:21:59', '2025-04-09 09:21:59');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (313, '198.18.0.1', '1744162223231-93034', 2, '2025-04-09', '2025-04-09 09:30:23', '2025-04-09 09:30:23');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (314, '198.18.0.1', '1744162226946-33049', 2, '2025-04-09', '2025-04-09 09:30:27', '2025-04-09 09:30:27');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (315, '198.18.0.1', '1744162643506-44771', 2, '2025-04-09', '2025-04-09 09:37:24', '2025-04-09 09:37:24');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (316, '198.18.0.1', '1744162646798-37643', 2, '2025-04-09', '2025-04-09 09:37:27', '2025-04-09 09:37:27');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (317, '198.18.0.1', '1744162804898-96783', 2, '2025-04-09', '2025-04-09 09:40:05', '2025-04-09 09:40:05');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (318, '198.18.0.1', '1744162816305-80535', 2, '2025-04-09', '2025-04-09 09:40:16', '2025-04-09 09:40:16');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (319, '198.18.0.1', '1744162816728-15137', 2, '2025-04-09', '2025-04-09 09:40:17', '2025-04-09 09:40:17');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (320, '198.18.0.1', '1744162824464-66413', 2, '2025-04-09', '2025-04-09 09:40:24', '2025-04-09 09:40:24');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (321, '198.18.0.1', '1744163137237-44250', 2, '2025-04-09', '2025-04-09 09:45:37', '2025-04-09 09:45:37');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (322, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745126995749-6206', 2, '2025-04-20',
-        '2025-04-20 13:29:56', '2025-04-20 13:29:56');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (323, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745441740310-31489', 2, '2025-04-24',
-        '2025-04-24 04:55:40', '2025-04-24 04:55:40');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (324, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745533785425-37210', 2, '2025-04-25',
-        '2025-04-25 06:29:45', '2025-04-25 06:29:45');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (325, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745537748734-32483', 2, '2025-04-25',
-        '2025-04-25 07:35:49', '2025-04-25 07:35:49');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (326, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745537926459-46298', 2, '2025-04-25',
-        '2025-04-25 07:38:46', '2025-04-25 07:38:46');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (327, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745538047626-48024', 2, '2025-04-25',
-        '2025-04-25 07:40:48', '2025-04-25 07:40:48');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (328, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745538064008-28887', 2, '2025-04-25',
-        '2025-04-25 07:41:04', '2025-04-25 07:41:04');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (329, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745538573853-76688', 2, '2025-04-25',
-        '2025-04-25 07:49:34', '2025-04-25 07:49:34');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (330, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745545685240-23762', 2, '2025-04-25',
-        '2025-04-25 09:48:05', '2025-04-25 09:48:05');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (331, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745545703339-26996', 2, '2025-04-25',
-        '2025-04-25 09:48:23', '2025-04-25 09:48:23');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (332, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745545805457-6116', 2, '2025-04-25',
-        '2025-04-25 09:50:05', '2025-04-25 09:50:05');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (333, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745545814698-78258', 2, '2025-04-25',
-        '2025-04-25 09:50:15', '2025-04-25 09:50:15');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (334, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745545818990-98126', 2, '2025-04-25',
-        '2025-04-25 09:50:19', '2025-04-25 09:50:19');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (335, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745545823036-63818', 2, '2025-04-25',
-        '2025-04-25 09:50:23', '2025-04-25 09:50:23');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (336, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745545825427-65459', 2, '2025-04-25',
-        '2025-04-25 09:50:25', '2025-04-25 09:50:25');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (337, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745545888662-75104', 2, '2025-04-25',
-        '2025-04-25 09:51:29', '2025-04-25 09:51:29');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (338, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745545891625-91817', 2, '2025-04-25',
-        '2025-04-25 09:51:32', '2025-04-25 09:51:32');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (339, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745546172333-1147', 2, '2025-04-25',
-        '2025-04-25 09:56:12', '2025-04-25 09:56:12');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (340, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745546196679-50830', 2, '2025-04-25',
-        '2025-04-25 09:56:37', '2025-04-25 09:56:37');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (341, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745546533241-32002', 2, '2025-04-25',
-        '2025-04-25 10:02:13', '2025-04-25 10:02:13');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (342, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745546773741-71678', 2, '2025-04-25',
-        '2025-04-25 10:06:14', '2025-04-25 10:06:14');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (343, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745547042422-95082', 2, '2025-04-25',
-        '2025-04-25 10:10:42', '2025-04-25 10:10:42');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (344, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745547135807-21144', 2, '2025-04-25',
-        '2025-04-25 10:12:16', '2025-04-25 10:12:16');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (345, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745547172671-81369', 2, '2025-04-25',
-        '2025-04-25 10:12:53', '2025-04-25 10:12:53');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (346, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745547224456-58326', 2, '2025-04-25',
-        '2025-04-25 10:13:44', '2025-04-25 10:13:44');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (347, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745547391676-84045', 2, '2025-04-25',
-        '2025-04-25 10:16:32', '2025-04-25 10:16:32');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (348, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745547707987-93936', 2, '2025-04-25',
-        '2025-04-25 10:21:48', '2025-04-25 10:21:48');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (349, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745548009659-78781', 2, '2025-04-25',
-        '2025-04-25 10:26:50', '2025-04-25 10:26:50');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (350, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745548719802-36007', 2, '2025-04-25',
-        '2025-04-25 10:38:40', '2025-04-25 10:38:40');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (351, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745548940470-26579', 2, '2025-04-25',
-        '2025-04-25 10:42:20', '2025-04-25 10:42:20');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (352, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745549196564-3505', 2, '2025-04-25',
-        '2025-04-25 10:46:37', '2025-04-25 10:46:37');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (353, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745549238610-17950', 2, '2025-04-25',
-        '2025-04-25 10:47:19', '2025-04-25 10:47:19');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (354, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745549387579-76395', 2, '2025-04-25',
-        '2025-04-25 10:49:48', '2025-04-25 10:49:48');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (355, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745549446261-73268', 2, '2025-04-25',
-        '2025-04-25 10:50:46', '2025-04-25 10:50:46');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (356, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745549493645-61524', 2, '2025-04-25',
-        '2025-04-25 10:51:34', '2025-04-25 10:51:34');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (357, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745549580622-12572', 2, '2025-04-25',
-        '2025-04-25 10:53:01', '2025-04-25 10:53:01');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (358, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745549799853-27369', 2, '2025-04-25',
-        '2025-04-25 10:56:40', '2025-04-25 10:56:40');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (359, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745549843664-52866', 2, '2025-04-25',
-        '2025-04-25 10:57:24', '2025-04-25 10:57:24');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (360, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745550338157-97619', 2, '2025-04-25',
-        '2025-04-25 11:05:38', '2025-04-25 11:05:38');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (361, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745550485025-87256', 2, '2025-04-25',
-        '2025-04-25 11:08:05', '2025-04-25 11:08:05');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (362, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745551216657-34882', 2, '2025-04-25',
-        '2025-04-25 11:20:17', '2025-04-25 11:20:17');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (363, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745551563414-71511', 2, '2025-04-25',
-        '2025-04-25 11:26:03', '2025-04-25 11:26:03');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (364, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745552182228-59001', 2, '2025-04-25',
-        '2025-04-25 11:36:22', '2025-04-25 11:36:22');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (365, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745552266280-67526', 2, '2025-04-25',
-        '2025-04-25 11:37:46', '2025-04-25 11:37:46');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (366, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745552499502-73341', 2, '2025-04-25',
-        '2025-04-25 11:41:40', '2025-04-25 11:41:40');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (367, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745552922789-28218', 2, '2025-04-25',
-        '2025-04-25 11:48:43', '2025-04-25 11:48:43');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (368, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745552968721-83358', 2, '2025-04-25',
-        '2025-04-25 11:49:29', '2025-04-25 11:49:29');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (369, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745553534266-78055', 2, '2025-04-25',
-        '2025-04-25 11:58:54', '2025-04-25 11:58:54');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (370, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745553581264-77667', 2, '2025-04-25',
-        '2025-04-25 11:59:41', '2025-04-25 11:59:41');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (371, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745553806181-75537', 2, '2025-04-25',
-        '2025-04-25 12:03:26', '2025-04-25 12:03:26');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (372, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745554162459-88042', 2, '2025-04-25',
-        '2025-04-25 12:09:22', '2025-04-25 12:09:22');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (373, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745554250592-7779', 2, '2025-04-25',
-        '2025-04-25 12:10:51', '2025-04-25 12:10:51');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (374, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745554556510-15244', 2, '2025-04-25',
-        '2025-04-25 12:15:57', '2025-04-25 12:15:57');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (375, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745554592933-48173', 2, '2025-04-25',
-        '2025-04-25 12:16:33', '2025-04-25 12:16:33');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (376, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745554757948-86017', 2, '2025-04-25',
-        '2025-04-25 12:19:18', '2025-04-25 12:19:18');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (377, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745554870857-16902', 2, '2025-04-25',
-        '2025-04-25 12:21:11', '2025-04-25 12:21:11');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (378, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745554936865-5553', 2, '2025-04-25',
-        '2025-04-25 12:22:17', '2025-04-25 12:22:17');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (379, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745554963461-37917', 2, '2025-04-25',
-        '2025-04-25 12:22:43', '2025-04-25 12:22:43');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (380, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745555059989-67655', 2, '2025-04-25',
-        '2025-04-25 12:24:20', '2025-04-25 12:24:20');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (381, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745555225921-10017', 2, '2025-04-25',
-        '2025-04-25 12:27:06', '2025-04-25 12:27:06');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (382, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745555338257-15419', 2, '2025-04-25',
-        '2025-04-25 12:28:58', '2025-04-25 12:28:58');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (383, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745555386547-71159', 2, '2025-04-25',
-        '2025-04-25 12:29:47', '2025-04-25 12:29:47');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (384, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745555466917-930', 2, '2025-04-25',
-        '2025-04-25 12:31:07', '2025-04-25 12:31:07');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (385, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745555597716-80368', 2, '2025-04-25',
-        '2025-04-25 12:33:18', '2025-04-25 12:33:18');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (386, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745555706351-29698', 2, '2025-04-25',
-        '2025-04-25 12:35:06', '2025-04-25 12:35:06');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (387, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745555925768-87924', 2, '2025-04-25',
-        '2025-04-25 12:38:46', '2025-04-25 12:38:46');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (388, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745556092575-93193', 2, '2025-04-25',
-        '2025-04-25 12:41:33', '2025-04-25 12:41:33');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (389, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745556245886-99430', 2, '2025-04-25',
-        '2025-04-25 12:44:06', '2025-04-25 12:44:06');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (390, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745556629007-91464', 2, '2025-04-25',
-        '2025-04-25 12:50:29', '2025-04-25 12:50:29');
-INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`)
-VALUES (391, 'fd77:5237:e99d:24b:1c12:672b:44a0:7aba%bridge100', '1745556739949-71360', 2, '2025-04-25',
-        '2025-04-25 12:52:20', '2025-04-25 12:52:20');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
