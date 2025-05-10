@@ -16,7 +16,7 @@ kpu:
     username: 'root'
     password: 'lmx123125'
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/kpu_none?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&nullCatalogMeansCurrent=true
+    url: jdbc:mysql://172.16.190.130:3306/kpu_none?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&nullCatalogMeansCurrent=true
   database: # 字段介绍参考 DatabaseProperties
     multiTenantType: COLUMN
     tenantIdColumn: 'tenant_id'
@@ -108,7 +108,7 @@ xxl.job:
     appname: ${spring.application.name}
     address: ''
     # 调度器通过XXL-RPC跟执行器通信的IP
-    ip: ${EXECUTOR_IP:127.0.0.1}
+    ip: ${EXECUTOR_IP:172.16.190.130}
     # 调度器通过XXL-RPC跟执行器通信的端口
     port: ${EXECUTOR_PORT:8777}
     # 日志路径
