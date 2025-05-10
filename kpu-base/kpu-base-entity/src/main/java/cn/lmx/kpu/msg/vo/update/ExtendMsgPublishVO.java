@@ -2,6 +2,7 @@ package cn.lmx.kpu.msg.vo.update;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -43,6 +44,7 @@ public class ExtendMsgPublishVO implements Serializable {
      * 标题
      */
     @Schema(description = "标题")
+    @NotNull(message = "请填写标题")
     @Size(max = 255, message = "标题长度不能超过{max}")
     private String title;
     /**
@@ -70,6 +72,7 @@ public class ExtendMsgPublishVO implements Serializable {
      * [01-待办 02-预警 03-提醒]
      */
     @Schema(description = "提醒方式")
+    @NotNull(message = "请填写提醒方式")
     @Size(max = 2, message = "提醒方式长度不能超过{max}")
     private String remindMode;
 
