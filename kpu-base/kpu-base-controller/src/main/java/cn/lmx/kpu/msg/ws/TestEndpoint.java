@@ -1,8 +1,6 @@
 package cn.lmx.kpu.msg.ws;
 
 import cn.hutool.core.util.StrUtil;
-import cn.lmx.kpu.msg.ws.WebSocketObserver;
-import cn.lmx.kpu.msg.ws.WebSocketSubject;
 import jakarta.websocket.OnClose;
 import jakarta.websocket.OnError;
 import jakarta.websocket.OnMessage;

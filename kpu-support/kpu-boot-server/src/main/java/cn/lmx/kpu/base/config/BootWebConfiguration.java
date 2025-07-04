@@ -17,11 +17,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import cn.lmx.basic.boot.config.BaseConfig;
 import cn.lmx.basic.constant.Constants;
 import cn.lmx.basic.log.event.SysLogListener;
-import cn.lmx.basic.utils.BeanPlusUtil;
 import cn.lmx.kpu.base.interceptor.AuthenticationSaInterceptor;
 import cn.lmx.kpu.base.interceptor.TokenContextFilter;
-import cn.lmx.kpu.base.service.system.BaseOperationLogService;
-import cn.lmx.kpu.base.vo.save.system.BaseOperationLogSaveVO;
 import cn.lmx.kpu.common.properties.IgnoreProperties;
 import cn.lmx.kpu.common.properties.SystemProperties;
 
@@ -76,7 +73,7 @@ public class BootWebConfiguration extends BaseConfig implements WebMvcConfigurer
                 .excludePathPatterns(commonPathPatterns);
 
         // 注册 Sa-Token 拦截器，定义详细认证规则
-        registry.addInterceptor(getSaFilter()).addPathPatterns("/**").excludePathPatterns("/error").order(10);
+        registry.addInterceptor(getSaFilter()).addPathPatterns("/**").order(10);
 
 
         WebMvcConfigurer.super.addInterceptors(registry);

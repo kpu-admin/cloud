@@ -22,14 +22,15 @@
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-generator-controller</artifactId>
+            <artifactId>kpu-login-user-cloud-impl</artifactId>
             <version>${kpu-project.version}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-login-user-cloud-impl</artifactId>
+            <artifactId>kpu-generator-controller</artifactId>
             <version>${kpu-project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-oauth-api</artifactId>
@@ -46,10 +47,10 @@
             <artifactId>kpu-all</artifactId>
         </dependency>
         <dependency>
-            <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-spring-boot3-starter</artifactId>
+            <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-sa-token-ext</artifactId>
+            <version>${project.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -87,6 +88,7 @@
                         <nonFilteredFileExtension>p12</nonFilteredFileExtension>
                         <nonFilteredFileExtension>key</nonFilteredFileExtension>
                         <nonFilteredFileExtension>db</nonFilteredFileExtension>
+                        <nonFilteredFileExtension>xdb</nonFilteredFileExtension>
                         <nonFilteredFileExtension>eot</nonFilteredFileExtension>
                         <nonFilteredFileExtension>otf</nonFilteredFileExtension>
                         <nonFilteredFileExtension>svg</nonFilteredFileExtension>

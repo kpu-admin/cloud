@@ -1,4 +1,2 @@
 logging:
   config: classpath:logback-spring-dev.xml
-  level:
-    cn.lmx: debug

@@ -11,7 +11,7 @@ import cn.lmx.kpu.model.vo.BaseEventVO;
  * @date 2025-01-01 00:00
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 public class MsgEventVO extends BaseEventVO {
     Long msgId;

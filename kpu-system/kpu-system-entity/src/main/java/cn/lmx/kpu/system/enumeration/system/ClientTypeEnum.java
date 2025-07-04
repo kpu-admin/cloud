@@ -24,8 +24,7 @@ public enum ClientTypeEnum implements BaseEnum {
     KPU_WEB_PRO_VBEN("02", "基于vben的前端"),
     KPU_WEB_PRO_SOYBEAN("03", "基于soybean前端"),
     KPU_WEB_PRO_KPU("04", "基于Kpu前端"),
-
-    ;
+    KPU_WEB_PRO_VBEN5("05", "基于Kpu前端");
 
     @Schema(description = "code")
     private String code;

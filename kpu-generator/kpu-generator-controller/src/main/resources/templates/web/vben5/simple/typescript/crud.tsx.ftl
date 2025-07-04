@@ -4,36 +4,39 @@ import type {
   CrudExpose,
 } from '@fast-crud/fast-crud';
 
-import type { FormRulesExt } from '#/api';
-import type { ActionEnum } from '#/enums/commonEnum';
+import type { FormRulesExt } from '@/api';
+import type { ${table.entityName}Model } from '@/api/${table.plusApplicationName}/${table.plusModuleName}/model/${table.entityName?uncap_first}Model';
 
 import { ref, unref } from 'vue';
 import { useRouter } from 'vue-router';
 
-import { useAccess } from '@vben/access';
-import { $t } from '@vben/locales';
+// import { useAccess } from '@vben/access';
+import { $t } from '@/locales';
 
-import { ${table.entityName}Api } from '#/api/${table.plusApplicationName}/${table.plusModuleName}/${table.entityName?uncap_first}';
-import { DictEnum } from '#/enums/commonEnum';
-import { RoleEnum } from '#/enums/role';
+import { ${table.entityName}Api } from '@/api/${table.plusApplicationName}/${table.plusModuleName}/${table.entityName?uncap_first}';
+import { ActionEnum } from '@/enums/commonEnum';
+import { DictEnum } from '@/enums/commonEnum';
+import { RoleEnum } from '@/enums/role';
 import {
   YES_NO_CONSTANT_DICT,
   backendDict,
   createdTimeColumn,
   deleteButton,
   indexColumn,
-} from '#/plugins/fast-crud/common';
+} from '@/plugins/fast-crud/common';
 
-const { hasPermission } = useAccess();
+// const { hasPermission } = useAccess();
 
 type ContextRef = object;
 
 export function createCrudOptions(
   props: CreateCrudOptionsProps<${table.entityName}Model.${resultVoName}, ContextRef>,
-): CreateCrudOptionsRet<${table.entityName}Model> {
+): CreateCrudOptionsRet<${table.entityName}Model.${resultVoName}> {
   const selectedRowKeys = ref<string[]>([]);
   <#if table.popupType == POPUP_TYPE_JUMP>
   const { push } = useRouter();
+  // 注意，menuName 要跟(/anyone/visible/resource)实际返回的路由name一致才行。
+  const menuName = '${table.menuName}编辑';
   </#if>
   return {
     crudOptions: {
@@ -56,6 +59,11 @@ export function createCrudOptions(
           <#elseif table.addAuth?? && table.addAuth != '' >
             show: hasPermission('${table.addAuth}'),
           </#if>
+          <#if table.popupType == POPUP_TYPE_JUMP>
+            click() {
+              push({ name: menuName, params: { type: ActionEnum.ADD, id: '0' } });
+            },
+          </#if>
           },
 <#if table.deleteShow>
           ...deleteButton({
@@ -67,6 +75,13 @@ export function createCrudOptions(
             </#if>
           }),
 </#if>
+        },
+      },
+      form: {
+        wrapper: {
+          <#if table.popupType == POPUP_TYPE_MODAL>
+          is: 'a-modal',
+          </#if>
         },
       },
       table: {
@@ -197,7 +212,7 @@ export function createCrudOptions(
           },
           <#if field.javaType =="LocalDateTime" || field.javaType =="LocalDate" || field.javaType =="LocalTime">
           valueBuilder({ value, row, key }) {
-            if (value !== null) {
+            if (value !== null && row) {
               row[key] = value;
             }
           },

@@ -126,7 +126,7 @@ public class DefUserInfoResultVO extends Entity<Long> implements Serializable, E
     private Boolean state;
 
     @Schema(description = "头像id")
-    @Echo(api = EchoApi.FILE_ID_CLASS, ref ="avatar")
+    @Echo(api = EchoApi.FILE_ID_CLASS, ref = "avatar")
     private Long avatarId;
 
     @Schema(description = "头像")

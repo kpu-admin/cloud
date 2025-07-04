@@ -70,7 +70,7 @@ public class DefApplicationServiceImpl extends SuperCacheServiceImpl<DefApplicat
 
     @Override
     public List<DefApplicationResultVO> findMyApplication(String name) {
-        List<DefApplicationResultVO> list = superManager.findMyApplication( name);
+        List<DefApplicationResultVO> list = superManager.findMyApplication(name);
         list.forEach(item -> {
             //0-过期 1-有效
             String state = item.getExpirationTime() == null || item.getExpirationTime().isAfter(LocalDateTime.now()) ? "1" : "0";

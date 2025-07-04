@@ -1,7 +1,6 @@
 package cn.lmx.kpu.model.entity.base;
 
 import cn.hutool.core.map.MapUtil;
-import cn.lmx.kpu.model.entity.system.SysUser;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -1,6 +1,8 @@
 package cn.lmx.kpu.file.api.fallback;
 
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
 import cn.lmx.basic.base.R;
 import cn.lmx.kpu.file.api.FileApi;
@@ -19,6 +21,7 @@ import java.util.Map;
  */
 @Component
 public class FileApiFallback implements FileApi {
+    @PostMapping(value = "/anyone/file/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @Override
     public R<FileResultVO> upload(MultipartFile file, String bizType, String bucket, FileStorageType storageType) {
         return R.timeout();

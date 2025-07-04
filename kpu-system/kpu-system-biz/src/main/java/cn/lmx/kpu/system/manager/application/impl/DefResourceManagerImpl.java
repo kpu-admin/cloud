@@ -78,7 +78,7 @@ public class DefResourceManagerImpl extends SuperCacheManagerImpl<DefResourceMap
 
     @Override
     public Integer maxSortValueByTypeAndParentIdAndApplicationId(List<String> types, Long parentId, Long applicationId) {
-        return baseMapper.maxSortValueByTypeAndParentIdAndApplicationId(types,parentId, applicationId);
+        return baseMapper.maxSortValueByTypeAndParentIdAndApplicationId(types, parentId, applicationId);
 
     }
 

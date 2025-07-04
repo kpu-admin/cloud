@@ -3,6 +3,7 @@ kpu:
     outputDir: /Users/lmx/gitlab/kpu-boot
     frontOutputDir: /Users/lmx/gitlab/kpu-web
     frontSoyOutputDir: /Users/lmx/gitlab/kpu-web-soybean
+    frontVben5OutputDir: /Users/lmx/Documents/WebstormProjects/kpu-admin/web
     # 作者
     author: lmx
     # 默认项目

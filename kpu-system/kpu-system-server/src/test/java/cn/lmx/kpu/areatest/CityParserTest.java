@@ -34,7 +34,7 @@ public class CityParserTest {
     public void pullArea() {
 
         TimeInterval timer = DateUtil.timer();
-        List<DefArea> list = cityParser.parseProvinces(2);
+        List<DefArea> list = cityParser.parseProvinces(1);
         long interval = timer.interval();// 花费毫秒数
         long intervalMinute = timer.intervalMinute();// 花费分钟数
         StaticLog.error("爬取数据 花费毫秒数: {} ,   花费分钟数:{} . ", interval, intervalMinute);

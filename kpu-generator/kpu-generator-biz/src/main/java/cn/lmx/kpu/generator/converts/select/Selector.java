@@ -11,6 +11,8 @@ import java.util.function.Supplier;
  * <p>
  * 一旦结果被选择，其他的分支将不再被调用
  *
+ * @param <P>    参数类型
+ * @param <T>    返回值类型
  * @author hanchunlin
  * @author lmx
  * Created at 2025-01-01 00:00

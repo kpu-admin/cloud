@@ -2,14 +2,14 @@ package cn.lmx.kpu.satoken.interceptor;
 
 import cn.dev33.satoken.spring.pathmatch.SaPathPatternParserUtil;
 import cn.hutool.core.collection.CollUtil;
+import cn.lmx.basic.exception.BizException;
+import cn.lmx.kpu.common.properties.SystemProperties;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.AsyncHandlerInterceptor;
-import cn.lmx.basic.exception.BizException;
-import cn.lmx.kpu.common.properties.SystemProperties;
 
 import java.util.List;
 

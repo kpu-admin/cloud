@@ -23,17 +23,17 @@ import java.util.Map;
  * @date 2025-01-01 00:00
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonIgnoreProperties({TreeEntity.LABEL, TreeEntity.SORT_VALUE,
-        TreeEntity.PARENT_ID, Entity.UPDATED_BY, Entity.UPDATED_TIME, Entity.CREATED_TIME, Entity.CREATED_BY
-        , Entity.ID_FIELD})
+@JsonIgnoreProperties({TreeEntity.LABEL, TreeEntity.SORT_VALUE, TreeEntity.PARENT_ID, Entity.UPDATED_BY, Entity.UPDATED_TIME, Entity.CREATED_TIME, Entity.CREATED_BY, Entity.ID_FIELD})
 public class VueRouter extends TreeEntity<VueRouter, Long> implements EchoVO {
 
     private static final long serialVersionUID = -3327478146308500708L;
-    private Map<String, Object> echoMap = MapUtil.newHashMap();
+    private final Map<String, Object> echoMap = MapUtil.newHashMap();
     @Schema(description = "路径")
     private String path;
+    @Schema(description = "网址")
+    private String link;
     @Schema(description = "菜单名称")
     private String name;
     @Schema(description = "组件")

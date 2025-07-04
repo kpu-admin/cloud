@@ -3,9 +3,9 @@ import { onMounted } from 'vue';
 
 import { useFs } from '@fast-crud/fast-crud';
 
-import { ${table.entityName}Config } from '#/api/${table.plusApplicationName}/${table.plusModuleName}/${table.entityName?uncap_first}';
-import { getValidateRulesByFs } from '#/api/common/validateByFs';
-import { ActionEnum } from '#/enums/commonEnum';
+import { ${table.entityName}Config } from '@/api/${table.plusApplicationName}/${table.plusModuleName}/${table.entityName?uncap_first}';
+import { getValidateRulesByFs } from '@/api/common/validateByFs';
+import { ActionEnum } from '@/enums/commonEnum';
 
 import { createCrudOptions, frontRules } from './data/crud';
 
@@ -25,7 +25,6 @@ onMounted(async () => {
     Api: ${table.entityName}Config.Save,
     mode: ActionEnum.ADD,
     customRules: frontRules(crudExpose, ActionEnum.ADD),
-    trigger: ['blur', 'change'],
   });
   </#if>
   <#if table.editShow>
@@ -33,7 +32,6 @@ onMounted(async () => {
     Api: ${table.entityName}Config.Update,
     mode: ActionEnum.EDIT,
     customRules: frontRules(crudExpose, ActionEnum.EDIT),
-    trigger: ['blur', 'change'],
   });
   </#if>
   <#if table.addShow || table.copyShow || table.editShow>
@@ -48,4 +46,3 @@ onMounted(async () => {
     <FsCrud ref="crudRef" v-bind="crudBinding" />
   </FsPage>
 </template>
-<style lang="scss" scoped></style>

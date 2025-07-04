@@ -51,5 +51,5 @@ public interface DefResourceMapper extends SuperMapper<DefResource> {
      * @date 2025-03-01 08:30
      * @create [2025-03-01 08:30 ] [lmx ] [初始创建]
      **/
-    Integer maxSortValueByTypeAndParentIdAndApplicationId(@Param("types")List<String> types,@Param("parentId")Long parentId, @Param("applicationId")Long applicationId);
+    Integer maxSortValueByTypeAndParentIdAndApplicationId(@Param("types")List<String> types, @Param("parentId")Long parentId, @Param("applicationId")Long applicationId);
 }

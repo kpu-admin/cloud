@@ -35,7 +35,7 @@ import static cn.lmx.kpu.model.constant.Condition.LIKE;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @Schema(description = "组织")
 @TableName("base_org")

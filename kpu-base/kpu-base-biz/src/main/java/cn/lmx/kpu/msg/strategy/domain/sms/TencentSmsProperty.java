@@ -11,10 +11,10 @@ import cn.lmx.kpu.msg.strategy.domain.BaseProperty;
  * @date 2025-01-01 00:00
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 public class TencentSmsProperty extends BaseProperty {
-    private final static String DEF_REGION = "ap-beijing";
-    private final static String DEF_END_POINT = "sms.tencentcloudapi.com";
+    private static final String DEF_REGION = "ap-beijing";
+    private static final String DEF_END_POINT = "sms.tencentcloudapi.com";
     /** secretId */
     private String secretId;
     /** secretKey */

@@ -9,7 +9,7 @@ import cn.lmx.kpu.msg.strategy.domain.BaseProperty;
  * @date 2025-01-01 00:00
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 public class TencentMailProperty extends BaseProperty {
     /**
      * 端口

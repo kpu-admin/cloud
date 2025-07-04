@@ -1,18 +1,18 @@
 <script setup lang="ts">
   import type { Key } from 'ant-design-vue/es/vc-tree/interface';
 
-import type { Nullable } from '@vben/types';
+import type { Nullable } from '#/index';
 
 import type {
   ContextMenuItem,
   TreeActionItem,
   TreeActionType,
   TreeItem,
-} from '#/components/tree';
+} from '@/components/Tree';
 
 import { h, onMounted, ref, unref } from 'vue';
 
-import { PermModeEnum } from '@vben/access';
+// import { PermModeEnum } from '@vben/access';
 
 import {
   DeleteOutlined,
@@ -21,12 +21,12 @@ import {
 } from '@ant-design/icons-vue';
 import { Button } from 'ant-design-vue';
 
-import { ${table.entityName}Api } from '#/api/${table.plusApplicationName}/${table.plusModuleName}/${table.entityName?uncap_first}';
-import { BasicTree } from '#/components/tree';
-import { RoleEnum } from '#/enums/role';
-import { useMessage } from '#/hooks/web/useMessage';
-import { $t } from '#/locales';
-import { findNodeByKey } from '#/utils/helper/treeHelper';
+import { ${table.entityName}Api } from '@/api/${table.plusApplicationName}/${table.plusModuleName}/${table.entityName?uncap_first}';
+import { BasicTree } from '@/components/Tree';
+import { RoleEnum } from '@/enums/role';
+import { useMessage } from '@/hooks/useMessage';
+import { $t } from '@/locales';
+import { findNodeByKey } from '@/utils/helper/treeHelper';
 
 defineOptions({
   name: '${table.entityName}树结构',
@@ -280,4 +280,3 @@ defineExpose({ fetch });
     />
   </div>
 </template>
-<style lang="scss" scoped></style>

@@ -83,6 +83,12 @@ public class DefResourceUpdateVO implements Serializable {
     @Size(max = 255, message = "描述长度不能超过255")
     private String describe;
     /**
+     * 网址
+     */
+    @Schema(description = "地址栏路径")
+    @Size(max = 255, message = "地址栏路径长度不能超过255")
+    private String link;
+    /**
      * 地址栏路径;用于resource_type=菜单和视图和接口.resource_type=菜单和视图，表示地址栏地址, http开头表示外链, is_frame_src 为true表示在框架类打开.resource_type=接口，表示后端接口请求地址.
      */
     @Schema(description = "地址栏路径")

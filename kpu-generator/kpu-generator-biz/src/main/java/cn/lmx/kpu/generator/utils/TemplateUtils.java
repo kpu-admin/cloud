@@ -95,7 +95,7 @@ public class TemplateUtils {
                 templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_TREE_TREE);
                 templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_TREE_CRUD);
             } else if (TplEnum.MAIN_SUB.eq(tplType)) {
-
+                templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_MAIN_INDEX);
             } else {
                 if (PopupTypeEnum.JUMP.eq(popupType)) {
                     templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_JUMP_EDIT);
@@ -103,8 +103,7 @@ public class TemplateUtils {
                 templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_INDEX);
                 templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_CRUD);
             }
-        }
-        else if (TemplateEnum.WEB_VBEN5.eq(template)) {
+        } else if (TemplateEnum.WEB_VBEN5.eq(template)) {
             templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_SIMPLE_API);
             templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_SIMPLE_MODEL);
             templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_SIMPLE_LANG_EN);
@@ -116,36 +115,17 @@ public class TemplateUtils {
                 templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_TREE_TREE);
                 templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_TREE_CRUD);
             } else if (TplEnum.MAIN_SUB.eq(tplType)) {
-
+                templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_MAIN_INDEX);
+                templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_MAIN_DATA);
+                // 从表
+                templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_MAIN_SUB_INDEX);
+                templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_MAIN_SUB_DATA);
             } else {
                 if (PopupTypeEnum.JUMP.eq(popupType)) {
                     templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_SIMPLE_JUMP_EDIT);
                 }
                 templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_SIMPLE_INDEX);
                 templates.add(GenCodeConstant.TEMPLATE_WEB_VBEN5_SIMPLE_CRUD);
-            }
-        } else if (TemplateEnum.WEB_SOYBEAN.eq(template)) {
-            templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_API);
-            templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_MODEL);
-            templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_LANG_EN);
-            templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_LANG_ZH);
-            templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_CRUD);
-            if (TplEnum.TREE.eq(tplType)) {
-                templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_TREE_INDEX);
-                templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_TREE_EDIT);
-                templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_TREE_TREE);
-                templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_TREE_CRUD);
-            } else if (TplEnum.MAIN_SUB.eq(tplType)) {
-                templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_MAIN_INDEX);
-                if (PopupTypeEnum.JUMP.eq(popupType)) {
-                    templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_JUMP_EDIT);
-                }
-                templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_INDEX);
-            } else {
-                if (PopupTypeEnum.JUMP.eq(popupType)) {
-                    templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_JUMP_EDIT);
-                }
-                templates.add(GenCodeConstant.TEMPLATE_WEB_SOYBEAN_SIMPLE_INDEX);
             }
         }
         return templates;

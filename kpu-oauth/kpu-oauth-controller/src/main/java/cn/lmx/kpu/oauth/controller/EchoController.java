@@ -38,12 +38,6 @@ public class EchoController {
     private final DefUserService defUserService;
     private final BasePositionService basePositionService;
 
-    @Operation(summary = "根据id查询用户", description = "根据id查询用户")
-    @PostMapping("/user/findByIds")
-    public Map<Serializable, Object> findUserByIds(@RequestParam(value = "ids") Set<Serializable> ids) {
-        return defUserService.findByIds(ids);
-    }
-
     @PostMapping("/position/findByIds")
     public Map<Serializable, Object> findStationByIds(@RequestParam("ids") Set<Serializable> ids) {
         return basePositionService.findByIds(ids);

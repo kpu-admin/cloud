@@ -26,15 +26,16 @@ public enum LogType implements BaseEnum {
     /**
      * OPT="操作类型"
      */
-    OPT("正常"),
+    OPT("正常", "success"),
     /**
      * EX="异常类型"
      */
-    EX("异常"),
-    ;
+    EX("异常", "error");
 
     @Schema(description = "描述")
     private String desc;
+
+    private String extra;
 
 
     /**
@@ -56,6 +57,11 @@ public enum LogType implements BaseEnum {
     @Schema(description = "编码", allowableValues = "OPT,EX", example = "OPT")
     public String getCode() {
         return this.name();
+    }
+
+    @Override
+    public String getExtra() {
+        return this.extra;
     }
 
 }

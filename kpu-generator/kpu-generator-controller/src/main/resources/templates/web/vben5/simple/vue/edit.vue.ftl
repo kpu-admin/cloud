@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Recordable } from '@vben/types';
+import type { Recordable } from '#/index';
 
 import { useRoute } from 'vue-router';
 import { onMounted, ref, unref } from 'vue';
@@ -7,11 +7,11 @@ import { onMounted, ref, unref } from 'vue';
 import { useFs } from '@fast-crud/fast-crud';
 import { Button, Card } from 'ant-design-vue';
 
-import { ${table.entityName}Config } from '#/api/${table.plusApplicationName}/${table.plusModuleName}/${table.entityName?uncap_first}';
-import { getValidateRulesByFs } from '#/api/common/validateByFs';
-import { ActionEnum } from '#/enums/commonEnum';
-import { useMessage } from '#/hooks/web/useMessage';
-import { $t } from '#/locales';
+import { ${table.entityName}Config } from '@/api/${table.plusApplicationName}/${table.plusModuleName}/${table.entityName?uncap_first}';
+import { getValidateRulesByFs } from '@/api/common/validateByFs';
+import { ActionEnum } from '@/enums/commonEnum';
+import { useMessage } from '@/hooks/useMessage';
+import { $t } from '@/locales';
 import { useTabs } from '@vben/hooks';
 import { frontRules, createCrudOptions } from '../data/crud';
 

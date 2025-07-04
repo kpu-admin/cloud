@@ -11,9 +11,9 @@ import cn.lmx.kpu.msg.strategy.domain.BaseProperty;
  * @date 2025-01-01 00:00
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 public class BaiduSmsProperty extends BaseProperty {
-    private final static String DEF_END_POINT = "http://smsv3.bj.baidubce.com";
+    private static final String DEF_END_POINT = "http://smsv3.bj.baidubce.com";
     /**
      * accessKeyId
      */

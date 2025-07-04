@@ -84,21 +84,21 @@ import static cn.lmx.kpu.generator.utils.GenCodeConstant.WEB_CONFIGURATION_SUFFI
 @Slf4j
 public class ProjectUtils {
 
-    private final static String[] MAVEN_PATH = new String[]{
+    private static final String[] MAVEN_PATH = new String[]{
             SRC_MAIN_JAVA, SRC_MAIN_RESOURCE, SRC_TEST_JAVA, SRC_TEST_RESOURCE
     };
 
-    private final static List<String> CLOUD_MODULE = CollUtil.newArrayList(
+    private static final List<String> CLOUD_MODULE = CollUtil.newArrayList(
             ENTITY_SERVICE_SUFFIX, BIZ_SERVICE_SUFFIX,
             CONTROLLER_SERVICE_SUFFIX, SERVER_SERVICE_SUFFIX
     );
-    private final static List<String> BOOT_MODULE = CollUtil.newArrayList(
+    private static final List<String> BOOT_MODULE = CollUtil.newArrayList(
             ENTITY_SERVICE_SUFFIX, BIZ_SERVICE_SUFFIX, CONTROLLER_SERVICE_SUFFIX
     );
-    private final static List<String> FACADE_MODULE = CollUtil.newArrayList(
+    private static final List<String> FACADE_MODULE = CollUtil.newArrayList(
             API_SERVICE_SUFFIX, BOOT_IMPL_SERVICE_SUFFIX, CLOUD_IMPL_SERVICE_SUFFIX
     );
-    private final static Map<ProjectTypeEnum, List<String>> TYPE_MODULE_MAP = new HashMap();
+    private static final Map<ProjectTypeEnum, List<String>> TYPE_MODULE_MAP = new HashMap();
 
     static {
         TYPE_MODULE_MAP.put(ProjectTypeEnum.CLOUD, CLOUD_MODULE);
@@ -140,12 +140,12 @@ public class ProjectUtils {
 
     /**
      * 生成项目结构，仅仅生成项目结构和pom.xml，不会生成代码。
-     *
+     * <p>
      * 1. 单体版
      * - kpu-xx-entity
      * - kpu-xx-biz
      * - kpu-xx-controller
-     *
+     * <p>
      * 2. 微服务版
      * - kpu-xx-entity
      * - kpu-xx-biz
@@ -155,7 +155,6 @@ public class ProjectUtils {
      * - kpu-xx-boot-impl
      * - kpu-xx-cloud-impl
      * - kpu-xx-server
-     *
      *
      * @param vo                 vo
      * @param databaseProperties databaseProperties
@@ -266,8 +265,7 @@ public class ProjectUtils {
                                   paths-to-match: '/**'
                                   packages-to-scan:
                                     - {}
-                            """
-                    , serviceName, vo.getDescription(), vo.getParent() + StrPool.DOT + vo.getModuleName());
+                            """, serviceName, vo.getDescription(), vo.getParent() + StrPool.DOT + vo.getModuleName());
             Map<String, String> applicationMap = MapUtil.newHashMap();
             applicationMap.put("springdoc.groupconfigs", swaggerStr);
 
@@ -457,8 +455,7 @@ public class ProjectUtils {
                                         <artifactId>{}-{}-controller</artifactId>
                                         <version>${{}-project.version}</version>
                                     </dependency>
-                            """
-                    , vo.getGroupId(), projectPrefix, vo.getServiceName(), projectPrefix);
+                            """, vo.getGroupId(), projectPrefix, vo.getServiceName(), projectPrefix);
 
             tips.append("1. 请在 kpu-boot-server/pom.xml 中加入以下代码：\n");
             tips.append(dependencyStr);
@@ -471,8 +468,7 @@ public class ProjectUtils {
                                   paths-to-match: '/**'
                                   packages-to-scan:
                                     - {}
-                            """
-                    , serviceName, vo.getDescription(), vo.getParent() + StrPool.DOT + vo.getModuleName());
+                            """, serviceName, vo.getDescription(), vo.getParent() + StrPool.DOT + vo.getModuleName());
             tips.append("\n 2. 请在 doc.yml 中加入以下代码：\n");
             tips.append(swaggerStr);
 

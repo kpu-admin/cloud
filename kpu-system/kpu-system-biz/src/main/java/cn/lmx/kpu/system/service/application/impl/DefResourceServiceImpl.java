@@ -2,7 +2,6 @@ package cn.lmx.kpu.system.service.application.impl;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
-import cn.lmx.basic.base.entity.TreeEntity;
 import com.google.common.collect.Multimap;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -286,11 +285,11 @@ public class DefResourceServiceImpl extends SuperCacheServiceImpl<DefResourceMan
             resource.setSortValue(1);
             if (ResourceTypeEnum.MENU.eq(data.getResourceType())) {
                 resource.setSortValue(1);
-            }else if (ResourceTypeEnum.BUTTON.eq(data.getResourceType())) {
+            } else if (ResourceTypeEnum.BUTTON.eq(data.getResourceType())) {
                 resource.setSortValue(100);
-            }else if (ResourceTypeEnum.FIELD.eq(data.getResourceType())) {
+            } else if (ResourceTypeEnum.FIELD.eq(data.getResourceType())) {
                 resource.setSortValue(500);
-            }else if (ResourceTypeEnum.DATA.eq(data.getResourceType())) {
+            } else if (ResourceTypeEnum.DATA.eq(data.getResourceType())) {
                 resource.setSortValue(1000);
             }
         } else {
@@ -392,7 +391,8 @@ public class DefResourceServiceImpl extends SuperCacheServiceImpl<DefResourceMan
             ArgumentAssert.notNull(parent, "请正确填写父级");
             parentId = parent.getId();
         }
-        List<DefResource> list = list(Wraps.<DefResource>lbQ().eq(DefResource::getResourceType,menu.getResourceType()).eq(DefResource::getParentId, parentId).orderByAsc(DefResource::getSortValue));
+        List<DefResource> list = list(Wraps.<DefResource>lbQ().eq(DefResource::getResourceType, menu.getResourceType()).eq(DefResource::getParentId, parentId)
+                .eq(DefResource::getApplicationId, menu.getApplicationId()).orderByAsc(DefResource::getSortValue));
         if (list.size() <= 1) {
             throw BizException.wrap("已经是第一个了");
         }
@@ -434,7 +434,7 @@ public class DefResourceServiceImpl extends SuperCacheServiceImpl<DefResourceMan
             ArgumentAssert.notNull(parent, "请正确填写父级");
             parentId = parent.getId();
         }
-        List<DefResource> list = list(Wraps.<DefResource>lbQ().eq(DefResource::getResourceType,menu.getResourceType()).eq(DefResource::getParentId, parentId).orderByAsc(DefResource::getSortValue));
+        List<DefResource> list = list(Wraps.<DefResource>lbQ().eq(DefResource::getResourceType, menu.getResourceType()).eq(DefResource::getParentId, parentId).orderByAsc(DefResource::getSortValue));
         if (list.size() <= 1) {
             throw BizException.wrap("已经是资源类型最后一个了");
         }

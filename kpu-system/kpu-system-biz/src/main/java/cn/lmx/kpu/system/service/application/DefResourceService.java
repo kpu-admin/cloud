@@ -6,7 +6,6 @@ import cn.lmx.kpu.system.entity.application.DefResource;
 import cn.lmx.kpu.system.vo.result.application.DefResourceResultVO;
 import cn.lmx.kpu.system.vo.save.application.DefResourceSaveVO;
 import cn.lmx.kpu.system.vo.update.application.DefResourceUpdateVO;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.util.Collection;

@@ -385,7 +385,7 @@ public class DefGenTableServiceImpl extends SuperServiceImpl<DefGenTableManager,
                 name.append("|");
             }
         }
-        String zipName = Constants.PROJECT_PREFIX + "_" + template.getDesc()+"("+template.getCode()+ ")"+ "代码(" + name + ").zip";
+        String zipName = Constants.PROJECT_PREFIX + "_" + template.getDesc() + "(" + template.getCode() + ")" + "代码(" + name + ").zip";
 
         IoUtil.close(zip);
         return DownloadVO.builder()

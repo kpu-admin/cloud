@@ -7,8 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import cn.lmx.basic.boot.config.BaseConfig;
 import cn.lmx.basic.constant.Constants;
 import cn.lmx.basic.log.event.SysLogListener;
-import cn.lmx.basic.utils.BeanPlusUtil;
-import cn.lmx.kpu.base.vo.save.system.BaseOperationLogSaveVO;
 
 /**
  * 基础服务-Web配置

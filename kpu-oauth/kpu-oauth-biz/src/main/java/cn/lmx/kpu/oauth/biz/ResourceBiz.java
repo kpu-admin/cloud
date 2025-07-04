@@ -44,9 +44,8 @@ public class ResourceBiz {
 
     /**
      * 是否所有的子都是视图
-     *
+     * <p>
      * 若某个菜单的子集，全部都是视图，这需要标记为隐藏子集
-     *
      */
     private static boolean hideChildrenInMenu(List<VueRouter> children) {
         if (CollUtil.isEmpty(children)) {
@@ -114,14 +113,11 @@ public class ResourceBiz {
             List<VueRouter> tree = TreeUtil.buildTree(routers);
             if (ClientTypeEnum.KPU_WEB_PRO_SOYBEAN.eq(type)) {
                 forEachTreeBySoybean(tree, 1, null);
-            }
-            else if (ClientTypeEnum.KPU_WEB_PRO_KPU.eq(type)) {
+            } else if (ClientTypeEnum.KPU_WEB_PRO_KPU.eq(type)) {
                 forEachTreeByKpu(tree, 1, null);
-            }
-//            else if (ClientTypeEnum.KPU_WEB_PRO_KPU.eq(type)) {
-//                forEachTreeByVben5(tree, 1, null);
-//            }
-            else {
+            } else if (ClientTypeEnum.KPU_WEB_PRO_VBEN5.eq(type)) {
+                forEachTreeByVben5(tree, 1, null);
+            } else {
                 forEachTree(tree, 1);
             }
 
@@ -194,13 +190,11 @@ public class ResourceBiz {
         List<VueRouter> tree = TreeUtil.buildTree(routers);
         if (ClientTypeEnum.KPU_WEB_PRO_SOYBEAN.eq(type)) {
             forEachTreeBySoybean(tree, 1, null);
-        }else if (ClientTypeEnum.KPU_WEB_PRO_KPU.eq(type)){
+        } else if (ClientTypeEnum.KPU_WEB_PRO_KPU.eq(type)) {
             forEachTreeByKpu(tree, 1, null);
-        }
-//        else if (ClientTypeEnum.KPU_WEB_PRO_KPU.eq(type)) {
-//            forEachTreeByVben5(tree, 1, null);
-//        }
-        else {
+        } else if (ClientTypeEnum.KPU_WEB_PRO_VBEN5.eq(type)) {
+            forEachTreeByVben5(tree, 1, null);
+        } else {
             forEachTree(tree, 1);
         }
         return tree;
@@ -229,13 +223,15 @@ public class ResourceBiz {
             meta.setIcon(item.getIcon());
             if (ResourceOpenWithEnum.INNER_CHAIN.eq(item.getOpenWith())) {
                 //  是否内嵌页面
-                meta.setFrameSrc(item.getComponent());
+                meta.setFrameSrc(item.getLink());
                 item.setComponent(BizConstant.IFRAME);
                 meta.setComponent("sys/iframe/index");
             } else if (ResourceOpenWithEnum.OUTER_CHAIN.eq(item.getOpenWith())) {
                 // 是否外链
                 item.setComponent(BizConstant.IFRAME);
+                item.setPath(item.getLink());
             }
+
 
 
             // 视图需要隐藏
@@ -279,24 +275,24 @@ public class ResourceBiz {
             meta.setIcon(item.getIcon());
             if (ResourceOpenWithEnum.INNER_CHAIN.eq(item.getOpenWith())) {
                 //  是否内嵌页面
-                meta.setIframeSrc(item.getComponent());
+                meta.setIframeSrc(item.getLink());
                 item.setComponent(BizConstant.IFRAME);
             } else if (ResourceOpenWithEnum.OUTER_CHAIN.eq(item.getOpenWith())) {
                 // 是否外链
-                meta.setLink(item.getPath());
+                meta.setLink(item.getLink());
                 item.setComponent(BizConstant.IFRAME);
             }
 
             // 视图需要隐藏
             meta.setHideInMenu(item.getIsHidden() != null ? item.getIsHidden() : false);
 
-            if (StrUtil.isNotEmpty(meta.getCurrentActiveMenu())) {
-                meta.setActivePath(meta.getCurrentActiveMenu());
-            } else {
+//            if (StrUtil.isNotEmpty(meta.getCurrentActiveMenu())) {
+//                meta.setActivePath(meta.getCurrentActiveMenu());
+//            } else {
                 if (meta.getHideInMenu() && StrUtil.isEmpty(meta.getActivePath()) && parent != null) {
                     meta.setActivePath(parent.getPath());
                 }
-            }
+//            }
 
             // 是否所有的子都是视图
             meta.setHideChildrenInMenu(hideChildrenInMenu(item.getChildren()));
@@ -368,15 +364,13 @@ public class ResourceBiz {
 
                 if (ResourceOpenWithEnum.INNER_CHAIN.eq(item.getOpenWith())) {
                     //  是否内嵌页面
-                    meta.setFrameSrc(item.getComponent());
+                    meta.setFrameSrc(item.getLink());
                     item.setComponent(BizConstant.IFRAME.toLowerCase());
                     meta.setComponent("_builtin/iframe/index");
                 } else if (ResourceOpenWithEnum.OUTER_CHAIN.eq(item.getOpenWith())) {
                     // 是否外链
                     item.setComponent(BizConstant.IFRAME.toLowerCase());
-                    meta.setHref(item.getPath());
-
-                    item.setPath("/" + BizConstant.IFRAME);
+                    meta.setHref(item.getLink());
                 }
 
             } else {
@@ -405,8 +399,7 @@ public class ResourceBiz {
                     first.setComponent(component);
                     RouterMeta firstMeta = BeanPlusUtil.toBean(item.getMeta(), RouterMeta.class);
                     firstMeta.setActiveMenu(item.getName())
-                            .setHideInMenu(true)
-                    ;
+                            .setHideInMenu(true);
                     first.setMeta(firstMeta);
 
                     first.setIsHidden(true);
@@ -448,14 +441,11 @@ public class ResourceBiz {
                 meta.setIcon(item.getIcon());
                 if (ResourceOpenWithEnum.INNER_CHAIN.eq(item.getOpenWith())) {
                     //  是否内嵌页面
-                    meta.setIframe(item.getComponent());
+                    meta.setIframeSrc(item.getLink());
                     item.setComponent(BizConstant.IFRAME);
                 } else if (ResourceOpenWithEnum.OUTER_CHAIN.eq(item.getOpenWith())) {
-
-
-                    meta.setLink(item.getPath());
-                    item.setPath(BizConstant.IFRAME);
                     // 是否外链
+                    meta.setLink(item.getLink());
                     item.setComponent(BizConstant.IFRAME);
                 }
                 // 视图需要隐藏
@@ -471,7 +461,6 @@ public class ResourceBiz {
             if (parent != null) {
                 item.setName(parent.getName() + "_" + item.getName());
             }
-
 
 
             item.setMeta(meta);
@@ -490,8 +479,7 @@ public class ResourceBiz {
                     RouterMeta firstMeta = BeanPlusUtil.toBean(item.getMeta(), RouterMeta.class);
                     firstMeta.setActiveMenu(item.getPath())
                             .setMenu(false)
-                            .setBreadcrumb(false)
-                    ;
+                            .setBreadcrumb(false);
                     first.setMeta(firstMeta);
 
                     first.setIsHidden(true);

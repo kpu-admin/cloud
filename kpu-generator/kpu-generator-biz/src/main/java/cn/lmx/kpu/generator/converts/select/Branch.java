@@ -7,6 +7,8 @@ import java.util.function.Predicate;
 /**
  * 分支提供者
  *
+ * @param <P>    参数类型
+ * @param <T>    返回值类型
  * @author hanchunlin
  * @author lmx
  * Created at 2025-01-01 00:00

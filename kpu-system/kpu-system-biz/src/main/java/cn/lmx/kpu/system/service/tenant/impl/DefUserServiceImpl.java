@@ -300,8 +300,7 @@ public class DefUserServiceImpl extends SuperCacheServiceImpl<DefUserManager, Lo
                         .like(DefUser::getUsername, pageQuery.getUsername())
                         .like(DefUser::getIdCard, pageQuery.getIdCard())
                         .like(DefUser::getEmail, pageQuery.getEmail())
-                        .eq(DefUser::getSex, pageQuery.getSex())
-                , Convert::toLong);
+                        .eq(DefUser::getSex, pageQuery.getSex()), Convert::toLong);
     }
 
 

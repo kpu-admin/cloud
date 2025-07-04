@@ -3,7 +3,6 @@ package cn.lmx.kpu.file.facade.impl;
 
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.map.MapUtil;
-import cn.lmx.basic.utils.CollHelper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
