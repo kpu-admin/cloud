@@ -11,9 +11,13 @@ import cn.lmx.basic.utils.TreeUtil;
 import cn.lmx.kpu.base.service.system.BaseRoleService;
 import cn.lmx.kpu.base.vo.result.user.RouterMeta;
 import cn.lmx.kpu.base.vo.result.user.VueRouter;
+import cn.lmx.kpu.common.constant.AppendixType;
 import cn.lmx.kpu.common.constant.BizConstant;
 import cn.lmx.kpu.common.constant.RoleConstant;
+import cn.lmx.kpu.file.facade.FileFacade;
+import cn.lmx.kpu.file.service.AppendixService;
 import cn.lmx.kpu.model.enumeration.system.ResourceTypeEnum;
+import cn.lmx.kpu.model.vo.result.AppendixResultVO;
 import cn.lmx.kpu.system.entity.application.DefApplication;
 import cn.lmx.kpu.system.entity.application.DefResource;
 import cn.lmx.kpu.system.enumeration.system.ClientTypeEnum;
@@ -24,9 +28,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 资源大业务
@@ -41,7 +47,8 @@ public class ResourceBiz {
     private final DefResourceService defResourceService;
     private final DefApplicationService defApplicationService;
     private final BaseRoleService baseRoleService;
-
+    private final AppendixService appendixService;
+    private final FileFacade facade;
     /**
      * 是否所有的子都是视图
      * <p>
@@ -132,6 +139,13 @@ public class ResourceBiz {
             meta.setTitle(defApplication.getName());
             meta.setHideMenu(false);
             meta.setHideInMenu(false);
+            // 用户头像
+            AppendixResultVO appendix = appendixService.getByBiz(defApplication.getId(), AppendixType.System.DEF__APPLICATION__LOGO);
+            if (appendix != null) {
+                Map<Serializable, Object> byIds = facade.findByIds(CollUtil.newHashSet(appendix.getId()));
+                meta.setIcon(byIds.get(appendix.getId()).toString());
+            }
+
             // 是否所有的子都是视图
             meta.setHideChildrenInMenu(false);
 
@@ -489,10 +503,9 @@ public class ResourceBiz {
                     item.setRedirect(first.getPath());
                     item.setChildren(childrenList);
                 }
-            } else {
-                if (level == 1) {
-                    item.setComponent("Layout" + item.getComponent());
-                }
+            }
+            if (CollUtil.isNotEmpty(item.getChildren()) && !hideChildrenInMenu(item.getChildren())) {
+                item.setComponent(BizConstant.LAYOUT);
             }
 
             if (CollUtil.isNotEmpty(item.getChildren())) {

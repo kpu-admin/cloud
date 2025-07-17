@@ -1,0 +1,13 @@
+{
+  "framework": "sop",
+  "outPath": "target/doc",
+  "projectName": "项目",
+  "packageFilters": "cn.lmx.kpu.openapi.open.*",
+  "openUrl": "http://localhost:7700/api", // torna服务器地址
+  "appToken": "2de2a6482fa24221bf5d1c9b10ffa219", // torna应用token
+  "debugEnvName":"本地环境",
+  "debugEnvUrl":"http://127.0.0.1:8081",
+  "tornaDebug": true,
+  "replace": true,
+  "showValidation": false
+}

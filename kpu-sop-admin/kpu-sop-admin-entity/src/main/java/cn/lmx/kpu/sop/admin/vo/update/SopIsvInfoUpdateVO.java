@@ -1,0 +1,99 @@
+package cn.lmx.kpu.sop.admin.vo.update;
+
+import cn.lmx.basic.base.entity.SuperEntity;
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import java.time.LocalDateTime;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import lombok.experimental.Accessors;
+import java.io.Serializable;
+
+/**
+ * <p>
+ * 表单修改方法VO
+ * isv信息表
+ * </p>
+ *
+ * @author lmx
+ * @date 2025-07-06 19:04:41
+ */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(callSuper = true)
+@Accessors(chain = true)
+@EqualsAndHashCode
+@Builder
+@Schema(description = "isv信息表")
+public class SopIsvInfoUpdateVO implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Schema(description = "主键id")
+    @NotNull(message = "请填写主键id", groups = SuperEntity.Update.class)
+    private Long id;
+
+    /**
+     * 状态 [1-启用 2-禁用]
+     */
+    @Schema(description = "状态 [1-启用 2-禁用]")
+    @NotNull(message = "请填写状态 [1-启用 2-禁用]")
+    private Integer status;
+    /**
+     * 开始有效期
+     */
+    @Schema(description = "开始有效期")
+    private LocalDateTime startExpirationTime;
+    /**
+     * 结束有效期
+     */
+    @Schema(description = "结束有效期")
+    private LocalDateTime endExpirationTime;
+    /**
+     * 审核状态 [0-初始化 1-申请中 2-通过 99-退回]
+     */
+    @Schema(description = "审核状态 [0-初始化 1-申请中 2-通过 99-退回]")
+    private Integer auditStatus;
+    /**
+     * 审核时间
+     */
+    @Schema(description = "审核时间")
+    private LocalDateTime auditTime;
+    /**
+     * 提交时间
+     */
+    @Schema(description = "提交时间")
+    private LocalDateTime submissionTime;
+    /**
+     * 创建方式 [0-后台创建 1-用户申请]
+     */
+    @Schema(description = "创建方式 [0-后台创建 1-用户申请]")
+    private Integer creationMethod;
+    /**
+     * 审核意见
+     */
+    @Schema(description = "审核意见")
+    @Size(max = 255, message = "审核意见长度不能超过{max}")
+    private String reviewComments;
+    /**
+     * 租户id def_tenant.id
+     */
+    @Schema(description = "租户id def_tenant.id")
+    private Long tenantId;
+    /**
+     * 名称
+     */
+    @Schema(description = "名称")
+    @NotEmpty(message = "请填写名称")
+    @Size(max = 255, message = "名称长度不能超过{max}")
+    private String name;
+
+
+}

@@ -44,6 +44,11 @@
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-sop-admin-controller</artifactId>
+            <version>${kpu-project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-system-controller</artifactId>
             <version>${kpu-project.version}</version>
         </dependency>

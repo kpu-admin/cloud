@@ -1,0 +1,17 @@
+kpu:
+  database:
+#    initDatabasePrefix:
+#      - kpu_base
+
+server:
+  port: 8080
+
+springdoc:
+  group-configs:
+    - group: 'sop-admin'
+      displayName: 'sop-admin服务'
+      paths-to-match: '/**'
+      packages-to-scan: cn.lmx.kpu.sopadmin.controller
+
+## 请在nacos中新建一个名为: kpu-sop-admin-server.yml 的配置文件，并将： kpu-sop-admin-server/src/main/resources/application.yml 配置文件的内容移动过去
+## 然后在项目文件中，删除此文件！！！

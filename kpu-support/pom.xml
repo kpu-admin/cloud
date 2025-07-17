@@ -22,6 +22,8 @@
         <module>kpu-job-executor-none</module>
         <!-- 单体版 -->
         <module>kpu-boot-server</module>
+        <!-- 单体版SOP -->
+        <module>kpu-boot-sop-server</module>
     </modules>
 
 </project>

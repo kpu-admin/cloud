@@ -20,5 +20,9 @@
         <module>kpu-gateway</module>
         <module>kpu-support</module>
         <module>kpu-generator</module>
+        <module>kpu-sdk</module>
+        <module>kpu-sop-admin</module>
+        <module>kpu-openapi</module>
+
     </modules>
 </project>

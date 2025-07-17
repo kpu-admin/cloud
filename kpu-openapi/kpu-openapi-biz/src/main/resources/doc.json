@@ -1,0 +1,27 @@
+{
+  // 开启推送
+  "enable": true,
+  // 扫描package，多个用;隔开
+  "basePackage": "cn.lmx.kpu.openapi.open",
+  // 推送URL，IP端口对应Torna服务器
+  "url": "http://localhost:7700/api",
+  // 模块token
+  "token": "2de2a6482fa24221bf5d1c9b10ffa219",
+  // 推送人
+  "author": "Jim",
+  // 打开调试:true/false
+  "debug": true,
+  // 是否替换文档，true：替换，false：不替换（追加）。默认：true
+  "isReplace": true,
+  // 第三方jar中的class配置
+  "jarClass": {
+    "com.xx.Page": {
+      "records": { "value": "查询数据列表", "example": "" },
+      "total": { "value": "总数", "example": "100" },
+      "size": { "value": "页数", "example": "10" },
+      "current": { "value": "当前页", "example": "1" },
+      "countId": { "hidden": true },
+      "orders": { "hidden": true }
+    }
+  }
+}

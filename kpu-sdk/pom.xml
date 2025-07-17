@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>cn.lmx.kpu</groupId>
+        <artifactId>kpu-dependencies-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../kpu-dependencies-parent/pom.xml</relativePath>
+    </parent>
+    <artifactId>kpu-sdk</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>SDK支撑模块</description>
+
+    <modules>
+        <module>kpu-sdk-core</module>
+        <!-- 定时任务执行器，启动该项目时，需要先启动 kpu-job（开源版） 或 kpu-job-pro（赞助版） -->
+        <module>kpu-simple-sdk</module>
+    </modules>
+</project>

@@ -1,0 +1,36 @@
+kpu:
+  database:
+#    initDatabasePrefix:
+#      - kpu_base
+
+server:
+  port: 8080
+
+springdoc:
+  group-configs:
+    - group: 'openapi'
+      displayName: 'openapi服务'
+      paths-to-match: '/**'
+      packages-to-scan: cn.lmx.kpu.openapi.controller
+
+## 请在nacos中新建一个名为: kpu-openapi-server.yml 的配置文件，并将： kpu-openapi-server/src/main/resources/application.yml 配置文件的内容移动过去
+## 然后在项目文件中，删除此文件！！！
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  application:
+    qos-enable: false
+  # 提供方
+  provider:
+    validation: jvalidationNew
+  # 消费方
+  consumer:
+    check: false
+    validation: jvalidationNew
+  # 注册中心
+  registry:
+    # 确保 kpu-openapi-server 和 sop-gateway-server 服务的dubbo注册到同一个nacos
+    address: nacos://nacos:nacos@localhost:8848
+    check: false

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.lmx.kpu</groupId>
+        <artifactId>kpu-dependencies-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../kpu-dependencies-parent/pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.lmx.kpu</groupId>
+    <artifactId>kpu-openapi</artifactId>
+    <name>${project.artifactId}</name>
+    <description>开放平台对外接口服务服务</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>kpu-openapi-facade</module>
+        <module>kpu-openapi-server</module>
+        <module>kpu-openapi-entity</module>
+        <module>kpu-openapi-biz</module>
+        <module>kpu-openapi-controller</module>
+    </modules>
+    <build>
+        <plugins>
+            <!-- 文档推送 -->
+            <plugin>
+                <groupId>com.ly.smart-doc</groupId>
+                <artifactId>smart-doc-maven-plugin</artifactId>
+                <version>${smart-doc.version}</version>
+                <configuration>
+                    <!--指定生成文档的使用的配置文件-->
+                    <configFile>./src/main/resources/smart-doc.json</configFile>
+                    <!--指定项目名称-->
+                    <projectName>${project.artifactId}</projectName>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>cn.lmx.basic</groupId>
+                        <artifactId>sop-service-support</artifactId>
+                        <version>${project.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
