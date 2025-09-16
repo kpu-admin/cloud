@@ -21,29 +21,29 @@ import java.util.Map;
  */
 public class SignUtil {
 
-    /** RSA最大加密明文大小  */
-    private static final int MAX_ENCRYPT_BLOCK = 117;
-
-    /** RSA最大解密密文大小   */
-    private static final int MAX_DECRYPT_BLOCK = 128;
-
-    public static final String SIGN_TYPE_RSA                  = "RSA";
-
+    public static final String SIGN_TYPE_RSA = "RSA";
     /**
      * sha256WithRsa 算法请求类型
      */
-    public static final String SIGN_TYPE_RSA2                 = "RSA2";
-
-    public static final String SIGN_ALGORITHMS                = "SHA1WithRSA";
-
-    public static final String SIGN_SHA256RSA_ALGORITHMS      = "SHA256WithRSA";
-
-    /** GBK字符集 **/
-    public static final String CHARSET_GBK                    = "GBK";
-
+    public static final String SIGN_TYPE_RSA2 = "RSA2";
+    public static final String SIGN_ALGORITHMS = "SHA1WithRSA";
+    public static final String SIGN_SHA256RSA_ALGORITHMS = "SHA256WithRSA";
+    /**
+     * GBK字符集
+     **/
+    public static final String CHARSET_GBK = "GBK";
+    /**
+     * RSA最大加密明文大小
+     */
+    private static final int MAX_ENCRYPT_BLOCK = 117;
+    /**
+     * RSA最大解密密文大小
+     */
+    private static final int MAX_DECRYPT_BLOCK = 128;
 
     /**
      * 获取签名内容
+     *
      * @param sortedParams
      * @return
      */
@@ -63,7 +63,7 @@ public class SignUtil {
     }
 
     /**
-     *  rsa内容签名
+     * rsa内容签名
      *
      * @param content
      * @param privateKey
@@ -101,10 +101,10 @@ public class SignUtil {
 
         try {
             PrivateKey priKey = getPrivateKeyFromPKCS8(SIGN_TYPE_RSA,
-                new ByteArrayInputStream(privateKey.getBytes()));
+                    new ByteArrayInputStream(privateKey.getBytes()));
 
             java.security.Signature signature = java.security.Signature
-                .getInstance(SIGN_SHA256RSA_ALGORITHMS);
+                    .getInstance(SIGN_SHA256RSA_ALGORITHMS);
 
             signature.initSign(priKey);
 
@@ -136,10 +136,10 @@ public class SignUtil {
                                  String charset) throws SopSignException {
         try {
             PrivateKey priKey = getPrivateKeyFromPKCS8(SIGN_TYPE_RSA,
-                new ByteArrayInputStream(privateKey.getBytes()));
+                    new ByteArrayInputStream(privateKey.getBytes()));
 
             java.security.Signature signature = java.security.Signature
-                .getInstance(SIGN_ALGORITHMS);
+                    .getInstance(SIGN_ALGORITHMS);
 
             signature.initSign(priKey);
 
@@ -232,11 +232,11 @@ public class SignUtil {
     }
 
     public static boolean rsaCheckV1(Map<String, String> params, String publicKey,
-            String charset,String signType) throws SopSignException {
-		String sign = params.get("sign");
-		String content = getSignCheckContentV1(params);
+                                     String charset, String signType) throws SopSignException {
+        String sign = params.get("sign");
+        String content = getSignCheckContentV1(params);
 
-		return rsaCheck(content, sign, publicKey, charset,signType);
+        return rsaCheck(content, sign, publicKey, charset, signType);
     }
 
     public static boolean rsaCheckV2(Map<String, String> params, String publicKey,
@@ -248,12 +248,12 @@ public class SignUtil {
     }
 
     public static boolean rsaCheckV2(Map<String, ?> params, String publicKey,
-            String charset,String signType) throws SopSignException {
-		String sign = String.valueOf(params.get("sign"));
-		String content = getSignCheckContentV2(params);
+                                     String charset, String signType) throws SopSignException {
+        String sign = String.valueOf(params.get("sign"));
+        String content = getSignCheckContentV2(params);
 
-		return rsaCheck(content, sign, publicKey, charset,signType);
-	}
+        return rsaCheck(content, sign, publicKey, charset, signType);
+    }
 
     public static boolean rsaCheck(String content, String sign, String publicKey, String charset,
                                    String signType) throws SopSignException {
@@ -277,10 +277,10 @@ public class SignUtil {
                                              String charset) throws SopSignException {
         try {
             PublicKey pubKey = getPublicKeyFromX509("RSA",
-                new ByteArrayInputStream(publicKey.getBytes()));
+                    new ByteArrayInputStream(publicKey.getBytes()));
 
             java.security.Signature signature = java.security.Signature
-                .getInstance(SIGN_SHA256RSA_ALGORITHMS);
+                    .getInstance(SIGN_SHA256RSA_ALGORITHMS);
 
             signature.initVerify(pubKey);
 
@@ -293,7 +293,7 @@ public class SignUtil {
             return signature.verify(Base64Util.decodeBase64(sign.getBytes()));
         } catch (Exception e) {
             throw new SopSignException(
-                "RSAcontent = " + content + ",sign=" + sign + ",charset = " + charset, e);
+                    "RSAcontent = " + content + ",sign=" + sign + ",charset = " + charset, e);
         }
     }
 
@@ -301,10 +301,10 @@ public class SignUtil {
                                           String charset) throws SopSignException {
         try {
             PublicKey pubKey = getPublicKeyFromX509("RSA",
-                new ByteArrayInputStream(publicKey.getBytes()));
+                    new ByteArrayInputStream(publicKey.getBytes()));
 
             java.security.Signature signature = java.security.Signature
-                .getInstance(SIGN_ALGORITHMS);
+                    .getInstance(SIGN_ALGORITHMS);
 
             signature.initVerify(pubKey);
 
@@ -317,7 +317,7 @@ public class SignUtil {
             return signature.verify(Base64Util.decodeBase64(sign.getBytes()));
         } catch (Exception e) {
             throw new SopSignException(
-                "RSAcontent = " + content + ",sign=" + sign + ",charset = " + charset, e);
+                    "RSAcontent = " + content + ",sign=" + sign + ",charset = " + charset, e);
         }
     }
 
@@ -341,12 +341,13 @@ public class SignUtil {
      * <b>目前适用于公众号</b><br>
      * params参数示例：
      * <br>{
-     *    <br>biz_content=M0qGiGz+8kIpxe8aF4geWJdBn0aBTuJRQItLHo9R7o5JGhpic/MIUjvXo2BLB++BbkSq2OsJCEQFDZ0zK5AJYwvBgeRX30gvEj6eXqXRt16/IkB9HzAccEqKmRHrZJ7PjQWE0KfvDAHsJqFIeMvEYk1Zei2QkwSQPlso7K0oheo/iT+HYE8aTATnkqD/ByD9iNDtGg38pCa2xnnns63abKsKoV8h0DfHWgPH62urGY7Pye3r9FCOXA2Ykm8X4/Bl1bWFN/PFCEJHWe/HXj8KJKjWMO6ttsoV0xRGfeyUO8agu6t587Dl5ux5zD/s8Lbg5QXygaOwo3Fz1G8EqmGhi4+soEIQb8DBYanQOS3X+m46tVqBGMw8Oe+hsyIMpsjwF4HaPKMr37zpW3fe7xOMuimbZ0wq53YP/jhQv6XWodjT3mL0H5ACqcsSn727B5ztquzCPiwrqyjUHjJQQefFTzOse8snaWNQTUsQS7aLsHq0FveGpSBYORyA90qPdiTjXIkVP7mAiYiAIWW9pCEC7F3XtViKTZ8FRMM9ySicfuAlf3jtap6v2KPMtQv70X+hlmzO/IXB6W0Ep8DovkF5rB4r/BJYJLw/6AS0LZM9w5JfnAZhfGM2rKzpfNsgpOgEZS1WleG4I2hoQC0nxg9IcP0Hs+nWIPkEUcYNaiXqeBc=,
-     *    <br>sign=rlqgA8O+RzHBVYLyHmrbODVSANWPXf3pSrr82OCO/bm3upZiXSYrX5fZr6UBmG6BZRAydEyTIguEW6VRuAKjnaO/sOiR9BsSrOdXbD5Rhos/Xt7/mGUWbTOt/F+3W0/XLuDNmuYg1yIC/6hzkg44kgtdSTsQbOC9gWM7ayB4J4c=,
-     *    sign_type=RSA,
-     *    <br>charset=UTF-8
+     * <br>biz_content=M0qGiGz+8kIpxe8aF4geWJdBn0aBTuJRQItLHo9R7o5JGhpic/MIUjvXo2BLB++BbkSq2OsJCEQFDZ0zK5AJYwvBgeRX30gvEj6eXqXRt16/IkB9HzAccEqKmRHrZJ7PjQWE0KfvDAHsJqFIeMvEYk1Zei2QkwSQPlso7K0oheo/iT+HYE8aTATnkqD/ByD9iNDtGg38pCa2xnnns63abKsKoV8h0DfHWgPH62urGY7Pye3r9FCOXA2Ykm8X4/Bl1bWFN/PFCEJHWe/HXj8KJKjWMO6ttsoV0xRGfeyUO8agu6t587Dl5ux5zD/s8Lbg5QXygaOwo3Fz1G8EqmGhi4+soEIQb8DBYanQOS3X+m46tVqBGMw8Oe+hsyIMpsjwF4HaPKMr37zpW3fe7xOMuimbZ0wq53YP/jhQv6XWodjT3mL0H5ACqcsSn727B5ztquzCPiwrqyjUHjJQQefFTzOse8snaWNQTUsQS7aLsHq0FveGpSBYORyA90qPdiTjXIkVP7mAiYiAIWW9pCEC7F3XtViKTZ8FRMM9ySicfuAlf3jtap6v2KPMtQv70X+hlmzO/IXB6W0Ep8DovkF5rB4r/BJYJLw/6AS0LZM9w5JfnAZhfGM2rKzpfNsgpOgEZS1WleG4I2hoQC0nxg9IcP0Hs+nWIPkEUcYNaiXqeBc=,
+     * <br>sign=rlqgA8O+RzHBVYLyHmrbODVSANWPXf3pSrr82OCO/bm3upZiXSYrX5fZr6UBmG6BZRAydEyTIguEW6VRuAKjnaO/sOiR9BsSrOdXbD5Rhos/Xt7/mGUWbTOt/F+3W0/XLuDNmuYg1yIC/6hzkg44kgtdSTsQbOC9gWM7ayB4J4c=,
+     * sign_type=RSA,
+     * <br>charset=UTF-8
      * <br>}
      * </p>
+     *
      * @param params
      * @param alipayPublicKey 支付宝公钥
      * @param cusPrivateKey   商户私钥
@@ -379,12 +380,13 @@ public class SignUtil {
      * <b>目前适用于公众号</b><br>
      * params参数示例：
      * <br>{
-     *    <br>biz_content=M0qGiGz+8kIpxe8aF4geWJdBn0aBTuJRQItLHo9R7o5JGhpic/MIUjvXo2BLB++BbkSq2OsJCEQFDZ0zK5AJYwvBgeRX30gvEj6eXqXRt16/IkB9HzAccEqKmRHrZJ7PjQWE0KfvDAHsJqFIeMvEYk1Zei2QkwSQPlso7K0oheo/iT+HYE8aTATnkqD/ByD9iNDtGg38pCa2xnnns63abKsKoV8h0DfHWgPH62urGY7Pye3r9FCOXA2Ykm8X4/Bl1bWFN/PFCEJHWe/HXj8KJKjWMO6ttsoV0xRGfeyUO8agu6t587Dl5ux5zD/s8Lbg5QXygaOwo3Fz1G8EqmGhi4+soEIQb8DBYanQOS3X+m46tVqBGMw8Oe+hsyIMpsjwF4HaPKMr37zpW3fe7xOMuimbZ0wq53YP/jhQv6XWodjT3mL0H5ACqcsSn727B5ztquzCPiwrqyjUHjJQQefFTzOse8snaWNQTUsQS7aLsHq0FveGpSBYORyA90qPdiTjXIkVP7mAiYiAIWW9pCEC7F3XtViKTZ8FRMM9ySicfuAlf3jtap6v2KPMtQv70X+hlmzO/IXB6W0Ep8DovkF5rB4r/BJYJLw/6AS0LZM9w5JfnAZhfGM2rKzpfNsgpOgEZS1WleG4I2hoQC0nxg9IcP0Hs+nWIPkEUcYNaiXqeBc=,
-     *    <br>sign=rlqgA8O+RzHBVYLyHmrbODVSANWPXf3pSrr82OCO/bm3upZiXSYrX5fZr6UBmG6BZRAydEyTIguEW6VRuAKjnaO/sOiR9BsSrOdXbD5Rhos/Xt7/mGUWbTOt/F+3W0/XLuDNmuYg1yIC/6hzkg44kgtdSTsQbOC9gWM7ayB4J4c=,
-     *    sign_type=RSA,
-     *    <br>charset=UTF-8
+     * <br>biz_content=M0qGiGz+8kIpxe8aF4geWJdBn0aBTuJRQItLHo9R7o5JGhpic/MIUjvXo2BLB++BbkSq2OsJCEQFDZ0zK5AJYwvBgeRX30gvEj6eXqXRt16/IkB9HzAccEqKmRHrZJ7PjQWE0KfvDAHsJqFIeMvEYk1Zei2QkwSQPlso7K0oheo/iT+HYE8aTATnkqD/ByD9iNDtGg38pCa2xnnns63abKsKoV8h0DfHWgPH62urGY7Pye3r9FCOXA2Ykm8X4/Bl1bWFN/PFCEJHWe/HXj8KJKjWMO6ttsoV0xRGfeyUO8agu6t587Dl5ux5zD/s8Lbg5QXygaOwo3Fz1G8EqmGhi4+soEIQb8DBYanQOS3X+m46tVqBGMw8Oe+hsyIMpsjwF4HaPKMr37zpW3fe7xOMuimbZ0wq53YP/jhQv6XWodjT3mL0H5ACqcsSn727B5ztquzCPiwrqyjUHjJQQefFTzOse8snaWNQTUsQS7aLsHq0FveGpSBYORyA90qPdiTjXIkVP7mAiYiAIWW9pCEC7F3XtViKTZ8FRMM9ySicfuAlf3jtap6v2KPMtQv70X+hlmzO/IXB6W0Ep8DovkF5rB4r/BJYJLw/6AS0LZM9w5JfnAZhfGM2rKzpfNsgpOgEZS1WleG4I2hoQC0nxg9IcP0Hs+nWIPkEUcYNaiXqeBc=,
+     * <br>sign=rlqgA8O+RzHBVYLyHmrbODVSANWPXf3pSrr82OCO/bm3upZiXSYrX5fZr6UBmG6BZRAydEyTIguEW6VRuAKjnaO/sOiR9BsSrOdXbD5Rhos/Xt7/mGUWbTOt/F+3W0/XLuDNmuYg1yIC/6hzkg44kgtdSTsQbOC9gWM7ayB4J4c=,
+     * sign_type=RSA,
+     * <br>charset=UTF-8
      * <br>}
      * </p>
+     *
      * @param params
      * @param alipayPublicKey 支付宝公钥
      * @param cusPrivateKey   商户私钥
@@ -399,7 +401,7 @@ public class SignUtil {
         String charset = params.get("charset");
         String bizContent = params.get("biz_content");
         if (isCheckSign) {
-            if (!rsaCheckV2(params, alipayPublicKey, charset,signType)) {
+            if (!rsaCheckV2(params, alipayPublicKey, charset, signType)) {
                 throw new SopSignException("rsaCheck failure:rsaParams=" + params);
             }
         }
@@ -414,6 +416,7 @@ public class SignUtil {
     /**
      * 加密并签名<br>
      * <b>目前适用于公众号</b>
+     *
      * @param bizContent      待加密、签名内容
      * @param alipayPublicKey 支付宝公钥
      * @param cusPrivateKey   商户私钥
@@ -424,10 +427,10 @@ public class SignUtil {
      * <p>
      * 返回示例：
      * <alipay>
-     *  <response>密文</response>
-     *  <encryption_type>RSA</encryption_type>
-     *  <sign>sign</sign>
-     *  <sign_type>RSA</sign_type>
+     * <response>密文</response>
+     * <encryption_type>RSA</encryption_type>
+     * <sign>sign</sign>
+     * <sign_type>RSA</sign_type>
      * </alipay>
      * </p>
      * @throws SopSignException
@@ -440,7 +443,7 @@ public class SignUtil {
             charset = CHARSET_GBK;
         }
         sb.append("<?xml version=\"1.0\" encoding=\"" + charset + "\"?>");
-        if (isEncrypt) {// 加密
+        if (isEncrypt) { // 加密
             sb.append("<alipay>");
             String encrypted = rsaEncrypt(bizContent, alipayPublicKey, charset);
             sb.append("<response>" + encrypted + "</response>");
@@ -451,14 +454,14 @@ public class SignUtil {
                 sb.append("<sign_type>RSA</sign_type>");
             }
             sb.append("</alipay>");
-        } else if (isSign) {// 不加密，但需要签名
+        } else if (isSign) { // 不加密，但需要签名
             sb.append("<alipay>");
             sb.append("<response>" + bizContent + "</response>");
             String sign = rsaSign(bizContent, cusPrivateKey, charset);
             sb.append("<sign>" + sign + "</sign>");
             sb.append("<sign_type>RSA</sign_type>");
             sb.append("</alipay>");
-        } else {// 不加密，不加签
+        } else { // 不加密，不加签
             sb.append(bizContent);
         }
         return sb.toString();
@@ -467,6 +470,7 @@ public class SignUtil {
     /**
      * 加密并签名<br>
      * <b>目前适用于公众号</b>
+     *
      * @param bizContent      待加密、签名内容
      * @param alipayPublicKey 支付宝公钥
      * @param cusPrivateKey   商户私钥
@@ -477,23 +481,23 @@ public class SignUtil {
      * <p>
      * 返回示例：
      * <alipay>
-     *  <response>密文</response>
-     *  <encryption_type>RSA</encryption_type>
-     *  <sign>sign</sign>
-     *  <sign_type>RSA</sign_type>
+     * <response>密文</response>
+     * <encryption_type>RSA</encryption_type>
+     * <sign>sign</sign>
+     * <sign_type>RSA</sign_type>
      * </alipay>
      * </p>
      * @throws SopSignException
      */
     public static String encryptAndSign(String bizContent, String alipayPublicKey,
                                         String cusPrivateKey, String charset, boolean isEncrypt,
-                                        boolean isSign,String signType) throws SopSignException {
+                                        boolean isSign, String signType) throws SopSignException {
         StringBuilder sb = new StringBuilder();
         if (StringUtils.isEmpty(charset)) {
             charset = CHARSET_GBK;
         }
         sb.append("<?xml version=\"1.0\" encoding=\"" + charset + "\"?>");
-        if (isEncrypt) {// 加密
+        if (isEncrypt) { // 加密
             sb.append("<alipay>");
             String encrypted = rsaEncrypt(bizContent, alipayPublicKey, charset);
             sb.append("<response>" + encrypted + "</response>");
@@ -506,7 +510,7 @@ public class SignUtil {
                 sb.append("</sign_type>");
             }
             sb.append("</alipay>");
-        } else if (isSign) {// 不加密，但需要签名
+        } else if (isSign) { // 不加密，但需要签名
             sb.append("<alipay>");
             sb.append("<response>" + bizContent + "</response>");
             String sign = rsaSign(bizContent, cusPrivateKey, charset, signType);
@@ -515,7 +519,7 @@ public class SignUtil {
             sb.append(signType);
             sb.append("</sign_type>");
             sb.append("</alipay>");
-        } else {// 不加密，不加签
+        } else { // 不加密，不加签
             sb.append(bizContent);
         }
         return sb.toString();
@@ -534,11 +538,11 @@ public class SignUtil {
                                     String charset) throws SopSignException {
         try {
             PublicKey pubKey = getPublicKeyFromX509(SIGN_TYPE_RSA,
-                new ByteArrayInputStream(publicKey.getBytes()));
+                    new ByteArrayInputStream(publicKey.getBytes()));
             Cipher cipher = Cipher.getInstance(SIGN_TYPE_RSA);
             cipher.init(Cipher.ENCRYPT_MODE, pubKey);
             byte[] data = StringUtils.isEmpty(charset) ? content.getBytes()
-                : content.getBytes(charset);
+                    : content.getBytes(charset);
             int inputLen = data.length;
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             int offSet = 0;
@@ -559,10 +563,10 @@ public class SignUtil {
             out.close();
 
             return StringUtils.isEmpty(charset) ? new String(encryptedData)
-                : new String(encryptedData, charset);
+                    : new String(encryptedData, charset);
         } catch (Exception e) {
             throw new SopSignException("EncryptContent = " + content + ",charset = " + charset,
-                e);
+                    e);
         }
     }
 
@@ -579,12 +583,12 @@ public class SignUtil {
                                     String charset) throws SopSignException {
         try {
             PrivateKey priKey = getPrivateKeyFromPKCS8(SIGN_TYPE_RSA,
-                new ByteArrayInputStream(privateKey.getBytes()));
+                    new ByteArrayInputStream(privateKey.getBytes()));
             Cipher cipher = Cipher.getInstance(SIGN_TYPE_RSA);
             cipher.init(Cipher.DECRYPT_MODE, priKey);
             byte[] encryptedData = StringUtils.isEmpty(charset)
-                ? Base64Util.decodeBase64(content.getBytes())
-                : Base64Util.decodeBase64(content.getBytes(charset));
+                    ? Base64Util.decodeBase64(content.getBytes())
+                    : Base64Util.decodeBase64(content.getBytes(charset));
             int inputLen = encryptedData.length;
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             int offSet = 0;
@@ -605,7 +609,7 @@ public class SignUtil {
             out.close();
 
             return StringUtils.isEmpty(charset) ? new String(decryptedData)
-                : new String(decryptedData, charset);
+                    : new String(decryptedData, charset);
         } catch (Exception e) {
             throw new SopSignException("EncodeContent = " + content + ",charset = " + charset, e);
         }

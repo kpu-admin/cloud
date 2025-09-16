@@ -18,7 +18,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.xnio.Result;
 
 import java.util.List;
 
@@ -27,7 +26,7 @@ import java.util.List;
 @Validated
 @RestController
 @RequestMapping("/anyTenant/website")
-@Tag(name = "")
+@Tag(name = "网站", description = "网站")
 public class WebsiteController {
     private final WebsiteService websiteService;
 

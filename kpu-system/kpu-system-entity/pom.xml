@@ -5,7 +5,7 @@
     <parent>
         <artifactId>kpu-system</artifactId>
         <groupId>cn.lmx.kpu</groupId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -17,11 +17,11 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-common</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>easyexcel</artifactId>
+            <groupId>cn.idev.excel</groupId>
+            <artifactId>fastexcel</artifactId>
         </dependency>
     </dependencies>
 

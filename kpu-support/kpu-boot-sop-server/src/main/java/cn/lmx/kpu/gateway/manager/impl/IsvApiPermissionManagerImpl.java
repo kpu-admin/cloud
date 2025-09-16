@@ -4,7 +4,6 @@ import cn.lmx.basic.cache.repository.CacheOps;
 import cn.lmx.basic.database.mybatis.conditions.Wraps;
 import cn.lmx.kpu.common.cache.common.CaptchaCacheKeyBuilder;
 import cn.lmx.kpu.gateway.common.ApiInfoDTO;
-import cn.lmx.kpu.gateway.common.CacheKey;
 import cn.lmx.kpu.gateway.common.enums.YesOrNoEnum;
 import cn.lmx.kpu.gateway.manager.IsvApiPermissionManager;
 import cn.lmx.kpu.sop.admin.entity.SopApiInfo;
@@ -13,7 +12,6 @@ import cn.lmx.kpu.sop.admin.entity.SopPermIsvGroup;
 import cn.lmx.kpu.sop.admin.mapper.SopApiInfoMapper;
 import cn.lmx.kpu.sop.admin.mapper.SopPermGroupPermissionMapper;
 import cn.lmx.kpu.sop.admin.mapper.SopPermIsvGroupMapper;
-import com.tencentcloudapi.apigateway.v20180808.models.ApiInfo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +51,7 @@ public class IsvApiPermissionManagerImpl implements IsvApiPermissionManager {
     }
 
     public boolean doCheck(Long isvId, ApiInfoDTO apiInfoDTO) {
-        List<Long> apiNameVerionList = cacheOps.get(CaptchaCacheKeyBuilder.build(isvId+"", CACHE_KEY), k -> this.listApiId(isvId)).getValue();
+        List<Long> apiNameVerionList = cacheOps.get(CaptchaCacheKeyBuilder.build(isvId + "", CACHE_KEY), k -> this.listApiId(isvId)).getValue();
         if (CollectionUtils.isEmpty(apiNameVerionList)) {
             return false;
         }
@@ -77,7 +75,7 @@ public class IsvApiPermissionManagerImpl implements IsvApiPermissionManager {
     }
 
     protected void cache(Long isvId, List<Long> apiIdList) {
-        cacheOps.set(CaptchaCacheKeyBuilder.build(isvId+"", CACHE_KEY), apiIdList);
+        cacheOps.set(CaptchaCacheKeyBuilder.build(isvId + "", CACHE_KEY), apiIdList);
         log.info("更新isv接口id本地缓存, isvId={}, apiIdList={}", isvId, apiIdList);
     }
 

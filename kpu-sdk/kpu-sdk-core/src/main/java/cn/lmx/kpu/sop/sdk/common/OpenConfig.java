@@ -7,7 +7,7 @@ import lombok.Data;
  */
 @Data
 public class OpenConfig {
-    public static DataNameBuilder DATA_NAME_BUILDER = new CustomDataNameBuilder();
+    public static final DataNameBuilder DATA_NAME_BUILDER = new CustomDataNameBuilder();
 
     /** 成功返回码值 */
     private String successCode = "0";

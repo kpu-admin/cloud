@@ -5,7 +5,7 @@
     <parent>
         <artifactId>kpu-support</artifactId>
         <groupId>cn.lmx.kpu</groupId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-database-mode</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -30,37 +30,37 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-generator-controller</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-base-controller</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-oauth-controller</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-sop-admin-controller</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-system-controller</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-login-user-resolver</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-data-scope-sdk</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
 
         <dependency>
@@ -72,28 +72,28 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-base-boot-impl</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-oauth-boot-impl</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-system-boot-impl</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <!-- 用户信息注入 - 单体版实现类 -->
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-login-user-boot-impl</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
 
         <dependency>
             <groupId>cn.lmx.basic</groupId>
-            <artifactId>kpu-all</artifactId>
+            <artifactId>kpu-all-boot</artifactId>
             <exclusions>
                 <exclusion>
                     <groupId>cn.lmx.basic</groupId>
@@ -125,12 +125,6 @@
                     <groupId>org.springframework.boot</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
 
         <dependency>

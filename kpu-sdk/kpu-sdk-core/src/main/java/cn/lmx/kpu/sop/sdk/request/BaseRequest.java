@@ -98,9 +98,9 @@ public abstract class BaseRequest<T> {
         params.put(openConfig.getVersionName(), v);
 
         // 业务参数
-        String biz_content = buildBizContent();
+        String bizContents = buildBizContent();
 
-        params.put(openConfig.getDataName(), biz_content);
+        params.put(openConfig.getDataName(), bizContents);
 
         RequestForm requestForm = new RequestForm(params);
         requestForm.setRequestMethod(getRequestMethod());

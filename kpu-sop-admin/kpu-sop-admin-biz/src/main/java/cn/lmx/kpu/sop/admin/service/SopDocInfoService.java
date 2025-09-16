@@ -7,7 +7,6 @@ import cn.lmx.kpu.sop.admin.vo.query.SopDocInfoPageQuery;
 import cn.lmx.kpu.sop.admin.vo.result.SopDocInfoResultVO;
 import cn.lmx.kpu.sop.admin.vo.result.TornaDocInfoViewVO;
 import cn.lmx.kpu.sop.admin.vo.update.SopDocInfoUpdateVO;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

@@ -5,7 +5,7 @@
     <parent>
         <groupId>cn.lmx.kpu</groupId>
         <artifactId>kpu-public</artifactId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-model</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.basic</groupId>
@@ -50,6 +50,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

@@ -47,6 +47,22 @@ public final class AppendixType {
          */
         String DEF__USER__AVATAR = "DEF__USER__AVATAR";
     }
+    public interface Shop {
+        /**
+         * 默认库 应用logo
+         */
+        String DEF__APPLICATION__LOGO = "DEF__APPLICATION__LOGO";
+
+        /**
+         * 默认库 用户头像
+         *
+         * @author lmx
+         * @date 2025-01-01 00:00
+         * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+         */
+        String MEMBER__USER__AVATAR = "MEMBER__USER__AVATAR";
+    }
+
 
     /**
      * 权限管理系统中有关的的附件类型定义

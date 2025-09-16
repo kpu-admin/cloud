@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class Goods {
 
     private Long id;
-    private String goods_name;
+    private String goodsName;
     private BigDecimal price;
 
     public Long getId() {
@@ -16,12 +16,12 @@ public class Goods {
         this.id = id;
     }
 
-    public String getGoods_name() {
-        return goods_name;
+    public String getGoodsName() {
+        return goodsName;
     }
 
-    public void setGoods_name(String goods_name) {
-        this.goods_name = goods_name;
+    public void setGoodsName(String goodsName) {
+        this.goodsName = goodsName;
     }
 
     public BigDecimal getPrice() {
@@ -34,7 +34,7 @@ public class Goods {
 
     @Override
     public String toString() {
-        return "Goods [id=" + id + ", goods_name=" + goods_name + ", price=" + price + "]";
+        return "Goods [id=" + id + ", goodsName=" + goodsName + ", price=" + price + "]";
     }
 
 }

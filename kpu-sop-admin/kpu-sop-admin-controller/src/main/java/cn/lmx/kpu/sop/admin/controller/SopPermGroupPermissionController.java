@@ -19,8 +19,6 @@ import cn.lmx.kpu.sop.admin.vo.result.SopPermGroupPermissionResultVO;
 import cn.lmx.kpu.sop.admin.vo.query.SopPermGroupPermissionPageQuery;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 /**
  * <p>
  * 前端控制器

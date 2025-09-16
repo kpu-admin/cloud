@@ -1,10 +1,12 @@
 package cn.lmx.kpu.generator.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.db.meta.Column;
 import cn.hutool.db.meta.MetaUtil;
 import cn.hutool.db.meta.Table;
 
+import cn.lmx.basic.database.mybatis.conditions.query.LbQueryWrap;
 import cn.lmx.kpu.generator.config.GeneratorConfig;
 import cn.lmx.kpu.generator.utils.GenUtils;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -52,7 +54,10 @@ public class DefGenTableColumnServiceImpl extends SuperServiceImpl<DefGenTableCo
         IPage<DefGenTableColumn> page = params.buildPage();
         DefGenTableColumnPageQuery model = params.getModel();
         DefGenTableColumn column = BeanUtil.toBean(model, DefGenTableColumn.class);
-        superManager.page(page, Wraps.lbQ(column));
+        LbQueryWrap<DefGenTableColumn> wrap = Wraps.lbQ(column);
+        wrap.orderByAsc(DefGenTableColumn::getId);
+        wrap.orderBy(StrUtil.isNotBlank(params.getSort()), StrUtil.equalsAny(params.getOrder(), "ascending", "ascend", "asc"), DefGenTableColumn::getCreatedTime);
+        superManager.page(page, wrap);
         return BeanPlusUtil.toBeanPage(page, DefGenTableColumnResultVO.class);
     }
 

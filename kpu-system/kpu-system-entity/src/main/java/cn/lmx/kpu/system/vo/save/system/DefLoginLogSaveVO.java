@@ -113,4 +113,6 @@ public class DefLoginLogSaveVO implements Serializable {
 
     private String status;
 
+    private Long createdBy;
+
 }

@@ -1,6 +1,5 @@
 package cn.lmx.kpu.gateway.manager;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 

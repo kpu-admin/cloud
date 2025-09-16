@@ -11,9 +11,12 @@ public enum SopSdkErrors {
     /**
      * 验证返回sign错误
      */
-    CHECK_RESPONSE_SIGN_ERROR("836875002", "验证服务端sign出错")
-    ;
+    CHECK_RESPONSE_SIGN_ERROR("836875002", "验证服务端sign出错");
 
+    private String code;
+    private String msg;
+    private String subCode;
+    private String subMsg;
     SopSdkErrors(String code, String msg) {
         this.code = code;
         this.msg = msg;
@@ -29,11 +32,6 @@ public enum SopSdkErrors {
         result.setMsg(msg);
         return result;
     }
-
-    private String code;
-    private String msg;
-    private String subCode;
-    private String subMsg;
 
     public String getCode() {
         return code;

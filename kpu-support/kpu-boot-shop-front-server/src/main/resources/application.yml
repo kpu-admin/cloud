@@ -1,0 +1,208 @@
+kpu:
+  feign:
+    # xxl-job-admin 的地址
+    job-server: http://127.0.0.1:8767
+  scan:
+    enabled: true
+    basePackage: cn.lmx
+  system:
+    # 登录时否验证密码有效性 （常用于开发环境快速登录）
+    verifyPassword: true
+    # 登录时否验证验证码有效性 （常用于开发环境快速登录）
+    verifyCaptcha: true
+    # 默认用户密码
+    defPwd: '123456'
+    # 密码最大输错次数  小于0不限制
+    maxPasswordErrorNum: 10
+    # 密码错误锁定用户时间  除了0表示锁定到今天结束，还支持m、h、d、w、M、y等单位
+    passwordErrorLockUserTime: '0'
+    # log记录 cn.lmx.kpu.controller/service/biz包下 参数
+    recordKpu: false
+    # log记录 cn.lmx.kpu.controller/service/biz包下 所有方法的参数
+    recordKpuArgs: true
+    # log记录 cn.lmx.kpu.controller/service/biz包下 所有方法的返回值
+    record/kpuResult: true
+    # 缓存Key前缀
+    cachePrefix: lb
+    # oauth 服务扫描枚举类的包路径
+    enumPackage: "cn.lmx"
+    # 演示环境启用
+    notAllowWrite: false
+    notAllowWriteList:
+      POST:
+        - /defResource
+        - /defTenantApplicationRel/cancel
+        - /baseRole/roleEmployee
+        - /baseRole/roleResource
+        - /baseEmployee/employeeRole
+        - /sopPermGroupPermission/delete
+      PUT:
+        - /defResource
+        - /defResource/moveResource
+      DELETE:
+        - /defResource
+        - /defResource*/**
+        - /defTenant
+        - /defTenant*/**
+        - /defApplication
+        - /defApplication*/**
+        - /defUser
+        - /defUser*/**
+        - /baseEmployee
+        - /baseEmployee*/**
+        - /defParameter
+        - /defParameter*/**
+        - /defDict
+        - /defDict*/**
+        - /defClient
+        - /defClient*/**
+        - /defMsgTemplate*/**
+        - /sopApiInfo*/**
+        - /sopSysConfig*/**
+        - /sopIsvInfo*/**
+        - /sopPermGroup*/**
+        - /sopSysConfig*/**
+  ignore:
+    # 是否启用网关的 uri权限鉴权 (设置为false，则后台不校验访问权限)
+    authEnabled: true
+    # 前端校验按钮 是否区分大小写
+    caseSensitive: false
+    # 系统没有配置某个URI时，是否允许访问
+    notConfigUriAllow: false
+    anyone: # 请求中 需要携带Tenant 且 需要携带Token(不需要登录)，但不需要验证uri权限
+      ALL:
+        - /anyone/**
+        - /service/model/*/json
+        - /service/model/*/save
+        - /service/editor/stencilset
+    anyUser: # 请求中 需要携带Tenant，但 不需要携带Token(不需要登录) 和 不需要验证uri权限
+      ALL:
+        - /anyUser/**
+    anyTenant: # 请求中 不需要携带Tenant 且 不需要携带Token(不需要登录) 和 不需要验证uri权限
+      ALL:
+        - /anyTenant/**
+  echo: #详情看: EchoProperties
+    # 是否启用 远程数据 手动注入
+    enabled: true
+    # 是否启用 远程数据 注解AOP注入
+    aop-enabled: true
+    # 字典类型 和 code 的分隔符
+    dictSeparator: '###'
+    # 多个字典code 之间的的分隔符
+    dictItemSeparator: ','
+    # 递归最大深度
+    maxDepth: 3
+    # 本地缓存配置信息 生产慎用
+    guavaCache:
+      enabled: false
+      maximumSize: 1000
+      refreshWriteTime: 2
+      refreshThreadPoolSize: 10
+  webmvc:
+    undertow: true
+    header: false
+  log: # 详情看：OptLogProperties
+    # 开启记录操作日志
+    enabled: true
+    # 记录到什么地方  DB:mysql LOGGER:日志文件
+    type: DB
+  xss:
+    # 是否开启 xss 过滤器  详情看：XssProperties
+    enabled: true
+    requestBodyEnabled: false
+  captcha:
+    # 登录界面的验证码配置 详情看：CaptchaProperties
+    type: ARITHMETIC
+    width: 158
+    height: 58
+    len: 2
+    charType: 2
+  async: # 全局线程池配置
+    corePoolSize: 2
+    maxPoolSize: 50
+    queueCapacity: 10000
+    keepAliveSeconds: 300
+    threadNamePrefix: 'kpu-async-executor-'
+spring:
+  config:
+    # 配置优先级： ./application-${spring.profiles.active}.yml >= ./application.yml >= /config/${spring.profiles.active}/*.yml  >= bootstrap-${spring.profiles.active}.yml >= bootstrap.yml
+    # import的文件顺序越靠后，优先级越大
+    import:
+      - classpath:config/${spring.profiles.active}/common.yml
+      - classpath:config/${spring.profiles.active}/doc.yml
+      - classpath:config/${spring.profiles.active}/oss.yml
+      - classpath:config/${spring.profiles.active}/sa-token.yml
+      - classpath:config/${spring.profiles.active}/rabbitmq.yml
+      - classpath:config/${spring.profiles.active}/redis.yml
+      - classpath:config/${spring.profiles.active}/mysql.yml
+  mvc:
+    pathmatch:
+      # 升级springboot2.6.6后临时处理，防止swagger报错
+      matching-strategy: ANT_PATH_MATCHER
+  lifecycle:
+    # 优雅停机宽限期时间
+    timeout-per-shutdown-phase: 30s
+  servlet:
+    # 上传文件最大值
+    multipart:
+      max-file-size: 512MB
+      max-request-size: 512MB
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: '@project.artifactId@'
+    # 单体版不需要配置这个配置
+    path: ''
+  profiles:
+    active: '@profile.active@'
+server:
+  # 优雅停机
+  shutdown: GRACEFUL
+  servlet:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      access: unrestricted
+    health:
+      show-details: ALWAYS
+
+
+logging:
+  file:
+    path: '@logging.file.path@'
+    name: ${logging.file.path}/${spring.application.name}/root.log
+  level:
+    root: INFO
+    # 关闭不必要的日志
+    org.reflections.Reflections: off
+    com.alibaba.nacos.client: error
+    com.alibaba.nacos.common.remote.client: error
+    com.ulisesbocchio: error
+    # 开发、调试需要的日志
+    cn.lmx: info
+    org.springframework: info
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss.SSS
+    console: "[${spring.application.name}:%X{TenantId}:%X{UserId}] %d{yyyy-MM-dd HH:mm:ss.SSS}[%5p] ${PID} [%X{trace}] [%t:%r] [%logger{50}.%M:%L] %m%n"
+  logback:
+    rollingpolicy:
+      max-file-size: 64MB
+
+info:
+  name: '@project.name@'
+  description: '@project.description@'
+  version: '@project.version@'
+sa-token:
+  api-key:
+    # API Key 前缀
+    prefix: AK-

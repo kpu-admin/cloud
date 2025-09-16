@@ -1,14 +1,13 @@
 package cn.lmx.kpu.generator.controller;
 
+import cn.lmx.basic.base.request.PageParams;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import cn.lmx.basic.annotation.log.WebLog;
 import cn.lmx.basic.base.R;
 import cn.lmx.basic.base.controller.SuperController;
@@ -45,6 +44,24 @@ public class DefGenTableColumnController extends SuperController<DefGenTableColu
         return echoService;
     }
 
+//    @Override
+//    public QueryWrap<DefGenTableColumn> handlerWrapper(DefGenTableColumn model, PageParams<DefGenTableColumnPageQuery> params) {
+//        return super.handlerWrapper(model, params);
+//    }
+
+    /**
+     * 分页查询
+     *
+     * @param params 分页参数
+     * @return 分页数据s
+     */
+    @Override
+    @WebLog(value = "'分页列表查询:第' + #params?.current + '页, 显示' + #params?.size + '行'", response = false)
+    public R<IPage<DefGenTableColumnResultVO>> page(@RequestBody @Validated PageParams<DefGenTableColumnPageQuery> params) {
+        IPage<DefGenTableColumnResultVO> page = superService.pageColumn(params);
+        handlerResult(page);
+        return R.success(page);
+    }
 
     @Operation(summary = "同步字段结构", description = "同步字段结构")
     @PostMapping(value = "/syncField")

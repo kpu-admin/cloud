@@ -5,7 +5,7 @@
     <parent>
         <groupId>cn.lmx.kpu</groupId>
         <artifactId>kpu-dependencies-parent</artifactId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
         <relativePath>../kpu-dependencies-parent/pom.xml</relativePath>
     </parent>
 
@@ -24,6 +24,8 @@
         <module>kpu-boot-server</module>
         <!-- 单体版SOP -->
         <module>kpu-boot-sop-server</module>
+        <!-- 单体版-商城-启动模块 -->
+        <module>kpu-boot-shop-front-server</module>
     </modules>
 
 </project>

@@ -43,11 +43,11 @@ public class GateController {
         // 自行新增服务后，需要在这里手动新增一条数据
         List<Option> list = new ArrayList<>();
 
-        list.add(Option.builder().value("base").text(application).label("kpu-base").build());
-        list.add(Option.builder().value("system").text(application).label("kpu-system").build());
-        list.add(Option.builder().value("generator").text(application).label("kpu-generator").build());
-        list.add(Option.builder().value("oauth").text(application).label("kpu-oauth").build());
-        list.add(Option.builder().value("sopadmin").text(application).label("kpu-sop-admin").build());
+        list.add(Option.builder().value("base").remark(application).label("kpu-base").build());
+        list.add(Option.builder().value("system").remark(application).label("kpu-system").build());
+        list.add(Option.builder().value("generator").remark(application).label("kpu-generator").build());
+        list.add(Option.builder().value("oauth").remark(application).label("kpu-oauth").build());
+        list.add(Option.builder().value("sopadmin").remark(application).label("kpu-sop-admin").build());
 
         return R.success(list);
     }

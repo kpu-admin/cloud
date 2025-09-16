@@ -1,6 +1,8 @@
 package cn.lmx.kpu.oauth.event.listener;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.util.StrUtil;
+import cn.lmx.kpu.system.entity.tenant.DefUser;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
@@ -30,6 +32,14 @@ public class LoginListener {
     @EventListener({LoginEvent.class})
     public void saveSysLog(LoginEvent event) {
         LoginStatusDTO loginStatus = (LoginStatusDTO) event.getSource();
+        DefUser user;
+        if (loginStatus.getUserId() != null) {
+            user = this.defUserService.getByIdCache(loginStatus.getUserId());
+        } else if (StrUtil.isNotEmpty(loginStatus.getMobile())) {
+            user = this.defUserService.getUserByMobile(loginStatus.getMobile());
+        } else {
+            user = this.defUserService.getUserByUsername(loginStatus.getUsername());
+        }
 
         if (LoginStatusEnum.SUCCESS.eq(loginStatus.getStatus())) {
             // 重置错误次数 和 最后登录时间
@@ -39,6 +49,10 @@ public class LoginListener {
             this.defUserService.incrPasswordErrorNumById(loginStatus.getUserId());
         }
         DefLoginLogSaveVO saveVO = BeanUtil.toBean(loginStatus, DefLoginLogSaveVO.class);
+        if (user != null) {
+            saveVO.setUsername(user.getUsername()).setUserId(user.getId()).setNickName(user.getNickName())
+                    .setCreatedBy(user.getId());
+        }
         defLoginLogService.save(saveVO);
     }
 

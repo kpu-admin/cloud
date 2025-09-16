@@ -5,7 +5,7 @@
     <parent>
         <artifactId>kpu-generator</artifactId>
         <groupId>cn.lmx.kpu</groupId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -18,24 +18,24 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-generator-entity</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-oauth-api</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
 
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-file-sdk</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
 
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-data-scope-sdk</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.basic</groupId>

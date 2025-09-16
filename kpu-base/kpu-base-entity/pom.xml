@@ -5,7 +5,7 @@
     <parent>
         <artifactId>kpu-base</artifactId>
         <groupId>cn.lmx.kpu</groupId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-common</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
     </dependencies>
 

@@ -36,7 +36,7 @@ kpu:
       epochStr: '2020-09-15'
       boost-power: 3
       padding-factor: 50
-  echo:  #详情看: EchoProperties
+  echo: #详情看: EchoProperties
     # 是否启用 远程数据 手动注入
     enabled: true
     # 是否启用 远程数据 注解AOP注入
@@ -126,15 +126,19 @@ server:
       force: true
     context-path: /${spring.application.name}
   port: 8776
-  undertow:
-    threads:
-      io: 4 # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
-      worker: 80  # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
-    buffer-size: 2048  # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理 , 每块buffer的空间大小,越小的空间被利用越充分
-    direct-buffers: true  # 是否分配的直接内存
+#  undertow:
+#    threads:
+#      io: 4 # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+#      worker: 80  # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
+#    buffer-size: 2048  # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理 , 每块buffer的空间大小,越小的空间被利用越充分
+#    direct-buffers: true  # 是否分配的直接内存
 
 # mysql 通用配置
 spring:
+  application:
+    name: @project.artifactId@
+  main:
+    allow-bean-definition-overriding: true
   profiles:
     active: dev
   lifecycle:
@@ -174,14 +178,14 @@ spring:
       # 从这里结束(druid)，中间的这段配置用于 kpu.database.multiTenantType != DATASOURCE 时
 
       # 以下的2段配置，同时适用于所有模式
-      web-stat-filter:  # WebStatFilter配置，说明请参考Druid Wiki，配置_配置WebStatFilter
+      web-stat-filter: # WebStatFilter配置，说明请参考Druid Wiki，配置_配置WebStatFilter
         enabled: true
         url-pattern: /*
         exclusions: "*.js , *.gif ,*.jpg ,*.png ,*.css ,*.ico , /druid/*"
         session-stat-max-count: 1000
         profile-enable: true
         session-stat-enable: false
-      stat-view-servlet:  #展示Druid的统计信息,StatViewServlet的用途包括：1.提供监控信息展示的html页面2.提供监控信息的JSON API
+      stat-view-servlet: #展示Druid的统计信息,StatViewServlet的用途包括：1.提供监控信息展示的html页面2.提供监控信息的JSON API
         enabled: true
         url-pattern: /druid/*   #根据配置中的url-pattern来访问内置监控页面，如果是上面的配置，内置监控页面的首页是/druid/index.html例如：http://127.0.0.1:9000/druid/index.html
         reset-enable: true    #允许清空统计数据
@@ -233,3 +237,26 @@ knife4j:
     enableFooter: false
     enableFooterCustom: true
     footerCustomContent: Apache License 2.0 | Copyright  2020 [kpu-cloud](https://github.com/***)
+
+
+
+logging:
+  file:
+    path: '@logging.file.path@'
+    name: ${logging.file.path}/${spring.application.name}/root.log
+  level:
+    root: INFO
+    # 关闭不必要的日志
+    org.reflections.Reflections: off
+    com.alibaba.nacos.client: error
+    com.alibaba.nacos.common.remote.client: error
+    com.ulisesbocchio: error
+    # 开发、调试需要的日志
+    cn.lmx: info
+    org.springframework: info
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss.SSS
+    console: "[${spring.application.name}:%X{TenantId}:%X{UserId}] %d{yyyy-MM-dd HH:mm:ss.SSS}[%5p] ${PID} [%X{trace}] [%t:%r] [%logger{50}.%M:%L] %m%n"
+  logback:
+    rollingpolicy:
+      max-file-size: 64MB

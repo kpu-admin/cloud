@@ -11,7 +11,7 @@
  Target Server Version : 80405 (8.4.5)
  File Encoding         : 65001
 
- Date: 05/07/2025 03:07:55
+ Date: 10/08/2025 20:52:34
 */
 
 SET NAMES utf8mb4;
@@ -688,6 +688,18 @@ INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `na
 INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (596670257059353808, 596670257059353788, 'DATASOURCE_CONFIG_DRIVER', '10', 'com.mysql.jdbc.Driver', 'mysql5', b'1', '', 2, '', '', '', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (596670257059353811, 596670257059353788, 'DATASOURCE_CONFIG_DRIVER', '10', 'oracle.jdbc.driver.OracleDriver', 'oracle', b'1', '', 3, '', '', '', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (596670257059353814, 596670257059353788, 'DATASOURCE_CONFIG_DRIVER', '10', 'com.microsoft.sqlserver.jdbc.SQLServerDriver', 'sqlserver', b'1', '', 4, '', '', '', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928863, 0, NULL, '10', 'SOP_ISV_KEYS_KEY_FORMAT', '秘钥格式', b'1', '[1-java适用 2-非java适用]', 1, '', '', '', 2, '2025-08-10 20:22:14', 2, '2025-08-10 20:22:49');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928864, 664088577746928863, 'SOP_ISV_KEYS_KEY_FORMAT', '10', '2', 'PKCS1(非Java适用)', b'1', '', 2, '', '', '', 2, '2025-08-10 20:22:14', 2, '2025-08-10 20:22:14');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928865, 664088577746928863, 'SOP_ISV_KEYS_KEY_FORMAT', '10', '1', 'PKCS8(Java适用)', b'1', '', 1, '', '', '', 2, '2025-08-10 20:22:14', 2, '2025-08-10 20:22:14');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928872, 0, NULL, '10', 'SOP_ISV_CREATION_METHOD', '创建方式', b'1', '[0-后台创建 1-用户申请]', 1, '', '', '', 2, '2025-08-10 20:25:01', 2, '2025-08-10 20:25:01');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928873, 664088577746928872, 'SOP_ISV_CREATION_METHOD', '10', '0', '后台创建', b'1', '', 1, '', '', '', 2, '2025-08-10 20:25:01', 2, '2025-08-10 20:25:01');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928874, 664088577746928872, 'SOP_ISV_CREATION_METHOD', '10', '1', '用户申请', b'1', '', 2, '', '', '', 2, '2025-08-10 20:25:01', 2, '2025-08-10 20:25:01');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928878, 0, NULL, '10', 'SOP_API_INFO_REG_SOURCE', '注册来源', b'1', '[1-系统注册 2-手动注册]', 1, '', '', '', 2, '2025-08-10 20:28:07', 2, '2025-08-10 20:28:07');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928879, 664088577746928878, 'SOP_API_INFO_REG_SOURCE', '10', '1', '系统注册', b'1', '', 1, '', '', '', 2, '2025-08-10 20:28:07', 2, '2025-08-10 20:28:07');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928880, 664088577746928878, 'SOP_API_INFO_REG_SOURCE', '10', '2', '手动注册', b'1', '', 2, '', '', '', 2, '2025-08-10 20:28:07', 2, '2025-08-10 20:28:07');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928883, 0, NULL, '10', 'SOP_API_INFO_API_MODE', '接口模式', b'1', '[1-open接口 2-Restful模式]', 1, '', '', '', 2, '2025-08-10 20:29:10', 2, '2025-08-10 20:29:10');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928884, 664088577746928883, 'SOP_API_INFO_API_MODE', '10', '1', 'open接口', b'1', '', 1, '', '', '', 2, '2025-08-10 20:29:10', 2, '2025-08-10 20:29:10');
+INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928885, 664088577746928883, 'SOP_API_INFO_API_MODE', '10', '2', 'Restful模式', b'1', '', 2, '', '', '', 2, '2025-08-10 20:29:10', 2, '2025-08-10 20:29:10');
 INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1445949268236959744, 0, '', '10', 'TENANT_DICT_CLASSIFY', '字典分类', b'1', '[10-系统字典 20-业务字典]', 1, '', '', '', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1445983002105479168, 1445949268236959744, 'TENANT_DICT_CLASSIFY', '10', '10', '系统字典', b'1', '', 1, '', '', 'success', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_dict` (`id`, `parent_id`, `parent_key`, `classify`, `key_`, `name`, `state`, `remark`, `sort_value`, `icon`, `css_style`, `css_class`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1445983070812372992, 1445949268236959744, 'TENANT_DICT_CLASSIFY', '10', '20', '业务字典', b'1', '', 2, '', '', 'processing', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
@@ -848,6 +860,84 @@ CREATE TABLE `def_gen_table_column` (
 
 -- ----------------------------
 -- Records of def_gen_table_column
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for def_gen_test_simple
+-- ----------------------------
+DROP TABLE IF EXISTS `def_gen_test_simple`;
+CREATE TABLE `def_gen_test_simple` (
+  `id` bigint NOT NULL COMMENT 'ID',
+  `name` varchar(24) NOT NULL DEFAULT '大法师' COMMENT '名称',
+  `parent_id` bigint DEFAULT NULL COMMENT '父id',
+  `sort_value` int DEFAULT '22' COMMENT '排序',
+  `stock` int NOT NULL COMMENT '库存',
+  `created_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `created_by` bigint DEFAULT NULL COMMENT '创建人',
+  `updated_time` datetime DEFAULT NULL COMMENT '修改时间',
+  `updated_by` bigint DEFAULT '123123' COMMENT '修改人',
+  `type_` text COMMENT '商品类型;;\n#ProductType{ordinary:普通;gift:赠品}',
+  `type2` longtext COMMENT '商品类型2;;\n#{ordinary:01,普通;gift:02,赠品;}',
+  `type3` varchar(255) DEFAULT NULL COMMENT '学历;@Echo(api = EchoApi.DICTIONARY_ITEM_FEIGN_CLASS,  dictType = EchoDictType.Global.EDUCATION)',
+  `state` bit(1) DEFAULT b'0' COMMENT '状态',
+  `test4` int DEFAULT NULL COMMENT '测试',
+  `test5` date DEFAULT NULL COMMENT '时间',
+  `test6` datetime DEFAULT NULL COMMENT '日期',
+  `label` varchar(255) DEFAULT NULL COMMENT '名称',
+  `test7` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '01' COMMENT '字符字典;@Echo(api = "top.tangyh.lamp.common.api.DictApi", dictType="GLOBAL_SEX")',
+  `test12` int DEFAULT NULL COMMENT '整形字典;@Echo(api = EchoApi.DICTIONARY_ITEM_FEIGN_CLASS, dictType = EchoDictType.Global.TEST_ADD_DICT)[1-测试 2-新增 aad-haha]',
+  `user_id` bigint DEFAULT NULL COMMENT '用户;@Echo(api = EchoApi.POSITION_ID_CLASS)',
+  `org_id` bigint DEFAULT NULL COMMENT '组织;@Echo(api = EchoApi.ORG_ID_CLASS)',
+  `test8` decimal(16,4) DEFAULT '21.2300' COMMENT '小数',
+  `test9` float DEFAULT NULL COMMENT '浮点2',
+  `test10` decimal(24,6) DEFAULT NULL COMMENT '浮点',
+  `test11` decimal(2,0) DEFAULT NULL COMMENT 'xiao树',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='测试树结构';
+
+-- ----------------------------
+-- Records of def_gen_test_simple
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for def_gen_test_tree
+-- ----------------------------
+DROP TABLE IF EXISTS `def_gen_test_tree`;
+CREATE TABLE `def_gen_test_tree` (
+  `id` bigint NOT NULL COMMENT 'ID',
+  `name` varchar(24) NOT NULL DEFAULT '大法师' COMMENT '名称',
+  `parent_id` bigint DEFAULT NULL COMMENT '父id',
+  `sort_value` int DEFAULT '22' COMMENT '排序',
+  `stock` int NOT NULL COMMENT '库存',
+  `created_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `created_by` bigint DEFAULT NULL COMMENT '创建人',
+  `updated_time` datetime DEFAULT NULL COMMENT '修改时间',
+  `updated_by` bigint DEFAULT '123123' COMMENT '修改人',
+  `type_` text COMMENT '商品类型;\n#ProductType{ordinary:普通;gift:赠品}',
+  `type2` longtext COMMENT '商品类型2;#{ordinary:01,普通;gift:02,赠品;}',
+  `type3` varchar(255) DEFAULT NULL COMMENT '学历;@Echo(api = EchoApi.DICTIONARY_ITEM_FEIGN_CLASS,  dictType = EchoDictType.Global.EDUCATION)',
+  `state` bit(1) DEFAULT b'0' COMMENT '状态',
+  `test4` int DEFAULT NULL COMMENT '测试',
+  `test5` date DEFAULT NULL COMMENT '时间',
+  `test6` datetime DEFAULT NULL COMMENT '日期',
+  `label` varchar(255) DEFAULT NULL COMMENT '名称',
+  `test7` char(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '01' COMMENT '字符字典;@Echo(api = "top.tangyh.lamp.common.api.DictApi", dictType="GLOBAL_SEX")',
+  `test12` int DEFAULT NULL COMMENT '整形字典;@Echo(api = EchoApi.DICTIONARY_ITEM_FEIGN_CLASS, dictType = EchoDictType.Global.TEST_ADD_DICT)[1-测试 2-新增 aad-haha]',
+  `user_id` bigint DEFAULT NULL COMMENT '用户;@Echo(api = EchoApi.POSITION_ID_CLASS)[1-aa 2-ddd]',
+  `org_id` bigint DEFAULT NULL COMMENT '组织;@Echo(api = EchoApi.ORG_ID_CLASS)',
+  `test8` decimal(16,4) DEFAULT '21.2300' COMMENT '小数',
+  `test9` float DEFAULT NULL COMMENT '浮点2',
+  `test10` decimal(24,6) DEFAULT NULL COMMENT '浮点',
+  `test11` decimal(2,0) DEFAULT NULL COMMENT 'xiao树',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='测试树结构';
+
+-- ----------------------------
+-- Records of def_gen_test_tree
 -- ----------------------------
 BEGIN;
 COMMIT;
@@ -1121,7 +1211,7 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (160833820721938439, 2, 'tenant:developer:nacos', 'nacos', '20', 160833820721938437, '03', '', '/developer/nacos', 'IFRAME', 'https://kpui.top/nacos/', '', 'ant-design:aliyun-outlined', b'0', b'0', b'1', 5, '', b'0', b'1', NULL, NULL, NULL, '/160833820721938437/', 1, '{}', 1, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (160833820721938440, 2, 'tenant:developer:skyWalking', 'SkyWalking', '20', 160833820721938437, '03', '', '/developer/sky', 'IFRAME', 'http://sky.kpui.top', '', 'ant-design:fund-projection-screen-outlined', b'0', b'0', b'1', 6, '', b'0', b'1', NULL, NULL, NULL, '/160833820721938437/', 1, '{}', 1, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (160833820721938441, 2, 'tenant:developer:db', '数据库监控', '20', 160833820721938437, '02', '', '/developer/druid', 'IFRAME', 'https://datasource.kpui.top/druid/index.html', '', 'ant-design:console-sql-outlined', b'0', b'0', b'1', 7, '', b'0', b'1', NULL, NULL, NULL, '/160833820721938437/', 1, '{}', 1, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
-INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (172353511420329984, 2, 'tenant:system:file', '全局附件管理', '20', 143911967403278336, '01', '', '/system/file', '/devOperation/system/defFile/index', NULL, '', 'ant-design:file-zip-outlined', b'0', b'0', b'1', 8, '', b'0', b'1', NULL, NULL, NULL, '/143911967403278336/', 1, '{}', 1452186486253289472, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (172353511420329984, 2, 'tenant:system:file', '全局附件管理', '20', 143911967403278336, '01', '', '/system/file', '/devOperation/system/defFile/index', NULL, '', 'ant-design:file-zip-outlined', b'0', b'0', b'1', 8, '', b'0', b'1', NULL, NULL, NULL, '/143911967403278336/', 1, '{}', 1452186486253289472, '2025-01-01 00:00:00', 2, '2025-08-10 17:27:47');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (172353511420329986, 2, 'tenant:system:file:upload', '上传', '40', 172353511420329984, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 100, '', b'0', b'1', NULL, NULL, NULL, '/143911967403278336/172353511420329984/', 2, '{}', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (172353511420329987, 2, 'tenant:system:file:debug:upload', '调试上传', '40', 172353511420329984, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 101, '', b'0', b'1', NULL, NULL, NULL, '/143911967403278336/172353511420329984/', 2, '{}', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (172353511420329988, 2, 'tenant:system:file:download', '下载', '40', 172353511420329984, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 102, '', b'0', b'1', NULL, NULL, NULL, '/143911967403278336/172353511420329984/', 2, '{}', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
@@ -1186,6 +1276,32 @@ INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_ty
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (529783477227333632, 2, 'tenant:system:online', '在线用户', '20', 143911967403278336, '01', '', '/system/online', 'devOperation/system/online/index', NULL, '', 'ant-design:user-outlined', b'0', b'0', b'1', 9, '', b'0', b'1', NULL, NULL, b'0', '/143911967403278336/', 1, '', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (529783477227333635, 2, 'tenant:system:online:kickout', '踢人下线', '40', 529783477227333632, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 100, '', b'0', b'1', NULL, NULL, b'0', '/143911967403278336/529783477227333632/', 2, '', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (529783477227333637, 2, 'tenant:system:online:logout', '强制注销', '40', 529783477227333632, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 101, '', b'0', b'1', NULL, NULL, b'0', '/143911967403278336/529783477227333632/', 2, '', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111251, 1, 'basic:open', '开放能力', '20', 0, '01', '', '/open', 'LAYOUT', NULL, '/doc/api', 'carbon:api-1', b'0', b'0', b'1', 4, '', b'0', b'0', '06', NULL, b'0', '/', 0, '{}', 2, '2025-08-09 01:11:29', 2, '2025-08-09 01:48:39');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111254, 1, 'basic:open:doc', '文档列表', '20', 663886473766111251, '01', '', '/open/docinfo', '/open/welcome/index', NULL, '/doc/api', 'ant-design:file-word-outlined', b'0', b'0', b'1', 1, '', b'0', b'0', '06', NULL, b'0', '/663886473766111251/', 1, '{\"openInNewWindow\":true}', 2, '2025-08-09 01:12:29', 2, '2025-08-10 17:21:18');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111303, 2, 'tenant:sop', '开放平台', '20', 0, '01', '', '/sop', 'LAYOUT', NULL, '', 'ant-design:skype-outlined', b'0', b'0', b'1', 6, '', b'0', b'0', '06', NULL, b'0', '/', 0, '{\"badgeType\":\"dot\"}', 2, '2025-08-09 02:03:55', 2, '2025-08-09 02:03:55');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111306, 2, 'tenant:sop:api', '开放接口', '20', 663886473766111303, '01', '', '/sop/sopApiInfo', '/devOperation/sop/sopApiInfo/index', NULL, '', 'ant-design:api-outlined', b'0', b'0', b'1', 1, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/', 1, '{}', 2, '2025-08-09 02:06:09', 2, '2025-08-09 02:06:09');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111314, 2, 'tenant:sop:api:edit', '编辑', '40', 663886473766111306, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 100, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111306/', 2, '{}', 2, '2025-08-09 02:08:33', 2, '2025-08-09 02:08:33');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111318, 2, 'tenant:sop:api:delete', '删除', '40', 663886473766111306, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 101, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111306/', 2, '{}', 2, '2025-08-09 02:09:32', 2, '2025-08-09 02:09:32');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111322, 2, 'tenant:sop:apiconfig', '文档配置', '20', 663886473766111303, '01', '', '/sop/sopSysConfig', '/devOperation/sop/sopSysConfig/index', NULL, '', 'ant-design:container-outlined', b'0', b'0', b'1', 2, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/', 1, '{}', 2, '2025-08-09 02:11:22', 2, '2025-08-09 02:11:22');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111326, 2, 'tenant:sop:apiconfig:add', '新增', '40', 663886473766111322, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 100, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111322/', 2, '{}', 2, '2025-08-09 02:12:45', 2, '2025-08-09 02:12:45');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111333, 2, 'tenant:sop:apiconfig:edit', '编辑', '40', 663886473766111322, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 101, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111322/', 2, '{}', 2, '2025-08-09 02:14:23', 2, '2025-08-09 02:14:23');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111337, 2, 'tenant:sop:apiconfig:delete', '删除', '40', 663886473766111322, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 102, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111322/', 2, '{}', 2, '2025-08-09 02:15:18', 2, '2025-08-09 02:15:18');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111341, 2, 'tenant:sop:doc', '文档管理', '20', 663886473766111303, '01', '', '/sop/sopDocInfo', '/devOperation/sop/sopDocInfo/index', NULL, '', 'ant-design:file-exclamation-outlined', b'0', b'0', b'1', 3, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/', 1, '{}', 2, '2025-08-09 02:17:10', 2, '2025-08-09 02:17:10');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111346, 2, 'tenant:sop:doc:addApp', '新增应用', '40', 663886473766111341, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 100, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111341/', 2, '{}', 2, '2025-08-09 02:18:13', 2, '2025-08-09 02:18:13');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111350, 2, 'tenant:sop:doc:publish', '发布', '40', 663886473766111341, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 101, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111341/', 2, '{}', 2, '2025-08-09 02:18:57', 2, '2025-08-09 02:18:57');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111354, 2, 'tenant:sop:doc:offline', '下线', '40', 663886473766111341, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 102, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111341/', 2, '{}', 2, '2025-08-09 02:19:58', 2, '2025-08-09 02:19:58');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111358, 2, 'tenant:sop:doc:sync', '同步文档', '40', 663886473766111341, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 103, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111341/', 2, '{}', 2, '2025-08-09 02:20:44', 2, '2025-08-09 02:20:44');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111363, 2, 'tenant:sop:isv', '开放应用', '20', 663886473766111303, '01', '', '/sop/sopIsvInfo', '/devOperation/sop/sopIsvInfo/index', NULL, '', 'ant-design:linkedin-outlined', b'0', b'0', b'1', 4, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/', 1, '{}', 2, '2025-08-09 02:23:15', 2, '2025-08-09 02:23:15');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111368, 2, 'tenant:sop:isv:add', '新增', '40', 663886473766111363, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 100, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111363/', 2, '{}', 2, '2025-08-09 02:24:19', 2, '2025-08-09 02:24:19');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111372, 2, 'tenant:sop:isv:edit', '编辑', '40', 663886473766111363, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 101, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111363/', 2, '{}', 2, '2025-08-09 02:25:16', 2, '2025-08-09 02:25:16');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111376, 2, 'tenant:sop:isv:delete', '删除', '40', 663886473766111363, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 102, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111363/', 2, '{}', 2, '2025-08-09 02:25:54', 2, '2025-08-09 02:25:54');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111380, 2, 'tenant:sop:isv:settingKeys', '设置秘钥', '40', 663886473766111363, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 103, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111363/', 2, '{}', 2, '2025-08-09 02:27:04', 2, '2025-08-09 02:27:04');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111386, 2, 'tenant:sop:isv:settingGroup', '设置分组', '40', 663886473766111363, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 104, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111363/', 2, '{}', 2, '2025-08-09 02:28:00', 2, '2025-08-09 02:28:00');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111391, 2, 'tenant:sop:group', '应用分组', '20', 663886473766111303, '01', '', '/sop/sopPermGroup', '/devOperation/sop/sopPermGroup/index', NULL, '', 'ant-design:group-outlined', b'0', b'0', b'1', 5, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/', 1, '{}', 2, '2025-08-09 02:30:51', 2, '2025-08-09 02:30:51');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111397, 2, 'tenant:sop:group:add', '新增', '40', 663886473766111391, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 100, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111391/', 2, '{}', 2, '2025-08-09 02:31:48', 2, '2025-08-09 02:31:48');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111401, 2, 'tenant:sop:group:edit', '编辑', '40', 663886473766111391, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 101, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111391/', 2, '{}', 2, '2025-08-09 02:32:29', 2, '2025-08-09 02:32:29');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111405, 2, 'tenant:sop:group:delete', '删除', '40', 663886473766111391, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 102, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111391/', 2, '{}', 2, '2025-08-09 02:33:08', 2, '2025-08-09 02:33:08');
+INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111409, 2, 'tenant:sop:group:authorize', '授权', '40', 663886473766111391, '01', '', '', '', NULL, '', '', b'0', b'0', b'1', 103, '', b'0', b'0', '06', NULL, b'0', '/663886473766111303/663886473766111391/', 2, '{}', 2, '2025-08-09 02:34:27', 2, '2025-08-09 02:34:27');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1448315264151060480, 2, 'tenant:system:param', '参数管理', '20', 143911967403278336, '01', '', '/system/parameter', '/devOperation/system/defParameter/index', NULL, '', 'ant-design:profile-outlined', b'0', b'0', b'1', 4, '', b'0', b'1', NULL, NULL, NULL, '/143911967403278336/', 1, '{}', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1448315406962917376, 2, 'tenant:system:area', '地区管理', '20', 143911967403278336, '01', '', '/system/area', '/devOperation/system/defArea/index', NULL, '', 'ant-design:area-chart-outlined', b'0', b'0', b'1', 5, '', b'0', b'1', NULL, NULL, NULL, '/143911967403278336/', 1, '{}', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_resource` (`id`, `application_id`, `code`, `name`, `resource_type`, `parent_id`, `open_with`, `describe_`, `path`, `component`, `link`, `redirect`, `icon`, `is_hidden`, `is_general`, `state`, `sort_value`, `sub_group`, `field_is_secret`, `field_is_edit`, `data_scope`, `custom_class`, `is_def`, `tree_path`, `tree_grade`, `meta_json`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1448315861369618432, 2, 'tenant:system:client', '客户端管理', '20', 143911967403278336, '01', '', '/system/client', '/devOperation/system/defClient/index', NULL, '', 'ant-design:android-outlined', b'0', b'0', b'1', 6, '', b'0', b'1', NULL, NULL, NULL, '/143911967403278336/', 1, '{}', 2, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
@@ -1393,7 +1509,6 @@ INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_appli
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (169380096971374678, 1449724119569399808, 'DefDictItemController', 'kpu-system-server', 'GET', '字典项-检测字典项标识是否可用', '/system/defDictItem/check', b'0', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (169380096971374682, 1460547739937931264, 'DefParameterController', 'kpu-system-server', 'GET', '参数配置-检测参数键是否可用', '/system/defParameter/check', b'0', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (169380096971374684, 1460547794912673792, 'DefParameterController', 'kpu-system-server', 'GET', '参数配置-检测参数键是否可用', '/system/defParameter/check', b'0', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
-INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (172353511420329985, 172353511420329984, 'FileDefController', 'kpu-base-server', 'POST', '默认库-文件操作接口-分页列表查询', '/base/file/def/page', b'0', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (172353511420329990, 172353511420329989, 'FileDefController', 'kpu-base-server', 'DELETE', '默认库-文件操作接口-删除', '/base/file/def', b'0', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (179951682229108736, 1449734450995789824, 'DefApplicationController', 'kpu-system-server', 'GET', '应用-查询可用的应用资源列表', '/system/defApplication/findAvailableApplicationResourceList', b'0', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (179951682229108737, 1449734450995789824, 'BaseRoleController', 'kpu-base-server', 'GET', '角色-查询角色拥有的资源id集合', '/base/baseRole/resourceList', b'0', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
@@ -1495,6 +1610,177 @@ INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_appli
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (650921341888994353, 281886056620490965, 'DefResourceController', 'kpu-system-server', 'POST', '资源-查询系统所有的资源', '/system/defResource/tree', b'0', 2, '2025-07-05 02:46:44', 2, '2025-07-05 02:46:44');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (650921341888994354, 281886056620490965, 'DefResourceController', 'kpu-boot-server-none', 'PUT', '资源上移', '/system/defResource/moveUp/{id}', b'0', 2, '2025-07-05 02:46:44', 2, '2025-07-05 02:46:44');
 INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (650921341888994355, 281886056620490965, 'DefResourceController', 'kpu-boot-server-none', 'PUT', '资源下移', '/system/defResource/moveDown/{id}', b'0', 2, '2025-07-05 02:46:44', 2, '2025-07-05 02:46:44');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111307, 663886473766111306, 'SopApiInfoController', 'kpu-boot-server-none', 'POST', '接口信息表分页列表查询', '/sopadmin/sopApiInfo/page', b'0', 2, '2025-08-09 02:06:09', 2, '2025-08-09 02:06:09');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111315, 663886473766111314, 'SopApiInfoController', 'kpu-boot-server-none', 'PUT', '接口信息表修改', '/sopadmin/sopApiInfo', b'0', 2, '2025-08-09 02:08:33', 2, '2025-08-09 02:08:33');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111319, 663886473766111318, 'SopApiInfoController', 'kpu-boot-server-none', 'DELETE', '接口信息表删除', '/sopadmin/sopApiInfo', b'0', 2, '2025-08-09 02:09:32', 2, '2025-08-09 02:09:32');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111323, 663886473766111322, 'SopSysConfigController', 'kpu-boot-server-none', 'POST', '系统配置表分页列表查询', '/sopadmin/sopSysConfig/page', b'0', 2, '2025-08-09 02:11:22', 2, '2025-08-09 02:11:22');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111327, 663886473766111326, 'SopSysConfigController', 'kpu-boot-server-none', 'POST', '系统配置表新增', '/sopadmin/sopSysConfig', b'0', 2, '2025-08-09 02:12:45', 2, '2025-08-09 02:12:45');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111334, 663886473766111333, 'SopSysConfigController', 'kpu-boot-server-none', 'PUT', '系统配置表修改', '/sopadmin/sopSysConfig', b'0', 2, '2025-08-09 02:14:23', 2, '2025-08-09 02:14:23');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111338, 663886473766111337, 'SopSysConfigController', 'kpu-boot-server-none', 'DELETE', '系统配置表删除', '/sopadmin/sopSysConfig', b'0', 2, '2025-08-09 02:15:18', 2, '2025-08-09 02:15:18');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111342, 663886473766111341, 'SopDocAppController', 'kpu-boot-server-none', 'POST', '文档应用批量查询', '/sopadmin/sopDocApp/query', b'0', 2, '2025-08-09 02:17:10', 2, '2025-08-09 02:17:10');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111343, 663886473766111341, 'SopDocInfoController', 'kpu-boot-server-none', 'POST', '文档信息文档信息按树结构查询', '/sopadmin/sopDocInfo/tree', b'0', 2, '2025-08-09 02:17:10', 2, '2025-08-09 02:17:10');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111347, 663886473766111346, 'SopDocAppController', 'kpu-boot-server-none', 'POST', '文档应用新增', '/sopadmin/sopDocApp', b'0', 2, '2025-08-09 02:18:13', 2, '2025-08-09 02:18:13');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111351, 663886473766111350, 'SopDocInfoController', 'kpu-boot-server-none', 'POST', '文档信息文档信息发布文档', '/sopadmin/sopDocInfo/publish', b'0', 2, '2025-08-09 02:18:57', 2, '2025-08-09 02:18:57');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111355, 663886473766111354, 'SopDocInfoController', 'kpu-boot-server-none', 'POST', '文档信息文档信息发布文档', '/sopadmin/sopDocInfo/publish', b'0', 2, '2025-08-09 02:19:58', 2, '2025-08-09 02:19:58');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111359, 663886473766111358, 'SopDocInfoController', 'kpu-boot-server-none', 'POST', '文档信息文档信息同步文档', '/sopadmin/sopDocInfo/syncDoc', b'0', 2, '2025-08-09 02:20:44', 2, '2025-08-09 02:20:44');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111360, 663886473766111358, 'SopDocInfoController', 'kpu-boot-server-none', 'POST', '文档信息文档信息同步应用文档', '/sopadmin/sopDocInfo/syncAppDoc', b'0', 2, '2025-08-09 02:20:44', 2, '2025-08-09 02:20:44');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111364, 663886473766111363, 'SopPermGroupController', 'kpu-boot-server-none', 'POST', '分组表批量查询', '/sopadmin/sopPermGroup/query', b'0', 2, '2025-08-09 02:23:15', 2, '2025-08-09 02:23:15');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111365, 663886473766111363, 'SopIsvInfoController', 'kpu-boot-server-none', 'POST', 'isv信息表分页列表查询', '/sopadmin/sopIsvInfo/page', b'0', 2, '2025-08-09 02:23:15', 2, '2025-08-09 02:23:15');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111369, 663886473766111368, 'SopIsvInfoController', 'kpu-boot-server-none', 'POST', 'isv信息表新增', '/sopadmin/sopIsvInfo', b'0', 2, '2025-08-09 02:24:19', 2, '2025-08-09 02:24:19');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111373, 663886473766111372, 'SopIsvInfoController', 'kpu-boot-server-none', 'PUT', 'isv信息表修改', '/sopadmin/sopIsvInfo', b'0', 2, '2025-08-09 02:25:16', 2, '2025-08-09 02:25:16');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111377, 663886473766111376, 'SopIsvInfoController', 'kpu-boot-server-none', 'DELETE', 'isv信息表删除', '/sopadmin/sopIsvInfo', b'0', 2, '2025-08-09 02:25:54', 2, '2025-08-09 02:25:54');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111381, 663886473766111380, 'SopIsvInfoController', 'kpu-boot-server-none', 'POST', 'isv信息表createKeys', '/sopadmin/sopIsvInfo/createKeys', b'0', 2, '2025-08-09 02:27:04', 2, '2025-08-09 02:27:04');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111382, 663886473766111380, 'SopIsvInfoController', 'kpu-boot-server-none', 'GET', 'isv信息表getKeys', '/sopadmin/sopIsvInfo/getKeys', b'0', 2, '2025-08-09 02:27:04', 2, '2025-08-09 02:27:04');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111383, 663886473766111380, 'SopIsvInfoController', 'kpu-boot-server-none', 'POST', 'isv信息表updateKeys', '/sopadmin/sopIsvInfo/updateKeys', b'0', 2, '2025-08-09 02:27:04', 2, '2025-08-09 02:27:04');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111387, 663886473766111386, 'SopPermGroupController', 'kpu-boot-server-none', 'GET', '分组表查询开发应用分组', '/sopadmin/sopPermGroup/listByGroupId', b'0', 2, '2025-08-09 02:28:00', 2, '2025-08-09 02:28:00');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111388, 663886473766111386, 'SopPermGroupController', 'kpu-boot-server-none', 'POST', '分组表修改开发应用分组', '/sopadmin/sopPermGroup/updateIsvGroup', b'0', 2, '2025-08-09 02:28:00', 2, '2025-08-09 02:28:00');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111392, 663886473766111391, 'SopPermGroupController', 'kpu-boot-server-none', 'POST', '分组表分页列表查询', '/sopadmin/sopPermGroup/page', b'0', 2, '2025-08-09 02:30:51', 2, '2025-08-09 02:30:51');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111393, 663886473766111391, 'SopApiInfoController', 'kpu-boot-server-none', 'POST', '接口信息表分页列表查询', '/sopadmin/sopApiInfo/pageByGroup', b'0', 2, '2025-08-09 02:30:51', 2, '2025-08-09 02:30:51');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111394, 663886473766111391, 'SopApiInfoController', 'kpu-boot-server-none', 'POST', '接口信息表批量查询', '/sopadmin/sopApiInfo/query', b'0', 2, '2025-08-09 02:30:51', 2, '2025-08-09 02:30:51');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111398, 663886473766111397, 'SopPermGroupController', 'kpu-boot-server-none', 'POST', '分组表新增', '/sopadmin/sopPermGroup', b'0', 2, '2025-08-09 02:31:48', 2, '2025-08-09 02:31:48');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111402, 663886473766111401, 'SopPermGroupController', 'kpu-boot-server-none', 'PUT', '分组表修改', '/sopadmin/sopPermGroup', b'0', 2, '2025-08-09 02:32:29', 2, '2025-08-09 02:32:29');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111406, 663886473766111405, 'SopPermGroupController', 'kpu-boot-server-none', 'DELETE', '分组表删除', '/sopadmin/sopPermGroup', b'0', 2, '2025-08-09 02:33:08', 2, '2025-08-09 02:33:08');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111410, 663886473766111409, 'SopApiInfoController', 'kpu-boot-server-none', 'POST', '接口信息表分页列表查询', '/sopadmin/sopApiInfo/page', b'0', 2, '2025-08-09 02:34:27', 2, '2025-08-09 02:34:27');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (663886473766111411, 663886473766111409, 'SopPermGroupPermissionController', 'kpu-boot-server-none', 'POST', '组权限表删除', '/sopadmin/sopPermGroupPermission/delete', b'0', 2, '2025-08-09 02:34:27', 2, '2025-08-09 02:34:27');
+INSERT INTO `def_resource_api` (`id`, `resource_id`, `controller`, `spring_application_name`, `request_method`, `name`, `uri`, `is_input`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (664088577746928688, 172353511420329984, 'FileController', 'kpu-boot-sop-server-none', 'POST', 'com_file表增删改分页列表查询', '/base/file/page', b'0', 2, '2025-08-10 17:27:47', 2, '2025-08-10 17:27:47');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for def_tenant
+-- ----------------------------
+DROP TABLE IF EXISTS `def_tenant`;
+CREATE TABLE `def_tenant` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `code` varchar(255) DEFAULT NULL COMMENT '企业编码',
+  `name` varchar(255) NOT NULL COMMENT '企业名称',
+  `abbreviation` varchar(255) DEFAULT NULL COMMENT '企业简称',
+  `credit_code` varchar(18) DEFAULT NULL COMMENT '统一社会信用代码',
+  `contact_person` varchar(255) DEFAULT NULL COMMENT '联系人',
+  `contact_phone` varchar(255) DEFAULT NULL COMMENT '联系方式',
+  `contact_email` varchar(255) DEFAULT NULL COMMENT '联系邮箱',
+  `classify` varchar(255) DEFAULT NULL COMMENT '类别',
+  `province_id` bigint DEFAULT NULL COMMENT '省',
+  `province_name` varchar(255) DEFAULT NULL COMMENT '省',
+  `city_id` bigint DEFAULT NULL COMMENT '市',
+  `city_name` varchar(255) DEFAULT NULL COMMENT '市',
+  `district_id` bigint DEFAULT NULL COMMENT '区',
+  `district_name` varchar(255) DEFAULT NULL COMMENT '区',
+  `address` varchar(255) DEFAULT NULL COMMENT '详细地址',
+  `register_type` varchar(10) DEFAULT NULL COMMENT '注册类型;#DefTenantRegisterTypeEnum{CREATE:创建;REGISTER:注册}',
+  `connect_type` varchar(10) DEFAULT NULL COMMENT '连接类型;#TenantConnectTypeEnum{SYSTEM:系统内置数据源;CUSTOM:自定义数据源}',
+  `state` bit(1) DEFAULT b'0' COMMENT '状态',
+  `status` char(2) DEFAULT NULL COMMENT '审核状态;[05-正常 10-待初始化 15-已撤回 20-待审核 25-已拒绝 30-已同意]\n@Echo(api = EchoApi.DICTIONARY_ITEM_FEIGN_CLASS, dictType = EchoDictType.System.TENANT_STATUS)',
+  `readonly` bit(1) DEFAULT b'1' COMMENT '只读',
+  `expiration_time` datetime DEFAULT NULL COMMENT '有效期',
+  `describe` varchar(255) DEFAULT NULL COMMENT '描述',
+  `review_comments` varchar(255) DEFAULT NULL COMMENT '审阅意见',
+  `employee_state` bit(1) DEFAULT NULL,
+  `employee_id` bigint DEFAULT NULL,
+  `is_default` bit(1) DEFAULT NULL COMMENT '默认值',
+  `created_name` varchar(255) DEFAULT NULL COMMENT '创建人名称',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='租户';
+
+-- ----------------------------
+-- Records of def_tenant
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for def_tenant_application_record
+-- ----------------------------
+DROP TABLE IF EXISTS `def_tenant_application_record`;
+CREATE TABLE `def_tenant_application_record` (
+  `id` bigint NOT NULL COMMENT 'ID',
+  `tenant_application_ref_id` bigint NOT NULL COMMENT '拥有租户的应用;#def_tenant_resource_rel',
+  `tenant_id` bigint NOT NULL COMMENT '拥有租户;#def_tenant',
+  `application_id` bigint NOT NULL COMMENT '所属应用;#def_application',
+  `grant_type` char(2) DEFAULT NULL COMMENT '授权类型',
+  `created_by` bigint DEFAULT NULL COMMENT '创建人',
+  `updated_by` bigint DEFAULT NULL COMMENT '最后更新人',
+  `created_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated_time` datetime DEFAULT NULL COMMENT '最后更新时间',
+  `created_org_id` bigint DEFAULT NULL COMMENT '创建人组织',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='租户应用授权记录';
+
+-- ----------------------------
+-- Records of def_tenant_application_record
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for def_tenant_application_rel
+-- ----------------------------
+DROP TABLE IF EXISTS `def_tenant_application_rel`;
+CREATE TABLE `def_tenant_application_rel` (
+  `id` bigint NOT NULL COMMENT 'ID',
+  `tenant_id` bigint NOT NULL COMMENT '拥有租户;#def_tenant',
+  `application_id` bigint NOT NULL COMMENT '所属应用;#def_application',
+  `created_by` bigint DEFAULT NULL COMMENT '创建人',
+  `updated_by` bigint DEFAULT NULL COMMENT '最后更新人',
+  `created_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated_time` datetime DEFAULT NULL COMMENT '最后更新时间',
+  `created_org_id` bigint DEFAULT NULL COMMENT '创建人组织',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='租户的应用';
+
+-- ----------------------------
+-- Records of def_tenant_application_rel
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for def_tenant_datasource_config_rel
+-- ----------------------------
+DROP TABLE IF EXISTS `def_tenant_datasource_config_rel`;
+CREATE TABLE `def_tenant_datasource_config_rel` (
+  `id` bigint NOT NULL COMMENT 'ID',
+  `tenant_id` bigint NOT NULL COMMENT '拥有租户;#def_tenant',
+  `datasource_config_id` bigint NOT NULL COMMENT '所属数据源配置;#def_datasource_config',
+  `db_prefix` varchar(255) DEFAULT NULL COMMENT '数据源前缀',
+  `created_by` bigint DEFAULT NULL COMMENT '创建人',
+  `updated_by` bigint DEFAULT NULL COMMENT '最后更新人',
+  `created_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated_time` datetime DEFAULT NULL COMMENT '最后更新时间',
+  `created_org_id` bigint DEFAULT NULL COMMENT '创建人组织',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='租户的远程数据源';
+
+-- ----------------------------
+-- Records of def_tenant_datasource_config_rel
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for def_tenant_resource_rel
+-- ----------------------------
+DROP TABLE IF EXISTS `def_tenant_resource_rel`;
+CREATE TABLE `def_tenant_resource_rel` (
+  `id` bigint NOT NULL COMMENT 'ID',
+  `tenant_id` bigint NOT NULL COMMENT '拥有租户;#def_tenant',
+  `resource_id` bigint NOT NULL COMMENT '拥有资源;#def_resource',
+  `application_id` bigint NOT NULL COMMENT '所属应用;#def_application',
+  `created_by` bigint DEFAULT NULL COMMENT '创建人',
+  `updated_by` bigint DEFAULT NULL COMMENT '最后更新人',
+  `created_time` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated_time` datetime DEFAULT NULL COMMENT '最后更新时间',
+  `created_org_id` bigint DEFAULT NULL COMMENT '创建人组织',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='租户的资源';
+
+-- ----------------------------
+-- Records of def_tenant_resource_rel
+-- ----------------------------
+BEGIN;
 COMMIT;
 
 -- ----------------------------
@@ -1538,7 +1824,7 @@ CREATE TABLE `def_user` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `def_user` (`id`, `username`, `nick_name`, `email`, `mobile`, `id_card`, `wx_open_id`, `dd_open_id`, `readonly`, `nation`, `education`, `sex`, `state`, `work_describe`, `password_error_last_time`, `password_error_num`, `password_expire_time`, `password`, `salt`, `last_login_time`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1, 'superAdmin', '超管', NULL, '13000000000', NULL, NULL, NULL, b'0', '01', '02', '1', b'1', '', NULL, 0, NULL, 'd3cf98806ab5ea6094bdfaa8d321b3e86142c7cd9032e333fb79eb8ab4f326aa', 'd0OAyArl0f0X9594rfQU', '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
-INSERT INTO `def_user` (`id`, `username`, `nick_name`, `email`, `mobile`, `id_card`, `wx_open_id`, `dd_open_id`, `readonly`, `nation`, `education`, `sex`, `state`, `work_describe`, `password_error_last_time`, `password_error_num`, `password_expire_time`, `password`, `salt`, `last_login_time`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (2, 'admin', '内置超管', 'admin@qq.com', '15211111111', NULL, NULL, NULL, b'0', '04', '02', '1', b'1', '老子今天不上班，爽翻，巴适得板。', NULL, 0, NULL, 'd3cf98806ab5ea6094bdfaa8d321b3e86142c7cd9032e333fb79eb8ab4f326aa', 'd0OAyArl0f0X9594rfQU', '2025-07-05 02:43:40', 1, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
+INSERT INTO `def_user` (`id`, `username`, `nick_name`, `email`, `mobile`, `id_card`, `wx_open_id`, `dd_open_id`, `readonly`, `nation`, `education`, `sex`, `state`, `work_describe`, `password_error_last_time`, `password_error_num`, `password_expire_time`, `password`, `salt`, `last_login_time`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (2, 'admin', '内置超管', 'admin@qq.com', '15211111111', NULL, NULL, NULL, b'0', '04', '02', '1', b'1', '老子今天不上班，爽翻，巴适得板。', NULL, 0, NULL, 'd3cf98806ab5ea6094bdfaa8d321b3e86142c7cd9032e333fb79eb8ab4f326aa', 'd0OAyArl0f0X9594rfQU', '2025-08-09 01:05:15', 1, '2025-01-01 00:00:00', 2, '2025-01-01 00:00:00');
 INSERT INTO `def_user` (`id`, `username`, `nick_name`, `email`, `mobile`, `id_card`, `wx_open_id`, `dd_open_id`, `readonly`, `nation`, `education`, `sex`, `state`, `work_describe`, `password_error_last_time`, `password_error_num`, `password_expire_time`, `password`, `salt`, `last_login_time`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1454329823852756992, 'test1', '门店管理员', NULL, '15211111112', NULL, '', '', b'0', '02', '02', '1', b'1', '', NULL, 0, NULL, 'd3cf98806ab5ea6094bdfaa8d321b3e86142c7cd9032e333fb79eb8ab4f326aa', 'd0OAyArl0f0X9594rfQU', '2025-01-01 00:00:00', 1, '2025-01-01 00:00:00', 1, '2025-01-01 00:00:00');
 INSERT INTO `def_user` (`id`, `username`, `nick_name`, `email`, `mobile`, `id_card`, `wx_open_id`, `dd_open_id`, `readonly`, `nation`, `education`, `sex`, `state`, `work_describe`, `password_error_last_time`, `password_error_num`, `password_expire_time`, `password`, `salt`, `last_login_time`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1457904455960756224, 'test2', '普通用户', NULL, '15211111113', NULL, '', '', b'0', '02', '06', '1', b'1', '', NULL, 0, NULL, 'd3cf98806ab5ea6094bdfaa8d321b3e86142c7cd9032e333fb79eb8ab4f326aa', 'd0OAyArl0f0X9594rfQU', '2025-01-01 00:00:00', 1, '2025-01-01 00:00:00', 1, '2025-01-01 00:00:00');
 INSERT INTO `def_user` (`id`, `username`, `nick_name`, `email`, `mobile`, `id_card`, `wx_open_id`, `dd_open_id`, `readonly`, `nation`, `education`, `sex`, `state`, `work_describe`, `password_error_last_time`, `password_error_num`, `password_expire_time`, `password`, `salt`, `last_login_time`, `created_by`, `created_time`, `updated_by`, `updated_time`) VALUES (1459157721822527488, 'test3', '测试号', NULL, '15211111114', NULL, '', '', b'0', '', NULL, '2', b'1', '', NULL, 0, NULL, 'd3cf98806ab5ea6094bdfaa8d321b3e86142c7cd9032e333fb79eb8ab4f326aa', 'd0OAyArl0f0X9594rfQU', '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00', 1452186486253289472, '2025-01-01 00:00:00');
@@ -1708,6 +1994,286 @@ BEGIN;
 COMMIT;
 
 -- ----------------------------
+-- Table structure for sop_api_info
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_api_info`;
+CREATE TABLE `sop_api_info` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `application` varchar(64) NOT NULL COMMENT '应用名称',
+  `api_name` varchar(128) NOT NULL COMMENT '接口名称',
+  `api_version` varchar(16) NOT NULL DEFAULT '1.0' COMMENT '版本号',
+  `description` varchar(64) DEFAULT NULL COMMENT '接口描述',
+  `remark` text COMMENT '备注',
+  `interface_class_name` varchar(128) NOT NULL COMMENT '接口class',
+  `method_name` varchar(128) NOT NULL COMMENT '方法名称',
+  `param_info` text COMMENT '参数信息',
+  `is_permission` tinyint NOT NULL DEFAULT '0' COMMENT '接口是否需要授权访问',
+  `is_need_token` tinyint NOT NULL DEFAULT '0' COMMENT '是否需要appAuthToken',
+  `has_common_response` tinyint DEFAULT '1' COMMENT '是否有公共响应参数',
+  `reg_source` tinyint NOT NULL DEFAULT '1' COMMENT '注册来源 [1-系统注册 2-手动注册]',
+  `api_mode` tinyint DEFAULT '1' COMMENT '接口模式 [1-open接口 2-Restful模式]',
+  `status` tinyint NOT NULL DEFAULT '1' COMMENT '状态 [1-启用 0-禁用]',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='接口信息表';
+
+-- ----------------------------
+-- Records of sop_api_info
+-- ----------------------------
+BEGIN;
+INSERT INTO `sop_api_info` (`id`, `application`, `api_name`, `api_version`, `description`, `remark`, `interface_class_name`, `method_name`, `param_info`, `is_permission`, `is_need_token`, `has_common_response`, `reg_source`, `api_mode`, `status`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652454662393382912, 'kpu-boot-sop-server-none', 'openapi.trade.wap.pay', '1.0', NULL, NULL, 'cn.lmx.kpu.openapi.open.OpenOpenapi', 'tradeWapPay', '[{\"name\":\"request\",\"type\":\"cn.lmx.kpu.openapi.open.req.PayTradeWapPayRequest\"}]', 0, 0, 1, 1, 1, 1, '2025-07-09 05:37:55', '2025-07-09 09:30:42', NULL, 2);
+INSERT INTO `sop_api_info` (`id`, `application`, `api_name`, `api_version`, `description`, `remark`, `interface_class_name`, `method_name`, `param_info`, `is_permission`, `is_need_token`, `has_common_response`, `reg_source`, `api_mode`, `status`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652454662393382913, 'kpu-boot-sop-server-none', 'openapi.order.search', '1.0', NULL, NULL, 'cn.lmx.kpu.openapi.open.OpenOpenapi', 'orderSearch', '[{\"name\":\"request\",\"type\":\"cn.lmx.kpu.openapi.open.req.PayOrderSearchRequest\"}]', 0, 0, 1, 1, 1, 1, '2025-07-09 05:37:55', '2025-07-09 08:51:00', NULL, 2);
+INSERT INTO `sop_api_info` (`id`, `application`, `api_name`, `api_version`, `description`, `remark`, `interface_class_name`, `method_name`, `param_info`, `is_permission`, `is_need_token`, `has_common_response`, `reg_source`, `api_mode`, `status`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652454662393382914, 'kpu-boot-sop-server-none', 'openapi.upload.more', '1.0', NULL, NULL, 'cn.lmx.kpu.openapi.open.OpenOpenapi', 'upload2', '[{\"name\":\"request\",\"type\":\"cn.lmx.kpu.openapi.open.req.ProductSaveRequest\"},{\"name\":\"idCardFront\",\"type\":\"com.gitee.sop.support.dto.FileData\"},{\"name\":\"idCardBack\",\"type\":\"com.gitee.sop.support.dto.FileData\"}]', 0, 0, 1, 1, 1, 1, '2025-07-09 05:37:56', '2025-07-09 05:37:56', NULL, NULL);
+INSERT INTO `sop_api_info` (`id`, `application`, `api_name`, `api_version`, `description`, `remark`, `interface_class_name`, `method_name`, `param_info`, `is_permission`, `is_need_token`, `has_common_response`, `reg_source`, `api_mode`, `status`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652454662393382915, 'kpu-boot-sop-server-none', 'openapi.upload.list', '1.0', NULL, NULL, 'cn.lmx.kpu.openapi.open.OpenOpenapi', 'upload3', '[{\"name\":\"request\",\"type\":\"cn.lmx.kpu.openapi.open.req.ProductSaveRequest\"},{\"actualType\":\"com.gitee.sop.support.dto.FileData\",\"name\":\"files\",\"type\":\"java.util.List\"}]', 0, 0, 1, 1, 1, 1, '2025-07-09 05:37:56', '2025-07-09 05:37:56', NULL, NULL);
+INSERT INTO `sop_api_info` (`id`, `application`, `api_name`, `api_version`, `description`, `remark`, `interface_class_name`, `method_name`, `param_info`, `is_permission`, `is_need_token`, `has_common_response`, `reg_source`, `api_mode`, `status`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652454662393382916, 'kpu-boot-sop-server-none', 'openapi.upload', '1.0', NULL, NULL, 'cn.lmx.kpu.openapi.open.OpenOpenapi', 'upload', '[{\"name\":\"request\",\"type\":\"cn.lmx.kpu.openapi.open.req.ProductSaveRequest\"},{\"name\":\"file\",\"type\":\"com.gitee.sop.support.dto.FileData\"}]', 0, 0, 1, 1, 1, 1, '2025-07-09 05:37:56', '2025-07-09 05:37:56', NULL, NULL);
+INSERT INTO `sop_api_info` (`id`, `application`, `api_name`, `api_version`, `description`, `remark`, `interface_class_name`, `method_name`, `param_info`, `is_permission`, `is_need_token`, `has_common_response`, `reg_source`, `api_mode`, `status`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652454662393382917, 'kpu-boot-sop-server-none', 'openapi.download', '1.0', NULL, NULL, 'cn.lmx.kpu.openapi.open.OpenOpenapi', 'download', '[{\"name\":\"id\",\"type\":\"java.lang.Integer\"}]', 0, 0, 1, 1, 1, 1, '2025-07-09 05:37:56', '2025-07-09 05:37:56', NULL, NULL);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for sop_doc_app
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_doc_app`;
+CREATE TABLE `sop_doc_app` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `app_name` varchar(64) NOT NULL COMMENT '应用名称',
+  `token` varchar(64) NOT NULL COMMENT 'Torna应用token',
+  `is_publish` bigint DEFAULT '0' COMMENT '是否发布',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='文档应用';
+
+-- ----------------------------
+-- Records of sop_doc_app
+-- ----------------------------
+BEGIN;
+INSERT INTO `sop_doc_app` (`id`, `app_name`, `token`, `is_publish`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423388, '演示', '2de2a6482fa24221bf5d1c9b10ffa219', 1, '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for sop_doc_content
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_doc_content`;
+CREATE TABLE `sop_doc_content` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `doc_info_id` bigint NOT NULL DEFAULT '0' COMMENT '文档ID doc_info.id',
+  `content` longtext COMMENT '文档内容',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='文档内容';
+
+-- ----------------------------
+-- Records of sop_doc_content
+-- ----------------------------
+BEGIN;
+INSERT INTO `sop_doc_content` (`id`, `doc_info_id`, `content`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423396, 652446776833423389, '{\"children\":[],\"contentType\":\"\",\"description\":\"\",\"docName\":\"支付接口\",\"docTitle\":\"支付接口\",\"errorCodeParams\":[],\"globalHeaders\":[],\"globalParams\":[],\"globalReturns\":[],\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"headerParams\":[],\"headerParamsRaw\":[],\"httpMethod\":\"\",\"id\":166,\"isFolder\":1,\"name\":\"支付接口\",\"parentId\":0,\"pathParams\":[],\"queryParams\":[],\"requestParams\":[],\"responseParams\":[],\"url\":\"\",\"version\":\"\"}', '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_content` (`id`, `doc_info_id`, `content`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423397, 652446776833423390, '{\"children\":[],\"contentType\":\"\",\"description\":\"该接口是页面跳转接口，用于生成用户访问跳转链接。\\n请在服务端执行SDK中pageExecute方法，读取响应中的body()结果。\\n该结果用于跳转到页面，返回到用户浏览器渲染或重定向跳转到页面。\\n具体使用方法请参考 <a href=\\\"https://torna.cn\\\" target=\\\"_blank\\\">接入指南</a>\",\"docName\":\"手机网站支付接口\",\"docTitle\":\"手机网站支付接口\",\"errorCodeParams\":[],\"globalHeaders\":[],\"globalParams\":[],\"globalReturns\":[],\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"headerParams\":[],\"headerParamsRaw\":[],\"httpMethod\":\"\",\"id\":167,\"isFolder\":0,\"name\":\"手机网站支付接口\",\"parentId\":166,\"pathParams\":[],\"queryParams\":[],\"requestParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商户网站唯一订单号\",\"docId\":167,\"enumId\":0,\"example\":\"70501111111S001111119\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1156,\"maxLength\":\"64\",\"modifierName\":\"lmx\",\"name\":\"outTradeNo\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"订单总金额.单位为元，精确到小数点后两位，取值范围：[0.01,100000000]\",\"docId\":167,\"enumId\":0,\"example\":\"9.00\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1157,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"totalAmount\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"BigDecimal\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"订单标题。注意：不可使用特殊字符，如 /，=，& 等。\",\"docId\":167,\"enumId\":0,\"example\":\"大乐透\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1158,\"maxLength\":\"256\",\"modifierName\":\"lmx\",\"name\":\"subject\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"销售产品码，商家和支付平台签约的产品码。手机网站支付为：QUICK_WAP_WAY\",\"docId\":167,\"enumId\":0,\"example\":\"QUICK_WAP_WAY\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1159,\"maxLength\":\"64\",\"modifierName\":\"lmx\",\"name\":\"productCode\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"针对用户授权接口，获取用户相关数据时，用于标识用户授权关系\",\"docId\":167,\"enumId\":0,\"example\":\"appopenBb64d181d0146481ab6a762c00714cC27\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1160,\"maxLength\":\"40\",\"modifierName\":\"lmx\",\"name\":\"authToken\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"用户付款中途退出返回商户网站的地址\",\"docId\":167,\"enumId\":0,\"example\":\"http://www.taobao.com/product/113714.html\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1161,\"maxLength\":\"400\",\"modifierName\":\"lmx\",\"name\":\"quit_url\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商品的编号\",\"docId\":167,\"enumId\":0,\"example\":\"apple-01\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1163,\"maxLength\":\"64\",\"modifierName\":\"lmx\",\"name\":\"goodsId\",\"parentId\":1162,\"require\":false,\"required\":1,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商品名称\",\"docId\":167,\"enumId\":0,\"example\":\"ipad\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1164,\"maxLength\":\"256\",\"modifierName\":\"lmx\",\"name\":\"goodsName\",\"parentId\":1162,\"require\":false,\"required\":1,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商品数量\",\"docId\":167,\"enumId\":0,\"example\":\"1\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1165,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"quantity\",\"parentId\":1162,\"require\":false,\"required\":1,\"type\":\"Integer\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商品单价，单位为元\",\"docId\":167,\"enumId\":0,\"example\":\"2000\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1166,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"price\",\"parentId\":1162,\"require\":false,\"required\":1,\"type\":\"BigDecimal\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"支付平台定义的统一商品编号\",\"docId\":167,\"enumId\":0,\"example\":\"20010001\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1167,\"maxLength\":\"32\",\"modifierName\":\"lmx\",\"name\":\"alipayGoodsId\",\"parentId\":1162,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商品类目\",\"docId\":167,\"enumId\":0,\"example\":\"34543238\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1168,\"maxLength\":\"24\",\"modifierName\":\"lmx\",\"name\":\"goodsCategory\",\"parentId\":1162,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商品类目树，从商品类目根节点到叶子节点的类目id组成，类目id值使用|分割\",\"docId\":167,\"enumId\":0,\"example\":\"124868003|126232002|126252004\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1169,\"maxLength\":\"128\",\"modifierName\":\"lmx\",\"name\":\"categoriesTree\",\"parentId\":1162,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商品描述信息\",\"docId\":167,\"enumId\":0,\"example\":\"特价手机\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1170,\"maxLength\":\"1000\",\"modifierName\":\"lmx\",\"name\":\"body\",\"parentId\":1162,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商品的展示地址\",\"docId\":167,\"enumId\":0,\"example\":\"http://www.alipay.com/xxx.jpg\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1171,\"maxLength\":\"400\",\"modifierName\":\"lmx\",\"name\":\"showUrl\",\"parentId\":1162,\"require\":false,\"required\":0,\"type\":\"String\"}],\"creatorName\":\"lmx\",\"description\":\"订单包含的商品列表信息，json格式，其它说明详见商品明细说明\",\"docId\":167,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1162,\"maxLength\":\"\",\"modifierName\":\"lmx\",\"name\":\"goodsDetail\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"List<PayTradeWapPayRequest$GoodsDetail>\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"绝对超时时间，格式为yyyy-MM-dd HH:mm:ss。超时时间范围：1m~15d。\",\"docId\":167,\"enumId\":0,\"example\":\"2016-12-31 10:05:00\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1172,\"maxLength\":\"32\",\"modifierName\":\"lmx\",\"name\":\"timeExpire\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商户传入业务信息，具体值要和支付平台约定，应用于安全，营销等参数直传场景，格式为json格式\",\"docId\":167,\"enumId\":0,\"example\":\"{mc_create_trade_ip:127.0.0.1}\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1173,\"maxLength\":\"512\",\"modifierName\":\"lmx\",\"name\":\"businessParams\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"公用回传参数，如果请求时传递了该参数，则返回给商户时会回传该参数。支付平台只会在同步返回（包括跳转回商户网站）和异步通知时将该参数原样返回。本参数必须进行UrlEncode之后才可以发送给支付平台。\",\"docId\":167,\"enumId\":0,\"example\":\"merchantBizType%3d3C%26merchantBizNo%3d2016010101111\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1174,\"maxLength\":\"512\",\"modifierName\":\"lmx\",\"name\":\"passbackParams\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"商户原始订单号，最大长度限制32位\",\"docId\":167,\"enumId\":0,\"example\":\"{mc_create_trade_ip:127.0.0.1}\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1175,\"maxLength\":\"32\",\"modifierName\":\"lmx\",\"name\":\"merchantOrderNo\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"}],\"responseParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"用于跳转支付平台页面的信息，POST和GET方法生成内容不同：使用POST方法执行，结果为html form表单，在浏览器渲染即可<br>使用GET方法会得到支付平台URL，需要打开或重定向到该URL。建议使用POST方式。\",\"docId\":167,\"enumId\":0,\"example\":\"请参考响应示例\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1176,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"pageRedirectionData\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"}],\"url\":\"openapi.trade.wap.pay\",\"version\":\"1.0\"}', '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_content` (`id`, `doc_info_id`, `content`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423398, 652446776833423391, '{\"children\":[],\"contentType\":\"\",\"description\":\"订单查询接口\",\"docName\":\"订单查询接口\",\"docTitle\":\"订单查询接口\",\"errorCodeParams\":[],\"globalHeaders\":[],\"globalParams\":[],\"globalReturns\":[],\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"headerParams\":[],\"headerParamsRaw\":[],\"httpMethod\":\"\",\"id\":168,\"isFolder\":0,\"name\":\"订单查询接口\",\"parentId\":166,\"pathParams\":[],\"queryParams\":[],\"requestParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"订单编号\",\"docId\":168,\"enumId\":0,\"example\":\"xxxx\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1177,\"maxLength\":\"64\",\"modifierName\":\"lmx\",\"name\":\"orderNo\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"}],\"responseParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"订单编号\",\"docId\":168,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1178,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"orderNo\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"支付编号\",\"docId\":168,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1179,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"payNo\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"支付人id\",\"docId\":168,\"enumId\":0,\"example\":\"0\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1180,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"payUserId\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"Long\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"支付人姓名\",\"docId\":168,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1181,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"payUserName\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"备注\",\"docId\":168,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1182,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"remark\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"}],\"url\":\"openapi.order.search\",\"version\":\"1.0\"}', '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_content` (`id`, `doc_info_id`, `content`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423399, 652446776833423392, '{\"children\":[],\"contentType\":\"\",\"description\":\"\",\"docName\":\"openapi.upload\",\"docTitle\":\"openapi.upload\",\"errorCodeParams\":[],\"globalHeaders\":[],\"globalParams\":[],\"globalReturns\":[],\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"headerParams\":[],\"headerParamsRaw\":[],\"httpMethod\":\"\",\"id\":169,\"isFolder\":0,\"name\":\"openapi.upload\",\"parentId\":166,\"pathParams\":[],\"queryParams\":[],\"requestParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"产品名称\",\"docId\":169,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1183,\"maxLength\":\"64\",\"modifierName\":\"lmx\",\"name\":\"productName\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"添加时间\",\"docId\":169,\"enumId\":0,\"example\":\"yyyy-MM-dd HH:mm:ss\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1184,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"addTime\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"Date\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回表单字段名\",\"docId\":169,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1185,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"name\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件原始名称.\",\"docId\":169,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1186,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"originalFilename\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件Content type,没有指定返回null\",\"docId\":169,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1187,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"contentType\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"文件内容是否为空\",\"docId\":169,\"enumId\":0,\"example\":\"true\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1188,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"empty\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"boolean\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件内容大小单位byte,没有返回0\",\"docId\":169,\"enumId\":0,\"example\":\"0\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1189,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"size\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"long\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文字字节内容\",\"docId\":169,\"enumId\":0,\"example\":\",\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1190,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"bytes\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"byte[]\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件流\",\"docId\":169,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1191,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"inputStream\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"InputStream\"}],\"responseParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":169,\"enumId\":0,\"example\":\"0\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1192,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"id\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"Integer\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":169,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1193,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"name\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":169,\"enumId\":0,\"example\":\"yyyy-MM-dd HH:mm:ss\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1194,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"addTime\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"Date\"}],\"url\":\"openapi.upload\",\"version\":\"1.0\"}', '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_content` (`id`, `doc_info_id`, `content`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423400, 652446776833423393, '{\"children\":[],\"contentType\":\"\",\"description\":\"\",\"docName\":\"openapi.upload.more\",\"docTitle\":\"openapi.upload.more\",\"errorCodeParams\":[],\"globalHeaders\":[],\"globalParams\":[],\"globalReturns\":[],\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"headerParams\":[],\"headerParamsRaw\":[],\"httpMethod\":\"\",\"id\":170,\"isFolder\":0,\"name\":\"openapi.upload.more\",\"parentId\":166,\"pathParams\":[],\"queryParams\":[],\"requestParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"产品名称\",\"docId\":170,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1195,\"maxLength\":\"64\",\"modifierName\":\"lmx\",\"name\":\"productName\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"添加时间\",\"docId\":170,\"enumId\":0,\"example\":\"yyyy-MM-dd HH:mm:ss\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1196,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"addTime\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"Date\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回表单字段名\",\"docId\":170,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1197,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"name\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件原始名称.\",\"docId\":170,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1198,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"originalFilename\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件Content type,没有指定返回null\",\"docId\":170,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1199,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"contentType\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"文件内容是否为空\",\"docId\":170,\"enumId\":0,\"example\":\"true\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1200,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"empty\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"boolean\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件内容大小单位byte,没有返回0\",\"docId\":170,\"enumId\":0,\"example\":\"0\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1201,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"size\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"long\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文字字节内容\",\"docId\":170,\"enumId\":0,\"example\":\",\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1202,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"bytes\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"byte[]\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件流\",\"docId\":170,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1203,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"inputStream\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"InputStream\"}],\"responseParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":170,\"enumId\":0,\"example\":\"0\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1211,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"id\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"Integer\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":170,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1212,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"name\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":170,\"enumId\":0,\"example\":\"yyyy-MM-dd HH:mm:ss\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1213,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"addTime\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"Date\"}],\"url\":\"openapi.upload.more\",\"version\":\"1.0\"}', '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_content` (`id`, `doc_info_id`, `content`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423401, 652446776833423394, '{\"children\":[],\"contentType\":\"\",\"description\":\"\",\"docName\":\"openapi.upload.list\",\"docTitle\":\"openapi.upload.list\",\"errorCodeParams\":[],\"globalHeaders\":[],\"globalParams\":[],\"globalReturns\":[],\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"headerParams\":[],\"headerParamsRaw\":[],\"httpMethod\":\"\",\"id\":171,\"isFolder\":0,\"name\":\"openapi.upload.list\",\"parentId\":166,\"pathParams\":[],\"queryParams\":[],\"requestParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"产品名称\",\"docId\":171,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1214,\"maxLength\":\"64\",\"modifierName\":\"lmx\",\"name\":\"productName\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"添加时间\",\"docId\":171,\"enumId\":0,\"example\":\"yyyy-MM-dd HH:mm:ss\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1215,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"addTime\",\"parentId\":0,\"require\":false,\"required\":1,\"type\":\"Date\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回表单字段名\",\"docId\":171,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1216,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"name\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件原始名称.\",\"docId\":171,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1217,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"originalFilename\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件Content type,没有指定返回null\",\"docId\":171,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1218,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"contentType\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"文件内容是否为空\",\"docId\":171,\"enumId\":0,\"example\":\"true\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1219,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"empty\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"boolean\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件内容大小单位byte,没有返回0\",\"docId\":171,\"enumId\":0,\"example\":\"0\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1220,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"size\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"long\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文字字节内容\",\"docId\":171,\"enumId\":0,\"example\":\",\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1221,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"bytes\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"byte[]\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件流\",\"docId\":171,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1222,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"inputStream\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"InputStream\"}],\"responseParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":171,\"enumId\":0,\"example\":\"0\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1223,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"id\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"Integer\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":171,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1224,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"name\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":171,\"enumId\":0,\"example\":\"yyyy-MM-dd HH:mm:ss\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1225,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"addTime\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"Date\"}],\"url\":\"openapi.upload.list\",\"version\":\"1.0\"}', '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_content` (`id`, `doc_info_id`, `content`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423402, 652446776833423395, '{\"children\":[],\"contentType\":\"\",\"description\":\"\",\"docName\":\"openapi.download\",\"docTitle\":\"openapi.download\",\"errorCodeParams\":[],\"globalHeaders\":[],\"globalParams\":[],\"globalReturns\":[],\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"headerParams\":[],\"headerParamsRaw\":[],\"httpMethod\":\"\",\"id\":172,\"isFolder\":0,\"name\":\"openapi.download\",\"parentId\":166,\"pathParams\":[],\"queryParams\":[],\"requestParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"No comments found.\",\"docId\":172,\"enumId\":0,\"example\":\"0\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1226,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"id\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"Integer\"}],\"responseParams\":[{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回表单字段名\",\"docId\":172,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1227,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"name\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件原始名称.\",\"docId\":172,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1228,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"originalFilename\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件Content type,没有指定返回null\",\"docId\":172,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1229,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"contentType\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"String\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"文件内容是否为空\",\"docId\":172,\"enumId\":0,\"example\":\"true\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1230,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"empty\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"boolean\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件内容大小单位byte,没有返回0\",\"docId\":172,\"enumId\":0,\"example\":\"0\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1231,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"size\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"long\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文字字节内容\",\"docId\":172,\"enumId\":0,\"example\":\",\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1232,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"bytes\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"byte[]\"},{\"children\":[],\"creatorName\":\"lmx\",\"description\":\"返回文件流\",\"docId\":172,\"enumId\":0,\"example\":\"\",\"global\":false,\"gmtCreate\":\"2025-07-09 04:34:22\",\"gmtModified\":\"2025-07-09 04:34:22\",\"id\":1233,\"maxLength\":\"-\",\"modifierName\":\"lmx\",\"name\":\"inputStream\",\"parentId\":0,\"require\":false,\"required\":0,\"type\":\"InputStream\"}],\"url\":\"openapi.download\",\"version\":\"1.0\"}', '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for sop_doc_info
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_doc_info`;
+CREATE TABLE `sop_doc_info` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `doc_app_id` bigint NOT NULL COMMENT '应用id doc_app.id',
+  `doc_title` varchar(128) NOT NULL COMMENT '文档标题',
+  `doc_id` bigint NOT NULL COMMENT '文档id torna.doc_info.id',
+  `doc_code` varchar(64) DEFAULT NULL COMMENT '文档编码',
+  `doc_type` int DEFAULT '1' COMMENT '文档类型 [1-dubbo 2-富文本 3-Markdown]',
+  `source_type` int DEFAULT '1' COMMENT '来源类型 [1-torna 2-自建]',
+  `doc_version` varchar(16) NOT NULL COMMENT '文档版本号',
+  `doc_name` varchar(64) NOT NULL COMMENT '文档名称',
+  `description` text NOT NULL COMMENT '描述',
+  `is_folder` tinyint NOT NULL DEFAULT '0' COMMENT '是否分类',
+  `is_publish` tinyint NOT NULL DEFAULT '0' COMMENT '状态 [0-未发布 1-已发布]',
+  `parent_id` bigint DEFAULT NULL COMMENT '父文档节点id',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='文档信息';
+
+-- ----------------------------
+-- Records of sop_doc_info
+-- ----------------------------
+BEGIN;
+INSERT INTO `sop_doc_info` (`id`, `doc_app_id`, `doc_title`, `doc_id`, `doc_code`, `doc_type`, `source_type`, `doc_version`, `doc_name`, `description`, `is_folder`, `is_publish`, `parent_id`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423389, 652446776833423388, '支付接口', 166, '', 1, 1, '', '支付接口', '', 1, 1, 0, '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_info` (`id`, `doc_app_id`, `doc_title`, `doc_id`, `doc_code`, `doc_type`, `source_type`, `doc_version`, `doc_name`, `description`, `is_folder`, `is_publish`, `parent_id`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423390, 652446776833423388, '手机网站支付接口', 167, '', 1, 1, '1.0', 'openapi.trade.wap.pay', '该接口是页面跳转接口，用于生成用户访问跳转链接。\n请在服务端执行SDK中pageExecute方法，读取响应中的body()结果。\n该结果用于跳转到页面，返回到用户浏览器渲染或重定向跳转到页面。\n具体使用方法请参考 <a href=\"https://torna.cn\" target=\"_blank\">接入指南</a>', 0, 1, 166, '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_info` (`id`, `doc_app_id`, `doc_title`, `doc_id`, `doc_code`, `doc_type`, `source_type`, `doc_version`, `doc_name`, `description`, `is_folder`, `is_publish`, `parent_id`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423391, 652446776833423388, '订单查询接口', 168, '', 1, 1, '1.0', 'openapi.order.search', '订单查询接口', 0, 1, 166, '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_info` (`id`, `doc_app_id`, `doc_title`, `doc_id`, `doc_code`, `doc_type`, `source_type`, `doc_version`, `doc_name`, `description`, `is_folder`, `is_publish`, `parent_id`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423392, 652446776833423388, 'openapi.upload', 169, '', 1, 1, '1.0', 'openapi.upload', '', 0, 1, 166, '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_info` (`id`, `doc_app_id`, `doc_title`, `doc_id`, `doc_code`, `doc_type`, `source_type`, `doc_version`, `doc_name`, `description`, `is_folder`, `is_publish`, `parent_id`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423393, 652446776833423388, 'openapi.upload.more', 170, '', 1, 1, '1.0', 'openapi.upload.more', '', 0, 1, 166, '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_info` (`id`, `doc_app_id`, `doc_title`, `doc_id`, `doc_code`, `doc_type`, `source_type`, `doc_version`, `doc_name`, `description`, `is_folder`, `is_publish`, `parent_id`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423394, 652446776833423388, 'openapi.upload.list', 171, '', 1, 1, '1.0', 'openapi.upload.list', '', 0, 1, 166, '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+INSERT INTO `sop_doc_info` (`id`, `doc_app_id`, `doc_title`, `doc_id`, `doc_code`, `doc_type`, `source_type`, `doc_version`, `doc_name`, `description`, `is_folder`, `is_publish`, `parent_id`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652446776833423395, 652446776833423388, 'openapi.download', 172, '', 1, 1, '1.0', 'openapi.download', '', 0, 1, 166, '2025-07-09 05:24:24', '2025-07-09 05:24:24', 2, 2);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for sop_isv_info
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_isv_info`;
+CREATE TABLE `sop_isv_info` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `app_id` varchar(100) NOT NULL COMMENT 'appKey',
+  `status` tinyint NOT NULL DEFAULT '1' COMMENT '状态 [1-启用 2-禁用]',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  `start_expiration_time` datetime DEFAULT NULL COMMENT '开始有效期',
+  `end_expiration_time` datetime DEFAULT NULL COMMENT '结束有效期',
+  `audit_status` tinyint DEFAULT '0' COMMENT '审核状态 [0-初始化 1-申请中 2-通过 99-退回]',
+  `audit_time` datetime DEFAULT NULL COMMENT '审核时间',
+  `submission_time` datetime DEFAULT NULL COMMENT '提交时间',
+  `creation_method` tinyint DEFAULT '0' COMMENT '创建方式 [0-后台创建 1-用户申请]',
+  `review_comments` varchar(255) DEFAULT NULL COMMENT '审核意见',
+  `tenant_id` bigint DEFAULT NULL COMMENT '租户id def_tenant.id',
+  `name` varchar(255) NOT NULL COMMENT '名称',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='isv信息表';
+
+-- ----------------------------
+-- Records of sop_isv_info
+-- ----------------------------
+BEGIN;
+INSERT INTO `sop_isv_info` (`id`, `app_id`, `status`, `created_time`, `updated_time`, `created_by`, `updated_by`, `start_expiration_time`, `end_expiration_time`, `audit_status`, `audit_time`, `submission_time`, `creation_method`, `review_comments`, `tenant_id`, `name`) VALUES (652045476564081668, '20250708652045476564081667', 1, '2025-07-08 03:11:48', '2025-07-08 03:11:48', 2, 2, NULL, NULL, 0, NULL, NULL, 0, NULL, NULL, '内置ISV');
+INSERT INTO `sop_isv_info` (`id`, `app_id`, `status`, `created_time`, `updated_time`, `created_by`, `updated_by`, `start_expiration_time`, `end_expiration_time`, `audit_status`, `audit_time`, `submission_time`, `creation_method`, `review_comments`, `tenant_id`, `name`) VALUES (652607236811625475, '20250709652607236811625474', 1, '2025-07-09 15:33:36', '2025-07-09 15:33:36', 2, 2, NULL, NULL, 2, NULL, NULL, 0, NULL, NULL, 'test');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for sop_isv_keys
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_isv_keys`;
+CREATE TABLE `sop_isv_keys` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `isv_id` bigint NOT NULL COMMENT 'ISV isv_info.id',
+  `key_format` tinyint NOT NULL DEFAULT '1' COMMENT '秘钥格式 [1-PKCS8(JAVA适用) 2-PKCS1(非JAVA适用)]',
+  `public_key_isv` text NOT NULL COMMENT '开发者生成的公钥',
+  `private_key_isv` text NOT NULL COMMENT '开发者生成的私钥 （提供给开发者）',
+  `public_key_platform` text NOT NULL COMMENT '平台生成的公钥 （提供给开发者）',
+  `private_key_platform` text NOT NULL COMMENT '平台生成的私钥',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='ISV秘钥管理';
+
+-- ----------------------------
+-- Records of sop_isv_keys
+-- ----------------------------
+BEGIN;
+INSERT INTO `sop_isv_keys` (`id`, `isv_id`, `key_format`, `public_key_isv`, `private_key_isv`, `public_key_platform`, `private_key_platform`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652073965082157056, 652045476564081668, 1, 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxCrTgQVc3lsaOc4qm1ZFpxCrOxZzWXV+UFsstEnc9pstp2P23w99QNk0vRPc9EgF/XWGgNIUbd+PS6VXrSZrusEQzS+Se8NrzMiyWVLa22nk3fWhZs3SaVZqjZw4lKHtOScSHPE63uNiSy8FGJP+RU3rldIfDb1nO3xbpHsCSVUft0iIyAapvKxmc4+IMRJU685Bk4sL0idWkxT4+/dTUQ0C+7IKIAJvi7WDeGIUnR6JWDHBRS6HuoJZFTAvhJ3erDSwffUSYotlrS0wcUMhKckIuvZPpFH/sPEPZUItJAsgMTnbliQdj+x08caiqOrFi4eM9zOC24HedxZcNIRvSwIDAQAB', 'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDEKtOBBVzeWxo5ziqbVkWnEKs7FnNZdX5QWyy0Sdz2my2nY/bfD31A2TS9E9z0SAX9dYaA0hRt349LpVetJmu6wRDNL5J7w2vMyLJZUtrbaeTd9aFmzdJpVmqNnDiUoe05JxIc8Tre42JLLwUYk/5FTeuV0h8NvWc7fFukewJJVR+3SIjIBqm8rGZzj4gxElTrzkGTiwvSJ1aTFPj791NRDQL7sgogAm+LtYN4YhSdHolYMcFFLoe6glkVMC+End6sNLB99RJii2WtLTBxQyEpyQi69k+kUf+w8Q9lQi0kCyAxOduWJB2P7HTxxqKo6sWLh4z3M4Lbgd53Flw0hG9LAgMBAAECggEAInVDYc6HWae3G6BTa6Xj5kzPRznSWUyCO6tIVwMChW8MvfKZUuVtow6EbRIoJeDg7HzQe6BrZkF28lrA4/FzywJO6TwKByN0tCws5/Pd7dzUDwkuqNhOtaIwZV+jsLgg64EpdVwKc0yN35cK1h5o89OUJmUaf1dd4t0dW+8fn7G9FqweM1P+zQioXih3NXidmHAWgtI8Dw0OCuFbJZXfvmTePHfwkGSjO98/8b1vbekRlA1QlzdJurjl5DTrySjwIZ958aiC467AAEgzhJlVvkT4yFbwPkwJTXQd38TAmoQAYZRAAQP9aCa2U0ckdxY2OLl4YWu0Sg/8sd+uXNnPgQKBgQDKiMNu+4l/xFBkdI0ysq96eWPvwHt7hlTaGMSvbMw/RpHY7upe4nQTDZ8JESsqLVZCrHASVTI2nKSIInurtMppLEjQdO8UvdqL07CSBjXnX8cZSpIrJ62+k2VQ5cM8waDTAmRfWxC8J+jTnbBrWWhAKWm1a0y3WD9yjF05pd4g8wKBgQD388kg7VoR7jsnYbnPC9JUSTGXrMuhWJs5O4cf9DGKyLujtGdP+DyfuldTxs5IpmMPw3ErMJEFdsI6VH0ChS4o8fcA6/iMDIx6KQESIAwbMuixxF3nLCKSvS5FndvLkzxWql9S1y8rDeeOP683hyIoitziKAIQlo48Mq0IThFOSQKBgBQiQmNfCA02g9NorryyfLVNKf0kgmIGOZswySSzSR6lMkyBe7URB/745K1vEn5v4VphcAayh3pcWhLacrbgExsfduGaLkY+lWI/Ghd6HJOytsUx35QArsn6NyEyphT9HrK7UyUTlXdO9FtNGsOhMLboJwUM9KRpVm1ZvM7FSW63AoGBANFapnzFy2IOWyXiTsexvJJsBpKBVKHTtaQ6Tdo+DcKXwE712LFd8JoQ9QEIgE45JrU9mQUVia0qW85yXebN2m659otxsjdVtRrEGmJaar5gWrcWDQ9OZZauYy5mnhmiJLUsPzYr+GiK4fNqdCAXWlEPBndxvmSRKmFLjGvRtqz5AoGAWjN+Og7+/r15tYbAYTWW0ft0QNK0gky6BoLLs64E78NNVe1FeBmIJNxq6IAjcx88R2/i+nqvRuUIKr78JXeW/vdGI0BJdFbGEAaVWsA4PQU1IlEdsiaZthx4wopBRz/blDZXdrTEFBcp7Az7EKPirV1OqAIYFaSs5m9uM1HInpo=', 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnC/sX6cWJh992qZdCLu/kGv8B9Yao3d/yU6Z4y1AghJfw5DoPDEhm/mxP3EvxZxZIapt0IDQcdCpEcbYbuNV0Q55x3cQt78MgStB77OQYV1fULCF+AuWDScBRjOI54nm7YKSrEf76f2jARKlYcwvFtESN7vHMvQx6RUYWrkmQChqqS/UY6x1zu5oJ51bq8qvhjVFrwLhGuOWlMBYTY5Vwl3wSgnxyPCsFBo0bkDrRtSgFjBTAUrUd2GtNM7XkEq+wdINzBrpoJnWldtWb4s+XHFKib8X4RlRBRqFpUdzxa8vv7BPmJF+G97M03S01ID4G4yrzRZbAL68xrTD0mUWCQIDAQAB', 'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCcL+xfpxYmH33apl0Iu7+Qa/wH1hqjd3/JTpnjLUCCEl/DkOg8MSGb+bE/cS/FnFkhqm3QgNBx0KkRxthu41XRDnnHdxC3vwyBK0Hvs5BhXV9QsIX4C5YNJwFGM4jniebtgpKsR/vp/aMBEqVhzC8W0RI3u8cy9DHpFRhauSZAKGqpL9RjrHXO7mgnnVuryq+GNUWvAuEa45aUwFhNjlXCXfBKCfHI8KwUGjRuQOtG1KAWMFMBStR3Ya00zteQSr7B0g3MGumgmdaV21Zviz5ccUqJvxfhGVEFGoWlR3PFry+/sE+YkX4b3szTdLTUgPgbjKvNFlsAvrzGtMPSZRYJAgMBAAECggEABkK5g+ALuD186v3OLuJvvFdHw/ymFrVcjvIyovOWaWBZLFqrpHYHtdvdagCcfJxWyk2tlzUCpf1KOacx18gPEZE1+nPgXK0w0CCuxO/6spxujKp2xEmamy5cE7dPHpDdi9m3DWbZRzjehtV7gZ8QqCZ7R3akdntpYMFyt3hCe0HTZyNlrrXxeGZ0cUbolB04xxEXFmKlpprgwsP6We1wA+sRhO/uBFQHAzVz86n1O22z2xuFlKd8/dGokkD4sAoudVwe2v19xp5uo6SP32+HZkIvGSb6AjRSBICCNSeILuBlslHPMwQSugEQKpLdb8q/BmPGvouwBvvQgqbpJ7vAMQKBgQC4Rrnqp4R+keNtGia1BQRE85ayB2Z51K1f/dseWo6hq7I4ejWLhYsZfk24FNAuEfO6rSKi0qE9zcg6c7thC2rx6IiI4rK89bCfWQvHYx+VFLfJocqnYSPibyppXlh4A94RLX3iPJr4yF0cEioCi0C8h4irYkqMh04RDyaegHSF3QKBgQDY+mdpF07UnEInB0o6Yf7AsKWT/4lMvlDIBNgPLZYr0cQJqz4KDQP+DItfsBTzpKjVvU9/PtUV5tTzsEMGKJosMvtX+gl57zPvNwqpEVnxBhWPAOUG2Mz4AcNozs24YTATrzAJr3Ng+FB2OSbVf7UXtBiM6HbGUhX+meO5rEjcHQKBgH7NpFd1aHXUG+RSj3oW9qYf3H2rG/gPwjIAtExB0k4roNq+NaRJg7tKL17Ra6OYFNhLFT9noy6tMPAP/Uu9GJ1X/sP7AzWF90DffHx6mBv1ArcLzzC4ZoIFLvEMy+Hh/2hgnnQUcitpbLDJSwEvI5/Xv9L3Mwdaf/y7KT7+c7A9AoGAbyH6G1KL1svd+h16wGJ21/ziIeaNTVhhCcGpZETGGNWM4iLqWL2H4PRN4onOgWhB7Y/UCumEvH4JbnNGMP5U0PSf1dTES8bfw9NeS3AOsCucmS0tIQ+kFBbbHnBl390vgbWGFj/eCbnFhHgLUujhOS3OMUXTqApdJ5VslSoP+2UCgYEAhAkweHXIrqdzIUBl2rSIOUtYlj+9RqcYd0xm8ObnXaIqrf/LrmZ5T960iETv3lUMUul1AYPQzljbQJ81aT+npBOXq5quXwDP+8/JFcT1KNlCVI0bR4/89gsQgTHgjXE2RB9SMaVJLWyC7VO09sQEa8VCNnmwStH7ZYvFdFSSGlA=', '2025-07-08 05:00:22', '2025-07-08 05:00:22', 2, 2);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for sop_perm_group
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_perm_group`;
+CREATE TABLE `sop_perm_group` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `group_name` varchar(64) NOT NULL COMMENT '分组描述',
+  `is_deleted` tinyint NOT NULL DEFAULT '0' COMMENT '是否删除',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='分组表';
+
+-- ----------------------------
+-- Records of sop_perm_group
+-- ----------------------------
+BEGIN;
+INSERT INTO `sop_perm_group` (`id`, `group_name`, `is_deleted`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652484495236224002, '支付模块', 0, '2025-07-09 07:33:46', '2025-07-09 07:33:46', 2, 2);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for sop_perm_group_permission
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_perm_group_permission`;
+CREATE TABLE `sop_perm_group_permission` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `group_id` bigint NOT NULL DEFAULT '0' COMMENT '分组id perm_group.id',
+  `api_id` bigint NOT NULL DEFAULT '0' COMMENT '文档id api_info.id',
+  `is_deleted` tinyint NOT NULL DEFAULT '0' COMMENT '是否删除',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='组权限表';
+
+-- ----------------------------
+-- Records of sop_perm_group_permission
+-- ----------------------------
+BEGIN;
+INSERT INTO `sop_perm_group_permission` (`id`, `group_id`, `api_id`, `is_deleted`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (652514615841879081, 652484495236224002, 652454662393382912, 0, '2025-07-09 09:33:01', '2025-07-09 09:33:01', 2, 2);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for sop_perm_isv_group
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_perm_isv_group`;
+CREATE TABLE `sop_perm_isv_group` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `is_deleted` tinyint NOT NULL DEFAULT '0' COMMENT '是否删除',
+  `isv_id` varchar(19) NOT NULL COMMENT 'ISV',
+  `group_id` varchar(19) NOT NULL COMMENT '分组 perm_group.id',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='isv分组';
+
+-- ----------------------------
+-- Records of sop_perm_isv_group
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for sop_sys_config
+-- ----------------------------
+DROP TABLE IF EXISTS `sop_sys_config`;
+CREATE TABLE `sop_sys_config` (
+  `id` bigint NOT NULL COMMENT '主键id',
+  `config_key` varchar(64) NOT NULL COMMENT '配置key',
+  `config_value` varchar(256) NOT NULL COMMENT '配置值',
+  `remark` varchar(128) NOT NULL COMMENT '备注',
+  `is_deleted` tinyint NOT NULL DEFAULT '0' COMMENT '是否删除',
+  `created_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间',
+  `created_by` bigint DEFAULT '0' COMMENT '创建人id',
+  `updated_by` bigint DEFAULT '0' COMMENT '最后更新人id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='系统配置表';
+
+-- ----------------------------
+-- Records of sop_sys_config
+-- ----------------------------
+BEGIN;
+INSERT INTO `sop_sys_config` (`id`, `config_key`, `config_value`, `remark`, `is_deleted`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (651989337046543360, 'admin.jwt.secret', 'aghYVtCeYZdAV5KQBxuBaBfTjJG4Dh', '', 0, '2025-07-07 23:31:53', '2025-07-07 23:31:53', 2, 2);
+INSERT INTO `sop_sys_config` (`id`, `config_key`, `config_value`, `remark`, `is_deleted`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (651989337046543363, 'admin.torna-server-addr', 'http://localhost:7700', 'Torna服务器地址', 0, '2025-07-07 23:32:16', '2025-07-07 23:32:16', 2, 2);
+INSERT INTO `sop_sys_config` (`id`, `config_key`, `config_value`, `remark`, `is_deleted`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (651989337046543366, 'admin.open-sandbox-url', 'http://test-open.kpui.top/api', '开放平台测试地址', 0, '2025-07-07 23:32:44', '2025-07-09 21:47:08', 2, 2);
+INSERT INTO `sop_sys_config` (`id`, `config_key`, `config_value`, `remark`, `is_deleted`, `created_time`, `updated_time`, `created_by`, `updated_by`) VALUES (651989337046543369, 'admin.open-prod-url', 'http://open.kpui.top/api', '开放平台线上地址', 0, '2025-07-07 23:33:07', '2025-07-09 21:47:00', 2, 2);
+COMMIT;
+
+-- ----------------------------
 -- Table structure for undo_log
 -- ----------------------------
 DROP TABLE IF EXISTS `undo_log`;
@@ -1743,12 +2309,13 @@ CREATE TABLE `worker_node` (
   `modified` timestamp NULL DEFAULT NULL COMMENT '修改时间',
   `created` timestamp NULL DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='DB;WorkerID Assigner for UID Generator';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='DB;WorkerID Assigner for UID Generator';
 
 -- ----------------------------
 -- Records of worker_node
 -- ----------------------------
 BEGIN;
+INSERT INTO `worker_node` (`id`, `host_name`, `port`, `type`, `launch_date`, `modified`, `created`) VALUES (1, '2408:8352:e60:73f4:5432:180f:7c3c:124d%en0', '1754719370381-95113', 2, '2025-08-09', '2025-08-09 14:02:50', '2025-08-09 14:02:50');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;

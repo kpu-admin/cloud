@@ -1,22 +1,17 @@
 package cn.lmx.kpu.gateway.manager.impl;
 
 
-import cn.lmx.basic.cache.repository.CacheOps;
 import cn.lmx.basic.cache.repository.CachePlusOps;
 import cn.lmx.kpu.common.cache.common.CaptchaCacheKeyBuilder;
 import cn.lmx.kpu.gateway.common.CacheKey;
 import cn.lmx.kpu.gateway.manager.IsvManager;
 import cn.lmx.kpu.gateway.util.CopyUtil;
-import cn.lmx.kpu.gateway.util.JsonUtil;
 import cn.lmx.kpu.sop.admin.dto.IsvDTO;
 import cn.lmx.kpu.sop.admin.entity.SopIsvInfo;
 import cn.lmx.kpu.sop.admin.mapper.SopIsvInfoMapper;
-import com.gitee.sop.support.constant.SopConstants;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -30,13 +25,13 @@ import java.util.*;
 @Service
 public class IsvManagerImpl implements IsvManager {
 
-    private final CachePlusOps cacheOps;
     private static final String KEY_ISV = CacheKey.KEY_ISV;
     protected final SopIsvInfoMapper isvInfoMapper;
+    private final CachePlusOps cacheOps;
 
     @Override
     public IsvDTO getIsv(String appId) {
-        return cacheOps.get(CaptchaCacheKeyBuilder.build(appId, KEY_ISV), k ->{
+        return cacheOps.get(CaptchaCacheKeyBuilder.build(appId, KEY_ISV), k -> {
             SopIsvInfo isvInfo = isvInfoMapper.getByAppId(appId);
             return CopyUtil.copyBean(isvInfo, IsvDTO::new);
         }).getValue();

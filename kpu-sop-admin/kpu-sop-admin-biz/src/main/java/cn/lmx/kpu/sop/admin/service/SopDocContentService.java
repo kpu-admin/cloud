@@ -1,9 +1,7 @@
 package cn.lmx.kpu.sop.admin.service;
 
-import cn.lmx.basic.base.entity.SuperEntity;
 import cn.lmx.basic.base.service.SuperService;
 import cn.lmx.kpu.sop.admin.entity.SopDocContent;
-import jakarta.validation.constraints.NotNull;
 
 
 /**
@@ -20,7 +18,7 @@ public interface SopDocContentService extends SuperService<Long, SopDocContent> 
 
     void saveContent(Long id, String content);
 
-    String getContent( Long id);
+    String getContent(Long id);
 }
 
 

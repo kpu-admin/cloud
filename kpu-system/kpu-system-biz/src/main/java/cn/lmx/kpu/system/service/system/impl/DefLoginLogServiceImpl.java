@@ -5,20 +5,17 @@ import cn.hutool.http.useragent.Browser;
 import cn.hutool.http.useragent.OS;
 import cn.hutool.http.useragent.UserAgent;
 import cn.hutool.http.useragent.UserAgentUtil;
-
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import cn.lmx.basic.base.service.impl.SuperServiceImpl;
 import cn.lmx.basic.utils.DateUtils;
-
 import cn.lmx.kpu.system.entity.system.DefLoginLog;
-import cn.lmx.kpu.system.entity.tenant.DefUser;
 import cn.lmx.kpu.system.manager.system.DefLoginLogManager;
 import cn.lmx.kpu.system.manager.tenant.DefUserManager;
 import cn.lmx.kpu.system.service.system.DefLoginLogService;
 import cn.lmx.kpu.system.vo.save.system.DefLoginLogSaveVO;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.function.Supplier;
@@ -59,14 +56,6 @@ public class DefLoginLogServiceImpl extends SuperServiceImpl<DefLoginLogManager,
     protected <SaveVO> DefLoginLog saveBefore(SaveVO saveVO) {
         DefLoginLogSaveVO defLoginLogSaveVO = (DefLoginLogSaveVO) saveVO;
         DefLoginLog defLoginLog = super.saveBefore(defLoginLogSaveVO);
-        DefUser user;
-        if (defLoginLog.getUserId() != null) {
-            user = this.defUserManager.getByIdCache(defLoginLog.getUserId());
-        } else if (StrUtil.isNotEmpty(defLoginLogSaveVO.getMobile())) {
-            user = this.defUserManager.getUserByMobile(defLoginLogSaveVO.getMobile());
-        } else {
-            user = this.defUserManager.getUserByUsername(defLoginLog.getUsername());
-        }
 
         defLoginLog.setLoginDate(DateUtils.formatAsDate(LocalDateTime.now()));
 
@@ -83,10 +72,7 @@ public class DefLoginLogServiceImpl extends SuperServiceImpl<DefLoginLogManager,
         if (os != null) {
             defLoginLog.setOperatingSystem(simplifyOperatingSystem(os.getName()));
         }
-        if (user != null) {
-            defLoginLog.setUsername(user.getUsername()).setUserId(user.getId()).setNickName(user.getNickName())
-                    .setCreatedBy(user.getId());
-        }
+
         return defLoginLog;
     }
 

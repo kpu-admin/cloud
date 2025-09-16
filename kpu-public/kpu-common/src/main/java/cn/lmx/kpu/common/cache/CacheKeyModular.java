@@ -32,6 +32,10 @@ public class CacheKeyModular {
      */
     public static final String SYSTEM = "system";
     /**
+     * 仅租户服务tenant使用的缓存
+     */
+    public static final String SHOP = "shop";
+    /**
      * 仅网关服务gateway使用的缓存
      */
     public static final String GATEWAY = "gateway";

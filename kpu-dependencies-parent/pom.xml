@@ -2,12 +2,11 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <parent>
         <!--
-        这个依赖爆红，怀疑代码没给全？
+            这个依赖爆红，怀疑代码没给全？
             拜托你能不能先看文档，了解清楚项目的依赖关系！别一来就折腾代码。
-            这个依赖在独立的 kpu-util 项目
+            这个依赖在独立的 kpu-util 项目，请先下载kpu-util并将其编译至本地maven仓库后，本项目才能编译成功。
         -->
         <groupId>cn.lmx.basic</groupId>
         <artifactId>kpu-parent</artifactId>
@@ -17,16 +16,17 @@
 
     <groupId>cn.lmx.kpu</groupId>
     <artifactId>kpu-dependencies-parent</artifactId>
-    <version>1.0.0</version>
+    <version>${revision}</version>
 
     <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
-
     <name>${project.artifactId}</name>
     <description>kpu项目业务父pom</description>
     <properties>
+        <!-- 本项目的版本 -->
+        <revision>1.0.0</revision>
+        <!-- kpu-util基础库的版本 -->
         <kpu-util.version>1.0.0</kpu-util.version>
-        <kpu-project.version>1.0.0</kpu-project.version>
         <docker.image.prefix>lmx</docker.image.prefix>
     </properties>
 
@@ -34,7 +34,12 @@
         <dependencies>
             <dependency>
                 <groupId>cn.lmx.basic</groupId>
-                <artifactId>kpu-all</artifactId>
+                <artifactId>kpu-all-cloud</artifactId>
+                <version>${kpu-util.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.lmx.basic</groupId>
+                <artifactId>kpu-all-boot</artifactId>
                 <version>${kpu-util.version}</version>
             </dependency>
             <dependency>
@@ -50,11 +55,6 @@
             <dependency>
                 <groupId>cn.lmx.basic</groupId>
                 <artifactId>kpu-cache-starter</artifactId>
-                <version>${kpu-util.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.lmx.basic</groupId>
-                <artifactId>kpu-captcha-starter</artifactId>
                 <version>${kpu-util.version}</version>
             </dependency>
             <dependency>
@@ -77,9 +77,15 @@
                 <artifactId>kpu-echo-starter</artifactId>
                 <version>${kpu-util.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>cn.lmx.basic</groupId>
                 <artifactId>kpu-log-starter</artifactId>
+                <version>${kpu-util.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.lmx.basic</groupId>
+                <artifactId>kpu-captcha-starter</artifactId>
                 <version>${kpu-util.version}</version>
             </dependency>
             <dependency>
@@ -117,6 +123,22 @@
                 <artifactId>kpu-xss-starter</artifactId>
                 <version>${kpu-util.version}</version>
             </dependency>
+            <dependency>
+                <groupId>cn.lmx.basic</groupId>
+                <artifactId>fastdfs-client</artifactId>
+                <version>${kpu-util.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.lmx.basic</groupId>
+                <artifactId>sop-service-support</artifactId>
+                <version>${kpu-util.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.lmx.basic</groupId>
+                <artifactId>sop-spring-boot-starter</artifactId>
+                <version>${kpu-util.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -235,7 +257,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-
             </plugin>
             <!--
             <plugin>
@@ -255,6 +276,7 @@
                     <generateBackupPoms>false</generateBackupPoms>
                 </configuration>
             </plugin>
+
             <!-- 代码规范检查 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

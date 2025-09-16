@@ -5,7 +5,7 @@
     <parent>
         <groupId>cn.lmx.kpu</groupId>
         <artifactId>kpu-login-user-facade</artifactId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -18,23 +18,23 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-login-user-resolver</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
 
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-oauth-biz</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-system-biz</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-base-biz</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
 
     </dependencies>

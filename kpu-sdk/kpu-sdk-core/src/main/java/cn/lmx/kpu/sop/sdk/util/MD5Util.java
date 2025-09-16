@@ -4,6 +4,7 @@ import java.security.MessageDigest;
 
 /**
  * MD5工具类
+ *
  * @author 六如
  */
 public class MD5Util {
@@ -37,7 +38,7 @@ public class MD5Util {
      * @return
      */
     public static String encrypt(String input) {
-        if(input == null || "".equals(input)) {
+        if (input == null || "".equals(input)) {
             throw new IllegalArgumentException("The argument input can not be empty.");
         }
         return encrypt(input.getBytes());
@@ -45,11 +46,12 @@ public class MD5Util {
 
     /**
      * 返回长度16串,小写
+     *
      * @param input
      * @return
      */
     public static String encrypt16(String input) {
-        return encrypt(input).substring(8,24);
+        return encrypt(input).substring(8, 24);
     }
 
     /**
@@ -59,7 +61,7 @@ public class MD5Util {
      * @return
      */
     public static String encrypt(byte[] input) {
-        if(input == null || input.length == 0) {
+        if (input == null || input.length == 0) {
             throw new IllegalArgumentException("The argument input can not be empty.");
         }
         try {
@@ -75,8 +77,4 @@ public class MD5Util {
         }
     }
 
-
-    /*public static void main(String[] args) {
-        System.out.println(encrypt(encrypt("123456")));
-    }*/
 }

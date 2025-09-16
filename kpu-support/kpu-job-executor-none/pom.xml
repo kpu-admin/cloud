@@ -6,7 +6,7 @@
     <parent>
         <artifactId>kpu-support</artifactId>
         <groupId>cn.lmx.kpu</groupId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>kpu-job-executor-none</artifactId>
@@ -19,7 +19,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-system-biz</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>kpu-tenant-datasource-init</artifactId>
@@ -30,29 +30,29 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-base-biz</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <!-- boot 版本使用此实现 -->
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-system-boot-impl</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-base-boot-impl</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <!-- cloud 版本使用此实现 -->
         <!--        <dependency>-->
         <!--            <groupId>cn.lmx.kpu</groupId>-->
         <!--            <artifactId>kpu-system-cloud-impl</artifactId>-->
-        <!--            <version>${kpu-project.version}</version>-->
+        <!--            <version>${revision}</version>-->
         <!--        </dependency>-->
         <!--        <dependency>-->
         <!--            <groupId>cn.lmx.kpu</groupId>-->
         <!--            <artifactId>kpu-base-cloud-impl</artifactId>-->
-        <!--            <version>${kpu-project.version}</version>-->
+        <!--            <version>${revision}</version>-->
         <!--        </dependency>-->
 
 
@@ -65,7 +65,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-database-mode</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.basic</groupId>
@@ -88,10 +88,6 @@
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>${mysql.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

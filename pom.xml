@@ -2,24 +2,38 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>cn.lmx.kpu</groupId>
+    <parent>
+        <groupId>cn.lmx.kpu</groupId>
+        <artifactId>kpu-dependencies-parent</artifactId>
+        <version>${revision}</version>
+        <relativePath>./kpu-dependencies-parent/pom.xml</relativePath>
+    </parent>
     <artifactId>kpu-none</artifactId>
-    <version>1.0.0</version>
+
+    <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
+
     <name>${project.artifactId}</name>
-    <description>kpu-cloud</description>
+    <description>kpu-none</description>
 
     <modules>
         <!-- @kpu.generator auto insert root.pom.xml -->
+        <!-- 商城服务 -->
+        <module>kpu-shop</module>
         <module>kpu-dependencies-parent</module>
         <module>kpu-public</module>
-        <module>kpu-base</module>
+        <!-- 认证服务 -->
         <module>kpu-oauth</module>
+        <!-- 基础服务 -->
+        <module>kpu-base</module>
+        <!-- 系统服务 -->
         <module>kpu-system</module>
-        <module>kpu-gateway</module>
-        <module>kpu-support</module>
+        <!-- 代码生成 -->
         <module>kpu-generator</module>
+        <!-- 网关 -->
+        <module>kpu-gateway</module>
+        <!-- 支撑模块 -->
+        <module>kpu-support</module>
         <module>kpu-sdk</module>
         <module>kpu-sop-admin</module>
         <module>kpu-openapi</module>

@@ -1,7 +1,6 @@
 package cn.lmx.kpu.gateway.manager.impl;
 
 
-import cn.lmx.basic.cache.repository.CacheOps;
 import cn.lmx.basic.cache.repository.CachePlusOps;
 import cn.lmx.basic.database.mybatis.conditions.Wraps;
 import cn.lmx.basic.model.cache.CacheKey;
@@ -9,7 +8,6 @@ import cn.lmx.kpu.common.cache.common.CaptchaCacheKeyBuilder;
 import cn.lmx.kpu.gateway.common.ApiInfoDTO;
 import cn.lmx.kpu.gateway.manager.ApiManager;
 import cn.lmx.kpu.gateway.util.CopyUtil;
-import cn.lmx.kpu.oauth.granter.CaptchaTokenGranter;
 import cn.lmx.kpu.sop.admin.entity.SopApiInfo;
 import cn.lmx.kpu.sop.admin.mapper.SopApiInfoMapper;
 import lombok.RequiredArgsConstructor;
@@ -18,10 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Function;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 /**
  * @author 六如
@@ -41,7 +35,7 @@ public class ApiManagerImpl implements ApiManager {
     public void save(ApiInfoDTO apiInfoDTO) {
         String key = apiInfoDTO.buildApiNameVersion();
         CacheKey cacheKey = CaptchaCacheKeyBuilder.build(key, KEY_API);
-        cachePlusOps.set(cacheKey,apiInfoDTO);
+        cachePlusOps.set(cacheKey, apiInfoDTO);
     }
 
 
@@ -69,7 +63,7 @@ public class ApiManagerImpl implements ApiManager {
         ApiInfoDTO apiInfoDTO = CopyUtil.copyBean(apiInfo, ApiInfoDTO::new);
         String key = apiInfoDTO.buildApiNameVersion();
         CacheKey cacheKey = CaptchaCacheKeyBuilder.build(key, KEY_API);
-        cachePlusOps.set(cacheKey,apiInfoDTO);
+        cachePlusOps.set(cacheKey, apiInfoDTO);
         log.info("更新接口本地缓存, apiInfoDTO={}", apiInfoDTO);
         return apiInfoDTO;
     }

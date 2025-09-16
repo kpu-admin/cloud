@@ -140,7 +140,15 @@ public interface CacheKeyTable {
         String APPLICATION_RESOURCE = "app_res";
         String ALL_RESOURCE_API = "all_dra";
     }
-
+    /**
+     * 商城服务缓存 start
+     */
+    interface Shop {
+        /**
+         * 会员用户 前缀
+         */
+        String MEMBER_USER = "member_user";
+    }
 
     /**
      * 消息服务缓存 start

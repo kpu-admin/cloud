@@ -5,7 +5,7 @@
     <parent>
         <artifactId>kpu-gateway</artifactId>
         <groupId>cn.lmx.kpu</groupId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-gateway-biz</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>spring-boot-starter-undertow</artifactId>
@@ -34,12 +34,12 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-base-cloud-impl</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-system-cloud-impl</artifactId>
-            <version>${kpu-project.version}</version>
+            <version>${revision}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>kpu-validator-starter</artifactId>
@@ -122,7 +122,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

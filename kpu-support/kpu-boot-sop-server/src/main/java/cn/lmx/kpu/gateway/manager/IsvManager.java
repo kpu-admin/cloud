@@ -3,7 +3,6 @@ package cn.lmx.kpu.gateway.manager;
 
 import cn.lmx.kpu.sop.admin.dto.IsvDTO;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 

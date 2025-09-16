@@ -22,22 +22,21 @@ public enum AuditStatusEnum implements BaseEnum {
     /**
      * 初始化
      */
-    INIT("初始化","0","default"),
+    INIT("初始化", "0", "default"),
     /**
      * 申请中
      */
-    APPLYING("申请中","1","default"),
+    APPLYING("申请中", "1", "default"),
     /**
      * 通过
      */
-    PASS("通过","2","success"),
+    PASS("通过", "2", "success"),
     //    退回
-    BACK("退回","99","error");
+    BACK("退回", "99", "error");
     private String desc;
     private String value;
     @Schema(description = "扩展")
     private String extra;
-
 
 
     /**

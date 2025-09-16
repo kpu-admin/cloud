@@ -4,7 +4,6 @@ import cn.lmx.basic.annotation.log.WebLog;
 import cn.lmx.basic.base.R;
 import cn.lmx.basic.interfaces.echo.EchoService;
 import cn.lmx.kpu.sop.admin.vo.save.SopPermIsvGroupSaveVO;
-import cn.lmx.kpu.sop.admin.vo.update.SopPermIsvGroupUpdateVO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -49,8 +48,9 @@ public class SopPermGroupController extends SuperController<SopPermGroupService,
     @GetMapping("/listByGroupId")
     @WebLog(value = "查询开发应用分组", request = false)
     public R<List<Long>> listByGroupId(String isvId) {
-        return R.success( superService.listByGroupId(isvId));
+        return R.success(superService.listByGroupId(isvId));
     }
+
     @Operation(summary = "修改开发应用分组")
     @PostMapping("/updateIsvGroup")
     @WebLog(value = "修改开发应用分组", request = false)

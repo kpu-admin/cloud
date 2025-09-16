@@ -1,18 +1,12 @@
 package cn.lmx.kpu.sop.admin.controller;
 
 import cn.hutool.core.bean.BeanUtil;
-import cn.hutool.core.collection.CollUtil;
 import cn.lmx.basic.annotation.log.WebLog;
 import cn.lmx.basic.base.R;
-import cn.lmx.basic.base.entity.Entity;
 import cn.lmx.basic.base.request.PageParams;
-import cn.lmx.basic.database.mybatis.conditions.Wraps;
-import cn.lmx.basic.database.mybatis.conditions.query.LbQueryWrap;
 import cn.lmx.basic.database.mybatis.conditions.query.QueryWrap;
 import cn.lmx.basic.interfaces.echo.EchoService;
 import cn.lmx.basic.utils.BeanPlusUtil;
-import cn.lmx.kpu.common.constant.BizConstant;
-import cn.lmx.kpu.sop.admin.entity.SopPermGroupPermission;
 import cn.lmx.kpu.sop.admin.service.SopPermGroupPermissionService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.v3.oas.annotations.Operation;
@@ -31,8 +25,6 @@ import cn.lmx.kpu.sop.admin.vo.update.SopApiInfoUpdateVO;
 import cn.lmx.kpu.sop.admin.vo.result.SopApiInfoResultVO;
 import cn.lmx.kpu.sop.admin.vo.query.SopApiInfoPageQuery;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * <p>
