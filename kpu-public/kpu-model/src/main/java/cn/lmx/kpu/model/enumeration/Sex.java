@@ -1,10 +1,10 @@
 package cn.lmx.kpu.model.enumeration;
 
+import cn.lmx.basic.interfaces.BaseEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import cn.lmx.basic.interfaces.BaseEnum;
 
 import java.util.stream.Stream;
 
@@ -34,7 +34,7 @@ public enum Sex implements BaseEnum {
     /**
      * N="未知"
      */
-    N("3","未知");
+    N("3", "未知");
 
     private String code;
     @Schema(description = "描述")
