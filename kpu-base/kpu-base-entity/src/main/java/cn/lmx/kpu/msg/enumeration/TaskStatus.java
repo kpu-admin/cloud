@@ -73,5 +73,9 @@ public enum TaskStatus implements BaseEnum {
         return this.name();
     }
 
+    @Override
+    public String getExtra() {
+        return this.extra;
+    }
 
 }

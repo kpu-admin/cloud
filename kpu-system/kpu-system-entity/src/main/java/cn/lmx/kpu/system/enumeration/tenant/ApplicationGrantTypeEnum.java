@@ -1,5 +1,7 @@
 package cn.lmx.kpu.system.enumeration.tenant;
 
+import cn.lmx.basic.interfaces.BaseEnum;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 
 /**
@@ -9,7 +11,9 @@ import lombok.Getter;
  * @date 2025-01-01 00:00
  */
 @Getter
-public enum ApplicationGrantTypeEnum {
+@Schema(title = "ApplicationGrantTypeEnum", description = "应用授权枚举")
+public enum ApplicationGrantTypeEnum implements BaseEnum {
+
 
     /**
      * 应用授权
@@ -29,11 +33,11 @@ public enum ApplicationGrantTypeEnum {
     /**
      * 资源类型
      */
-    private final String type;
+    private final String code;
     private final String desc;
 
-    ApplicationGrantTypeEnum(String type, String desc) {
-        this.type = type;
+    ApplicationGrantTypeEnum(String code, String desc) {
+        this.code = code;
         this.desc = desc;
     }
 }

@@ -1,12 +1,7 @@
 package cn.lmx.kpu.system.vo.query.application;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -27,7 +22,7 @@ import java.io.Serializable;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "资源")
+@Schema(title = "DefResourcePageQuery", description = "资源")
 public class DefResourcePageQuery implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -54,6 +49,7 @@ public class DefResourcePageQuery implements Serializable {
      */
     @Schema(description = "父级ID")
     private Long parentId;
+
     /**
      * 描述
      */

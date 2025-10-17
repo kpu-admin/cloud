@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -24,20 +25,35 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Accessors(chain = true)
 @ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+@EqualsAndHashCode
 @Builder
 @Schema(description = "字典")
 public class DefDictPageQuery implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 分类;[10-系统字典 20-业务字典]@Echo(api = EchoApi.DICTIONARY_ITEM_FEIGN_CLASS, dictType = EchoDictType.System.DICT_CLASSIFY)
+     * 分类
+     * [10-系统字典 20-业务字典]
+     * @Echo(api = EchoApi.DICTIONARY_ITEM_FEIGN_CLASS, dictType = EchoDictType.System.DICT_CLASSIFY)
      */
     @Schema(description = "分类")
     private List<String> classify;
+    /**
+     * 字典分组
+     */
+    @Schema(description = "字典分组")
+    private String dictGroup;
+
+    /**
+     * 数据类型
+     * [1-字符串 2-整型 3-布尔]
+     */
+    @Schema(description = "数据类型")
+    private String dataType;
     /**
      * 标识
      */
@@ -58,4 +74,6 @@ public class DefDictPageQuery implements Serializable {
      */
     @Schema(description = "备注")
     private String remark;
+
+
 }

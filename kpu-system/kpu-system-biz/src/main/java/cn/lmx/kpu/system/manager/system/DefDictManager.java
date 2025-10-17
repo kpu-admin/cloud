@@ -1,13 +1,15 @@
 package cn.lmx.kpu.system.manager.system;
 
 import cn.lmx.basic.base.manager.SuperManager;
-import cn.lmx.basic.interfaces.echo.LoadService;
+import cn.lmx.kpu.model.vo.result.Option;
 import cn.lmx.kpu.system.entity.system.DefDict;
 import cn.lmx.kpu.system.vo.result.system.DefDictItemResultVO;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 字典管理
@@ -16,7 +18,10 @@ import java.util.Map;
  * @version v1.0.0
  * @date 2025-01-01 00:00
  */
-public interface DefDictManager extends SuperManager<DefDict>, LoadService {
+public interface DefDictManager extends SuperManager<DefDict> {
+    Map<Serializable, DefDict> findByIds(Set<Serializable> dictKeys);
+
+    void syncEnumToDict(Map<Option, List<Option>> ennumMap);
 
     /**
      * 根据字典key查询系统默认的字典条目

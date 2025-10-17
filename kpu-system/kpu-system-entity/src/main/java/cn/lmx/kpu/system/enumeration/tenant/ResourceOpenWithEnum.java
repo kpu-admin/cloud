@@ -32,23 +32,16 @@ public enum ResourceOpenWithEnum implements BaseEnum {
     OUTER_CHAIN("03", "外链");
 
 
+
     /**
      * 打开方式
      */
-    private String type;
+    private String code;
 
     /**
      * 描述
      */
     private String desc;
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
 
     @Override
     public String getDesc() {
@@ -57,11 +50,5 @@ public enum ResourceOpenWithEnum implements BaseEnum {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-    @Override
-    @Schema(description = "编码", allowableValues = "01,02,03", example = "01")
-    public String getCode() {
-        return this.type;
     }
 }

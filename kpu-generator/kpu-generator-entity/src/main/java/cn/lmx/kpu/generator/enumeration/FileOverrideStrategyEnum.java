@@ -1,5 +1,6 @@
 package cn.lmx.kpu.generator.enumeration;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import cn.lmx.basic.interfaces.BaseEnum;
@@ -12,6 +13,7 @@ import cn.lmx.basic.interfaces.BaseEnum;
  */
 @Getter
 @AllArgsConstructor
+@Schema(title = "FileOverrideStrategyEnum", description = "文件覆盖策略")
 public enum FileOverrideStrategyEnum implements BaseEnum {
     /**
      * 覆盖 原始文件

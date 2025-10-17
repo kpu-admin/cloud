@@ -100,7 +100,7 @@ kpu:
       refreshThreadPoolSize: 10
   webmvc:
     undertow: true
-    header: false
+    header: true
   log: # 详情看：OptLogProperties
     # 开启记录操作日志
     enabled: true

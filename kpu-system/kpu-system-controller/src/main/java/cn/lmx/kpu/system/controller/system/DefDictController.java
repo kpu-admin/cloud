@@ -1,18 +1,6 @@
 package cn.lmx.kpu.system.controller.system;
 
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.Parameters;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import cn.lmx.basic.annotation.log.WebLog;
 import cn.lmx.basic.base.R;
 import cn.lmx.basic.base.controller.SuperController;
 import cn.lmx.basic.base.request.PageParams;
@@ -26,6 +14,16 @@ import cn.lmx.kpu.system.vo.query.system.DefDictPageQuery;
 import cn.lmx.kpu.system.vo.result.system.DefDictResultVO;
 import cn.lmx.kpu.system.vo.save.system.DefDictSaveVO;
 import cn.lmx.kpu.system.vo.update.system.DefDictUpdateVO;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -80,6 +78,13 @@ public class DefDictController extends SuperController<DefDictService, Long, Def
     @GetMapping("/check")
     public R<Boolean> check(@RequestParam String key, @RequestParam(required = false) Long id) {
         return success(superService.checkByKey(key, id));
+    }
+
+    @Operation(summary = "通过枚举导入字典", description = "通过枚举导入字典")
+    @PostMapping("/importDictByEnum")
+    @WebLog("通过枚举导入字典")
+    public R<Boolean> importDictByEnum(@RequestBody List<DefDictResultVO> list) {
+        return R.success(superService.importDictByEnum(list));
     }
 
 }

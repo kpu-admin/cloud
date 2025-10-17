@@ -14,7 +14,7 @@ import java.util.stream.Stream;
  * @date 2025-01-01 00:00
  */
 @Getter
-@Schema(description = "数据类型-枚举")
+@Schema(title = "DataTypeEnum", description = "数据类型-枚举")
 public enum DataTypeEnum implements BaseEnum {
 
     /**

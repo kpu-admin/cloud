@@ -1,14 +1,15 @@
 package cn.lmx.kpu.system.vo.update.system;
 
+import cn.lmx.basic.base.entity.SuperEntity;
+import cn.lmx.kpu.system.vo.save.system.DefDictItemSaveVO;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 import lombok.experimental.Accessors;
-import cn.lmx.basic.base.entity.SuperEntity;
-import cn.lmx.kpu.system.vo.save.system.DefDictItemSaveVO;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -24,18 +25,31 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Accessors(chain = true)
 @ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+@EqualsAndHashCode
 @Builder
-@Schema(description = "字典")
+@Schema(title = "DefDictUpdateVO", description = "字典")
 public class DefDictUpdateVO implements Serializable {
-
+    @Serial
     private static final long serialVersionUID = 1L;
 
-    @Schema(description = "主键")
-    @NotNull(message = "请填写主键", groups = SuperEntity.Update.class)
+    @Schema(description = "ID")
+    @NotNull(message = "请填写ID", groups = SuperEntity.Update.class)
     private Long id;
+    /**
+     * 字典分组
+     */
+    @Schema(description = "字典分组")
+    @Size(max = 255, message = "字典分组长度不能超过{max}")
+    private String dictGroup;
+    /**
+     * 数据类型
+     * [1-字符串 2-整型 3-布尔]
+     */
+    @Schema(description = "数据类型")
+    @Size(max = 1, message = "数据类型长度不能超过{max}")
+    private String dataType;
     /**
      * 标识
      */

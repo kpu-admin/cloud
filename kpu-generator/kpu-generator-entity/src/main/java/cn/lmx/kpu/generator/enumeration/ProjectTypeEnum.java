@@ -1,5 +1,6 @@
 package cn.lmx.kpu.generator.enumeration;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import cn.lmx.basic.interfaces.BaseEnum;
@@ -13,6 +14,7 @@ import cn.lmx.basic.interfaces.BaseEnum;
  */
 @Getter
 @AllArgsConstructor
+@Schema(title = "ProjectTypeEnum", description = "项目类型")
 public enum ProjectTypeEnum implements BaseEnum {
     /**
      * 单体版

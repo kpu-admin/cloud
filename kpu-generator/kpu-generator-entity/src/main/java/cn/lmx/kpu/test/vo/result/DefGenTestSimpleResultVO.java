@@ -39,7 +39,7 @@ import java.util.Map;
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
 @Builder
-@Schema(description = "测试单表")
+@Schema(title = "DefGenTestSimpleResultVO", description = "测试单表")
 public class DefGenTestSimpleResultVO extends Entity<Long> implements Serializable, EchoVO {
 
     private static final long serialVersionUID = 1L;
@@ -122,7 +122,7 @@ public class DefGenTestSimpleResultVO extends Entity<Long> implements Serializab
      * @Echo(api = "cn.lmx.kpu.oauth.api.DictionaryApi", dictType="GLOBAL_SEX")
      */
     @Schema(description = "字符字典")
-    @Echo(api = "cn.lmx.kpu.oauth.api.DictionaryApi", dictType = "GLOBAL_SEX")
+    @Echo(api = "cn.lmx.kpu.oauth.api.DictionaryApi", dictType = "SEX")
     private String test7;
     /**
      * 整形字典;

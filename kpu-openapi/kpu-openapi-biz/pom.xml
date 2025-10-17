@@ -74,11 +74,6 @@
             <artifactId>dubbo</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- SOP 核心服务 -->
-        <dependency>
-            <groupId>cn.lmx.basic</groupId>
-            <artifactId>sop-service-support</artifactId>
-        </dependency>
 
     </dependencies>
 </project>

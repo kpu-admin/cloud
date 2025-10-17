@@ -16,115 +16,6 @@ kpu:
   sentinel:
     dashboard: ${SENTINEL_DASHBOARD:@sentinel.dashboard@}
 
-  generator:
-    outputDir: /Users/lmx/gitlab/kpu-cloud
-    frontOutputDir: /Users/lmx/gitlab/kpu-web
-    frontSoyOutputDir: /Users/lmx/gitlab/kpu-web-pro-soybean
-    frontVben5OutputDir: /Users/lmx/gitlab/kpu-web-vben-max/apps/web-antd
-    # 作者
-    author: lmx
-    # 默认项目
-    projectType: CLOUD
-    #  # 去除表前缀
-    #  tablePrefix:
-    #    - xxx_
-    #  # 去除字段前缀
-    #  fieldPrefix:
-    #    - xxx_
-    #  # 去除字段后缀
-    #  fieldSuffix:
-    #    - xxx_
-    # 项目前缀
-    projectPrefix: 'kpu'
-    superClass: SUPER_CLASS
-    # 生成方式
-    genType: GEN
-    packageInfoConfig: # 其他配置建议保持PackageInfoConfig中的默认值
-      # 生成代码位于 src/main/java 下的基础包
-      parent: 'cn.lmx.kpu'
-      utilParent: 'cn.lmx.basic'
-    entity-config:
-      # 时间类型对应策略  ONLY_DATE: java.util  SQL_PACK:java.sql  TIME_PACK: java.time
-      dateType: TIME_PACK
-      # Entity类的父类
-      entitySuperClass: ENTITY
-      # 指定生成的主键的ID类型 (${superClass} == NONE 时，新生成的实体才生效)
-      idType: INPUT
-      # 数据库表字段映射到实体的命名策略
-      columnNaming: underline_to_camel
-      # 忽略字段（字段名）
-      # ignoreColumns:
-      #   - xxx
-      # 【实体】 是否生成字段常量
-      columnConstant: false
-      # 【实体、VO】是否为链式模型
-      chain: true
-      # 【实体、VO】 是否为lombok模型
-      lombok: true
-      # 乐观锁字段名称
-      versionColumnName: ''
-      # 乐观锁属性名称
-      versionPropertyName: ''
-      # 逻辑删除字段名称
-      logicDeleteColumnName: ''
-      # 逻辑删除属性名称
-      logicDeletePropertyName: ''
-      fillColumnName:
-        xxx: INSERT
-      # 格式化SaveVO文件名称
-      formatSaveVoFileName: ''
-      # 格式化UpdateVO文件名称
-      formatUpdateVoFileName: ''
-      # 格式化ResultVO文件名称
-      formatResultVoFileName: ''
-      # 格式化 PageQuery 文件名称
-      formatPageQueryFileName: ''
-    mapperConfig:
-      formatMapperFileName: ''
-      formatXmlFileName: ''
-      mapperAnnotation: false
-      #    columnAnnotationTablePrefix:
-      #      - xxx
-      baseResultMap: true
-      cache: false
-      baseColumnList: true
-      cacheClass: org.apache.ibatis.cache.decorators.LoggingCache
-    #  serviceConfig:
-    #  managerConfig:
-    #  controllerConfig:
-    #  webProConfig:
-    fileOverrideStrategy:
-      entityFileOverride: OVERRIDE
-      sqlFileOverride: OVERRIDE
-      mapperFileOverride: EXIST_IGNORE
-      xmlFileOverride: OVERRIDE
-      managerFileOverride: EXIST_IGNORE
-      serviceFileOverride: EXIST_IGNORE
-      controllerFileOverride: EXIST_IGNORE
-      apiModelFileOverride: OVERRIDE
-      langFileOverride: OVERRIDE
-      indexEditTreeFileOverride: EXIST_IGNORE
-      dataFileOverride: EXIST_IGNORE
-    constantsPackage:
-      # 业务服务 后台手动改动过的枚举
-      FieldFill: com.baomidou.mybatisplus.annotation.FieldFill
-      SuperClassEnum: cn.lmx.kpu.generator.enumeration.SuperClassEnum
-      EntitySuperClassEnum: cn.lmx.kpu.generator.enumeration.EntitySuperClassEnum
-      # common 常量
-      EchoDictType: cn.lmx.kpu.model.constant.EchoDictType
-      EchoApi: cn.lmx.kpu.model.constant.EchoApi
-      # common 公共枚举
-      HttpMethod: cn.lmx.kpu.model.enumeration.HttpMethod
-      BooleanEnum: cn.lmx.kpu.model.enumeration.BooleanEnum
-      StateEnum: cn.lmx.kpu.model.enumeration.StateEnum
-      UserStatusEnum: cn.lmx.kpu.model.enumeration.base.UserStatusEnum
-      RoleCategoryEnum: cn.lmx.kpu.model.enumeration.base.RoleCategoryEnum
-      ActiveStatusEnum: cn.lmx.kpu.model.enumeration.base.ActiveStatusEnum
-      OrgTypeEnum: cn.lmx.kpu.model.enumeration.base.OrgTypeEnum
-      FileType: cn.lmx.kpu.model.enumeration.base.FileType
-      DateType: cn.lmx.kpu.model.enumeration.base.DateType
-      DictClassifyEnum: cn.lmx.kpu.model.enumeration.system.DictClassifyEnum
-      DataTypeEnum: cn.lmx.kpu.model.enumeration.system.DataTypeEnum
 
 
 spring:
@@ -160,47 +51,13 @@ spring:
         namespace: ${kpu.nacos.namespace}
         enabled: true
       discovery:
-        server-addr: ${kpu.nacos.ip}:${kpu.nacos.port}
         namespace: ${kpu.nacos.namespace}
         metadata: # 元数据，用于权限服务实时获取各个服务的所有接口
           management.context-path: ${server.servlet.context-path:}${spring.mvc.servlet.path:}${management.endpoints.web.base-path:}
           gray_version: lmx
 
-logging:
-  file:
-    path: '@logging.file.path@'
-    name: ${logging.file.path}/${spring.application.name}/root.log
-  level:
-    root: INFO
-    # 关闭不必要的日志
-    org.reflections.Reflections: off
-    com.alibaba.nacos.client: error
-    com.alibaba.nacos.common.remote.client: error
-    com.ulisesbocchio: error
-    # 开发、调试需要的日志
-    cn.lmx: info
-    org.springframework: info
-  pattern:
-    dateformat: yyyy-MM-dd HH:mm:ss.SSS
-    console: "[${spring.application.name}:%X{TenantId}:%X{UserId}] %d{yyyy-MM-dd HH:mm:ss.SSS}[%5p] ${PID} [%X{trace}] [%t:%r] [%logger{50}.%M:%L] %m%n"
-  logback:
-    rollingpolicy:
-      max-file-size: 64MB
 # 用于/actuator/info
 info:
   name: '@project.name@'
   description: '@project.description@'
   version: '@project.version@'
-
-
-server:
-  port: 18764
-
-springdoc:
-  group-configs:
-    - group: 'generator'
-      displayName: 'generator'
-      paths-to-match: '/**'
-      packages-to-scan:
-        - cn.lmx.kpu.generator
-        - cn.lmx.kpu.test.controller

@@ -59,7 +59,7 @@ public class MobileTokenMemberGranter extends AbstractTokenMemberGranter impleme
     @Override
     protected MemberUser getUser(LoginParamVO loginParam) {
         Boolean userByMobile = memberUserService.checkMobile(loginParam.getMobile(), null);
-        if (!userByMobile){
+        if (!userByMobile) {
             MemberUser memberUser = MemberUser.builder().mobile(loginParam.getMobile()).password(systemProperties.getDefPwd()).build();
             memberUser.setCreatedBy(0L);
             memberUserService.register(memberUser);

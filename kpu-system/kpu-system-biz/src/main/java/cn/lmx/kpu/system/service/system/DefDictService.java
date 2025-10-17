@@ -2,6 +2,7 @@ package cn.lmx.kpu.system.service.system;
 
 import cn.lmx.basic.base.service.SuperService;
 import cn.lmx.kpu.system.entity.system.DefDict;
+import cn.lmx.kpu.system.vo.result.system.DefDictResultVO;
 
 import java.util.List;
 
@@ -55,4 +56,6 @@ public interface DefDictService extends SuperService<Long, DefDict> {
      * @create [2025-01-01 00:00 ] [lmx] [初始创建]
      */
     List<DefDict> findItemByDictId(Long id);
+
+    Boolean importDictByEnum(List<DefDictResultVO> list);
 }

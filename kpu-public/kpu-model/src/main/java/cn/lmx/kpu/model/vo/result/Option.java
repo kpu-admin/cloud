@@ -21,7 +21,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @ToString(callSuper = true)
-@EqualsAndHashCode
+@EqualsAndHashCode(of = "value")
 @Accessors(chain = true)
 @AllArgsConstructor
 @Builder

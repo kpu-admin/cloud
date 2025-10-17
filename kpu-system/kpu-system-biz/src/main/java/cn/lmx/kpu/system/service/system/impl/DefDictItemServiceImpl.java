@@ -35,7 +35,6 @@ import java.util.Collection;
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
-
 public class DefDictItemServiceImpl extends SuperServiceImpl<DefDictManager, Long, DefDict> implements DefDictItemService {
 
     private final CachePlusOps cachePlusOps;
@@ -58,10 +57,13 @@ public class DefDictItemServiceImpl extends SuperServiceImpl<DefDictManager, Lon
         DefDict parent = getById(model.getParentId());
         ArgumentAssert.notNull(parent, "字典不存在");
         model.setParentKey(parent.getKey());
+        model.setDictGroup(parent.getDictGroup());
+        model.setDataType(parent.getDataType());
+        model.setClassify(parent.getClassify());
         model.setClassify(DictClassifyEnum.SYSTEM.getCode());
         superManager.save(model);
         CacheHashKey hashKey = DictCacheKeyBuilder.builder(model.getParentKey(), model.getKey());
-        cachePlusOps.hSet(hashKey, model.getName());
+        cachePlusOps.hSet(hashKey, model);
         return model;
     }
 
@@ -75,7 +77,9 @@ public class DefDictItemServiceImpl extends SuperServiceImpl<DefDictManager, Lon
         DefDict parent = getById(model.getParentId());
         ArgumentAssert.notNull(parent, "您要修改的字典不存在或已被删除！");
         model.setParentKey(parent.getKey());
-        model.setClassify(DictClassifyEnum.SYSTEM.getCode());
+        model.setDictGroup(parent.getDictGroup());
+        model.setDataType(parent.getDataType());
+        model.setClassify(parent.getClassify());
         superManager.updateById(model);
 
         // 淘汰旧缓存
@@ -83,7 +87,7 @@ public class DefDictItemServiceImpl extends SuperServiceImpl<DefDictManager, Lon
         cachePlusOps.hDel(oldHashKey);
         // 设置新缓存
         CacheHashKey hashKey = DictCacheKeyBuilder.builder(parent.getKey(), model.getKey());
-        cachePlusOps.hSet(hashKey, model.getName());
+        cachePlusOps.hSet(hashKey, model);
         return model;
     }
 

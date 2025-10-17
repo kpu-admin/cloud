@@ -3,14 +3,10 @@ package cn.lmx.kpu.system.vo.save.system;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
@@ -26,15 +22,28 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Accessors(chain = true)
 @ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+@EqualsAndHashCode
 @Builder
 @Schema(description = "字典")
 public class DefDictSaveVO implements Serializable {
-
+    @Serial
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 字典分组
+     */
+    @Schema(description = "字典分组")
+    @Size(max = 255, message = "字典分组长度不能超过{max}")
+    private String dictGroup;
+    /**
+     * 数据类型
+     * [1-字符串 2-整型 3-布尔]
+     */
+    @Schema(description = "数据类型")
+    @Size(max = 1, message = "数据类型长度不能超过{max}")
+    private String dataType;
     /**
      * 标识
      */

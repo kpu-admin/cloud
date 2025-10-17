@@ -3,6 +3,7 @@ package cn.lmx.kpu.common.cache.base.common;
 
 import cn.lmx.basic.base.entity.SuperEntity;
 import cn.lmx.basic.model.cache.CacheHashKey;
+import cn.lmx.basic.model.cache.CacheKey;
 import cn.lmx.basic.model.cache.CacheKeyBuilder;
 import cn.lmx.kpu.common.cache.CacheKeyModular;
 import cn.lmx.kpu.common.cache.CacheKeyTable;
@@ -23,7 +24,7 @@ import java.io.Serializable;
  * @date 2025-01-01 00:00
  */
 public class BaseDictCacheKeyBuilder implements CacheKeyBuilder {
-    public static CacheHashKey builder(Serializable dictKey) {
+    public static CacheKey builder(Serializable dictKey) {
         return new BaseDictCacheKeyBuilder().hashKey(dictKey);
     }
 
