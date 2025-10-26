@@ -2,10 +2,10 @@ package cn.lmx.kpu.gateway.manager.impl;
 
 
 import cn.lmx.basic.cache.repository.CachePlusOps;
-import cn.lmx.kpu.common.cache.common.CaptchaCacheKeyBuilder;
+import cn.lmx.basic.utils.BeanPlusUtil;
+import cn.lmx.kpu.common.cache.common.SOPCacheKeyBuilder;
 import cn.lmx.kpu.gateway.common.CacheKey;
 import cn.lmx.kpu.gateway.manager.IsvManager;
-import cn.lmx.kpu.gateway.util.CopyUtil;
 import cn.lmx.kpu.sop.admin.dto.IsvDTO;
 import cn.lmx.kpu.sop.admin.entity.SopIsvInfo;
 import cn.lmx.kpu.sop.admin.mapper.SopIsvInfoMapper;
@@ -15,7 +15,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author 六如
@@ -31,14 +34,14 @@ public class IsvManagerImpl implements IsvManager {
 
     @Override
     public IsvDTO getIsv(String appId) {
-        return cacheOps.get(CaptchaCacheKeyBuilder.build(appId, KEY_ISV), k -> {
+        return cacheOps.get(SOPCacheKeyBuilder.build(KEY_ISV, appId), k -> {
             SopIsvInfo isvInfo = isvInfoMapper.getByAppId(appId);
-            return CopyUtil.copyBean(isvInfo, IsvDTO::new);
+            return BeanPlusUtil.toBean(isvInfo, IsvDTO.class);
         }).getValue();
     }
 
     protected void cache(String appId, IsvDTO isvDTO) {
-        cacheOps.set(CaptchaCacheKeyBuilder.build(appId, KEY_ISV), isvDTO);
+        cacheOps.set(SOPCacheKeyBuilder.build(KEY_ISV, appId), isvDTO);
         log.debug("更新isv redis缓存, isvDTO={}", isvDTO);
     }
 
@@ -51,7 +54,7 @@ public class IsvManagerImpl implements IsvManager {
         Map<String, IsvDTO> map = new HashMap<>(appIds.size() * 2);
         for (String appId : appIds) {
             SopIsvInfo isvInfo = isvInfoMapper.getByAppId(appId);
-            IsvDTO isvDTO = CopyUtil.copyBean(isvInfo, IsvDTO::new);
+            IsvDTO isvDTO = BeanPlusUtil.toBean(isvInfo, IsvDTO.class);
             map.put(appId, isvDTO);
 
             cache(appId, isvDTO);
@@ -65,7 +68,7 @@ public class IsvManagerImpl implements IsvManager {
         log.info("load isvInfo to redis");
         List<SopIsvInfo> isvInfos = this.isvInfoMapper.selectList(null);
         for (SopIsvInfo isvInfo : isvInfos) {
-            this.cache(isvInfo.getAppId(), CopyUtil.copyBean(isvInfo, IsvDTO::new));
+            this.cache(isvInfo.getAppId(), BeanPlusUtil.toBean(isvInfo, IsvDTO.class));
         }
     }
 }

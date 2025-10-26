@@ -49,7 +49,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-sa-token-ext</artifactId>
-            <version>${project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

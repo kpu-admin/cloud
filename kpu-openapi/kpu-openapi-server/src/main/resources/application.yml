@@ -78,5 +78,6 @@ dubbo:
   # 注册中心
   registry:
     # 确保 kpu-openapi-server 和 sop-gateway-server 服务的dubbo注册到同一个nacos
-    address: nacos://nacos:nacos@localhost:8848
+    address: nacos://${kpu.nacos.username}:${kpu.nacos.password}@${kpu.nacos.ip}:${kpu.nacos.port}?namespace=${kpu.nacos.namespace}
+
     check: false

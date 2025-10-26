@@ -2,7 +2,7 @@ package cn.lmx.kpu.gateway.manager.impl;
 
 import cn.lmx.basic.cache.repository.CachePlusOps;
 import cn.lmx.basic.database.mybatis.conditions.Wraps;
-import cn.lmx.kpu.common.cache.common.CaptchaCacheKeyBuilder;
+import cn.lmx.kpu.common.cache.common.SOPCacheKeyBuilder;
 import cn.lmx.kpu.gateway.common.CacheKey;
 import cn.lmx.kpu.gateway.manager.SecretManager;
 import cn.lmx.kpu.sop.admin.entity.SopIsvKeys;
@@ -13,7 +13,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 秘钥管理
@@ -31,7 +34,7 @@ public class SecretManagerImpl implements SecretManager {
 
     @Override
     public String getIsvPublicKey(Long isvId) {
-        return cacheOps.get(CaptchaCacheKeyBuilder.build(isvId + "", KEY_SEC), k -> {
+        return cacheOps.get(SOPCacheKeyBuilder.build(KEY_SEC,isvId + ""), k -> {
             String publicKey = doGetPublicKey(isvId);
             return publicKey;
         }).getValue();
@@ -43,7 +46,7 @@ public class SecretManagerImpl implements SecretManager {
     }
 
     protected void cache(Long isvId, String publicKey) {
-        cacheOps.set(CaptchaCacheKeyBuilder.build(isvId + "", KEY_SEC), publicKey);
+        cacheOps.set(SOPCacheKeyBuilder.build(KEY_SEC,isvId + ""), publicKey);
         log.info("更新isv秘钥本地缓存, isvId={}", isvId);
     }
 

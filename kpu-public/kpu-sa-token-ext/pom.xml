@@ -18,7 +18,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-common</artifactId>
-            <version>${project.version}</version>
+            <version>${revision}</version>
         </dependency>
 
         <dependency>

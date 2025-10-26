@@ -113,7 +113,7 @@ public class RouteServiceImpl implements RouteService {
         RpcContextAttachment clientAttachment = RpcContext.getClientAttachment();
         String paramInfo = apiInfo.getParamInfo();
         List<ParamInfoDTO> paramInfoList = JSON.parseArray(paramInfo, ParamInfoDTO.class);
-        OpenContext openRequest = buildOpenContext(apiRequestContext);
+        OpenContext openRequest = buildOpenContext(routeContext);
         clientAttachment.setObjectAttachment(SopConstants.OPEN_CONTEXT, openRequest);
         if (apiRequestContext.getIsRest()) {
             clientAttachment.setObjectAttachment(SopConstants.WEB_CONTEXT, apiRequestContext.getWebContext());
@@ -207,9 +207,11 @@ public class RouteServiceImpl implements RouteService {
         return serde.parseObject(bizContent);
     }
 
-    protected OpenContext buildOpenContext(ApiRequestContext apiRequestContext) {
-        ApiRequest apiRequest = apiRequestContext.getApiRequest();
+    protected OpenContext buildOpenContext(RouteContext routeContext) {
+        ApiRequestContext apiRequestContext = routeContext.getApiRequestContext();
         DefaultOpenContext defaultOpenRequest = new DefaultOpenContext();
+        ApiRequest apiRequest = apiRequestContext.getApiRequest();
+        defaultOpenRequest.setTenantId(apiRequest.getTenantId());
         defaultOpenRequest.setAppId(apiRequest.getAppId());
         defaultOpenRequest.setApiName(apiRequest.getMethod());
         defaultOpenRequest.setVersion(apiRequest.getVersion());

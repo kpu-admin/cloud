@@ -16,6 +16,11 @@ public interface CacheKeyTable {
      */
     String CAPTCHA = "captcha";
     /**
+     * 验证码 前缀
+     * 完整key: captcha:{key} -> str
+     */
+    String SOP = "sop";
+    /**
      * token 前缀
      * 完整key： token:{token} -> userid
      */

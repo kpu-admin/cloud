@@ -1,5 +1,6 @@
 package cn.lmx.kpu.gateway.service.dubbo;
 
+import cn.lmx.basic.utils.BeanPlusUtil;
 import cn.lmx.kpu.gateway.common.ApiInfoDTO;
 import cn.lmx.kpu.gateway.common.enums.StatusEnum;
 import cn.lmx.kpu.gateway.manager.ApiManager;
@@ -46,7 +47,7 @@ public class ApiRegisterServiceImpl implements ApiRegisterService {
     }
 
     private void doReg(RegisterDTO registerDTO) {
-        ApiInfoDTO apiInfoDTO = CopyUtil.copyBean(registerDTO, ApiInfoDTO::new);
+        ApiInfoDTO apiInfoDTO = BeanPlusUtil.toBean(registerDTO, ApiInfoDTO.class);
         apiInfoDTO.setStatus(StatusEnum.ENABLE.getValue());
 
         SopApiInfo apiInfo = apiInfoMapper.getByNameVersion(apiInfoDTO.getApiName(), apiInfoDTO.getApiVersion());

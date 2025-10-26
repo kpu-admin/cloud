@@ -28,6 +28,11 @@
 
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-base-biz</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-openapi-entity</artifactId>
             <version>${revision}</version>
         </dependency>

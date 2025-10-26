@@ -29,37 +29,7 @@
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-sop-admin-controller</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-openapi-controller</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-generator-controller</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-base-controller</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-oauth-controller</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-sop-admin-controller</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-system-controller</artifactId>
+            <artifactId>kpu-sop-admin-biz</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
@@ -76,7 +46,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-sa-token-ext</artifactId>
-            <version>${project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <!-- 基础服务相关接口 - 单体版实现类 -->
         <dependency>

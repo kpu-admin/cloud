@@ -7,6 +7,7 @@ import cn.lmx.kpu.openapi.open.resp.PayOrderSearchResponse;
 import cn.lmx.kpu.openapi.open.resp.PayTradeWapPayResponse;
 import cn.lmx.kpu.openapi.open.resp.ProductResponse;
 import com.gitee.sop.support.annotation.Open;
+import com.gitee.sop.support.context.OpenContext;
 import com.gitee.sop.support.dto.FileData;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -29,7 +30,7 @@ public interface OpenOpenapi {
      * 具体使用方法请参考 <a href="https://torna.cn" target="_blank">接入指南</a>
      */
     @Open("openapi.trade.wap.pay")
-    PayTradeWapPayResponse tradeWapPay(PayTradeWapPayRequest request);
+    PayTradeWapPayResponse tradeWapPay(PayTradeWapPayRequest request, OpenContext context);
 
 
     /**

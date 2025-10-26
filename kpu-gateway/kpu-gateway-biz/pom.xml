@@ -19,7 +19,7 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-oauth-biz</artifactId>
-            <version>${project.version}</version>
+            <version>${revision}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>spring-webmvc</artifactId>
@@ -47,12 +47,12 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-model</artifactId>
-            <version>${project.version}</version>
+            <version>${revision}</version>
         </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-database-mode</artifactId>
-            <version>${project.version}</version>
+            <version>${revision}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>spring-webmvc</artifactId>

@@ -30,6 +30,8 @@ import java.io.Serializable;
 public class ApiRequest implements Serializable {
     private static final long serialVersionUID = 1815097687653555654L;
 
+    @NotBlank(message = "租户ID不能为空")
+    private String tenantId;
     /**
      * 分配给开发者的应用ID
      *
@@ -38,6 +40,7 @@ public class ApiRequest implements Serializable {
     @NotBlank(message = "应用ID不能为空")
     @Length(max = 32)
     private String appId;
+
 
     /**
      * 接口名称

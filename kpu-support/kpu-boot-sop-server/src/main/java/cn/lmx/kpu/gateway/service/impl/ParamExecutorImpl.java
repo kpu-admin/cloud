@@ -99,6 +99,7 @@ public class ParamExecutorImpl implements ParamExecutor<HttpServletRequest, Http
 
     protected ApiRequest convertApiRequest(HttpServletRequest request, JSONObject jsonObject) {
         ApiRequest apiRequest = new ApiRequest();
+        apiRequest.setTenantId(jsonObject.getString(apiConfig.getTenantIdName()));
         apiRequest.setAppId(jsonObject.getString(apiConfig.getAppIdName()));
         apiRequest.setMethod(jsonObject.getString(apiConfig.getApiName()));
         apiRequest.setFormat(jsonObject.getString(apiConfig.getFormatName()));

@@ -1,5 +1,8 @@
 package cn.lmx.kpu.openapi.open.impl;
 
+import cn.lmx.basic.jackson.JsonUtil;
+import cn.lmx.kpu.base.entity.user.BaseEmployee;
+import cn.lmx.kpu.base.service.user.BaseEmployeeService;
 import cn.lmx.kpu.openapi.open.OpenOpenapi;
 import cn.lmx.kpu.openapi.open.req.PayOrderSearchRequest;
 import cn.lmx.kpu.openapi.open.req.PayTradeWapPayRequest;
@@ -7,13 +10,17 @@ import cn.lmx.kpu.openapi.open.req.ProductSaveRequest;
 import cn.lmx.kpu.openapi.open.resp.PayOrderSearchResponse;
 import cn.lmx.kpu.openapi.open.resp.PayTradeWapPayResponse;
 import cn.lmx.kpu.openapi.open.resp.ProductResponse;
+import com.gitee.sop.support.context.OpenContext;
 import com.gitee.sop.support.dto.CommonFileData;
 import com.gitee.sop.support.dto.FileData;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.Assert;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,20 +33,32 @@ import java.util.UUID;
  *
  * @author 六如
  */
-@DubboService(validation = "true")
+@DubboService
+@Slf4j
 public class OpenOpenapiImpl implements OpenOpenapi {
 
 //    @DubboReference
 //    private ProductService storyService;
+    @Autowired
+    private BaseEmployeeService baseEmployeeService;
 
     @Value("${dubbo.labels:}")
     private String env;
 
 
     @Override
-    public PayTradeWapPayResponse tradeWapPay(PayTradeWapPayRequest request) {
+    public PayTradeWapPayResponse tradeWapPay(PayTradeWapPayRequest request, OpenContext context) {
+        log.info("appId={}, tenantId={}", context.getAppId(), context.getTenantId());
+
         PayTradeWapPayResponse payTradeWapPayResponse = new PayTradeWapPayResponse();
         payTradeWapPayResponse.setPageRedirectionData(UUID.randomUUID().toString());
+
+        // 手动设置租户id
+//        ContextUtil();
+        System.out.println(context.getTenantId());
+        // 去租户库进行查询或操作
+        BaseEmployee baseEmployee = baseEmployeeService.getById(1L);
+        System.out.println(JsonUtil.toJson(baseEmployee));
         return payTradeWapPayResponse;
     }
 

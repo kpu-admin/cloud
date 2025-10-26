@@ -233,7 +233,12 @@ kpu:
       DefTenantStatusEnum: cn.lmx.kpu.model.enumeration.system.DefTenantStatusEnum
       DataTypeEnum: cn.lmx.kpu.model.enumeration.system.DataTypeEnum
       TenantConnectTypeEnum: cn.lmx.kpu.model.enumeration.system.TenantConnectTypeEnum
-
+  nacos:
+    ip: ${NACOS_IP:@nacos.ip@}
+    port: ${NACOS_PORT:@nacos.port@}
+    namespace: ${NACOS_NAMESPACE:@nacos.namespace@}
+    username: ${NACOS_USERNAME:@nacos.username@}
+    password: ${NACOS_PASSWORD:@nacos.password@}
 spring:
   config:
     # 配置优先级： ./application-${spring.profiles.active}.yml >= ./application.yml >= /config/${spring.profiles.active}/*.yml  >= bootstrap-${spring.profiles.active}.yml >= bootstrap.yml
@@ -293,12 +298,9 @@ management:
 dubbo:
   protocol:
     name: dubbo
-    port: -1
-    serialization: fastjson2
+    port: 1
   application:
     qos-enable: false
-  consumer:
-    qos-check: false
   # ### register config see:https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/registry/overview/
   # ------
   # nacos://localhost:8848        Cluster config:nacos://localhost:8848?backup=localshot:8846,localshot:8847
@@ -306,7 +308,7 @@ dubbo:
   # redis://localhost:6379        Cluster config:redis://10.20.153.10:6379?backup=10.20.153.11:6379,10.20.153.12:6379
   # ------
   registry:
-    address: nacos://localhost:8848?username=nacos&password=nacos
+    address: nacos://${kpu.nacos.username}:${kpu.nacos.password}@${kpu.nacos.ip}:${kpu.nacos.port}?namespace=${kpu.nacos.namespace}
 gateway:
   path: /api
   # restfull entry path
@@ -316,7 +318,6 @@ gateway:
   serialize.date-format: yyyy-MM-dd HH:mm:ss
 admin:
   torna-server-addr: http://localhost:7700
-
 
 logging:
   file:
@@ -330,7 +331,7 @@ logging:
     com.alibaba.nacos.common.remote.client: error
     com.ulisesbocchio: error
     # 开发、调试需要的日志
-    cn.lmx: info
+    top.tangyh: info
     org.springframework: info
   pattern:
     dateformat: yyyy-MM-dd HH:mm:ss.SSS
@@ -338,7 +339,6 @@ logging:
   logback:
     rollingpolicy:
       max-file-size: 64MB
-
 info:
   name: '@project.name@'
   description: '@project.description@'

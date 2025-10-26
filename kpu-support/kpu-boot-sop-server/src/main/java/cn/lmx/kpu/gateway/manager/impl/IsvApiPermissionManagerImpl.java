@@ -2,8 +2,9 @@ package cn.lmx.kpu.gateway.manager.impl;
 
 import cn.lmx.basic.cache.repository.CacheOps;
 import cn.lmx.basic.database.mybatis.conditions.Wraps;
-import cn.lmx.kpu.common.cache.common.CaptchaCacheKeyBuilder;
+import cn.lmx.kpu.common.cache.common.SOPCacheKeyBuilder;
 import cn.lmx.kpu.gateway.common.ApiInfoDTO;
+import cn.lmx.kpu.gateway.common.CacheKey;
 import cn.lmx.kpu.gateway.common.enums.YesOrNoEnum;
 import cn.lmx.kpu.gateway.manager.IsvApiPermissionManager;
 import cn.lmx.kpu.sop.admin.entity.SopApiInfo;
@@ -31,7 +32,7 @@ import java.util.stream.Collectors;
 @Service
 public class IsvApiPermissionManagerImpl implements IsvApiPermissionManager {
 
-    private static final String CACHE_KEY = "sop:isv-perm";
+    private static final String CACHE_KEY = CacheKey.KEY_ISV_PERM;
 
     private final CacheOps cacheOps;
     @Autowired
@@ -51,7 +52,7 @@ public class IsvApiPermissionManagerImpl implements IsvApiPermissionManager {
     }
 
     public boolean doCheck(Long isvId, ApiInfoDTO apiInfoDTO) {
-        List<Long> apiNameVerionList = cacheOps.get(CaptchaCacheKeyBuilder.build(isvId + "", CACHE_KEY), k -> this.listApiId(isvId)).getValue();
+        List<Long> apiNameVerionList = cacheOps.get(SOPCacheKeyBuilder.build(CACHE_KEY,isvId + ""), k -> this.listApiId(isvId)).getValue();
         if (CollectionUtils.isEmpty(apiNameVerionList)) {
             return false;
         }
@@ -75,7 +76,7 @@ public class IsvApiPermissionManagerImpl implements IsvApiPermissionManager {
     }
 
     protected void cache(Long isvId, List<Long> apiIdList) {
-        cacheOps.set(CaptchaCacheKeyBuilder.build(isvId + "", CACHE_KEY), apiIdList);
+        cacheOps.set(SOPCacheKeyBuilder.build(CACHE_KEY,isvId + ""), apiIdList);
         log.info("更新isv接口id本地缓存, isvId={}, apiIdList={}", isvId, apiIdList);
     }
 

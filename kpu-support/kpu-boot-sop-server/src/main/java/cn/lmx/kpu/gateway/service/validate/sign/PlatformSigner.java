@@ -56,6 +56,7 @@ public class PlatformSigner implements Signer {
 
     private Map<String, String> buildParams(ApiRequest apiRequest) {
         Map<String, String> params = new SkipNullHashMap(20);
+        params.put(apiConfig.getTenantIdName(), apiRequest.getTenantId());
         params.put(apiConfig.getAppIdName(), apiRequest.getAppId());
         params.put(apiConfig.getApiName(), apiRequest.getMethod());
         params.put(apiConfig.getFormatName(), apiRequest.getFormat());

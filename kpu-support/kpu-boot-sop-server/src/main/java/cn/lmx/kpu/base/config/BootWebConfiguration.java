@@ -3,12 +3,10 @@ package cn.lmx.kpu.base.config;
 import cn.lmx.basic.boot.config.BaseConfig;
 import cn.lmx.basic.constant.Constants;
 import cn.lmx.basic.log.event.SysLogListener;
-import cn.lmx.kpu.base.interceptor.AuthenticationSaInterceptor;
 import cn.lmx.kpu.base.interceptor.TokenContextFilter;
 import cn.lmx.kpu.common.properties.IgnoreProperties;
 import cn.lmx.kpu.common.properties.SystemProperties;
 import cn.lmx.kpu.oauth.facade.LogFacade;
-import cn.lmx.kpu.system.facade.DefResourceFacade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
@@ -35,18 +33,12 @@ public class BootWebConfiguration extends BaseConfig implements WebMvcConfigurer
 
 
     private final IgnoreProperties ignoreProperties;
-    private final DefResourceFacade defResourceFacade;
     @Value("${spring.profiles.active:dev}")
     protected String profiles;
 
     @Bean
     public HandlerInterceptor getTokenContextFilter() {
         return new TokenContextFilter(profiles, ignoreProperties);
-    }
-
-    @Bean
-    public HandlerInterceptor getSaFilter() {
-        return new AuthenticationSaInterceptor(ignoreProperties, defResourceFacade);
     }
 
     @Override
@@ -71,10 +63,6 @@ public class BootWebConfiguration extends BaseConfig implements WebMvcConfigurer
                 .addPathPatterns("/**")
                 .order(5)
                 .excludePathPatterns(commonPathPatterns);
-
-        // 注册 Sa-Token 拦截器，定义详细认证规则
-        registry.addInterceptor(getSaFilter()).addPathPatterns("/**").order(10).excludePathPatterns(commonPathPatterns);
-
 
         WebMvcConfigurer.super.addInterceptors(registry);
     }

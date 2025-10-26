@@ -15,6 +15,10 @@ public class ApiConfig {
     // ========= 请求参数名 =========
 
     /**
+     * 租户ID
+     */
+    private String tenantIdName = "tenant_id";
+    /**
      * 分配给开发者的应用ID
      */
     private String appIdName = "app_id";
