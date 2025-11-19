@@ -26,7 +26,6 @@ public class TornaDocInfoViewVO {
     /**
      * 文档概述
      */
-
     private String description;
 
     /**
@@ -37,12 +36,12 @@ public class TornaDocInfoViewVO {
     /**
      * 访问URL
      */
-
     private String url;
 
     /**
      * 版本号
      */
+    @Builder.Default
     private String version = "";
 
     private String docKey;
@@ -50,15 +49,12 @@ public class TornaDocInfoViewVO {
     /**
      * http方法
      */
-
     private String httpMethod;
 
     /**
      * contentType
      */
-
     private String contentType;
-
 
     /**
      * 是否是分类，0：不是，1：是
@@ -68,67 +64,56 @@ public class TornaDocInfoViewVO {
     /**
      * 父节点
      */
-
     private Long parentId;
 
     /**
      * 模块id，module.id
      */
-
     private Long moduleId;
 
     /**
      * 项目id
      */
-
     private Long projectId;
 
     /**
      * 是否使用全局请求参数
      */
-
     private Byte isUseGlobalHeaders;
 
     /**
      * 是否使用全局请求参数
      */
-
     private Byte isUseGlobalParams;
 
     /**
      * 是否使用全局返回参数
      */
-
     private Byte isUseGlobalReturns;
 
     /**
      * 是否请求数组
      */
-
     private Byte isRequestArray;
 
     /**
      * 是否返回数组
      */
-
     private Byte isResponseArray;
 
     /**
      * 请求数组时元素类型
      */
-
     private String requestArrayType;
 
     /**
      * 返回数组时元素类型
      */
-
     private String responseArrayType;
 
     /**
      * 文档状态
      */
-
     private Byte status;
 
     private String remark;
@@ -145,31 +130,39 @@ public class TornaDocInfoViewVO {
      */
     private LocalDateTime gmtModified;
 
-
+    @Builder.Default
     private List<TornaDocParamDTO> pathParams = Collections.emptyList();
 
-
+    @Builder.Default
     private List<TornaDocParamDTO> headerParams = Collections.emptyList();
 
+    @Builder.Default
     private List<TornaDocParamDTO> headerParamsRaw = Collections.emptyList();
 
-
+    @Builder.Default
     private List<TornaDocParamDTO> queryParams = Collections.emptyList();
 
-
+    @Builder.Default
     private List<TornaDocParamDTO> requestParams = Collections.emptyList();
 
-
+    @Builder.Default
     private List<TornaDocParamDTO> responseParams = Collections.emptyList();
 
+    @Builder.Default
     private List<TornaDocParamDTO> errorCodeParams = Collections.emptyList();
 
+    @Builder.Default
     private List<TornaDocParamDTO> globalHeaders = Collections.emptyList();
+
+    @Builder.Default
     private List<TornaDocParamDTO> globalParams = Collections.emptyList();
+
+    @Builder.Default
     private List<TornaDocParamDTO> globalReturns = Collections.emptyList();
 
     private String errorCodeInfo;
 
+    @Builder.Default
     private List<TornaDocInfoViewVO> children = Collections.emptyList();
 
     public String getDocName() {

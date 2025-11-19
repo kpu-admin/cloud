@@ -11,11 +11,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Schema(description = "时区-枚举")
 public enum TimezoneEnum implements BaseEnum {
-    AmericaNewYork("America/New_York",-5),
-    EuropeLondon("Europe/London",0),
-    AsiaShanghai("Asia/Shanghai",8),
-    AsiaTokyo("Asia/Tokyo",9),
-    AsiaSeoul("Asia/Seoul",9);
+    AmericaNewYork("America/New_York", -5),
+    EuropeLondon("Europe/London", 0),
+    AsiaShanghai("Asia/Shanghai", 8),
+    AsiaTokyo("Asia/Tokyo", 9),
+    AsiaSeoul("Asia/Seoul", 9);
 
 
     @Schema(description = "时区")
@@ -33,6 +33,6 @@ public enum TimezoneEnum implements BaseEnum {
     @Override
     @Schema(description = "描述")
     public String getDesc() {
-        return timezone+" (GMT"+(offset> 0? "+"+offset:offset) +")";
+        return timezone + " (GMT" + (offset > 0 ? "+" + offset : offset) + ")";
     }
 }

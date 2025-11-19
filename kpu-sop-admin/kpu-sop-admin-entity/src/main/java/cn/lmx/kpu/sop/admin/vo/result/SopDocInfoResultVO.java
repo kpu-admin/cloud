@@ -5,16 +5,12 @@ import cn.lmx.basic.base.entity.Entity;
 import cn.lmx.basic.interfaces.echo.EchoVO;
 import cn.lmx.kpu.common.support.TreeNode;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import lombok.experimental.Accessors;
+
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
-import java.io.Serializable;
 
 /**
  * <p>
@@ -36,7 +32,7 @@ import java.io.Serializable;
 public class SopDocInfoResultVO extends Entity<Long> implements Serializable, EchoVO, TreeNode<SopDocInfoResultVO, Long> {
 
     private static final long serialVersionUID = 1L;
-
+    @Builder.Default
     private Map<String, Object> echoMap = MapUtil.newHashMap();
 
     @Schema(description = "主键id")
