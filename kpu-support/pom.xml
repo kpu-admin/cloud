@@ -24,8 +24,6 @@
         <module>kpu-boot-server</module>
         <!-- 单体版SOP -->
         <module>kpu-boot-sop-server</module>
-        <!-- 单体版-商城-启动模块 -->
-        <module>kpu-boot-shop-front-server</module>
     </modules>
 
 </project>

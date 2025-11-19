@@ -101,7 +101,7 @@ kpu:
       refreshThreadPoolSize: 10
   webmvc:
     undertow: true
-    header: false
+    header: true
   log: # 详情看：OptLogProperties
     # 开启记录操作日志
     enabled: true
@@ -125,7 +125,7 @@ kpu:
     keepAliveSeconds: 300
     threadNamePrefix: 'kpu-async-executor-'
   generator:
-    outputDir: /Users/lmx/github/kpu-cloud
+    outputDir: /Users/lmx/Documents/IdeaProjects/kpu-cloud
     frontOutputDir: /Users/lmx/github/kpu-web
     frontSoyOutputDir: /Users/lmx/github/kpu-web-pro-soybean
     frontVben5OutputDir: /Users/lmx/github/kpu-web-vben-max/apps/web-antd
@@ -263,7 +263,6 @@ spring:
     multipart:
       max-file-size: 512MB
       max-request-size: 512MB
-  # one file max size limit
   main:
     allow-bean-definition-overriding: true
   application:
@@ -272,9 +271,6 @@ spring:
     path: ''
   profiles:
     active: '@profile.active@'
-upload:
-  one-file-max-size: 10MB
-  total-file-max-size: 5MB
 server:
   # 优雅停机
   shutdown: GRACEFUL
@@ -319,6 +315,11 @@ gateway:
 admin:
   torna-server-addr: http://localhost:7700
 
+upload:
+  # one file max size limit
+  one-file-max-size: 10MB
+  total-file-max-size: 5MB
+
 logging:
   file:
     path: '@logging.file.path@'
@@ -331,7 +332,7 @@ logging:
     com.alibaba.nacos.common.remote.client: error
     com.ulisesbocchio: error
     # 开发、调试需要的日志
-    top.tangyh: info
+    cn.lmx: info
     org.springframework: info
   pattern:
     dateformat: yyyy-MM-dd HH:mm:ss.SSS
@@ -339,6 +340,7 @@ logging:
   logback:
     rollingpolicy:
       max-file-size: 64MB
+
 info:
   name: '@project.name@'
   description: '@project.description@'

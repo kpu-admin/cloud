@@ -2,7 +2,7 @@ kpu:
   cache:
     type: REDIS
   redis:
-    ip: 1Panel-redis-RKi2
+    ip: redis
     port: 6379
     password: 'lmx123125'
     database: 7
