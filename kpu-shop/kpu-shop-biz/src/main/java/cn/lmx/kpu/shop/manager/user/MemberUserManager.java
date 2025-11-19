@@ -1,6 +1,7 @@
 package cn.lmx.kpu.shop.manager.user;
 
 import cn.lmx.basic.base.manager.SuperCacheManager;
+import cn.lmx.basic.interfaces.echo.LoadService;
 import cn.lmx.kpu.shop.entity.user.MemberUser;
 
 /**
@@ -13,7 +14,7 @@ import cn.lmx.kpu.shop.entity.user.MemberUser;
  * @date 2025-08-18 23:30:25
  * @create [2025-08-18 23:30:25] [lmx] [代码生成器生成]
  */
-public interface MemberUserManager extends SuperCacheManager<MemberUser> {
+public interface MemberUserManager extends SuperCacheManager<MemberUser>, LoadService {
 
     /**
      * 重置密码错误次数
@@ -45,6 +46,8 @@ public interface MemberUserManager extends SuperCacheManager<MemberUser> {
      * @return
      */
     MemberUser getUserByMobile(String mobile);
+
+    MemberUser getMemberUserByUser(Long userId);
 }
 
 

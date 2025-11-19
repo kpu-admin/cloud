@@ -1,6 +1,7 @@
 package cn.lmx.kpu.shop.service.user.impl;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
@@ -26,6 +27,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.Serializable;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 /**
  * <p>
  * 业务实现类
@@ -43,6 +49,10 @@ import org.springframework.transaction.annotation.Transactional;
 public class MemberUserServiceImpl extends SuperCacheServiceImpl<MemberUserManager, Long, MemberUser> implements MemberUserService {
     private final AppendixService appendixService;
 
+    @Override
+    public Map<Serializable, Object> findByIds(Set<Serializable> ids) {
+        return superManager.findByIds(ids.stream().map(Convert::toLong).collect(Collectors.toSet()));
+    }
     @Transactional(rollbackFor = Exception.class)
     @Override
     public String register(MemberUser memberUser) {
@@ -160,6 +170,22 @@ public class MemberUserServiceImpl extends SuperCacheServiceImpl<MemberUserManag
 //            cacheOps.del(MemberUserIdCardCacheKeyBuilder.builder(old.getCardId()));
 //        }
         return flag;
+    }
+    @Override
+    public MemberUser getMemberUserByUser(Long userId) {
+        return superManager.getMemberUserByUser(userId);
+    }
+    @Override
+    public Long getUIdByUserId(Long userId) {
+//        try {
+//            ContextUtil.setTenantId(tenantId);
+//            return defUserCache.getUserInfo(defUserId).getId();
+            ArgumentAssert.notNull(userId, "用户id为空");
+            return getMemberUserByUser(userId).getId();
+//        }
+//        finally {
+//            ContextUtil.setTenantId(null);
+//        }
     }
 
 }

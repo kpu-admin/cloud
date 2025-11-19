@@ -2,8 +2,11 @@ package cn.lmx.kpu.shop.manager.user.impl;
 
 import cn.lmx.basic.base.manager.impl.SuperCacheManagerImpl;
 import cn.lmx.basic.cache.redis2.CacheResult;
+import cn.lmx.basic.database.mybatis.conditions.Wraps;
 import cn.lmx.basic.model.cache.CacheKey;
 import cn.lmx.basic.model.cache.CacheKeyBuilder;
+import cn.lmx.basic.utils.ArgumentAssert;
+import cn.lmx.basic.utils.CollHelper;
 import cn.lmx.kpu.common.cache.shop.user.MemberUserCacheKeyBuilder;
 import cn.lmx.kpu.common.cache.shop.user.MemberUserMobileCacheKeyBuilder;
 import cn.lmx.kpu.common.cache.shop.user.MemberUserUserNameCacheKeyBuilder;
@@ -16,7 +19,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
 
 /**
  * <p>
@@ -36,6 +44,11 @@ public class MemberUserManagerImpl extends SuperCacheManagerImpl<MemberUserMappe
     @Override
     protected CacheKeyBuilder cacheKeyBuilder() {
         return new MemberUserCacheKeyBuilder();
+    }
+
+    public Map<Serializable, Object> findByIds(Set<Serializable> ids) {
+        List<MemberUser> list = findByIds(ids, null).stream().filter(Objects::nonNull).toList();
+        return CollHelper.uniqueIndex(list, MemberUser::getId, MemberUser::getNickName);
     }
     @Override
     public int resetPassErrorNum(Long id) {
@@ -65,6 +78,12 @@ public class MemberUserManagerImpl extends SuperCacheManagerImpl<MemberUserMappe
     public MemberUser getUserByMobile(String mobile) {
         CacheKey key = MemberUserMobileCacheKeyBuilder.builder(mobile);
         return getMemberUser(key, mobile, MemberUser::getMobile);
+    }
+
+    @Override
+    public MemberUser getMemberUserByUser(Long userId) {
+        ArgumentAssert.notNull(userId, "用户id为空");
+        return baseMapper.selectOne(Wraps.<MemberUser>lbQ().eq(MemberUser::getUserId, userId));
     }
 
 }

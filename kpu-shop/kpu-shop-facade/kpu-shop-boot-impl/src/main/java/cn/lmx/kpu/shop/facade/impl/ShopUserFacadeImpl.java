@@ -1,8 +1,8 @@
 package cn.lmx.kpu.shop.facade.impl;
 
 import cn.lmx.kpu.model.constant.EchoApi;
-import cn.lmx.kpu.shop.facade.DictFacade;
-import cn.lmx.kpu.shop.service.DictService;
+import cn.lmx.kpu.shop.facade.ShopUserFacade;
+import cn.lmx.kpu.shop.service.user.MemberUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +17,16 @@ import java.util.Set;
  */
 @Service(EchoApi.DICTIONARY_ITEM_FEIGN_CLASS)
 @RequiredArgsConstructor
-public class DictFacadeImpl implements DictFacade {
-    private final DictService dictService;
+public class ShopUserFacadeImpl implements ShopUserFacade {
+    private final MemberUserService memberUserService;
 
     @Override
     public Map<Serializable, Object> findByIds(Set<Serializable> ids) {
-        return dictService.findByIds(ids);
+        return memberUserService.findByIds(ids);
+    }
+
+    @Override
+    public Long findById(Long id) {
+        return memberUserService.getUIdByUserId(id);
     }
 }

@@ -12,7 +12,7 @@ import java.util.Set;
  * @author lmx
  * @date 2025-01-01 00:00
  */
-public interface DictFacade extends LoadService {
+public interface ShopUserFacade extends LoadService {
 
     /**
      * 根据id查询实体
@@ -22,5 +22,6 @@ public interface DictFacade extends LoadService {
      */
     @Override
     Map<Serializable, Object> findByIds(Set<Serializable> ids);
+    Long findById(Long id);
 
 }

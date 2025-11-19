@@ -35,6 +35,11 @@ public class MemberUser extends Entity<Long> {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 用户id
+     */
+    @TableField(value = "user_id")
+    private Long userId;
+    /**
      * 账号
      */
     @TableField(value = "username", condition = LIKE)

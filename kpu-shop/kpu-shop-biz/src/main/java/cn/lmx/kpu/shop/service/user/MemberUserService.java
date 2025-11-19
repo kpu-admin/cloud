@@ -7,6 +7,10 @@ import cn.lmx.kpu.system.vo.update.tenant.DefUserBaseInfoUpdateVO;
 import cn.lmx.kpu.system.vo.update.tenant.DefUserMobileUpdateVO;
 import cn.lmx.kpu.system.vo.update.tenant.DefUserPasswordUpdateVO;
 
+import java.io.Serializable;
+import java.util.Map;
+import java.util.Set;
+
 
 /**
  * <p>
@@ -19,6 +23,14 @@ import cn.lmx.kpu.system.vo.update.tenant.DefUserPasswordUpdateVO;
  * @create [2025-08-18 23:30:25] [lmx] [代码生成器生成]
  */
 public interface MemberUserService extends SuperCacheService<Long, MemberUser> {
+
+    /**
+     * 根据id查询待回显参数
+     *
+     * @param ids 唯一键（可能不是主键ID)
+     * @return
+     */
+    Map<Serializable, Object> findByIds(Set<Serializable> ids);
 
     /**
      * 注册
@@ -103,6 +115,9 @@ public interface MemberUserService extends SuperCacheService<Long, MemberUser> {
      */
     Boolean updateBaseInfo(DefUserBaseInfoUpdateVO data);
 
+    MemberUser getMemberUserByUser(Long userId);
+
+    Long getUIdByUserId(Long id);
 }
 
 

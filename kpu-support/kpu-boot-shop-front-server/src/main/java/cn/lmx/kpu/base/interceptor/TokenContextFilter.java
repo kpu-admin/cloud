@@ -3,6 +3,11 @@ package cn.lmx.kpu.base.interceptor;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.URLUtil;
+import cn.lmx.basic.context.ContextConstants;
+import cn.lmx.basic.context.ContextUtil;
+import cn.lmx.basic.utils.StrPool;
+import cn.lmx.kpu.common.properties.IgnoreProperties;
+import cn.lmx.kpu.common.utils.Base64Util;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -10,15 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.AsyncHandlerInterceptor;
-import cn.lmx.basic.context.ContextConstants;
-import cn.lmx.basic.context.ContextUtil;
-import cn.lmx.basic.utils.StrPool;
-import cn.lmx.kpu.common.properties.IgnoreProperties;
-import cn.lmx.kpu.common.utils.Base64Util;
 
-import static cn.lmx.basic.context.ContextConstants.APPLICATION_ID_HEADER;
-import static cn.lmx.basic.context.ContextConstants.APPLICATION_ID_KEY;
-import static cn.lmx.basic.context.ContextConstants.CLIENT_KEY;
+import static cn.lmx.basic.context.ContextConstants.*;
 
 /**
  * 用户信息解析器 一定要在AuthenticationFilter之前执行
@@ -48,10 +46,13 @@ public class TokenContextFilter implements AsyncHandlerInterceptor {
 
 
     private void parseClient(HttpServletRequest request) {
-        String base64Authorization = getHeader(CLIENT_KEY, request);
-        if (StrUtil.isNotEmpty(base64Authorization)) {
-            String[] client = Base64Util.getClient(base64Authorization);
-            ContextUtil.setClientId(client[0]);
+        try {
+            String base64Authorization = getHeader(CLIENT_KEY, request);
+            if (StrUtil.isNotEmpty(base64Authorization)) {
+                String[] client = Base64Util.getClient(base64Authorization);
+                ContextUtil.setClientId(client[0]);
+            }
+        } catch (Exception ignored) {
         }
     }
 
