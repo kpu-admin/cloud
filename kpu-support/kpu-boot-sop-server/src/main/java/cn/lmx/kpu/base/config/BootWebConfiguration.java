@@ -1,15 +1,11 @@
 package cn.lmx.kpu.base.config;
 
 import cn.lmx.basic.boot.config.BaseConfig;
-import cn.lmx.basic.constant.Constants;
-import cn.lmx.basic.log.event.SysLogListener;
 import cn.lmx.kpu.base.interceptor.TokenContextFilter;
 import cn.lmx.kpu.common.properties.IgnoreProperties;
 import cn.lmx.kpu.common.properties.SystemProperties;
-import cn.lmx.kpu.oauth.facade.LogFacade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -101,13 +97,4 @@ public class BootWebConfiguration extends BaseConfig implements WebMvcConfigurer
         };
     }
 
-
-    /**
-     * kpu.log.enabled = true 并且 kpu.log.type=DB时实例该类
-     */
-    @Bean
-    @ConditionalOnExpression("${" + Constants.PROJECT_PREFIX + ".log.enabled:true} && 'DB'.equals('${" + Constants.PROJECT_PREFIX + ".log.type:LOGGER}')")
-    public SysLogListener sysLogListener(LogFacade logApi) {
-        return new SysLogListener(logApi::save);
-    }
 }

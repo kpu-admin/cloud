@@ -17,6 +17,12 @@
     <dependencies>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-common-config</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-database-mode</artifactId>
             <version>${revision}</version>
         </dependency>

@@ -22,4 +22,16 @@ public interface ParamService extends LoadService {
      * @return key： 参数key  value: 参数值
      */
     Map<String, String> findParamMapByKey(List<String> paramsKeys);
+    /**
+     * 根据参数key查参数值
+     * <p>
+     * 1. 先查询租户自己的参数。
+     * 2. 若不存在，则查询系统默认的参数。
+     *
+     * @param paramsKey 参数key
+     * @return 参数值
+     */
+    String findValueByKey(String paramsKey);
+
+    Boolean updateValueByKey(String paramsKey, String value);
 }

@@ -27,4 +27,8 @@ public interface DefParameterManager extends SuperCacheManager<DefParameter>, Lo
      * @return key： 参数key  value: 参数值
      */
     Map<String, String> findParamMapByKey(List<String> paramsKeys);
+
+    String findValueByKey(String paramsKey);
+
+    Boolean updateValueByKey(String paramsKey, String value);
 }

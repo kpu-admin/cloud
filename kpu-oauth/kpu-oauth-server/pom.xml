@@ -17,6 +17,12 @@
     <dependencies>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-common-config</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-oauth-controller</artifactId>
             <version>${revision}</version>
         </dependency>
@@ -43,7 +49,11 @@
             <artifactId>kpu-base-cloud-impl</artifactId>
             <version>${revision}</version>
         </dependency>
-
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-oauth-cloud-impl</artifactId>
+            <version>${revision}</version>
+        </dependency>
         <dependency>
             <groupId>cn.lmx.basic</groupId>
             <artifactId>kpu-all-cloud</artifactId>

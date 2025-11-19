@@ -23,6 +23,11 @@
             <version>${revision}</version>
         </dependency>
         <dependency>
+            <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-common-config</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-commons</artifactId>
             <version>${spring-cloud-alibaba-dependencies.version}</version>

@@ -3,9 +3,18 @@ package cn.lmx.kpu.gateway.filter;
 import cn.dev33.satoken.config.SaTokenConfig;
 import cn.dev33.satoken.exception.SaTokenException;
 import cn.dev33.satoken.session.SaSession;
+import cn.dev33.satoken.spring.pathmatch.SaPathPatternParserUtil;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.URLUtil;
+import cn.lmx.basic.base.R;
+import cn.lmx.basic.context.ContextConstants;
+import cn.lmx.basic.context.ContextUtil;
+import cn.lmx.basic.exception.BizException;
+import cn.lmx.basic.exception.UnauthorizedException;
+import cn.lmx.basic.utils.StrPool;
+import cn.lmx.kpu.common.properties.IgnoreProperties;
+import cn.lmx.kpu.common.utils.Base64Util;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
@@ -22,14 +31,6 @@ import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
-import cn.lmx.basic.base.R;
-import cn.lmx.basic.context.ContextConstants;
-import cn.lmx.basic.context.ContextUtil;
-import cn.lmx.basic.exception.BizException;
-import cn.lmx.basic.exception.UnauthorizedException;
-import cn.lmx.basic.utils.StrPool;
-import cn.lmx.kpu.common.properties.IgnoreProperties;
-import cn.lmx.kpu.common.utils.Base64Util;
 
 import static cn.lmx.basic.context.ContextConstants.*;
 
@@ -163,13 +164,20 @@ public class TokenContextFilter implements WebFilter, Ordered {
     }
 
     private void parseClient(ServerHttpRequest request, ServerHttpRequest.Builder mutate) {
-        String base64Authorization = getHeader(CLIENT_KEY, request);
-        if (StrUtil.isNotEmpty(base64Authorization)) {
-            String[] client = Base64Util.getClient(base64Authorization);
-            ContextUtil.setClientId(client[0]);
-            addHeader(mutate, CLIENT_ID_HEADER, ContextUtil.getClientId());
+        try {
+            String pattern = "/actuator/**";
+            if (!SaPathPatternParserUtil.match(pattern, request.getPath().toString())) {
+                String base64Authorization = getHeader(CLIENT_KEY, request);
+                if (StrUtil.isNotEmpty(base64Authorization)) {
+                    String[] client = Base64Util.getClient(base64Authorization);
+                    ContextUtil.setClientId(client[0]);
+                    addHeader(mutate, CLIENT_ID_HEADER, ContextUtil.getClientId());
+                }
+            }
+        } catch (Exception ignore) {
         }
     }
+
 
     private void parseApplication(ServerHttpRequest request, ServerHttpRequest.Builder mutate) {
         String applicationIdStr = getHeader(APPLICATION_ID_KEY, request);

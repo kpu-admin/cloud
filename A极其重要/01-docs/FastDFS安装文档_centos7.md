@@ -13,7 +13,7 @@ CentOS7.x 安装教程， centos6 安装可能与此不同
 * db-6.2.32.tar.gz
 * fastdht-master.zip
 * libfastcommon-master.zip
-* FastDFS_v5.05.tar.gz
+* FastDFS_v5.05.tar.gzStpLogic
 * fastdfs-nginx-module_v1.16.tar.gz
 * ngx_cache_purge-2.1.tar.gz  (可选)
 * nginx-1.10.3.tar.gz

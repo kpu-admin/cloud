@@ -16,7 +16,11 @@
 
     <dependencies>
         <!-- @kpu.generator auto insert server.pom.xml -->
-
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-common-config</artifactId>
+            <version>${revision}</version>
+        </dependency>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-database-mode</artifactId>

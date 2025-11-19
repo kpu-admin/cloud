@@ -17,7 +17,7 @@ kpu:
     password: 'lmx123125'
     # 生产使用原生驱动，开发使用p6spy驱动打印日志
     driverClassName: com.p6spy.engine.spy.P6SpyDriver
-    url: jdbc:p6spy:mysql://127.0.0.1:3306/kpu_none?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&nullCatalogMeansCurrent=true
+    url: jdbc:p6spy:mysql://127.0.0.1:3306/kpu_none?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
   dameng: &db-dameng
     username: 'SYSDBA'
     password: 'SYSdba001'

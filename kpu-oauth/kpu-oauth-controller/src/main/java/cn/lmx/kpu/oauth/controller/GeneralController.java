@@ -1,6 +1,8 @@
 package cn.lmx.kpu.oauth.controller;
 
+import cn.hutool.core.convert.Convert;
 import cn.lmx.basic.base.R;
+import cn.lmx.basic.utils.ArgumentAssert;
 import cn.lmx.kpu.oauth.service.DictService;
 import cn.lmx.kpu.oauth.service.ParamService;
 import cn.lmx.kpu.system.vo.result.system.DefDictItemResultVO;
@@ -10,6 +12,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -50,6 +53,20 @@ public class GeneralController {
     @Operation(summary = "根据key批量获取系统参数", description = "根据key批量获取系统参数")
     public R<Map<String, String>> findParams(@RequestBody List<String> keys) {
         return R.success(paramService.findParamMapByKey(keys));
+    }
+
+    @PostMapping("/anyUser/timezone/getTimezone")
+    @Operation(summary = "获取系统时区参数", description = "获取系统时区参数")
+    public R<String> getTimezone() {
+        return R.success(paramService.findValueByKey("timezone"));
+    }
+
+    @PutMapping("/anyUser/timezone/setTimezone")
+    @Operation(summary = "修改系统时区参数", description = "修改系统时区参数")
+    public R<Boolean> setTimezone(@RequestBody Map<String, String> params) {
+        String timezone = Convert.toStr(params.get("timezone"));
+        ArgumentAssert.notBlank(timezone, "时区不能为空");
+        return R.success(paramService.updateValueByKey("timezone", timezone));
     }
 
 

@@ -13,6 +13,18 @@
 
     <artifactId>kpu-simple-sdk</artifactId>
     <name>${project.artifactId}</name>
-    <description></description>
+    <dependencies>
+        <dependency>
+            <groupId>cn.lmx.kpu</groupId>
+            <artifactId>kpu-sdk-core</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8</version>
+            <scope>test</scope>
+        </dependency>
 
+    </dependencies>
 </project>

@@ -19,6 +19,7 @@
     <modules>
         <module>kpu-model</module>
         <module>kpu-common</module>
+        <module>kpu-common-config</module>
         <module>kpu-database-mode</module>
         <module>kpu-file-sdk</module>
         <module>kpu-data-scope-sdk</module>

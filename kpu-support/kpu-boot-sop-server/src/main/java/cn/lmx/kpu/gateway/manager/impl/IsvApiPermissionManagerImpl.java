@@ -52,7 +52,7 @@ public class IsvApiPermissionManagerImpl implements IsvApiPermissionManager {
     }
 
     public boolean doCheck(Long isvId, ApiInfoDTO apiInfoDTO) {
-        List<Long> apiNameVerionList = cacheOps.get(SOPCacheKeyBuilder.build(CACHE_KEY,isvId + ""), k -> this.listApiId(isvId)).getValue();
+        List<Long> apiNameVerionList = cacheOps.get(SOPCacheKeyBuilder.build(CACHE_KEY, isvId + ""), k -> this.listApiId(isvId)).getValue();
         if (CollectionUtils.isEmpty(apiNameVerionList)) {
             return false;
         }
@@ -76,7 +76,7 @@ public class IsvApiPermissionManagerImpl implements IsvApiPermissionManager {
     }
 
     protected void cache(Long isvId, List<Long> apiIdList) {
-        cacheOps.set(SOPCacheKeyBuilder.build(CACHE_KEY,isvId + ""), apiIdList);
+        cacheOps.set(SOPCacheKeyBuilder.build(CACHE_KEY, isvId + ""), apiIdList);
         log.info("更新isv接口id本地缓存, isvId={}, apiIdList={}", isvId, apiIdList);
     }
 

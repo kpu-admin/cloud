@@ -1,19 +1,18 @@
 package cn.lmx.kpu.system.service.system.impl;
 
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import cn.lmx.basic.base.service.impl.SuperCacheServiceImpl;
 import cn.lmx.basic.database.mybatis.conditions.Wraps;
 import cn.lmx.basic.utils.ArgumentAssert;
-
 import cn.lmx.kpu.model.enumeration.system.DataTypeEnum;
 import cn.lmx.kpu.system.entity.system.DefParameter;
 import cn.lmx.kpu.system.manager.system.DefParameterManager;
 import cn.lmx.kpu.system.service.system.DefParameterService;
 import cn.lmx.kpu.system.vo.save.system.DefParameterSaveVO;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -38,6 +37,7 @@ public class DefParameterServiceImpl extends SuperCacheServiceImpl<DefParameterM
         defParameter.setParamType(DataTypeEnum.SYSTEM.getCode());
         return defParameter;
     }
+
 
     @Override
     public Boolean checkKey(String key, Long id) {

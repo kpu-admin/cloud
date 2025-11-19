@@ -7,9 +7,10 @@ import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.ComponentScan;
+
 import java.net.UnknownHostException;
 
 /**
@@ -21,8 +22,8 @@ import java.net.UnknownHostException;
 @SpringBootApplication
 @EnableDiscoveryClient
 @Configuration
-@EnableFeignClients(value = { "cn.lmx.kpu", "cn.lmx.basic" })
-@ComponentScan(basePackages = { "cn.lmx.kpu", "cn.lmx.basic" })
+@EnableFeignClients(value = {"cn.lmx.kpu", "cn.lmx.basic"})
+@ComponentScan(basePackages = {"cn.lmx.kpu", "cn.lmx.basic"})
 @EnableAspectJAutoProxy(proxyTargetClass = true, exposeProxy = true)
 @Slf4j
 @EnableFormValidator

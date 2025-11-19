@@ -21,7 +21,7 @@ docker run -idt --name kpu_nacos \
         -e NACOS_AUTH_ENABLE_USERAGENT_AUTHWHITE=true \
         -e MODE=standalone  -e SPRING_DATASOURCE_PLATFORM=mysql \
         -e MYSQL_DATABASE_NUM=1 \
-        -e MYSQL_SERVICE_HOST=192.168.1.60 -e MYSQL_SERVICE_DB_NAME=kpu_nacos -e MYSQL_SERVICE_PORT=3306 \
+        -e MYSQL_SERVICE_HOST=192.168.2.86 -e MYSQL_SERVICE_DB_NAME=kpu_nacos -e MYSQL_SERVICE_PORT=3306 \
         -e MYSQL_SERVICE_USER=root \
         -e MYSQL_SERVICE_PASSWORD=lmx123125 \
         -p 8848:8848 -p 9848:9848 \

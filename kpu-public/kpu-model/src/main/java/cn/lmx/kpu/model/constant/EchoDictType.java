@@ -84,7 +84,7 @@ public interface EchoDictType {
      * 租户服务
      */
     interface System {
-        // @lamp.generator auto insert System
+        // @kpu.generator auto insert System
 
         String DefTenantRegisterTypeEnum = "DefTenantRegisterTypeEnum";
         /**

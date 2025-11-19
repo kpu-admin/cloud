@@ -1,6 +1,15 @@
 package cn.lmx.kpu.gateway.config;
 
+import cn.lmx.basic.converter.String2DateConverter;
+import cn.lmx.basic.converter.String2LocalDateConverter;
+import cn.lmx.basic.converter.String2LocalDateTimeConverter;
+import cn.lmx.basic.converter.String2LocalTimeConverter;
+import cn.lmx.basic.interfaces.echo.EchoService;
 import cn.lmx.basic.jackson.KpuJacksonModule;
+import cn.lmx.basic.utils.SpringUtils;
+import cn.lmx.kpu.common.properties.IgnoreProperties;
+import cn.lmx.kpu.common.properties.SystemProperties;
+import cn.lmx.kpu.gateway.service.GarbageEchoServiceImpl;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.json.JsonReadFeature;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -8,19 +17,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
-import cn.lmx.basic.converter.String2DateConverter;
-import cn.lmx.basic.converter.String2LocalDateConverter;
-import cn.lmx.basic.converter.String2LocalDateTimeConverter;
-import cn.lmx.basic.converter.String2LocalTimeConverter;
-import cn.lmx.basic.interfaces.echo.EchoService;
-import cn.lmx.basic.utils.SpringUtils;
-import cn.lmx.kpu.gateway.service.GarbageEchoServiceImpl;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -38,6 +41,7 @@ import static cn.lmx.basic.utils.DateUtils.DEFAULT_DATE_TIME_FORMAT;
  * @date 2025-01-01 00:00
  */
 @Configuration
+@EnableConfigurationProperties({SystemProperties.class, IgnoreProperties.class})
 public class GatewayWebConfig {
     /**
      * 这个类仅仅是为了防止在gateway启动报错

@@ -34,7 +34,7 @@ public class SecretManagerImpl implements SecretManager {
 
     @Override
     public String getIsvPublicKey(Long isvId) {
-        return cacheOps.get(SOPCacheKeyBuilder.build(KEY_SEC,isvId + ""), k -> {
+        return cacheOps.get(SOPCacheKeyBuilder.build(KEY_SEC, isvId + ""), k -> {
             String publicKey = doGetPublicKey(isvId);
             return publicKey;
         }).getValue();
@@ -46,7 +46,7 @@ public class SecretManagerImpl implements SecretManager {
     }
 
     protected void cache(Long isvId, String publicKey) {
-        cacheOps.set(SOPCacheKeyBuilder.build(KEY_SEC,isvId + ""), publicKey);
+        cacheOps.set(SOPCacheKeyBuilder.build(KEY_SEC, isvId + ""), publicKey);
         log.info("更新isv秘钥本地缓存, isvId={}", isvId);
     }
 

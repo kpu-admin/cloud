@@ -1,6 +1,5 @@
 package cn.lmx.kpu.openapi.open.impl;
 
-import cn.lmx.basic.jackson.JsonUtil;
 import cn.lmx.kpu.base.entity.user.BaseEmployee;
 import cn.lmx.kpu.base.service.user.BaseEmployeeService;
 import cn.lmx.kpu.openapi.open.OpenOpenapi;
@@ -37,7 +36,7 @@ import java.util.UUID;
 @Slf4j
 public class OpenOpenapiImpl implements OpenOpenapi {
 
-//    @DubboReference
+    //    @DubboReference
 //    private ProductService storyService;
     @Autowired
     private BaseEmployeeService baseEmployeeService;
@@ -55,10 +54,8 @@ public class OpenOpenapiImpl implements OpenOpenapi {
 
         // 手动设置租户id
 //        ContextUtil();
-        System.out.println(context.getTenantId());
         // 去租户库进行查询或操作
         BaseEmployee baseEmployee = baseEmployeeService.getById(1L);
-        System.out.println(JsonUtil.toJson(baseEmployee));
         return payTradeWapPayResponse;
     }
 
@@ -78,6 +75,7 @@ public class OpenOpenapiImpl implements OpenOpenapi {
 //        }
         return payOrderSearchResponse;
     }
+
     @Override
     public ProductResponse upload(ProductSaveRequest storySaveDTO, FileData file) {
         checkFile(Arrays.asList(file));
