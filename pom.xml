@@ -18,8 +18,6 @@
 
     <modules>
         <!-- @kpu.generator auto insert root.pom.xml -->
-        <!-- 商城服务 -->
-        <module>kpu-shop</module>
         <module>kpu-dependencies-parent</module>
         <module>kpu-public</module>
         <!-- 认证服务 -->
