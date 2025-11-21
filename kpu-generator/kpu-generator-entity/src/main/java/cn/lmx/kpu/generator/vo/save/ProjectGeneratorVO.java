@@ -30,7 +30,7 @@ import java.io.Serializable;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "项目生成")
+@Schema(title = "ProjectGeneratorVO", description = "项目生成")
 public class ProjectGeneratorVO implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -24,10 +24,6 @@ public class SOPCacheKeyBuilder implements CacheKeyBuilder {
         return CacheKeyTable.SOP;
     }
 
-    @Override
-    public String getTenant() {
-        return null;
-    }
 
     @Override
     public Duration getExpire() {

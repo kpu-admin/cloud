@@ -28,7 +28,6 @@ import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 
-
 import java.util.List;
 import java.util.Map;
 
@@ -146,10 +145,10 @@ public class GenUtils {
 
     private static String getSwaggerComment(String comment) {
         String swaggerComment = StrUtil.isBlank(comment) ? StrUtil.EMPTY : StrUtil.trim(comment);
-        if (swaggerComment.contains(StrPool.SEMICOLON)) {
-            swaggerComment = StrUtil.subBefore(swaggerComment, StrPool.SEMICOLON, false);
-        }
-        swaggerComment = StrUtil.replace(swaggerComment, "\n", " ");
+        swaggerComment = StrUtil.subBefore(swaggerComment, StrPool.SEMICOLON, false);
+        swaggerComment = StrUtil.subBefore(swaggerComment, StrPool.CRLF, false);
+        swaggerComment = StrUtil.subBefore(swaggerComment, StrPool.RETURN, false);
+        swaggerComment = StrUtil.subBefore(swaggerComment, StrPool.NEWLINE, false);
         return swaggerComment;
     }
 

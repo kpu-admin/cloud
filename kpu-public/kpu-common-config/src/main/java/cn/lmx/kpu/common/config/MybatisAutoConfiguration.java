@@ -1,4 +1,4 @@
-package cn.lmx.kpu.database.none;
+package cn.lmx.kpu.common.config;
 
 import com.baomidou.mybatisplus.extension.plugins.inner.InnerInterceptor;
 import lombok.extern.slf4j.Slf4j;

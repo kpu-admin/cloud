@@ -21,15 +21,7 @@ public class DefUserMobileCacheKeyBuilder implements CacheKeyBuilder {
         return new DefUserMobileCacheKeyBuilder().key(mobile);
     }
 
-    @Override
-    public String getPrefix() {
-        return CacheKeyModular.PREFIX;
-    }
 
-    @Override
-    public String getTenant() {
-        return null;
-    }
 
     @Override
     public String getTable() {

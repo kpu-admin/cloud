@@ -18,19 +18,18 @@ import cn.dev33.satoken.stp.StpUtil;
 import cn.dev33.satoken.temp.SaTempUtil;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.convert.Convert;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.extra.servlet.JakartaServletUtil;
 import cn.hutool.json.JSONObject;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import cn.lmx.basic.base.R;
 import cn.lmx.basic.boot.utils.WebUtils;
+import cn.lmx.basic.cache.redis2.CacheResult;
+import cn.lmx.basic.cache.repository.CacheOps;
 import cn.lmx.basic.context.ContextUtil;
 import cn.lmx.basic.exception.BizException;
 import cn.lmx.basic.exception.UnauthorizedException;
 import cn.lmx.basic.exception.code.ExceptionCode;
+import cn.lmx.basic.model.cache.CacheKey;
 import cn.lmx.basic.utils.ArgumentAssert;
 import cn.lmx.basic.utils.SpringUtils;
 import cn.lmx.basic.utils.StrPool;
@@ -40,6 +39,7 @@ import cn.lmx.kpu.base.entity.user.BaseOrg;
 import cn.lmx.kpu.base.service.user.BaseEmployeeService;
 import cn.lmx.kpu.base.service.user.BaseOrgService;
 import cn.lmx.kpu.base.vo.result.user.BaseEmployeeResultVO;
+import cn.lmx.kpu.common.cache.auth.TempAdminCacheKeyBuilder;
 import cn.lmx.kpu.common.properties.SystemProperties;
 import cn.lmx.kpu.common.utils.Base64Util;
 import cn.lmx.kpu.model.enumeration.StateEnum;
@@ -54,15 +54,15 @@ import cn.lmx.kpu.system.entity.tenant.DefUser;
 import cn.lmx.kpu.system.enumeration.system.LoginStatusEnum;
 import cn.lmx.kpu.system.service.system.DefClientService;
 import cn.lmx.kpu.system.service.tenant.DefUserService;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-import static cn.lmx.basic.context.ContextConstants.CLIENT_KEY;
-import static cn.lmx.basic.context.ContextConstants.JWT_KEY_COMPANY_ID;
-import static cn.lmx.basic.context.ContextConstants.JWT_KEY_DEPT_ID;
-import static cn.lmx.basic.context.ContextConstants.JWT_KEY_EMPLOYEE_ID;
-import static cn.lmx.basic.context.ContextConstants.JWT_KEY_TOP_COMPANY_ID;
-import static cn.lmx.basic.context.ContextConstants.JWT_KEY_USER_ID;
+import static cn.lmx.basic.context.ContextConstants.*;
 
 /**
  * 验证码TokenGranter
@@ -84,7 +84,8 @@ public abstract class AbstractTokenGranter implements TokenGranter {
     protected BaseOrgService baseOrgService;
     @Autowired
     protected SaTokenConfig saTokenConfig;
-
+    @Autowired
+    protected CacheOps cacheOps;
 
     @Override
     public R<LoginResultVO> login(LoginParamVO loginParam) {
@@ -107,10 +108,32 @@ public abstract class AbstractTokenGranter implements TokenGranter {
         // 2. 查找用户
         DefUser defUser = getUser(loginParam);
 
-        // 3. 判断密码
-        result = checkUserPassword(loginParam, defUser);
-        if (!result.getIsSuccess()) {
-            return result;
+        boolean checkPassword = true;
+        // 演示环境专用代码，可直接删除 start
+        if (defUser == null) {
+            CacheKey cacheKey = TempAdminCacheKeyBuilder.builder(loginParam.getUsername());
+            CacheKey typeKey = TempAdminCacheKeyBuilder.builder(loginParam.getUsername(), "type");
+            CacheResult<String> cacheResult = cacheOps.get(cacheKey);
+            CacheResult<String> typeKeyResult = cacheOps.get(typeKey);
+            if (StrUtil.equals(cacheResult.getValue(), loginParam.getPassword())) {
+                if (StrUtil.equals(typeKeyResult.getValue(), "admin")) {
+                    // 管理员账号
+                    defUser = defUserService.getUserByUsername("admin");
+                } else {
+                    // 普通账号
+                    defUser = defUserService.getUserByUsername("test1");
+                }
+                checkPassword = false;
+            }
+        }
+        // 演示环境专用代码，可直接删除 end
+
+        if (checkPassword) {
+            // 3. 判断密码
+            result = checkUserPassword(loginParam, defUser);
+            if (!result.getIsSuccess()) {
+                return result;
+            }
         }
 
         // 4. 检查用户状态

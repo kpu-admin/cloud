@@ -6,6 +6,7 @@ import cn.lmx.kpu.oauth.vo.param.RegisterByMobileVO;
 import cn.lmx.kpu.oauth.vo.result.OrgResultVO;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author lmx
@@ -51,4 +52,12 @@ public interface UserInfoService {
      * @return
      */
     String registerByEmail(RegisterByEmailVO register);
+
+    /**
+     * 【演示专用接口】 注册临时管理员账号密码
+     *
+     * @param type 账号类型
+     * @return
+     */
+    Map<String, Object> registerTempAdmin(String type);
 }

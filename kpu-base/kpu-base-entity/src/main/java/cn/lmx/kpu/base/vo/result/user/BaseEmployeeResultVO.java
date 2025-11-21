@@ -2,20 +2,15 @@ package cn.lmx.kpu.base.vo.result.user;
 
 
 import cn.hutool.core.map.MapUtil;
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
 import cn.lmx.basic.annotation.echo.Echo;
 import cn.lmx.basic.base.entity.Entity;
 import cn.lmx.basic.interfaces.echo.EchoVO;
 import cn.lmx.kpu.model.constant.EchoApi;
 import cn.lmx.kpu.model.constant.EchoDictType;
 import cn.lmx.kpu.model.entity.system.SysUser;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.util.List;
@@ -37,7 +32,7 @@ import java.util.Map;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "员工")
+@Schema(title = "BaseEmployeeResultVO", description = "员工")
 public class BaseEmployeeResultVO extends Entity<Long> implements Serializable, EchoVO {
 
     private static final long serialVersionUID = 1L;

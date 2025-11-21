@@ -3,12 +3,7 @@ package cn.lmx.kpu.msg.vo.save;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -29,7 +24,7 @@ import java.io.Serializable;
 @Accessors(chain = true)
 @EqualsAndHashCode
 @Builder
-@Schema(description = "消息接收人")
+@Schema(title = "ExtendMsgRecipientSaveVO", description = "消息接收人")
 public class ExtendMsgRecipientSaveVO implements Serializable {
 
     private static final long serialVersionUID = 1L;

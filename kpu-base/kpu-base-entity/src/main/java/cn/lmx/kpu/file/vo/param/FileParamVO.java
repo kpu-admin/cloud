@@ -1,15 +1,10 @@
 package cn.lmx.kpu.file.vo.param;
 
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
 import cn.lmx.kpu.file.enumeration.FileStorageType;
 import cn.lmx.kpu.model.enumeration.base.FileType;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 
@@ -30,7 +25,7 @@ import java.io.Serializable;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "增量文件上传日志")
+@Schema(title = "FileParamVO", description = "增量文件上传日志")
 public class FileParamVO implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -19,20 +19,12 @@ import java.time.Duration;
  * @date 2025-01-01 00:00
  */
 public class PositionCacheKeyBuilder implements CacheKeyBuilder {
-    @Override
-    public String getTenant() {
-        return null;
-    }
 
     @Override
     public String getTable() {
         return CacheKeyTable.Base.BASE_POSITION;
     }
 
-    @Override
-    public String getPrefix() {
-        return CacheKeyModular.PREFIX;
-    }
 
     @Override
     public String getModular() {

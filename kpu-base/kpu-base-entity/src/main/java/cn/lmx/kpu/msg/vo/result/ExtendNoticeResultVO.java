@@ -1,19 +1,14 @@
 package cn.lmx.kpu.msg.vo.result;
 
 import cn.hutool.core.map.MapUtil;
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
 import cn.lmx.basic.annotation.echo.Echo;
 import cn.lmx.basic.base.entity.Entity;
 import cn.lmx.basic.interfaces.echo.EchoVO;
 import cn.lmx.kpu.model.constant.EchoApi;
 import cn.lmx.kpu.model.constant.EchoDictType;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -35,7 +30,7 @@ import java.util.Map;
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
 @Builder
-@Schema(description = "通知表")
+@Schema(title = "ExtendNoticeResultVO", description = "通知表")
 public class ExtendNoticeResultVO extends Entity<Long> implements Serializable, EchoVO {
 
     private static final long serialVersionUID = 1L;

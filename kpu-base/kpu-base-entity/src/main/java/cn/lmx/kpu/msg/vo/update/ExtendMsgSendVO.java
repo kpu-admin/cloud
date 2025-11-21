@@ -1,17 +1,12 @@
 package cn.lmx.kpu.msg.vo.update;
 
+import cn.lmx.basic.model.Kv;
+import cn.lmx.kpu.msg.vo.save.ExtendMsgRecipientSaveVO;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
-import cn.lmx.basic.model.Kv;
-import cn.lmx.kpu.msg.vo.save.ExtendMsgRecipientSaveVO;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -34,7 +29,7 @@ import java.util.List;
 @Accessors(chain = true)
 @EqualsAndHashCode
 @Builder
-@Schema(description = "消息发送")
+@Schema(title = "ExtendMsgSendVO", description = "消息发送")
 public class ExtendMsgSendVO implements Serializable {
 
     private static final long serialVersionUID = 1L;

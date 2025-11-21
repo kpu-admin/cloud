@@ -1,15 +1,10 @@
 package cn.lmx.kpu.base.vo.query.system;
 
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
 import cn.lmx.kpu.base.enumeration.system.LogType;
 import cn.lmx.kpu.model.enumeration.HttpMethod;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -30,7 +25,7 @@ import java.time.LocalDateTime;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "操作日志")
+@Schema(title = "BaseOperationLogPageQuery", description = "操作日志")
 public class BaseOperationLogPageQuery implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -20,16 +20,6 @@
             <artifactId>kpu-databases</artifactId>
         </dependency>
         <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-common</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-data-scope-sdk</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
         </dependency>

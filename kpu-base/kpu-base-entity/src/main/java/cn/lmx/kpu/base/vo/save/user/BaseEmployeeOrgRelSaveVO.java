@@ -2,12 +2,7 @@ package cn.lmx.kpu.base.vo.save.user;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -28,7 +23,7 @@ import java.io.Serializable;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "员工所在部门")
+@Schema(title = "BaseEmployeeOrgRelSaveVO", description = "员工所在部门")
 public class BaseEmployeeOrgRelSaveVO implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -1,17 +1,12 @@
 package cn.lmx.kpu.base.vo.update.user;
 
+import cn.lmx.basic.base.entity.SuperEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
-import cn.lmx.basic.base.entity.SuperEntity;
 
 import java.io.Serializable;
 import java.util.List;
@@ -32,7 +27,7 @@ import java.util.List;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "员工")
+@Schema(title = "BaseEmployeeUpdateVO", description = "员工")
 public class BaseEmployeeUpdateVO implements Serializable {
 
     private static final long serialVersionUID = 1L;

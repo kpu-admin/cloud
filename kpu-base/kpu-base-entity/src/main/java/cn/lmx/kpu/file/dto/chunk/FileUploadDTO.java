@@ -11,7 +11,7 @@ import lombok.ToString;
  * @date 2025-01-01 00:00
  */
 @Data
-@Schema(description = "文件分片上传实体")
+@Schema(title = "FileUploadDTO", description = "文件分片上传实体")
 @ToString
 public class FileUploadDTO {
     @Schema(description = "md5", name = "webuploader 自带的md5算法值， 与后端生成的不一致")

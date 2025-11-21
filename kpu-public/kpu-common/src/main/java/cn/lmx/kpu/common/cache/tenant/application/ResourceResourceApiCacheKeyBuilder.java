@@ -25,15 +25,7 @@ public class ResourceResourceApiCacheKeyBuilder implements CacheKeyBuilder {
         return new ResourceResourceApiCacheKeyBuilder().key(resourceId);
     }
 
-    @Override
-    public String getTenant() {
-        return null;
-    }
 
-    @Override
-    public String getPrefix() {
-        return CacheKeyModular.PREFIX;
-    }
 
     @Override
     public String getModular() {

@@ -1,12 +1,7 @@
 package cn.lmx.kpu.msg.vo.query;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -28,7 +23,7 @@ import java.io.Serializable;
 @Accessors(chain = true)
 @EqualsAndHashCode
 @Builder
-@Schema(description = "消息接收人")
+@Schema(title = "ExtendMsgRecipientPageQuery", description = "消息接收人")
 public class ExtendMsgRecipientPageQuery implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -18,22 +18,20 @@ package cn.lmx.kpu.oauth.granter;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import cn.lmx.basic.base.R;
 import cn.lmx.basic.exception.code.ExceptionCode;
 import cn.lmx.basic.utils.DateUtils;
 import cn.lmx.basic.utils.SpringUtils;
 import cn.lmx.basic.utils.StrHelper;
 import cn.lmx.basic.utils.ValidatorUtil;
-import cn.lmx.kpu.base.service.user.BaseOrgService;
 import cn.lmx.kpu.oauth.event.LoginEvent;
 import cn.lmx.kpu.oauth.event.model.LoginStatusDTO;
 import cn.lmx.kpu.oauth.vo.param.LoginParamVO;
 import cn.lmx.kpu.oauth.vo.result.LoginResultVO;
 import cn.lmx.kpu.system.entity.tenant.DefUser;
 import cn.lmx.kpu.system.enumeration.system.LoginStatusEnum;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
@@ -51,9 +49,6 @@ import static cn.lmx.kpu.oauth.granter.PasswordTokenGranter.GRANT_TYPE;
 public class PasswordTokenGranter extends AbstractTokenGranter implements TokenGranter {
 
     public static final String GRANT_TYPE = "PASSWORD";
-
-    @Autowired
-    protected BaseOrgService baseOrgService;
 
     @Override
     public R<LoginResultVO> checkParam(LoginParamVO loginParam) {

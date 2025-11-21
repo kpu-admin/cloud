@@ -1,8 +1,7 @@
 package cn.lmx.kpu.oauth.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import cn.hutool.core.util.RandomUtil;
 import cn.lmx.basic.cache.redis2.CacheResult;
 import cn.lmx.basic.cache.repository.CacheOps;
 import cn.lmx.basic.context.ContextUtil;
@@ -12,6 +11,7 @@ import cn.lmx.kpu.base.entity.user.BaseEmployee;
 import cn.lmx.kpu.base.entity.user.BaseOrg;
 import cn.lmx.kpu.base.service.user.BaseEmployeeService;
 import cn.lmx.kpu.base.service.user.BaseOrgService;
+import cn.lmx.kpu.common.cache.auth.TempAdminCacheKeyBuilder;
 import cn.lmx.kpu.common.cache.common.CaptchaCacheKeyBuilder;
 import cn.lmx.kpu.common.properties.SystemProperties;
 import cn.lmx.kpu.oauth.service.UserInfoService;
@@ -20,8 +20,13 @@ import cn.lmx.kpu.oauth.vo.param.RegisterByMobileVO;
 import cn.lmx.kpu.oauth.vo.result.OrgResultVO;
 import cn.lmx.kpu.system.entity.tenant.DefUser;
 import cn.lmx.kpu.system.service.tenant.DefUserService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
+import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author lmx
@@ -93,5 +98,29 @@ public class UserInfoServiceImpl implements UserInfoService {
         defUserService.registerByEmail(defUser);
 
         return defUser.getEmail();
+    }
+
+    @Override
+    public Map<String, Object> registerTempAdmin(String type) {
+        Map<String, Object> result = new HashMap<>(4);
+        String username = RandomUtil.randomNumbers(4);
+        String password = RandomUtil.randomNumbers(2);
+        CacheKey key = TempAdminCacheKeyBuilder.builder(username);
+        CacheKey typeKey = TempAdminCacheKeyBuilder.builder(username, "type");
+        cacheOps.set(key, username + password);
+        cacheOps.set(typeKey, type);
+
+        result.put("username", username);
+        result.put("password", username + password);
+        result.put("expire", key.getExpire());
+        result.put("expireStr", formatDuration(key.getExpire()));
+        return result;
+    }
+
+    private static String formatDuration(Duration duration) {
+        long seconds = duration.getSeconds();
+        long minutes = (seconds % 3600) / 60;
+        long secs = seconds % 60;
+        return String.format("00:%02d:%02d", minutes, secs);
     }
 }

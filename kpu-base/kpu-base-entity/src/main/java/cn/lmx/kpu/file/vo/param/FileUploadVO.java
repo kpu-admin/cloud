@@ -1,10 +1,10 @@
 package cn.lmx.kpu.file.vo.param;
 
 
+import cn.lmx.kpu.file.enumeration.FileStorageType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
-import cn.lmx.kpu.file.enumeration.FileStorageType;
 
 import java.io.Serializable;
 
@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @date 2025-01-01 00:00
  */
 @Data
-@Schema(description = "附件上传")
+@Schema(title = "FileUploadVO", description = "附件上传")
 public class FileUploadVO implements Serializable {
 
     @Schema(description = "业务类型")

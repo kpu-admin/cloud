@@ -35,7 +35,7 @@ import static cn.lmx.kpu.model.constant.Condition.LIKE;
 @Accessors(chain = true)
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
-@Schema(description = "岗位")
+@Schema(title = "SysPosition", description = "岗位")
 @TableName("base_position")
 public class SysPosition extends Entity<Long> implements Serializable, EchoVO {
 

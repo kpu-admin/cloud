@@ -3,12 +3,7 @@ package cn.lmx.kpu.base.vo.save.user;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -30,7 +25,7 @@ import java.util.List;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "员工的角色")
+@Schema(title = "BaseEmployeeRoleRelSaveVO", description = "员工的角色")
 public class BaseEmployeeRoleRelSaveVO implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -1,16 +1,11 @@
 package cn.lmx.kpu.msg.vo.result;
 
 import cn.hutool.core.map.MapUtil;
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
 import cn.lmx.basic.base.entity.Entity;
 import cn.lmx.basic.interfaces.echo.EchoVO;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -32,7 +27,7 @@ import java.util.Map;
 @Accessors(chain = true)
 @EqualsAndHashCode(callSuper = true)
 @Builder
-@Schema(description = "接口执行日志")
+@Schema(title = "ExtendInterfaceLogResultVO", description = "接口执行日志")
 public class ExtendInterfaceLogResultVO extends Entity<Long> implements Serializable, EchoVO {
 
     private static final long serialVersionUID = 1L;

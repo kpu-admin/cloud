@@ -2,18 +2,13 @@ package cn.lmx.kpu.base.vo.result.user;
 
 
 import cn.hutool.core.map.MapUtil;
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
 import cn.lmx.basic.annotation.echo.Echo;
 import cn.lmx.basic.base.entity.Entity;
 import cn.lmx.basic.interfaces.echo.EchoVO;
 import cn.lmx.kpu.model.constant.EchoApi;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -34,7 +29,7 @@ import java.util.Map;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "岗位")
+@Schema(title = "BasePositionResultVO", description = "岗位")
 public class BasePositionResultVO extends Entity<Long> implements Serializable, EchoVO {
 
     private static final long serialVersionUID = 1L;

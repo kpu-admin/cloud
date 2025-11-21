@@ -17,7 +17,7 @@
     <dependencies>
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-database-mode</artifactId>
+            <artifactId>kpu-base-controller</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
@@ -28,11 +28,6 @@
         <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-login-user-cloud-impl</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-base-controller</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
@@ -57,11 +52,6 @@
             <artifactId>kpu-all-cloud</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-sa-token-ext</artifactId>
-            <version>${revision}</version>
-        </dependency>
 
         <!-- websocket -->
         <dependency>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import type { KpuFormProps } from '@/adapter/form'
+import type { KpuFormProps } from '@/adapter/form'
 
 import type {
   VxeGridListeners,
@@ -9,19 +9,23 @@ import type {
 } from '@/adapter/vxe-table';
 import type { ${sub.table.entityName}Model } from '@/api/${sub.table.plusApplicationName}/${sub.table.plusModuleName}/model/${sub.table.entityName?uncap_first}Model';
 
-import { ref } from 'vue';
+import {ref} from 'vue';
 
-import Page from '@/components/Page/index.vue';
+import {useKpuVxeGrid} from '@/adapter/vxe-table';
+import {ActionEnum} from '@/enums/commonEnum';
+import {useMessage} from '@/hooks/useMessage';
+import {$t} from '@/locales';
 
-import { useKpuVxeGrid } from '@/adapter/vxe-table';
-import { ${sub.table.entityName}Api } from '@/api/${sub.table.plusApplicationName}/${sub.table.plusModuleName}/${sub.table.entityName?uncap_first}';
-import TableAction from '@/components/TableAction/index.vue';
-import { ActionEnum } from '@/enums/commonEnum';
-import { RoleEnum } from '@/enums/role';
-import { useMessage } from '@/hooks/useMessage';
-import { $t } from '@/locales';
+import {gridSchemas, searchFormSchemas} from '../data/slave';
+import {$
 
-import { gridSchemas, searchFormSchemas } from '../data/slave';
+{
+    sub.table.entityName
+}
+Api
+}
+from
+'@/api/';
 
 const ${table.subJavaFieldName}Ref = ref<string>('');
 const editRules = ref<VxeTablePropTypes.EditRules>({

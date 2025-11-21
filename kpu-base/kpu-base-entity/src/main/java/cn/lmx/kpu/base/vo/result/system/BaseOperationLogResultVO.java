@@ -2,19 +2,14 @@ package cn.lmx.kpu.base.vo.result.system;
 
 
 import cn.hutool.core.map.MapUtil;
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
 import cn.lmx.basic.annotation.echo.Echo;
 import cn.lmx.basic.base.entity.Entity;
 import cn.lmx.basic.interfaces.echo.EchoVO;
 import cn.lmx.kpu.base.enumeration.system.LogType;
 import cn.lmx.kpu.model.enumeration.HttpMethod;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -36,7 +31,7 @@ import java.util.Map;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "操作日志")
+@Schema(title = "BaseOperationLogResultVO", description = "操作日志")
 public class BaseOperationLogResultVO extends Entity<Long> implements Serializable, EchoVO {
 
     private static final long serialVersionUID = 1L;

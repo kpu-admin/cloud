@@ -1,13 +1,15 @@
 package cn.lmx.kpu;
 
 
+import cn.lmx.kpu.common.ServerApplication;
+import cn.lmx.kpu.common.config.ActuatorSecurityConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
-import cn.lmx.kpu.common.ServerApplication;
+import org.springframework.context.annotation.FilterType;
 
 import java.net.UnknownHostException;
 
@@ -22,9 +24,12 @@ import static cn.lmx.kpu.common.constant.BizConstant.UTIL_PACKAGE;
         DataSourceAutoConfiguration.class
 })
 @EnableDiscoveryClient
-@ComponentScan({
+@ComponentScan(value = {
         UTIL_PACKAGE, BUSINESS_PACKAGE
-})
+}, excludeFilters = @ComponentScan.Filter(
+        type = FilterType.ASSIGNABLE_TYPE,
+        classes = ActuatorSecurityConfig.class
+))
 @EnableFeignClients(value = {
         UTIL_PACKAGE, BUSINESS_PACKAGE
 })

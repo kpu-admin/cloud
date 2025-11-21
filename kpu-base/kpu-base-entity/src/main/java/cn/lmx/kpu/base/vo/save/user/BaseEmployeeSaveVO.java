@@ -1,17 +1,12 @@
 package cn.lmx.kpu.base.vo.save.user;
 
+import cn.lmx.basic.annotation.constraints.NotEmptyPattern;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
-import cn.lmx.basic.annotation.constraints.NotEmptyPattern;
 
 import java.io.Serializable;
 import java.util.List;
@@ -35,7 +30,7 @@ import static cn.lmx.basic.utils.ValidatorUtil.REGEX_USERNAME;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "员工")
+@Schema(title = "BaseEmployeeSaveVO", description = "员工")
 public class BaseEmployeeSaveVO implements Serializable {
 
     private static final long serialVersionUID = 1L;

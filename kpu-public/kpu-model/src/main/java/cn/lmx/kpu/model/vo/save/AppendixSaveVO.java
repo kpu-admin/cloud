@@ -29,7 +29,7 @@ import java.util.List;
 @Data
 @Accessors(chain = true)
 @ToString(callSuper = true)
-@Schema(description = "业务附件")
+@Schema(title = "AppendixSaveVO", description = "业务附件")
 public class AppendixSaveVO implements Serializable {
 
     @Serial

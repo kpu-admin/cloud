@@ -59,23 +59,8 @@
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-database-mode</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-data-scope-sdk</artifactId>
-            <version>${revision}</version>
-        </dependency>
-        <dependency>
             <groupId>cn.lmx.basic</groupId>
             <artifactId>kpu-all-cloud</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.lmx.kpu</groupId>
-            <artifactId>kpu-sa-token-ext</artifactId>
-            <version>${revision}</version>
         </dependency>
 
         <dependency>
@@ -109,7 +94,7 @@
                 <version>${dockerfile-maven-plugin.version}</version>
                 <configuration>
                     <repository>${docker.image.prefix}/${project.artifactId}</repository>
-                    <tag>${kpu-project.version}</tag>
+                    <tag>${revision}</tag>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>

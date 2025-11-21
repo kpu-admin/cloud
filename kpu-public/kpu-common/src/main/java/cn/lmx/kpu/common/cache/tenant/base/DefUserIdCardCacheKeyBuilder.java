@@ -21,15 +21,7 @@ public class DefUserIdCardCacheKeyBuilder implements CacheKeyBuilder {
         return new DefUserIdCardCacheKeyBuilder().key(idCard);
     }
 
-    @Override
-    public String getPrefix() {
-        return CacheKeyModular.PREFIX;
-    }
 
-    @Override
-    public String getTenant() {
-        return null;
-    }
 
     @Override
     public String getTable() {

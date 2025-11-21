@@ -1,15 +1,10 @@
 package cn.lmx.kpu.msg.vo.query;
 
-import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-import lombok.experimental.Accessors;
 import cn.lmx.kpu.msg.enumeration.SourceType;
 import cn.lmx.kpu.msg.enumeration.TaskStatus;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -31,7 +26,7 @@ import java.time.LocalDateTime;
 @Accessors(chain = true)
 @EqualsAndHashCode
 @Builder
-@Schema(description = "消息")
+@Schema(title = "ExtendMsgPageQuery", description = "消息")
 public class ExtendMsgPageQuery implements Serializable {
 
     private static final long serialVersionUID = 1L;

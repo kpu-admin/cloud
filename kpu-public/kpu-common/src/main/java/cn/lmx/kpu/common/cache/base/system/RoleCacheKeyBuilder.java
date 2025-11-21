@@ -21,18 +21,8 @@ public class RoleCacheKeyBuilder implements CacheKeyBuilder {
     }
 
     @Override
-    public String getTenant() {
-        return null;
-    }
-
-    @Override
     public String getTable() {
         return CacheKeyTable.Base.ROLE;
-    }
-
-    @Override
-    public String getPrefix() {
-        return CacheKeyModular.PREFIX;
     }
 
     @Override

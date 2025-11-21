@@ -2,12 +2,7 @@ package cn.lmx.kpu.base.vo.save.system;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -30,7 +25,7 @@ import java.util.Map;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "角色的资源")
+@Schema(title = "BaseRoleResourceRelSaveVO", description = "角色的资源")
 public class BaseRoleResourceRelSaveVO implements Serializable {
 
     private static final long serialVersionUID = 1L;

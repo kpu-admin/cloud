@@ -1,10 +1,10 @@
 package cn.lmx.kpu.msg.enumeration;
 
+import cn.lmx.basic.interfaces.BaseEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import cn.lmx.basic.interfaces.BaseEnum;
 
 import java.util.stream.Stream;
 
@@ -20,7 +20,7 @@ import java.util.stream.Stream;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(description = "发送渠道-枚举")
+@Schema(title = "SourceType", description = "发送渠道-枚举")
 public enum SourceType implements BaseEnum {
 
     /**

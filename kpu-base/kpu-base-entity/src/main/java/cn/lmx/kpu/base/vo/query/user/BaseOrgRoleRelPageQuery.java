@@ -1,12 +1,7 @@
 package cn.lmx.kpu.base.vo.query.user;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -27,7 +22,7 @@ import java.io.Serializable;
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 @Builder
-@Schema(description = "组织的角色")
+@Schema(title = "BaseOrgRoleRelPageQuery", description = "组织的角色")
 public class BaseOrgRoleRelPageQuery implements Serializable {
 
     private static final long serialVersionUID = 1L;

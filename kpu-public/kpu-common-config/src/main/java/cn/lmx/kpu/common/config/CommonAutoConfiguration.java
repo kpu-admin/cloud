@@ -1,8 +1,8 @@
 package cn.lmx.kpu.common.config;
 
 import cn.hutool.core.util.StrUtil;
+import cn.lmx.basic.model.cache.CacheKeyBuilder;
 import cn.lmx.kpu.common.aspect.KpuLogAspect;
-import cn.lmx.kpu.common.cache.CacheKeyModular;
 import cn.lmx.kpu.common.properties.IgnoreProperties;
 import cn.lmx.kpu.common.properties.SystemProperties;
 import jakarta.annotation.PostConstruct;
@@ -38,7 +38,7 @@ public class CommonAutoConfiguration {
     @PostConstruct
     public void init() {
         if (StrUtil.isNotEmpty(systemProperties.getCachePrefix())) {
-            CacheKeyModular.PREFIX = systemProperties.getCachePrefix();
+            CacheKeyBuilder.Key.setPrefix(systemProperties.getCachePrefix());
             log.info("检查到配置文件中：{}.cachePrefix={}", SystemProperties.PREFIX, systemProperties.getCachePrefix());
         }
     }

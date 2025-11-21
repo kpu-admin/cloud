@@ -21,15 +21,7 @@ public class MemberUserUserNameCacheKeyBuilder implements CacheKeyBuilder {
         return new MemberUserUserNameCacheKeyBuilder().key(name);
     }
 
-    @Override
-    public String getPrefix() {
-        return CacheKeyModular.PREFIX;
-    }
 
-    @Override
-    public String getTenant() {
-        return null;
-    }
 
     @Override
     public String getTable() {

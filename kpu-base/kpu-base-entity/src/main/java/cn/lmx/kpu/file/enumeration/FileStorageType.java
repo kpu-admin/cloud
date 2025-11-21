@@ -1,10 +1,10 @@
 package cn.lmx.kpu.file.enumeration;
 
+import cn.lmx.basic.interfaces.BaseEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import cn.lmx.basic.interfaces.BaseEnum;
 
 import java.util.stream.Stream;
 
@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(description = "文件存储类型")
+@Schema(title = "FileStorageType", description = "文件存储类型")
 public enum FileStorageType implements BaseEnum {
     /**
      * 本地

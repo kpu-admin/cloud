@@ -25,18 +25,8 @@ public class EmployeeCacheKeyBuilder implements CacheKeyBuilder {
     }
 
     @Override
-    public String getTenant() {
-        return null;
-    }
-
-    @Override
     public String getTable() {
         return CacheKeyTable.Base.BASE_EMPLOYEE;
-    }
-
-    @Override
-    public String getPrefix() {
-        return CacheKeyModular.PREFIX;
     }
 
     @Override

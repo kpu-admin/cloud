@@ -34,15 +34,7 @@ public class TokenUserIdCacheKeyBuilder implements CacheKeyBuilder {
         return CacheKeyTable.TOKEN_USER_ID;
     }
 
-    @Override
-    public String getPrefix() {
-        return CacheKeyModular.PREFIX;
-    }
 
-    @Override
-    public String getTenant() {
-        return null;
-    }
 
     @Override
     public String getModular() {

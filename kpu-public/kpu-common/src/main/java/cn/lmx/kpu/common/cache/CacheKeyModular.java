@@ -1,12 +1,14 @@
 package cn.lmx.kpu.common.cache;
 
+import cn.lmx.basic.model.cache.CacheKeyBuilder;
+
 /**
  * 缓存模块
  *
  * @author lmx
  * @date 2025-01-01 00:00
  */
-public class CacheKeyModular {
+public abstract class CacheKeyModular implements CacheKeyBuilder {
     /**
      * 多个服务都会使用的缓存
      */
@@ -16,17 +18,9 @@ public class CacheKeyModular {
      */
     public static final String BASE = "base";
     /**
-     * 仅消息服务msg使用的缓存
-     */
-    public static final String MSG = "msg";
-    /**
      * 仅认证服务oauth使用的缓存
      */
     public static final String OAUTH = "oauth";
-    /**
-     * 仅文件服务file使用的缓存
-     */
-    public static final String FILE = "file";
     /**
      * 仅租户服务tenant使用的缓存
      */
@@ -35,13 +29,6 @@ public class CacheKeyModular {
      * 仅租户服务tenant使用的缓存
      */
     public static final String SHOP = "shop";
-    /**
-     * 仅网关服务gateway使用的缓存
-     */
-    public static final String GATEWAY = "gateway";
 
-    /** 缓存key前缀， 可以在启动时覆盖该参数。
-     * 系统启动时，注入。
-     */
-    public static String PREFIX;
+
 }
