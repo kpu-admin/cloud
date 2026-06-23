@@ -542,24 +542,28 @@ COMMIT;
 -- ----------------------------
 DROP TABLE IF EXISTS `def_dict`;
 CREATE TABLE `def_dict` (
-  `id` bigint NOT NULL COMMENT 'ID',
-  `parent_id` bigint NOT NULL DEFAULT '0' COMMENT '字典ID',
-  `parent_key` varchar(255) DEFAULT NULL COMMENT '父字典标识',
-  `classify` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT '20' COMMENT '分类;[10-系统字典 20-业务字典]@Echo(api = EchoApi.DICTIONARY_ITEM_FEIGN_CLASS, dictType = EchoDictType.System.DICT_CLASSIFY)',
-  `key_` varchar(255) NOT NULL DEFAULT '' COMMENT '标识',
-  `name` varchar(255) NOT NULL DEFAULT '' COMMENT '名称',
-  `state` bit(1) DEFAULT b'1' COMMENT '状态',
-  `remark` varchar(255) DEFAULT '' COMMENT '备注',
-  `sort_value` int DEFAULT '1' COMMENT '排序',
-  `icon` varchar(255) DEFAULT '' COMMENT '图标',
-  `css_style` varchar(255) DEFAULT '' COMMENT 'css样式',
-  `css_class` varchar(255) DEFAULT '' COMMENT 'css类元素',
-  `created_by` bigint DEFAULT NULL COMMENT '创建人id',
-  `created_time` datetime NOT NULL COMMENT '创建时间',
-  `updated_by` bigint DEFAULT NULL COMMENT '更新人id',
-  `updated_time` datetime NOT NULL COMMENT '更新时间',
-  PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE KEY `uk_dict_key` (`parent_id`,`key_`) USING BTREE
+                            `id` bigint NOT NULL COMMENT 'ID',
+                            `parent_id` bigint NOT NULL DEFAULT '0' COMMENT '字典ID',
+                            `parent_key` varchar(255) DEFAULT NULL COMMENT '父字典标识',
+                            `dict_group` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '字典分组',
+                            `classify` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT '20' COMMENT '分类\n[10-系统字典 20-业务字典]\n@Echo(api = EchoApi.DICTIONARY_ITEM_FEIGN_CLASS, dictType = EchoDictType.System.DICT_CLASSIFY)',
+                            `data_type` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '1' COMMENT '数据类型\n[1-字符串 2-整型 3-布尔]',
+                            `key_` varchar(255) NOT NULL DEFAULT '' COMMENT '标识',
+                            `name` varchar(255) NOT NULL DEFAULT '' COMMENT '名称',
+                            `state` bit(1) DEFAULT b'1' COMMENT '状态',
+                            `remark` varchar(255) DEFAULT '' COMMENT '备注',
+                            `sort_value` int DEFAULT '1' COMMENT '排序',
+                            `icon` varchar(255) DEFAULT '' COMMENT '图标',
+                            `css_style` varchar(255) DEFAULT '' COMMENT 'css样式',
+                            `css_class` varchar(255) DEFAULT '' COMMENT 'css类元素',
+                            `prop_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '' COMMENT '组件属性\n用于Tag时，用于配置color属性\n用于Button时，用于配置type属性',
+                            `i18n_json` varchar(5120) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT '' COMMENT '国际化配置',
+                            `created_by` bigint DEFAULT NULL COMMENT '创建人id',
+                            `created_time` datetime NOT NULL COMMENT '创建时间',
+                            `updated_by` bigint DEFAULT NULL COMMENT '更新人id',
+                            `updated_time` datetime NOT NULL COMMENT '更新时间',
+                            PRIMARY KEY (`id`) USING BTREE,
+                            UNIQUE KEY `uk_dict_key` (`parent_id`,`key_`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='字典';
 
 -- ----------------------------

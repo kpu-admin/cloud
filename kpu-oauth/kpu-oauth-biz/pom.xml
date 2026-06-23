@@ -41,11 +41,6 @@
             <groupId>cn.lmx.basic</groupId>
             <artifactId>kpu-webmvc</artifactId>
         </dependency>
-        <!-- log 只有认证服务biz模块引用，其他服务都在controller模块 -->
-        <dependency>
-            <groupId>cn.lmx.basic</groupId>
-            <artifactId>kpu-log-starter</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>cn.lmx.basic</groupId>

@@ -16,16 +16,16 @@ docker rm kpu_nacos
 #        nacos/nacos-server:v2.4.3
 #docker run --name nacos-standalone -e MODE=standalone -v -p 8848:8848 -d -p 9848:9848  nacos/nacos-server:latest
 #docker run --name nacos-standalone -e MODE=standalone -v /path/application.properties:/home/nacos/conf/application.properties -p 8848:8848 -d -p 9848:9848  nacos/nacos-server:latest
-docker run -idt --name kpu_nacos \
-        -e NACOS_AUTH_ENABLE=true -e NACOS_AUTH_TOKEN='a3B1bmFjb3NsbXgxMjMxMjUwMDBBQkNEMTIzNDU2Nzg5MA==' -e NACOS_AUTH_IDENTITY_KEY='lmx123125' -e NACOS_AUTH_IDENTITY_VALUE='lmx123125' \
-        -e NACOS_AUTH_ENABLE_USERAGENT_AUTHWHITE=true \
-        -e MODE=standalone  -e SPRING_DATASOURCE_PLATFORM=mysql \
-        -e MYSQL_DATABASE_NUM=1 \
-        -e MYSQL_SERVICE_HOST=192.168.2.86 -e MYSQL_SERVICE_DB_NAME=kpu_nacos -e MYSQL_SERVICE_PORT=3306 \
-        -e MYSQL_SERVICE_USER=root \
-        -e MYSQL_SERVICE_PASSWORD=lmx123125 \
-        -p 8848:8848 -p 9848:9848 \
-        -v `pwd`/logs/:/home/nacos/logs \
+docker run -idt --name kpu_nacos `
+        -e NACOS_AUTH_ENABLE=true -e NACOS_AUTH_TOKEN='a3B1bmFjb3NsbXgxMjMxMjUwMDBBQkNEMTIzNDU2Nzg5MA==' -e NACOS_AUTH_IDENTITY_KEY='lmx123125' -e NACOS_AUTH_IDENTITY_VALUE='lmx123125' `
+        -e NACOS_AUTH_ENABLE_USERAGENT_AUTHWHITE=true `
+        -e MODE=standalone  -e SPRING_DATASOURCE_PLATFORM=mysql `
+        -e MYSQL_DATABASE_NUM=1 `
+        -e MYSQL_SERVICE_HOST=192.168.1.97 -e MYSQL_SERVICE_DB_NAME=kpu_nacos -e MYSQL_SERVICE_PORT=3306 `
+        -e MYSQL_SERVICE_USER=root `
+        -e MYSQL_SERVICE_PASSWORD=lmx123125 `
+        -p 8848:8848 -p 9848:9848 `
+        -v "C:\Users\Lmx\logs\:/home/nacos/logs" `
         nacos/nacos-server:v2.4.0
 
 #docker run --name nacos-standalone -e MODE=standalone \n

@@ -1,21 +1,27 @@
 package cn.lmx.kpu.common.utils;
 
 import cn.hutool.core.codec.Base64;
+import cn.hutool.crypto.SecureUtil;
+import cn.hutool.crypto.asymmetric.AsymmetricAlgorithm;
+import cn.hutool.crypto.asymmetric.AsymmetricCrypto;
+import cn.hutool.crypto.asymmetric.KeyType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.bouncycastle.asn1.ASN1Encodable;
-import org.bouncycastle.asn1.ASN1Primitive;
-import org.bouncycastle.asn1.pkcs.PrivateKeyInfo;
 
-import javax.crypto.Cipher;
+import java.io.ByteArrayOutputStream;
+import java.math.BigInteger;
 import java.security.KeyFactory;
 import java.security.KeyPair;
-import java.security.KeyPairGenerator;
+import java.security.PrivateKey;
+import java.security.interfaces.RSAPrivateCrtKey;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Objects;
+
+import static cn.hutool.crypto.asymmetric.AsymmetricAlgorithm.RSA;
+import static cn.hutool.crypto.asymmetric.AsymmetricAlgorithm.RSA_ECB_PKCS1;
 
 /**
  * RSA加解密工具<br>
@@ -23,7 +29,7 @@ import java.util.Objects;
  * @author 六如
  */
 public class RSATool {
-    private static final String RSA_ALGORITHM = "RSA";
+    private static final String RSA_ALGORITHM = RSA.getValue();
 
     private final KeyFormat keyFormat;
     private final KeyLength keyLength;
@@ -40,9 +46,7 @@ public class RSATool {
      * @throws Exception
      */
     public KeyStore createKeys() throws Exception {
-        KeyPairGenerator keyPairGeno = KeyPairGenerator.getInstance(RSA_ALGORITHM);
-        keyPairGeno.initialize(keyLength.getLength());
-        KeyPair keyPair = keyPairGeno.generateKeyPair();
+        KeyPair keyPair = SecureUtil.generateKeyPair(RSA_ALGORITHM, keyLength.getLength());
 
         RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
         RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
@@ -117,18 +121,8 @@ public class RSATool {
      * @throws Exception
      */
     public String encryptByPublicKey(String data, RSAPublicKey publicKey) throws Exception {
-        Cipher cipher = Cipher.getInstance(keyFormat.getCipherAlgorithm());
-        cipher.init(Cipher.ENCRYPT_MODE, publicKey);
-        // 模长
-        int keyLen = publicKey.getModulus().bitLength() / 8;
-        // 加密数据长度 <= 模长-11
-        String[] datas = splitString(data, keyLen - 11);
-        String mi = "";
-        // 如果明文长度大于模长-11则要分组加密
-        for (String s : datas) {
-            mi += bcd2Str(cipher.doFinal(s.getBytes()));
-        }
-        return mi;
+        AsymmetricCrypto crypto = createCrypto(null, publicKey);
+        return bcd2Str(crypto.encrypt(data.getBytes(), KeyType.PublicKey));
     }
 
     public String encryptByPrivateKey(String data, String privateKey) throws Exception {
@@ -144,18 +138,8 @@ public class RSATool {
      * @throws Exception
      */
     public String encryptByPrivateKey(String data, RSAPrivateKey privateKey) throws Exception {
-        Cipher cipher = Cipher.getInstance(keyFormat.getCipherAlgorithm());
-        cipher.init(Cipher.ENCRYPT_MODE, privateKey);
-        // 模长
-        int keyLen = privateKey.getModulus().bitLength() / 8;
-        // 加密数据长度 <= 模长-11
-        String[] datas = splitString(data, keyLen - 11);
-        String mi = "";
-        // 如果明文长度大于模长-11则要分组加密
-        for (String s : datas) {
-            mi += bcd2Str(cipher.doFinal(s.getBytes()));
-        }
-        return mi;
+        AsymmetricCrypto crypto = createCrypto(privateKey, null);
+        return bcd2Str(crypto.encrypt(data.getBytes(), KeyType.PrivateKey));
     }
 
     public String decryptByPrivateKey(String data, String privateKey) throws Exception {
@@ -171,19 +155,10 @@ public class RSATool {
      * @throws Exception
      */
     public String decryptByPrivateKey(String data, RSAPrivateKey privateKey) throws Exception {
-        Cipher cipher = Cipher.getInstance(keyFormat.getCipherAlgorithm());
-        cipher.init(Cipher.DECRYPT_MODE, privateKey);
-        // 模长
-        int keyLen = privateKey.getModulus().bitLength() / 8;
         byte[] bytes = data.getBytes();
         byte[] bcd = asciiToBcd(bytes, bytes.length);
-        // 如果密文长度大于模长则要分组解密
-        String ming = "";
-        byte[][] arrays = splitArray(bcd, keyLen);
-        for (byte[] arr : arrays) {
-            ming += new String(cipher.doFinal(arr));
-        }
-        return ming;
+        AsymmetricCrypto crypto = createCrypto(privateKey, null);
+        return new String(crypto.decrypt(bcd, KeyType.PrivateKey));
     }
 
     /**
@@ -195,27 +170,70 @@ public class RSATool {
      * @throws Exception
      */
     public String decryptByPublicKey(String data, RSAPublicKey rsaPublicKey) throws Exception {
-        Cipher cipher = Cipher.getInstance(keyFormat.getCipherAlgorithm());
-        cipher.init(Cipher.DECRYPT_MODE, rsaPublicKey);
-        // 模长
-        int keyLen = rsaPublicKey.getModulus().bitLength() / 8;
         byte[] bytes = data.getBytes();
         byte[] bcd = asciiToBcd(bytes, bytes.length);
-        // 如果密文长度大于模长则要分组解密
-        String ming = "";
-        byte[][] arrays = splitArray(bcd, keyLen);
-        for (byte[] arr : arrays) {
-            ming += new String(cipher.doFinal(arr));
-        }
-        return ming;
+        AsymmetricCrypto crypto = createCrypto(null, rsaPublicKey);
+        return new String(crypto.decrypt(bcd, KeyType.PublicKey));
+    }
+
+    private AsymmetricCrypto createCrypto(RSAPrivateKey privateKey, RSAPublicKey publicKey) {
+        AsymmetricCrypto crypto = new AsymmetricCrypto(keyFormat.getAlgorithm(), privateKey, publicKey);
+        int keyLen = (privateKey == null ? publicKey.getModulus() : privateKey.getModulus()).bitLength() / 8;
+        crypto.setEncryptBlockSize(keyLen - 11);
+        crypto.setDecryptBlockSize(keyLen);
+        return crypto;
     }
 
     public static String convertPkcs8ToPkcs1(byte[] privateKeyData) throws Exception {
-        PrivateKeyInfo pkInfo = PrivateKeyInfo.getInstance(privateKeyData);
-        ASN1Encodable encodable = pkInfo.parsePrivateKey();
-        ASN1Primitive primitive = encodable.toASN1Primitive();
-        byte[] privateKeyPKCS1 = primitive.getEncoded();
-        return Base64.encode(privateKeyPKCS1);
+        KeyFactory keyFactory = KeyFactory.getInstance(RSA_ALGORITHM);
+        PrivateKey privateKey = keyFactory.generatePrivate(new PKCS8EncodedKeySpec(privateKeyData));
+        if (!(privateKey instanceof RSAPrivateCrtKey)) {
+            throw new IllegalArgumentException("Private key is not an RSA CRT private key");
+        }
+        return Base64.encode(encodePkcs1PrivateKey((RSAPrivateCrtKey) privateKey));
+    }
+
+    private static byte[] encodePkcs1PrivateKey(RSAPrivateCrtKey privateKey) {
+        ByteArrayOutputStream body = new ByteArrayOutputStream();
+        writeDerInteger(body, BigInteger.ZERO);
+        writeDerInteger(body, privateKey.getModulus());
+        writeDerInteger(body, privateKey.getPublicExponent());
+        writeDerInteger(body, privateKey.getPrivateExponent());
+        writeDerInteger(body, privateKey.getPrimeP());
+        writeDerInteger(body, privateKey.getPrimeQ());
+        writeDerInteger(body, privateKey.getPrimeExponentP());
+        writeDerInteger(body, privateKey.getPrimeExponentQ());
+        writeDerInteger(body, privateKey.getCrtCoefficient());
+
+        ByteArrayOutputStream sequence = new ByteArrayOutputStream();
+        sequence.write(0x30);
+        writeDerLength(sequence, body.size());
+        sequence.writeBytes(body.toByteArray());
+        return sequence.toByteArray();
+    }
+
+    private static void writeDerInteger(ByteArrayOutputStream out, BigInteger value) {
+        byte[] bytes = value.toByteArray();
+        out.write(0x02);
+        writeDerLength(out, bytes.length);
+        out.writeBytes(bytes);
+    }
+
+    private static void writeDerLength(ByteArrayOutputStream out, int length) {
+        if (length < 128) {
+            out.write(length);
+            return;
+        }
+
+        int size = 1;
+        int value = length;
+        while ((value >>>= 8) != 0) {
+            size++;
+        }
+        out.write(0x80 | size);
+        for (int i = (size - 1) * 8; i >= 0; i -= 8) {
+            out.write(length >>> i);
+        }
     }
 
 
@@ -363,11 +381,11 @@ public class RSATool {
     @AllArgsConstructor
     @Getter
     public enum KeyFormat {
-        PKCS8(1, "RSA"),
-        PKCS1(2, "RSA/ECB/PKCS1Padding");
+        PKCS8(1, RSA),
+        PKCS1(2, RSA_ECB_PKCS1);
 
         private Integer value;
-        private String cipherAlgorithm;
+        private AsymmetricAlgorithm algorithm;
 
         public static KeyFormat of(Integer value) {
             for (KeyFormat keyFormat : KeyFormat.values()) {

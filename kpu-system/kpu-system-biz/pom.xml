@@ -20,6 +20,10 @@
             <version>${revision}</version>
         </dependency>
         <dependency>
+            <groupId>cn.lmx.basic</groupId>
+            <artifactId>kpu-log-starter</artifactId>
+        </dependency>
+        <dependency>
             <groupId>cn.lmx.kpu</groupId>
             <artifactId>kpu-file-sdk</artifactId>
             <version>${revision}</version>

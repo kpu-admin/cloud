@@ -6,7 +6,11 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 log.path_IS_UNDEFINED
 .DS_Store
+offline_user.md
 spy.log
+*-backup-*.chnr.json
+
+**/.flattened-pom.xml
 
 ### STS ###
 .apt_generated

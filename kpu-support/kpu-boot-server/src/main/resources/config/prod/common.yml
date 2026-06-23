@@ -7,6 +7,13 @@ kpu:
     author: lmx
     # 默认项目
     projectType: BOOT
+  log:
+    ipv4:
+      enabled: true
+      xdbPath: file:/data_prod/target/ip2region_v4.xdb
+    ipv6:
+      enabled: true
+      xdbPath: file:/data_prod/target/ip2region_v6.xdb
 
 server:
   port: 18761

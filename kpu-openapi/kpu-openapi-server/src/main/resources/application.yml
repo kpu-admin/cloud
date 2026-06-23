@@ -21,7 +21,7 @@ spring:
   application:
     name: '@project.artifactId@'
     # kpu自定义配置，用于kpu-scan-starter扫描接口时，拼接uri前缀。 需要和网关配置的前缀一致
-    path: /system
+    path: /openapi
   profiles:
     active: '@profile.active@'
   config:

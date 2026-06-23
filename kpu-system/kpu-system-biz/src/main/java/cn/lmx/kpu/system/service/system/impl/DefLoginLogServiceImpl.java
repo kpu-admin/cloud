@@ -8,15 +8,19 @@ import cn.hutool.http.useragent.UserAgentUtil;
 import cn.lmx.basic.base.service.impl.SuperServiceImpl;
 import cn.lmx.basic.utils.DateUtils;
 import cn.lmx.kpu.system.entity.system.DefLoginLog;
+import cn.lmx.kpu.system.entity.tenant.DefUser;
 import cn.lmx.kpu.system.manager.system.DefLoginLogManager;
 import cn.lmx.kpu.system.manager.tenant.DefUserManager;
 import cn.lmx.kpu.system.service.system.DefLoginLogService;
 import cn.lmx.kpu.system.vo.save.system.DefLoginLogSaveVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.lionsoul.ip2region.service.Ip2Region;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.time.LocalDateTime;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
@@ -36,6 +40,7 @@ import java.util.stream.Stream;
 @Transactional(readOnly = true)
 
 public class DefLoginLogServiceImpl extends SuperServiceImpl<DefLoginLogManager, Long, DefLoginLog> implements DefLoginLogService {
+    private final Ip2Region ip2Region;
     private static final Supplier<Stream<String>> BROWSER = () -> Stream.of(
             "Chrome", "Firefox", "Microsoft Edge", "Safari", "Opera"
     );
@@ -56,6 +61,14 @@ public class DefLoginLogServiceImpl extends SuperServiceImpl<DefLoginLogManager,
     protected <SaveVO> DefLoginLog saveBefore(SaveVO saveVO) {
         DefLoginLogSaveVO defLoginLogSaveVO = (DefLoginLogSaveVO) saveVO;
         DefLoginLog defLoginLog = super.saveBefore(defLoginLogSaveVO);
+        DefUser user;
+        if (defLoginLog.getUserId() != null) {
+            user = this.defUserManager.getByIdCache(defLoginLog.getUserId());
+        } else if (StrUtil.isNotEmpty(defLoginLogSaveVO.getMobile())) {
+            user = this.defUserManager.getUserByMobile(defLoginLogSaveVO.getMobile());
+        } else {
+            user = this.defUserManager.getUserByUsername(defLoginLog.getUsername());
+        }
 
         defLoginLog.setLoginDate(DateUtils.formatAsDate(LocalDateTime.now()));
 
@@ -72,8 +85,31 @@ public class DefLoginLogServiceImpl extends SuperServiceImpl<DefLoginLogManager,
         if (os != null) {
             defLoginLog.setOperatingSystem(simplifyOperatingSystem(os.getName()));
         }
-
+        if (user != null) {
+            defLoginLog.setUsername(user.getUsername()).setUserId(user.getId()).setNickName(user.getNickName())
+                    .setCreatedBy(user.getId());
+        }
+        String ipLocation = null;
+        try {
+            ipLocation = isLocalHostIp(defLoginLogSaveVO.getRequestIp()) ? "" : ip2Region.search(defLoginLogSaveVO.getRequestIp());
+        } catch (Exception e) {
+            log.warn("解析ip失败", e);
+        }
+        defLoginLog.setLocation(ipLocation);
         return defLoginLog;
+    }
+
+    /**
+     * 判断是否为本地IP地址的方法
+     */
+    private boolean isLocalHostIp(String ipAddress) {
+        try {
+            InetAddress inetAddress = InetAddress.getByName(ipAddress);
+            return inetAddress.isLoopbackAddress();
+        } catch (UnknownHostException e) {
+            // 处理异常情况，如果无法解析IP地址，则不视为本地地址
+            return false;
+        }
     }
 
     @Override
