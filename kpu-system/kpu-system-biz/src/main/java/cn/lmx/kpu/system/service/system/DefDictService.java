@@ -41,7 +41,7 @@ public interface DefDictService extends SuperService<Long, DefDict> {
      * @return system.entity.system.cn.lmx.kpu.DefDict
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @Override
     DefDict copy(Long id);
@@ -53,7 +53,7 @@ public interface DefDictService extends SuperService<Long, DefDict> {
      * @return java.util.List<cn.lmx.kpu.tenant.entity.base.DefDict>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<DefDict> findItemByDictId(Long id);
 

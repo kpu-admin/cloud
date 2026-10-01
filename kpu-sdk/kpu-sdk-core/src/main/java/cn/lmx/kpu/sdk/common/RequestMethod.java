@@ -2,7 +2,7 @@ package cn.lmx.kpu.sdk.common;
 
 /**
  * 请求方法枚举
- * @author 六如
+ * @author lmx
  */
 public enum RequestMethod {
 

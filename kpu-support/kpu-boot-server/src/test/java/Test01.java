@@ -63,7 +63,7 @@ public class Test01 {
          * CPU信息类
          *
          * @author xuyuxiang
-         * @date 2022/7/31 16:42
+         * @date 2025-01-01 00:00
          */
         @Getter
         @Setter
@@ -110,7 +110,7 @@ public class Test01 {
          * 内存信息类
          *
          * @author xuyuxiang
-         * @date 2022/7/31 16:42
+         * @date 2025-01-01 00:00
          */
         @Getter
         @Setter
@@ -137,7 +137,7 @@ public class Test01 {
          * 存储信息
          *
          * @author xuyuxiang
-         * @date 2022/7/31 16:42
+         * @date 2025-01-01 00:00
          */
         @Getter
         @Setter
@@ -164,7 +164,7 @@ public class Test01 {
          * 网络信息类
          *
          * @author xuyuxiang
-         * @date 2022/7/31 16:42
+         * @date 2025-01-01 00:00
          */
         @Getter
         @Setter
@@ -184,7 +184,7 @@ public class Test01 {
          * 服务器信息类
          *
          * @author xuyuxiang
-         * @date 2022/7/31 16:42
+         * @date 2025-01-01 00:00
          */
         @Getter
         @Setter
@@ -211,7 +211,7 @@ public class Test01 {
          * JVM信息类
          *
          * @author xuyuxiang
-         * @date 2022/7/31 16:42
+         * @date 2025-01-01 00:00
          */
         @Getter
         @Setter
@@ -371,7 +371,7 @@ public class Test01 {
      * 获取服务器网络情况
      *
      * @author diantu
-     * @date 2023/7/27
+     * @date 2025-01-01 00:00
      */
     public DevMonitorServerResult networkInfo(){
         DevMonitorServerResult devMonitorServerResult = new DevMonitorServerResult();

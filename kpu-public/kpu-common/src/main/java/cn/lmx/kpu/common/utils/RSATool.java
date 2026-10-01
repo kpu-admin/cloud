@@ -26,7 +26,7 @@ import static cn.hutool.crypto.asymmetric.AsymmetricAlgorithm.RSA_ECB_PKCS1;
 /**
  * RSA加解密工具<br>
  *
- * @author 六如
+ * @author lmx
  */
 public class RSATool {
     private static final String RSA_ALGORITHM = RSA.getValue();

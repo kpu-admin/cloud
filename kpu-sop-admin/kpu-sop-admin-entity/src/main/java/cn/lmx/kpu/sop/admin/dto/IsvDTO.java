@@ -3,7 +3,7 @@ package cn.lmx.kpu.sop.admin.dto;
 import lombok.Data;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Data
 public class IsvDTO {

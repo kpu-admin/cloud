@@ -4,7 +4,7 @@ import com.alibaba.fastjson2.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public interface Response {
 

@@ -88,7 +88,7 @@ public interface DefGenTableService extends SuperService<Long, DefGenTable> {
      * @return cn.lmx.basic.base.request.base.DownloadVO
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     DownloadVO downloadZip(List<Long> ids, TemplateEnum template);
 
@@ -106,7 +106,7 @@ public interface DefGenTableService extends SuperService<Long, DefGenTable> {
      * @return save.vo.generator.cn.lmx.kpu.ProjectGeneratorVO
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     ProjectGeneratorVO getDef();
 
@@ -117,7 +117,7 @@ public interface DefGenTableService extends SuperService<Long, DefGenTable> {
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Boolean generator(ProjectGeneratorVO projectGenerator);
 
@@ -126,7 +126,7 @@ public interface DefGenTableService extends SuperService<Long, DefGenTable> {
      * @author lmx
      * @date 2025-01-01 00:00
      * @return java.util.Map<java.lang.String, java.lang.String>
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Map<String, String> getFieldTemplate();
 
@@ -136,7 +136,7 @@ public interface DefGenTableService extends SuperService<Long, DefGenTable> {
      * @return java.util.Map<java.lang.String, enumeration.generator.cn.lmx.kpu.FileOverrideStrategyEnum>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      * @update [2025-01-01 00:00 ] [lmx] [变更描述]
      */
     Map<String, FileOverrideStrategyEnum> getDefFileOverrideStrategy();
@@ -148,7 +148,7 @@ public interface DefGenTableService extends SuperService<Long, DefGenTable> {
      * @return java.util.List<result.vo.generator.cn.lmx.kpu.DefGenTableResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      * @update [2025-01-01 00:00 ] [lmx] [变更描述]
      */
     List<DefGenTableResultVO> findTableList(List<Long> idList);
@@ -160,7 +160,7 @@ public interface DefGenTableService extends SuperService<Long, DefGenTable> {
      * @return cn.lmx.basic.base.request.base.DownloadVO
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      * @update [2025-01-01 00:00 ] [lmx] [变更描述]
      */
     DownloadVO download(ProjectGeneratorVO projectGenerator);

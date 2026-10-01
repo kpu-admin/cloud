@@ -7,7 +7,7 @@ import cn.lmx.kpu.gateway.message.IError;
 import java.util.Locale;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class ApiException extends RuntimeException {
     private static final long serialVersionUID = 8278005515613227643L;

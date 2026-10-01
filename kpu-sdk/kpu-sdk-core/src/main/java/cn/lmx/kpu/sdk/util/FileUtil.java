@@ -8,7 +8,7 @@ import java.nio.charset.Charset;
 /**
  * 文件工具类
  *
- * @author 六如
+ * @author lmx
  */
 public class FileUtil {
 

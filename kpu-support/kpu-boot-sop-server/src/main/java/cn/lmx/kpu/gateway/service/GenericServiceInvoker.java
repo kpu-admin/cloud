@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 /**
  * dubbo泛化调用
  *
- * @author 六如
+ * @author lmx
  */
 @Service
 public class GenericServiceInvoker implements InitializingBean {

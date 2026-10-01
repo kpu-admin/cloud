@@ -7,7 +7,7 @@ import cn.lmx.kpu.sdk.common.UploadFile;
 import java.util.List;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public abstract class DownloadParam extends BaseParam<List<UploadFile>, FileResult> implements DownloadAware {
 

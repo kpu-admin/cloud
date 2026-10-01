@@ -26,7 +26,7 @@ public interface DefResourceManager extends SuperCacheManager<DefResource> {
      * @return java.util.List<application.entity.system.cn.lmx.kpu.DefResource>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<DefResource> findResourceListByApplicationId(List<Long> applicationIdList, Collection<String> resourceTypes);
 
@@ -38,7 +38,7 @@ public interface DefResourceManager extends SuperCacheManager<DefResource> {
      * @return java.util.List<cn.lmx.kpu.system.entity.model.SysResource>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<DefResource> findByIdsAndType(Collection<? extends Serializable> idList, Collection<String> types);
 
@@ -67,7 +67,7 @@ public interface DefResourceManager extends SuperCacheManager<DefResource> {
      * @return int
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     int deleteRoleResourceRelByResourceId(List<Long> resourceIds);
 
@@ -78,7 +78,7 @@ public interface DefResourceManager extends SuperCacheManager<DefResource> {
      * @return java.util.List<cn.lmx.kpu.tenant.entity.tenant.DefResource>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<DefResource> findByApplicationId(List<Long> applicationIds);
 
@@ -88,8 +88,8 @@ public interface DefResourceManager extends SuperCacheManager<DefResource> {
      * @param parentId 资源父ID
      * @return java.lang.Integer
      * @author lmx
-     * @date 2025-02-17 01:12
-     * @create [2025-02-17 01:12 ] [lmx ] [初始创建]
+     * @date 2025-01-01 00:00
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     Integer maxSortValueByParentIdAndApplicationId(Long parentId, Long applicationId);
 
@@ -101,8 +101,8 @@ public interface DefResourceManager extends SuperCacheManager<DefResource> {
      * @param applicationId 应用ID
      * @return java.lang.Integer
      * @author lmx
-     * @date 2025-03-01 08:30
-     * @create [2025-03-01 08:30 ] [lmx ] [初始创建]
+     * @date 2025-01-01 00:00
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     Integer maxSortValueByTypeAndParentIdAndApplicationId(List<String> types, Long parentId, Long applicationId);
 }

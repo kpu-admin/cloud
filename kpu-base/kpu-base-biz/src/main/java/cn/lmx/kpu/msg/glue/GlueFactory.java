@@ -144,7 +144,7 @@ public class GlueFactory {
      * @param params params
      * @return java.lang.Object
      * @author henhen
-     * @date 2022/7/25 9:35 PM
+     * @date 2025-01-01 00:00
      */
     public Object exeGroovyScript(String script, Map<String, Object> params) {
         if (script != null && !script.trim().isEmpty()) {

@@ -22,7 +22,7 @@ public interface UserInfoService {
      * @return java.util.List<cn.lmx.kpu.base.entity.model.SysOrg>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<BaseOrg> findDeptByCompany(Long companyId, Long employeeId);
 
@@ -32,7 +32,7 @@ public interface UserInfoService {
      * @return result.vo.oauth.cn.lmx.kpu.OrgResultVO
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     OrgResultVO findCompanyAndDept();
 

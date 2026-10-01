@@ -55,7 +55,7 @@ public class MsgBiz {
      * @return boolean 是否成功
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     public boolean execSend(Long id) {
         ExtendMsg extendMsg = extendMsgService.getById(id);
@@ -122,7 +122,7 @@ public class MsgBiz {
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     public Boolean publish(ExtendMsgPublishVO data, SysUser sysUser) {
         //1，验证必要参数

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * pay.trade.wap.pay(手机网站支付接口)
  *
- * @author 六如
+ * @author lmx
  * https://opendocs.alipay.com/open/29ae8cb6_alipay.trade.wap.pay?pathHash=1ef587fd&ref=api&scene=21
  */
 @Data

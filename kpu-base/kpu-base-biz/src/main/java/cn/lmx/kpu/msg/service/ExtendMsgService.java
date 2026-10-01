@@ -30,7 +30,7 @@ public interface ExtendMsgService extends SuperService<Long, ExtendMsg> {
      * @return 是否执行
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
 
     Boolean send(ExtendMsgSendVO data, DefMsgTemplate msgTemplate, SysUser sysUser);
@@ -50,7 +50,7 @@ public interface ExtendMsgService extends SuperService<Long, ExtendMsg> {
      * @return
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Boolean publish(ExtendMsgPublishVO data, SysUser sysUser);
 

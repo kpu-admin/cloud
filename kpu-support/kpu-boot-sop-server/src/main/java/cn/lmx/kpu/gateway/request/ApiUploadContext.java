@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * 存放上传文件
  *
- * @author 六如
+ * @author lmx
  */
 public class ApiUploadContext implements UploadContext {
 

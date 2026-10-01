@@ -126,7 +126,7 @@ public class ProjectUtils {
      * @param databaseProperties databaseProperties
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      * @update [2025-01-01 00:00 ] [lmx] [变更描述]
      */
     public static void generator(ProjectGeneratorVO vo, DatabaseProperties databaseProperties) {

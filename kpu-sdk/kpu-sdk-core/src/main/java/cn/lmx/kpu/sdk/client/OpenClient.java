@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * 请求客户端，申明一个即可
  *
- * @author 六如
+ * @author lmx
  */
 public class OpenClient {
     private static final Log log = LogFactory.getLog(OpenClient.class);

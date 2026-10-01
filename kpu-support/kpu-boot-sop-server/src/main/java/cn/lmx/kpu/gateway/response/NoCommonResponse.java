@@ -3,7 +3,7 @@ package cn.lmx.kpu.gateway.response;
 /**
  * 没有公共返回结果
  *
- * @author 六如
+ * @author lmx
  */
 public class NoCommonResponse extends ApiResponse {
 

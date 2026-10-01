@@ -24,7 +24,7 @@ public interface OauthApi {
      * @return cn.lmx.basic.base.R<java.util.List < java.lang.String>>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @GetMapping("/anyone/findVisibleResource")
     R<List<String>> findVisibleResource(@RequestParam(value = "employeeId") Long employeeId,

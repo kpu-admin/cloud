@@ -36,7 +36,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return java.util.List<application.entity.system.cn.lmx.kpu.DefResource>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<DefResource> findResourceListByApplicationId(List<Long> applicationIdList, Collection<String> resourceTypes);
 
@@ -48,7 +48,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return java.util.List<cn.lmx.kpu.system.entity.model.SysResource>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<DefResource> findByIdsAndType(Collection<? extends Serializable> idList, Collection<String> types);
 
@@ -60,7 +60,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Boolean check(Long id, String code);
 
@@ -78,7 +78,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @param resourceIds resourceIds
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     void deleteRoleResourceRelByResourceId(List<Long> resourceIds);
 
@@ -98,7 +98,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     DefResource updateWithCacheById(DefResourceUpdateVO data);
 
@@ -109,7 +109,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @param parentId 待移动的节点ID 为空时，表示移动到根节点
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     void moveResource(Long id, Long parentId);
 
@@ -122,7 +122,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Boolean checkPath(Long id, Long applicationId, String path);
 
@@ -135,7 +135,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Boolean checkName(Long id, Long applicationId, String name);
 
@@ -146,7 +146,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return cn.lmx.kpu.tenant.vo.result.tenant.DefResourceResultVO
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     DefResourceResultVO getResourceById(Long id);
 
@@ -157,7 +157,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return java.util.Map<java.lang.Long, java.util.Collection < java.lang.Long>>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Map<Long, Collection<Long>> findResource();
     /**
@@ -166,7 +166,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     Boolean moveUp(Long id);
     /**
@@ -175,7 +175,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     Boolean moveDown(Long id);
 
@@ -186,7 +186,7 @@ public interface DefResourceService extends SuperCacheService<Long, DefResource>
      * @param parentId 待移动的节点ID 为空时，表示移动到根节点
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Boolean move(Long id, Long parentId);
 

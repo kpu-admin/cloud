@@ -22,7 +22,7 @@ public interface DefGenTableColumnManager extends SuperManager<DefGenTableColumn
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean removeByTableIds(Collection<Long> idList);
 }

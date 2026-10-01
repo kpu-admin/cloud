@@ -51,7 +51,7 @@ public interface TokenGranter {
      * @return result.vo.oauth.cn.lmx.kpu.LoginResultVO
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     LoginResultVO switchOrg(Long orgId);
 

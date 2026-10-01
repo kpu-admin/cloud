@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Data
 public class TornaDocDTO {

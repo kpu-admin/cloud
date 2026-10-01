@@ -121,7 +121,7 @@ public class GenUtils {
      * @param prefix   前缀
      * @param suffix   后缀
      * @return java.lang.String
-     * @date 2023/4/16 10:45 PM
+     * @date 2025-01-01 00:00
      */
     private static String processName(String name, NamingStrategy strategy, List<String> prefix, List<String> suffix) {
         String propertyName = name;

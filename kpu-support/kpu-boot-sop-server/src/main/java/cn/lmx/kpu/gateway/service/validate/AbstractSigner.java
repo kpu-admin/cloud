@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.common.utils.StringUtils;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Slf4j
 public abstract class AbstractSigner implements Signer {

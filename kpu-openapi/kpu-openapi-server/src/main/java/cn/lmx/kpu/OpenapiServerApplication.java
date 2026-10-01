@@ -17,7 +17,7 @@ import java.net.UnknownHostException;
  * 开放平台对外接口服务启动类
  *
  * @author lmx
- * @date 2025-07-07 09:43:01
+ * @date 2025-01-01 00:00
  */
 @SpringBootApplication
 @EnableDiscoveryClient

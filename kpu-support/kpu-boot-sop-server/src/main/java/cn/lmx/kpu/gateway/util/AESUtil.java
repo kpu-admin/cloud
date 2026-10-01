@@ -18,7 +18,7 @@ import javax.crypto.spec.SecretKeySpec;
  * 加密结果编码方式:Base64
  * </pre>
  *
- * @author 六如
+ * @author lmx
  */
 public class AESUtil {
     private static final String UTF8 = "UTF-8";

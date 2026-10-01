@@ -10,7 +10,7 @@ import java.util.Locale;
 /**
  * 网关错误定义
  *
- * @author 六如
+ * @author lmx
  */
 @Getter
 public enum ErrorEnum implements I18nMessage {

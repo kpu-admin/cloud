@@ -6,7 +6,7 @@ import cn.lmx.kpu.gateway.response.Response;
 /**
  * 接口路由
  *
- * @author 六如
+ * @author lmx
  */
 public interface RouteService {
 

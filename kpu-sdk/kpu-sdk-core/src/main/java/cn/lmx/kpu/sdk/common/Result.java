@@ -6,7 +6,7 @@ import lombok.Data;
 
 /**
  * @param <T> 数据
- * @author 六如
+ * @author lmx
  */
 @Data
 public class Result<T> {

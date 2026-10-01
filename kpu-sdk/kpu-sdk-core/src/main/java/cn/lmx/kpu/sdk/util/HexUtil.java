@@ -2,7 +2,7 @@ package cn.lmx.kpu.sdk.util;
 
 /**
  * hex工具类
- * @author 六如
+ * @author lmx
  */
 public class HexUtil {
     private static final String ZERO = "0";

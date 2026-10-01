@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 /**
  * 校验token
  *
- * @author 六如
+ * @author lmx
  */
 @Component
 @Slf4j

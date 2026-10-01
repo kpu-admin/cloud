@@ -71,7 +71,7 @@ public interface BaseRoleService extends SuperCacheService<Long, BaseRole> {
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<Long> findResourceIdByEmployeeId(Long applicationId, Long employeeId);
 
@@ -83,7 +83,7 @@ public interface BaseRoleService extends SuperCacheService<Long, BaseRole> {
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean checkRole(Long employeeId, String... codes);
 
@@ -94,7 +94,7 @@ public interface BaseRoleService extends SuperCacheService<Long, BaseRole> {
      * @return java.util.List<java.lang.String>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<String> findRoleCodeByEmployeeId(Long employeeId);
 }

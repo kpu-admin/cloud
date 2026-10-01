@@ -26,7 +26,7 @@ public interface BaseRoleMapper extends SuperMapper<BaseRole> {
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<Long> listEmployeeIdByRoleId(@Param("roleIds") List<Long> roleIds);
 
@@ -37,7 +37,7 @@ public interface BaseRoleMapper extends SuperMapper<BaseRole> {
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<Long> selectRoleIdByOrgId(@Param("orgId") Long orgId);
 
@@ -48,7 +48,7 @@ public interface BaseRoleMapper extends SuperMapper<BaseRole> {
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<Long> selectRoleByEmployeeId(@Param("employeeId") Long employeeId);
 
@@ -60,7 +60,7 @@ public interface BaseRoleMapper extends SuperMapper<BaseRole> {
      * @return java.util.List<BaseRole> 角色
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<BaseRole> selectRoleByEmployee(@Param("employeeId") Long employeeId, @Param("codes") String... codes);
 

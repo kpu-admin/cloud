@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 /**
  * 来源类型,1-torna,2-自建
  *
- * @author 六如
+ * @author lmx
  */
 @Getter
 @AllArgsConstructor

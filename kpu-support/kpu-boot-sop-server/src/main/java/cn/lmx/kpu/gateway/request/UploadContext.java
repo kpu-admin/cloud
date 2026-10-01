@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 获取上传文件
  *
- * @author 六如
+ * @author lmx
  */
 public interface UploadContext {
     /**

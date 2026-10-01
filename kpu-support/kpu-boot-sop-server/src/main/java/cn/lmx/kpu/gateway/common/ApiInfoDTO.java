@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Data
 public class ApiInfoDTO implements Serializable {

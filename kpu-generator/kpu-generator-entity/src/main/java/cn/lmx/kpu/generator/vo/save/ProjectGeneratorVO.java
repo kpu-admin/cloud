@@ -89,7 +89,7 @@ public class ProjectGeneratorVO implements Serializable {
      *
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      * @update [2025-01-01 00:00 ] [lmx] [变更描述]
      */
     @NotEmpty(message = "请填写服务中文名")

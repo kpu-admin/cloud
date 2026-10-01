@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import java.util.Map;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class SerdeImpl implements Serde {
 

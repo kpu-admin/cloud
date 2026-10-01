@@ -1,7 +1,7 @@
 package cn.lmx.kpu.sdk.param;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public interface DownloadAware {
 }

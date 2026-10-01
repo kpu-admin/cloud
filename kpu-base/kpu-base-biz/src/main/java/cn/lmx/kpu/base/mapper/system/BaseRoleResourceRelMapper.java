@@ -37,7 +37,7 @@ public interface BaseRoleResourceRelMapper extends SuperMapper<BaseRoleResourceR
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<Long> selectResourceIdByRoleId(@Param("applicationId") Long applicationId, @Param("roleId") Long roleId);
 
@@ -49,7 +49,7 @@ public interface BaseRoleResourceRelMapper extends SuperMapper<BaseRoleResourceR
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<Long> selectResourceIdByEmployeeId(@Param("applicationId") Long applicationId, @Param("employeeId") Long employeeId);
 }

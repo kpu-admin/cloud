@@ -13,7 +13,7 @@ import java.security.spec.X509EncodedKeySpec;
 
 /**
  * RSA加解密工具<br>
- * @author 六如
+ * @author lmx
  */
 public class RSAUtil {
     private static final String RSA_ALGORITHM = "RSA";

@@ -6,7 +6,7 @@ import cn.lmx.kpu.gateway.request.ApiRequestContext;
 /**
  * 负责签名校验
  *
- * @author 六如
+ * @author lmx
  */
 public interface Signer {
 

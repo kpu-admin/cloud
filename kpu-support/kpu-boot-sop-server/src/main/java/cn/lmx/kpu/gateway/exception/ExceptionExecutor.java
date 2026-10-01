@@ -5,7 +5,7 @@ import cn.lmx.kpu.gateway.request.ApiRequestContext;
 import cn.lmx.kpu.gateway.response.ApiResponse;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public interface ExceptionExecutor {
 

@@ -1,7 +1,7 @@
 package cn.lmx.kpu.gateway.interceptor;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class RouteInterceptorOrders {
 

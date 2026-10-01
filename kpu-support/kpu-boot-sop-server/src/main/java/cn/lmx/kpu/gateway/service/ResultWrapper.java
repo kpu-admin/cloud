@@ -8,7 +8,7 @@ import java.util.Optional;
 /**
  * 结果包裹
  *
- * @author 六如
+ * @author lmx
  */
 public interface ResultWrapper {
 

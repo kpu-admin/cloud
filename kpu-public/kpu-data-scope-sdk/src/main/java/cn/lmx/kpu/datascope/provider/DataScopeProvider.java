@@ -16,7 +16,7 @@ public interface DataScopeProvider {
      * @return java.util.List<cn.lmx.kpu.datascope.model.DataFieldProperty>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<DataFieldProperty> findDataFieldProperty(List<DataFieldProperty> fsp);
 }

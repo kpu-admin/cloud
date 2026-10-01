@@ -14,7 +14,7 @@ package cn.lmx.kpu.sdk.common;
  *     "sign": "ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE"
  * }
  * </pre>
- * @author 六如
+ * @author lmx
  */
 public class DefaultDataNameBuilder implements DataNameBuilder {
     private static final char DOT = '.';

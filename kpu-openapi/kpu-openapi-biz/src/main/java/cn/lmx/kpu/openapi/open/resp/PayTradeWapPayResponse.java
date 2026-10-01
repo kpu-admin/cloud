@@ -4,7 +4,7 @@ import lombok.Data;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Data
 public class PayTradeWapPayResponse {

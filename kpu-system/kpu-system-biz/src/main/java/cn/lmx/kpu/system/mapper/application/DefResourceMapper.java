@@ -27,7 +27,7 @@ public interface DefResourceMapper extends SuperMapper<DefResource> {
      * @return int
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     int deleteRoleResourceRelByResourceId(@Param("resourceIds") List<Long> resourceIds);
 
@@ -37,8 +37,8 @@ public interface DefResourceMapper extends SuperMapper<DefResource> {
      * @param parentId 资源父ID
      * @return java.lang.Integer
      * @author lmx
-     * @date 2025-02-17 01:13
-     * @create [2025-02-17 01:13 ] [lmx ] [初始创建]
+     * @date 2025-01-01 00:00
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     Integer maxSortValueByParentIdAndApplicationId(@Param("parentId") Long parentId, @Param("applicationId") Long applicationId);
     /**
@@ -48,8 +48,8 @@ public interface DefResourceMapper extends SuperMapper<DefResource> {
      * @param applicationId 应用ID
      * @return java.lang.Integer
      * @author lmx
-     * @date 2025-03-01 08:30
-     * @create [2025-03-01 08:30 ] [lmx ] [初始创建]
+     * @date 2025-01-01 00:00
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     Integer maxSortValueByTypeAndParentIdAndApplicationId(@Param("types")List<String> types, @Param("parentId")Long parentId, @Param("applicationId")Long applicationId);
 }

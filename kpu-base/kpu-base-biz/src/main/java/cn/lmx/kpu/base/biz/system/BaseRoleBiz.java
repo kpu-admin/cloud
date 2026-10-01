@@ -32,7 +32,7 @@ public class BaseRoleBiz {
      * @return java.util.Map<java.lang.Long, java.util.Collection < java.lang.Long>>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     public Map<Long, Collection<Long>> findResourceIdByRoleId(Long roleId) {
         BaseRole baseRole = baseRoleService.getById(roleId);

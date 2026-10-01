@@ -23,7 +23,7 @@ import java.io.IOException;
 /**
  * 开放平台入口
  *
- * @author 六如
+ * @author lmx
  */
 @Controller
 public class IndexController {

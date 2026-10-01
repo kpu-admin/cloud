@@ -41,7 +41,7 @@ public interface DefUserMapper extends SuperMapper<DefUser> {
      * @return 被修改了几行数据
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     int incrPasswordErrorNumById(@Param("id") Long id, @Param("now") LocalDateTime now);
 

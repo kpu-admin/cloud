@@ -33,8 +33,8 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author lmx
- * @date 2025-07-06 19:04:42
- * @create [2025-07-06 19:04:42] [lmx] [代码生成器生成]
+ * @date 2025-01-01 00:00
+ * @create [2025-01-01 00:00] [lmx] [代码生成器生成]
  */
 @Slf4j
 @RequiredArgsConstructor

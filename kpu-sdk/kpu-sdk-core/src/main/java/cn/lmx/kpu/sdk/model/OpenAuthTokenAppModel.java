@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * Oauth2认证参数
- * @author 六如
+ * @author lmx
  */
 @Data
 public class OpenAuthTokenAppModel {

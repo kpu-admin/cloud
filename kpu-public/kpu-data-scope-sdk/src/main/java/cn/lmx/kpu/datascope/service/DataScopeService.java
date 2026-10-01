@@ -34,7 +34,7 @@ public class DataScopeService {
      * @return cn.lmx.kpu.entity.datascope.DefResourceDataScope
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     
     @Transactional(propagation = Propagation.REQUIRES_NEW, readOnly = true)
@@ -59,7 +59,7 @@ public class DataScopeService {
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     
     @Transactional(propagation = Propagation.REQUIRES_NEW, readOnly = true)

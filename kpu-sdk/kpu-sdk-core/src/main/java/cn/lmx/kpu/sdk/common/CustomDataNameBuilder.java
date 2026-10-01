@@ -11,7 +11,7 @@ package cn.lmx.kpu.sdk.common;
  *     },
  *     "sign": "ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE"
  * }
- * @author 六如
+ * @author lmx
  */
 public class CustomDataNameBuilder implements DataNameBuilder {
     private String dataName = "data";

@@ -1,7 +1,7 @@
 package cn.lmx.kpu.sdk.common;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class SopSdkConstants {
     public  static final String DATA_SUFFIX = "_response";

@@ -22,7 +22,7 @@ public interface BaseRoleManager extends SuperCacheManager<BaseRole> {
      * @return java.util.List<cn.lmx.kpu.system.entity.base.kpu.BaseRole>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<Long> findRoleIdByEmployeeId(Long employeeId);
 
@@ -33,7 +33,7 @@ public interface BaseRoleManager extends SuperCacheManager<BaseRole> {
      * @return java.util.List<cn.lmx.kpu.system.entity.base.kpu.BaseRole>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<BaseRole> findRoleByEmployeeId(Long employeeId);
 
@@ -53,7 +53,7 @@ public interface BaseRoleManager extends SuperCacheManager<BaseRole> {
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<Long> listEmployeeIdByRoleId(List<Long> roleIds);
 
@@ -65,7 +65,7 @@ public interface BaseRoleManager extends SuperCacheManager<BaseRole> {
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<Long> findResourceIdByEmployeeId(Long applicationId, Long employeeId);
 
@@ -77,7 +77,7 @@ public interface BaseRoleManager extends SuperCacheManager<BaseRole> {
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean checkRole(Long employeeId, String... codes);
 

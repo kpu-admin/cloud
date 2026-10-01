@@ -8,7 +8,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class SignConfig {
     private static volatile Wrapper wrapper = new Wrapper() {

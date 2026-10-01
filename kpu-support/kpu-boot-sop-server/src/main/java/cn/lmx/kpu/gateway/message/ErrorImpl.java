@@ -3,7 +3,7 @@ package cn.lmx.kpu.gateway.message;
 import lombok.Data;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Data
 public class ErrorImpl implements IError {

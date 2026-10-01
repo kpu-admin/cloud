@@ -38,7 +38,7 @@ public interface AppendixService extends SuperManager<Appendix> {
      * @param bizTypes 业务类型
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     <T extends SuperEntity<Long> & EchoVO> void echoAppendix(IPage<T> page, String... bizTypes);
 
@@ -49,7 +49,7 @@ public interface AppendixService extends SuperManager<Appendix> {
      * @param bizTypes 业务类型
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     <T extends SuperEntity<Long> & EchoVO> void echoAppendix(List<T> list, String... bizTypes);
 

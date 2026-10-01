@@ -5,7 +5,7 @@ import cn.lmx.kpu.sdk.request.GetProductRequest;
 import cn.lmx.kpu.sdk.response.GetProductResponse;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class DemoFileUploadRequest extends BaseParam<GetProductRequest, GetProductResponse> {
     @Override

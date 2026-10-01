@@ -51,7 +51,7 @@ public class SourceCodeUtils {
      * @return java.util.Map<java.lang.String, java.lang.Object>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     public static Map<String, Object> getObjectMap(GeneratorConfig generatorConfig, DatabaseProperties databaseProperties, UidGenerator uidGenerator,
                                                    Map<String, Object> subObjectMap, DefGenTable genTable, List<DefGenTableColumn> allFieldList,
@@ -122,7 +122,7 @@ public class SourceCodeUtils {
      * @return cn.lmx.kpu.generator.rules.echo.EchoDict
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     private static EchoDict initEchoDictSql(DefGenTableColumn field) {
         String echoStr = StrUtil.isNotEmpty(field.getEchoStr()) ? field.getEchoStr() : field.getComment();

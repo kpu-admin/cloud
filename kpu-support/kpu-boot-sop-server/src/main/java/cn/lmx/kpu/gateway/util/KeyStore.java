@@ -1,7 +1,7 @@
 package cn.lmx.kpu.gateway.util;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class KeyStore {
     private String publicKey;

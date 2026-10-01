@@ -1,7 +1,7 @@
 package cn.lmx.kpu.gateway.common;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class CacheKey {
     public static final String KEY_API = "sop:api";

@@ -50,7 +50,7 @@ import java.util.Locale;
  * sub_code:业务异常码 <br>
  * sub_msg:业务异常信息 <br>
  *
- * @author 六如
+ * @author lmx
  */
 @Data
 public class ApiResponse implements Response {

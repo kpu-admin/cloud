@@ -26,7 +26,7 @@ public interface MsgStrategy {
      * @return java.util.Map<java.lang.String, java.lang.String>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     default Map<String, String> parseParam(String param) {
         Map<String, String> map = new LinkedHashMap<>();
@@ -47,7 +47,7 @@ public interface MsgStrategy {
      * @return cn.lmx.kpu.domain.strategy.msg.MsgResult
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     default MsgResult replaceVariable(ExtendMsg extendMsg, DefMsgTemplate extendMsgTemplate) {
         String script = extendMsgTemplate.getScript();
@@ -84,7 +84,7 @@ public interface MsgStrategy {
      * @throws Exception 异常
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     MsgResult exec(MsgParam msgParam) throws Exception;
 

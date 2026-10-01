@@ -3,7 +3,7 @@ package cn.lmx.kpu.sop.admin.dto.torna;
 import lombok.Data;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Data
 public class TornaModuleDTO {

@@ -148,7 +148,7 @@ public class DefResourceServiceImpl extends SuperCacheServiceImpl<DefResourceMan
      * @param resourceId      资源id
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     private void saveResourceApi(Long resourceId, List<DefResourceApiSaveVO> resourceApiList) {
         if (CollUtil.isNotEmpty(resourceApiList)) {

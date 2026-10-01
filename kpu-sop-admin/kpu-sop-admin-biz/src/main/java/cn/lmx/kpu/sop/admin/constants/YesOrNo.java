@@ -3,7 +3,7 @@ package cn.lmx.kpu.sop.admin.constants;
 import java.util.Objects;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class YesOrNo {
     public static final int YES = 1;

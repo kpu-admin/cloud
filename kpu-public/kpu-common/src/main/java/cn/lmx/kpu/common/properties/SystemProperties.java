@@ -69,7 +69,7 @@ public class SystemProperties {
      *
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     private String cachePrefix;
     /** oauth 服务扫描枚举类的包路径 */

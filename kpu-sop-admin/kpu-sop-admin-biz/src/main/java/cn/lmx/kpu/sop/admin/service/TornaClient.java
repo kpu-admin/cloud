@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Component
 public class TornaClient {

@@ -7,7 +7,7 @@ package cn.lmx.kpu.gateway.message;
  * sub_code（明细返回码）
  * sub_msg（明细返回码描述）
  * 解决方案
- * @author 六如
+ * @author lmx
  */
 public interface IError {
     /**

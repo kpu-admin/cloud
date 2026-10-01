@@ -44,7 +44,7 @@ public interface CaptchaService {
      * @return cn.lmx.basic.base.basic.R<java.lang.Boolean>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     R<Boolean> sendSmsCode(String mobile, String templateCode);
 
@@ -57,7 +57,7 @@ public interface CaptchaService {
      * @return cn.lmx.basic.base.basic.R<java.lang.Boolean>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     R<Boolean> sendEmailCode(String email, String templateCode);
 

@@ -30,7 +30,7 @@ import java.util.UUID;
 /**
  * 请求参数默认实现
  *
- * @author 六如
+ * @author lmx
  */
 @Slf4j
 public class ParamExecutorImpl implements ParamExecutor<HttpServletRequest, HttpServletResponse> {

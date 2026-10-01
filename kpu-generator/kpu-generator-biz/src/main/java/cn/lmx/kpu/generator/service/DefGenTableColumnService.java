@@ -25,7 +25,7 @@ public interface DefGenTableColumnService extends SuperService<Long, DefGenTable
      * @return com.baomidou.mybatisplus.core.metadata.IPage<result.vo.generator.cn.lmx.kpu.DefGenTableColumnResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     IPage<DefGenTableColumnResultVO> pageColumn(PageParams<DefGenTableColumnPageQuery> params);
 
@@ -37,7 +37,7 @@ public interface DefGenTableColumnService extends SuperService<Long, DefGenTable
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Boolean syncField(Long tableId, Long id);
 }

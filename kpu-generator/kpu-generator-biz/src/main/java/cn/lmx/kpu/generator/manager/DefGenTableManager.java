@@ -22,7 +22,7 @@ public interface DefGenTableManager extends SuperManager<DefGenTable> {
      * @param dsId dsId
      * @return javax.sql.DataSource
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      * @update [2025-01-01 00:00 ] [lmx] [变更描述]
      */
     DataSource getDs(Long dsId);
@@ -32,7 +32,7 @@ public interface DefGenTableManager extends SuperManager<DefGenTable> {
      *
      * @return com.baomidou.mybatisplus.annotation.DbType
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     DbType getDbType();
 }

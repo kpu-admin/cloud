@@ -68,7 +68,7 @@ public class RootController {
      * @return cn.lmx.basic.base.basic.R<result.vo.oauth.cn.lmx.kpu.LoginResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @Operation(summary = "登录接口", description = "登录或者清空缓存时调用")
     @PostMapping(value = "/anyTenant/login")

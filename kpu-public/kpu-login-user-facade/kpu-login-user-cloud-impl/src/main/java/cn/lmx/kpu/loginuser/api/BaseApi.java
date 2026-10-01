@@ -28,7 +28,7 @@ public interface BaseApi {
      * @return cn.lmx.basic.base.R<cn.lmx.kpu.base.entity.model.SysEmployee>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @GetMapping("/baseEmployee/{id}")
     R<SysEmployee> getEmployeeById(@PathVariable Long id);
@@ -40,7 +40,7 @@ public interface BaseApi {
      * @return cn.lmx.basic.base.R<cn.lmx.kpu.base.entity.model.SysOrg>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @GetMapping("/baseOrg/{id}")
     R<SysOrg> getOrgById(@PathVariable Long id);
@@ -52,7 +52,7 @@ public interface BaseApi {
      * @return cn.lmx.basic.base.R<cn.lmx.kpu.base.entity.model.SysPosition>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @GetMapping("/basePosition/{id}")
     R<SysPosition> getPositionById(@PathVariable Long id);
@@ -64,7 +64,7 @@ public interface BaseApi {
      * @return cn.lmx.basic.base.R<java.util.List < java.lang.String>>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @GetMapping("/baseRole/findRoleCodeByEmployeeId")
     R<List<String>> findRoleCodeByEmployeeId(@RequestParam("employeeId") Long employeeId);
@@ -77,7 +77,7 @@ public interface BaseApi {
      * @return cn.lmx.basic.base.R<java.util.List < cn.lmx.kpu.base.entity.model.SysOrg>>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @GetMapping("/baseOrg/findDeptByEmployeeId")
     R<List<SysOrg>> findDeptByEmployeeId(@RequestParam("employeeId") Long employeeId, @RequestParam("companyId") Long companyId);
@@ -89,7 +89,7 @@ public interface BaseApi {
      * @return cn.lmx.basic.base.R<java.util.List < cn.lmx.kpu.base.entity.model.SysOrg>>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @GetMapping("/baseOrg/findCompanyByEmployeeId")
     R<List<SysOrg>> findCompanyByEmployeeId(@RequestParam("employeeId") Long employeeId);

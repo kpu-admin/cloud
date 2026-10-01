@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class ResponseUtil {
 

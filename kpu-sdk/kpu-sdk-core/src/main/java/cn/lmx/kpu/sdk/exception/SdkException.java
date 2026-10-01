@@ -1,7 +1,7 @@
 package cn.lmx.kpu.sdk.exception;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public class SdkException extends RuntimeException {
 

@@ -27,7 +27,7 @@ public interface DefApplicationService extends SuperCacheService<Long, DefApplic
      * @return java.lang.Boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     Boolean check(Long id, String name);
 
@@ -37,7 +37,7 @@ public interface DefApplicationService extends SuperCacheService<Long, DefApplic
      * @return java.util.List<cn.lmx.kpu.tenant.vo.result.tenant.ApplicationResourceResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<ApplicationResourceResultVO> findApplicationResourceList();
 
@@ -47,7 +47,7 @@ public interface DefApplicationService extends SuperCacheService<Long, DefApplic
      * @return java.util.List<cn.lmx.kpu.tenant.vo.result.tenant.ApplicationResourceResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<ApplicationResourceResultVO> findAvailableApplicationResourceList();
 
@@ -73,7 +73,7 @@ public interface DefApplicationService extends SuperCacheService<Long, DefApplic
      * @return java.util.List<cn.lmx.kpu.tenant.vo.result.tenant.ApplicationResourceResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<ApplicationResourceResultVO> findAvailableApplicationDataScopeList();
 

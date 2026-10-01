@@ -43,7 +43,7 @@ public final class AppendixType {
          *
          * @author lmx
          * @date 2025-01-01 00:00
-         * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+         * @create [2025-01-01 00:00] [lmx] [初始创建]
          */
         String DEF__USER__AVATAR = "DEF__USER__AVATAR";
     }
@@ -58,7 +58,7 @@ public final class AppendixType {
          *
          * @author lmx
          * @date 2025-01-01 00:00
-         * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+         * @create [2025-01-01 00:00] [lmx] [初始创建]
          */
         String MEMBER__USER__AVATAR = "MEMBER__USER__AVATAR";
     }
@@ -84,7 +84,7 @@ public final class AppendixType {
          *
          * @author lmx
          * @date 2025-01-01 00:00
-         * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+         * @create [2025-01-01 00:00] [lmx] [初始创建]
          */
         String BASE__FILE = "BASE__FILE";
     }
@@ -99,7 +99,7 @@ public final class AppendixType {
          *
          * @author lmx
          * @date 2025-01-01 00:00
-         * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+         * @create [2025-01-01 00:00] [lmx] [初始创建]
          */
         String EXTEND__MSG__CONTENT = "EXTEND__MSG__CONTENT";
     }

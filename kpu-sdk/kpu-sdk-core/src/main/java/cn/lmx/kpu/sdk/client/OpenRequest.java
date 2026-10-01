@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * 负责请求操作
  *
- * @author 六如
+ * @author lmx
  */
 public class OpenRequest {
 

@@ -1,7 +1,7 @@
 package cn.lmx.kpu.gateway.manager;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public interface CacheManager {
 

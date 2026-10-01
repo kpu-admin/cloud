@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public interface ApiManager extends Manager<List<Long>, Map<Long, ApiInfoDTO>> {
 

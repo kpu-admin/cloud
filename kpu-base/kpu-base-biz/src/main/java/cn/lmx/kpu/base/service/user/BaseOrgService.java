@@ -72,7 +72,7 @@ public interface BaseOrgService extends SuperCacheService<Long, BaseOrg> {
      * @return java.util.List<cn.lmx.kpu.user.entity.base.kpu.BaseOrg>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<BaseOrg> findDeptByEmployeeId(Long employeeId, Long companyId);
 
@@ -84,7 +84,7 @@ public interface BaseOrgService extends SuperCacheService<Long, BaseOrg> {
      * @return java.util.List<cn.lmx.kpu.base.entity.model.SysOrg>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<BaseOrg> findCompanyByEmployeeId(Long employeeId);
 
@@ -96,7 +96,7 @@ public interface BaseOrgService extends SuperCacheService<Long, BaseOrg> {
      * @return cn.lmx.kpu.user.entity.base.kpu.BaseOrg
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     BaseOrg getDefaultOrg(List<BaseOrg> orgList, Long lastOrgId);
 

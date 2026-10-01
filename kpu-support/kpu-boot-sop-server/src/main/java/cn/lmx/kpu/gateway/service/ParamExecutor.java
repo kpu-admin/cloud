@@ -10,7 +10,7 @@ import java.io.IOException;
  *
  * @param <Req>  请求参数
  * @param <Resp> 响应参数
- * @author 六如
+ * @author lmx
  */
 public interface ParamExecutor<Req, Resp> {
 

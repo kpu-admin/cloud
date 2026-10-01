@@ -4,7 +4,7 @@ import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Data
 public class PayOrderSearchRequest {

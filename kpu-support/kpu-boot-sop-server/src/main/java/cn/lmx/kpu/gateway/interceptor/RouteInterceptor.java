@@ -7,7 +7,7 @@ import org.springframework.core.env.Environment;
 /**
  * 路由拦截器
  *
- * @author 六如
+ * @author lmx
  */
 public interface RouteInterceptor {
 

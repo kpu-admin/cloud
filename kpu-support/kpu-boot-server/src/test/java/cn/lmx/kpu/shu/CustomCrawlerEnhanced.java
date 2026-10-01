@@ -33,8 +33,8 @@ public class CustomCrawlerEnhanced {
      * @param reverse 是否倒序
      * @param limit 爬取章节数
      * @author lmx
-     * @date 2025-07-27 06:51
-     * @create [2025-07-27 06:51 ] [lmx ] [初始创建]
+     * @date 2025-01-01 00:00
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     public static void crawl(String bookId, String bookName, boolean reverse, Integer limit) {
         ArgumentAssert.notEmpty(bookId, "请填写小说ID");
@@ -157,8 +157,8 @@ public class CustomCrawlerEnhanced {
      * @param bookId 书ID
      * @param bookName 书名
      * @author lmx
-     * @date 2025-07-27 06:51
-     * @create [2025-07-27 06:51 ] [lmx ] [初始创建]
+     * @date 2025-01-01 00:00
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     public static void crawl(String bookId, String bookName) {
         crawl(bookId, bookName, false, null);
@@ -170,8 +170,8 @@ public class CustomCrawlerEnhanced {
      * @param bookName 书名
      * @param limit 爬取章节数
      * @author lmx
-     * @date 2025-07-27 06:51
-     * @create [2025-07-27 06:51 ] [lmx ] [初始创建]
+     * @date 2025-01-01 00:00
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     public static void crawl(String bookId, String bookName, int limit) {
         crawl(bookId, bookName, false, limit);
@@ -183,8 +183,8 @@ public class CustomCrawlerEnhanced {
      * @param bookName 书名
      * @param limit 爬取章节数
      * @author lmx
-     * @date 2025-07-27 06:52
-     * @create [2025-07-27 06:52 ] [lmx ] [初始创建]
+     * @date 2025-01-01 00:00
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      **/
     public static void crawlReverse(String bookId, String bookName, int limit) {
         crawl(bookId, bookName, true, limit);

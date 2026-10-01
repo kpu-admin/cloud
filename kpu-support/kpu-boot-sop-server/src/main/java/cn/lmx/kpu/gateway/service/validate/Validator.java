@@ -6,7 +6,7 @@ import cn.lmx.kpu.gateway.request.ApiRequestContext;
 /**
  * 校验接口
  *
- * @author 六如
+ * @author lmx
  */
 public interface Validator {
     /**

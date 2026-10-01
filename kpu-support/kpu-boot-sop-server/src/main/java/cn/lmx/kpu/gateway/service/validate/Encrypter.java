@@ -3,7 +3,7 @@ package cn.lmx.kpu.gateway.service.validate;
 /**
  * 负责加解密
  *
- * @author 六如
+ * @author lmx
  */
 public interface Encrypter {
 

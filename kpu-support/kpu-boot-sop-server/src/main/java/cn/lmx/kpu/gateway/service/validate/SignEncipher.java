@@ -1,7 +1,7 @@
 package cn.lmx.kpu.gateway.service.validate;
 
 /**
- * @author 六如
+ * @author lmx
  */
 public interface SignEncipher {
     /**

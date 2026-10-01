@@ -28,7 +28,7 @@ public interface BaseEmployeeService extends SuperCacheService<Long, BaseEmploye
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean saveBatch(Collection<BaseEmployee> entityList);
 
@@ -72,7 +72,7 @@ public interface BaseEmployeeService extends SuperCacheService<Long, BaseEmploye
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean updateById(BaseEmployee baseEmployee);
 
@@ -83,7 +83,7 @@ public interface BaseEmployeeService extends SuperCacheService<Long, BaseEmploye
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean updateAllById(BaseEmployee baseEmployee);
 

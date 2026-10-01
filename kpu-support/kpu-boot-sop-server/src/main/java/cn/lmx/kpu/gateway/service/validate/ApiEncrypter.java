@@ -8,7 +8,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 /**
  * 负责各类加解密
  *
- * @author 六如
+ * @author lmx
  */
 public class ApiEncrypter implements Encrypter {
 

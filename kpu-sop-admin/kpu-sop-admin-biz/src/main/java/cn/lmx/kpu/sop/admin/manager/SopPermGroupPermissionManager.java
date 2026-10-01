@@ -10,8 +10,8 @@ import cn.lmx.kpu.sop.admin.entity.SopPermGroupPermission;
  * </p>
  *
  * @author lmx
- * @date 2025-07-06 19:04:41
- * @create [2025-07-06 19:04:41] [lmx] [代码生成器生成]
+ * @date 2025-01-01 00:00
+ * @create [2025-01-01 00:00] [lmx] [代码生成器生成]
  */
 public interface SopPermGroupPermissionManager extends SuperManager<SopPermGroupPermission> {
 

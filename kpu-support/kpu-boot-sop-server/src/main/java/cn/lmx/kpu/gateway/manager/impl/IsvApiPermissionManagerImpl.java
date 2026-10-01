@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 /**
  * 缓存ISV接口权限
  *
- * @author 六如
+ * @author lmx
  */
 @Slf4j
 @RequiredArgsConstructor

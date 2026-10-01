@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 /**
  * 属性拷贝工具类
  *
- * @author 六如
+ * @author lmx
  */
 public class CopyUtil extends BeanUtils {
 

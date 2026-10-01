@@ -62,7 +62,7 @@ public interface DefUserManager extends SuperCacheManager<DefUser>, LoadService 
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean checkUsername(String username, Long id);
 
@@ -74,7 +74,7 @@ public interface DefUserManager extends SuperCacheManager<DefUser>, LoadService 
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean checkEmail(String email, Long id);
 
@@ -86,7 +86,7 @@ public interface DefUserManager extends SuperCacheManager<DefUser>, LoadService 
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean checkMobile(String mobile, Long id);
 
@@ -98,7 +98,7 @@ public interface DefUserManager extends SuperCacheManager<DefUser>, LoadService 
      * @return boolean
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     boolean checkIdCard(String idCard, Long id);
 

@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * 支付接口
  *
- * @author 六如
+ * @author lmx
  */
 public interface OpenOpenapi {
 

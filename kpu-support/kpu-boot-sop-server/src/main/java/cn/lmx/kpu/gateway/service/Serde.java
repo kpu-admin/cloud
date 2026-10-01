@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * 序列化/反序列化
  *
- * @author 六如
+ * @author lmx
  */
 public interface Serde {
 

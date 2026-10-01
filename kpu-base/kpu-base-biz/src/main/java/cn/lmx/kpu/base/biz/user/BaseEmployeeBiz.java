@@ -50,7 +50,7 @@ public class BaseEmployeeBiz {
      * @return cn.lmx.kpu.user.entity.base.kpu.BaseEmployee
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @Transactional(rollbackFor = Exception.class)
     public BaseEmployee save(BaseEmployeeSaveVO saveVO) {
@@ -79,7 +79,7 @@ public class BaseEmployeeBiz {
      * @return cn.lmx.kpu.user.result.vo.base.kpu.BaseEmployeeResultVO
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     public BaseEmployeeResultVO getEmployeeUserById(Long employeeId) {
         // 租户库
@@ -108,7 +108,7 @@ public class BaseEmployeeBiz {
      * @return IPage
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     public IPage<BaseEmployeeResultVO> findPageResultVO(PageParams<BaseEmployeePageQuery> params) {
         BaseEmployeePageQuery pageQuery = params.getModel();

@@ -3,7 +3,7 @@ package cn.lmx.kpu.sdk.model;
 import lombok.Data;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Data
 public class DemoFileUploadModel {

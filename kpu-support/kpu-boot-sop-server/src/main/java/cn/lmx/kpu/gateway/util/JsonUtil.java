@@ -9,7 +9,7 @@ import java.util.Objects;
 /**
  * json工具类,默认用fastjson2实现
  *
- * @author 六如
+ * @author lmx
  */
 public class JsonUtil {
 

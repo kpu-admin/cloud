@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Configuration
 @ConfigurationProperties(prefix = "api")

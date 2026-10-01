@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * 平台签名验证实现。
  *
- * @author 六如
+ * @author lmx
  * @see <a href="https://docs.open.alipay.com/291/106118">平台签名</a>
  */
 @Slf4j

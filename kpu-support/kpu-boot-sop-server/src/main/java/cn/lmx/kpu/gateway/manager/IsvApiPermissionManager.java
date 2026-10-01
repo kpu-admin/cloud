@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * isv接口授权管理
  *
- * @author 六如
+ * @author lmx
  */
 public interface IsvApiPermissionManager extends Manager<List<Long>, Map<Long, List<Long>>> {
 

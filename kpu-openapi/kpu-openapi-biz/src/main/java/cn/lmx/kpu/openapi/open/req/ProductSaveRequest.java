@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Data
 public class ProductSaveRequest implements Serializable {

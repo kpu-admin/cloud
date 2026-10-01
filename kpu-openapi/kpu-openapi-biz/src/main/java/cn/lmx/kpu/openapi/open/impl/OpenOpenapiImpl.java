@@ -30,7 +30,7 @@ import java.util.UUID;
 /**
  * 开放接口实现
  *
- * @author 六如
+ * @author lmx
  */
 @DubboService
 @Slf4j

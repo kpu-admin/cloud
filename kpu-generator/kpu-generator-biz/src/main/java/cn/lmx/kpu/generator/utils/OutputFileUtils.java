@@ -42,7 +42,7 @@ public class OutputFileUtils {
      * @return java.lang.String
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     public static String getZipOutputFile(GeneratorConfig generatorConfig, DefGenTable genTable, DefGenTable subTable, String templatePath, String enumName, TemplateEnum template) {
         if (TemplateEnum.BACKEND.eq(template)) {
@@ -68,7 +68,7 @@ public class OutputFileUtils {
      * @return java.lang.String
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     public static String getOutputFile(GeneratorConfig generatorConfig, DefGenTable genTable, DefGenTable subTable, String templatePath, String enumName, TemplateEnum template) {
         if (TemplateEnum.BACKEND.eq(template)) {
@@ -245,7 +245,7 @@ public class OutputFileUtils {
      * @return java.lang.String
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     private static String getOutputFile(GeneratorConfig generatorConfig, DefGenTable genTable, String templatePath, boolean isAbsolute, String enumName) {
         MapperConfig mapperConfig = generatorConfig.getMapperConfig();

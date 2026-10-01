@@ -26,7 +26,7 @@ public interface DefResourceApiManager extends SuperCacheManager<DefResourceApi>
      * @param resourceIdList 资源id
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     void removeByResourceId(List<Long> resourceIdList);
 
@@ -37,7 +37,7 @@ public interface DefResourceApiManager extends SuperCacheManager<DefResourceApi>
      * @return java.util.List<cn.lmx.kpu.tenant.vo.result.tenant.DefResourceApiResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     List<DefResourceApi> findByResourceId(Long resourceId);
 }

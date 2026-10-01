@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * 序列化/反序列化 gson实现
  *
- * @author 六如
+ * @author lmx
  */
 public class SerdeGsonImpl extends SerdeImpl {
 

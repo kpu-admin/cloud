@@ -4,7 +4,7 @@ import cn.lmx.kpu.gateway.message.ErrorEnum;
 import lombok.Getter;
 
 /**
- * @author 六如
+ * @author lmx
  */
 @Getter
 public class SignException extends Exception {

@@ -22,7 +22,7 @@ public interface BaseOrgRoleRelManager extends SuperManager<BaseOrgRoleRel> {
      * @param idList idList
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     void deleteByOrg(Collection<Long> idList);
 
@@ -32,7 +32,7 @@ public interface BaseOrgRoleRelManager extends SuperManager<BaseOrgRoleRel> {
      * @param idList idList
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     void deleteByRole(Collection<Long> idList);
 }

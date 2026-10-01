@@ -68,7 +68,7 @@ public class BaseRoleManagerImpl extends SuperCacheManagerImpl<BaseRoleMapper, B
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @Override
     public List<Long> findResourceIdByEmployeeId(Long applicationId, Long employeeId) {
@@ -105,7 +105,7 @@ public class BaseRoleManagerImpl extends SuperCacheManagerImpl<BaseRoleMapper, B
      * @return java.util.List<java.lang.Long>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     @Override
     public List<Long> findRoleIdByEmployeeId(Long employeeId) {

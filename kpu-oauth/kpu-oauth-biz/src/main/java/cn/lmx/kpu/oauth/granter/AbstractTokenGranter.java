@@ -162,7 +162,7 @@ public abstract class AbstractTokenGranter implements TokenGranter {
      * @return cn.lmx.basic.base.basic.R<result.vo.oauth.cn.lmx.kpu.LoginResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     protected abstract R<LoginResultVO> checkParam(LoginParamVO loginParam);
 
@@ -172,7 +172,7 @@ public abstract class AbstractTokenGranter implements TokenGranter {
      * @return cn.lmx.basic.base.basic.R<result.vo.oauth.cn.lmx.kpu.LoginResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     protected R<LoginResultVO> checkClient() {
         String basicHeader = JakartaServletUtil.getHeader(WebUtils.request(), CLIENT_KEY, StrPool.UTF_8);
@@ -196,7 +196,7 @@ public abstract class AbstractTokenGranter implements TokenGranter {
      * @return cn.lmx.basic.base.basic.R<result.vo.oauth.cn.lmx.kpu.LoginResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     protected R<LoginResultVO> checkCaptcha(LoginParamVO loginParam) {
         return R.success(null);
@@ -209,7 +209,7 @@ public abstract class AbstractTokenGranter implements TokenGranter {
      * @return tenant.entity.system.cn.lmx.kpu.DefUser
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     protected abstract DefUser getUser(LoginParamVO loginParam);
 
@@ -221,7 +221,7 @@ public abstract class AbstractTokenGranter implements TokenGranter {
      * @return cn.lmx.basic.base.basic.R<result.vo.oauth.cn.lmx.kpu.LoginResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
 
     protected R<LoginResultVO> checkUserPassword(LoginParamVO loginParam, DefUser user) {
@@ -235,7 +235,7 @@ public abstract class AbstractTokenGranter implements TokenGranter {
      * @return cn.lmx.basic.base.basic.R<result.vo.oauth.cn.lmx.kpu.LoginResultVO>
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     protected R<LoginResultVO> checkUserState(DefUser user) {
         // 用户被禁用
@@ -254,7 +254,7 @@ public abstract class AbstractTokenGranter implements TokenGranter {
      * @return granter.oauth.cn.lmx.kpu.AbstractTokenGranter.Employee
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     protected Employee getEmployee(DefUser defUser) {
         // 用户被禁用无法登陆， 员工被禁用无法访问当前企业的数据， 企业被禁用所有员工无法
@@ -284,7 +284,7 @@ public abstract class AbstractTokenGranter implements TokenGranter {
      * @return granter.oauth.cn.lmx.kpu.AbstractTokenGranter.Org
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     protected Org findOrg(Employee employee) {
         Long employeeId = employee.getEmployeeId();
@@ -372,7 +372,7 @@ public abstract class AbstractTokenGranter implements TokenGranter {
      * @return result.vo.oauth.cn.lmx.kpu.LoginResultVO
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     protected LoginResultVO buildResult(Employee employee, Org org, DefUser defUser) {
         //此登录接口登录web端

@@ -42,7 +42,7 @@ public class WebSocketSubject extends Observable {
      * @param data 数据
      * @author lmx
      * @date 2025-01-01 00:00
-     * @create [2025-01-01 00:00 ] [lmx] [初始创建]
+     * @create [2025-01-01 00:00] [lmx] [初始创建]
      */
     public void notify(String type, String data) {
         super.setChanged();
